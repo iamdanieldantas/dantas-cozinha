@@ -21,35 +21,15 @@ Os favoritos, as anotações, o cardápio e o checklist de compras ficam **somen
 4. Acesse a URL informada pelo GitHub Pages, normalmente `https://iamdanieldantas.github.io/dantas-cozinha/` (o endereço só existe após publicar).
 5. **Atenção à privacidade:** o GitHub Pages não tem senha integrada neste pacote. O site e as receitas são publicamente acessíveis, embora os dados pessoais do navegador sejam locais. Se precisar de portal restrito, será necessário configurar autenticação/hospedagem apropriada (não basta ocultar a URL).
 
-## Atualizações semanais — conteúdo e publicação
+## Política editorial vigente — receitas de fontes reconhecidas
 
-O arquivo `.github/workflows/site.yml` publica automaticamente às **09h17 de segunda-feira, horário de São Paulo**. O horário pode variar se a plataforma atrasar uma tarefa agendada. O fluxo:
+A partir de 16/10/2026, as novas receitas do Dantas Cozinha serão selecionadas entre publicações de chefs, escolas de gastronomia e veículos culinários reconhecidos, com autoria e URL verificáveis, priorizando ingredientes brasileiros comuns ou regionais.
 
-1. Testa os dados existentes.
-2. Executa `python scripts/weekly_update.py`.
-3. Salva novos artigos/receitas no repositório quando houver mudanças.
-4. Publica a versão resultante no GitHub Pages **no mesmo job**. Isso evita depender de um segundo workflow disparado pelo bot.
-
-### Com geração nova por IA: atualização contínua (recomendado)
-
-Configure um segredo chamado `OPENAI_API_KEY` em **Settings → Secrets and variables → Actions → New repository secret**. A chave **não** deve aparecer no código, em chats públicos ou em capturas de tela. A execução programada faz uma solicitação à API OpenAI (`gpt-4.1-mini` como padrão) para criar **uma receita e uma técnica culinária novas por semana**, submetidas a validações básicas antes de publicar. A API pode ter custo de uso, independente da assinatura do ChatGPT. É recomendado revisar periodicamente receitas geradas automaticamente por IA: a validação é de estrutura e plausibilidade básica, não é teste de cozinha nem checagem científica.
-
-### Complemento de curadoria por ChatGPT
-
-Além do GitHub Actions, há uma tarefa semanal do ChatGPT, configurada para as segundas-feiras à tarde (fuso de São Paulo). Ela confere se a publicação da semana ocorreu e tenta pesquisar e acrescentar conteúdos verificáveis de workshops, Instagram e vídeos, usando a integração GitHub quando disponível. Essa tarefa não é um processo executado no GitHub: sua execução e o acesso aos conectores dependem da disponibilidade da automação ChatGPT; se não conseguir publicar, deverá relatar o bloqueio. O workflow do GitHub Actions permanece como mecanismo principal e independente para publicação da receita e do estudo da semana.
-
-### Sem chave de API: fila editorial finita
-
-Sem `OPENAI_API_KEY`, a atualização semanal publica itens inéditos da fila `curatedQueue` em `assets/data.js`. **Essa fila se esgota**, então a publicação de novos conteúdos não é contínua: será necessário ampliá-la ou fornecer uma chave de API. O fluxo ainda pode republicar o site, mas não fingirá ter novas receitas.
-
-### Rodar/testar a rotina manualmente
-
-```bash
-python3 -m unittest discover -s tests -v
-python3 scripts/weekly_update.py --date 2026-10-19
-```
-
-**Cuidado:** o segundo comando modifica o conteúdo (não execute repetidamente em produção sem intenção). A rotina é idempotente para a mesma semana ISO.
+- **Nada de receitas inventadas por IA** ou alegações de teste sem confirmação da fonte. As 15 receitas iniciais permanecem como legado editorial **não testado/validado pela equipe** até eventual revisão.
+- **Respeito à autoria:** resumir, dar crédito e apontar a fonte original; não reproduzir integralmente textos e imagens de terceiros sem autorização.
+- A tarefa do ChatGPT faz curadoria **às segundas-feiras à tarde** e tenta atualizar o repositório quando encontra fontes confiáveis. A publicação de novos itens não é garantida se não houver material verificado ou a integração estiver indisponível.
+- O workflow do GitHub Actions executa testes e publica o site quando houver commits, além de uma republicação agendada toda segunda de manhã. **Não executa mais o gerador anterior de receitas por IA/fila editorial.** O script `scripts/weekly_update.py` foi mantido apenas como legado.
+- Para workshops e vídeos, usar links reais e não inventar datas, preços ou disponibilidade.
 
 ## Conteúdo e fontes
 
