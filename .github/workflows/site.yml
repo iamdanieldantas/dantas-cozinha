@@ -1,0 +1,67 @@
+name: Publicar Dantas Cozinha
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Segunda-feira, 09:17 em São Paulo (12:17 UTC)
+    - cron: '17 12 * * 1'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'dantas-cozinha-pages'
+  cancel-in-progress: false
+
+jobs:
+  atualizar-e-publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obter projeto
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testar conteúdo e automação
+        run: python -m unittest discover -s tests -v
+      - name: Atualizar conteúdo semanal
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: 'gpt-4.1-mini'
+        run: python scripts/weekly_update.py
+      - name: Salvar conteúdo publicado no repositório
+        if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: |
+          if ! git diff --quiet -- assets/data.js; then
+            git config user.name 'dantas-cozinha-bot'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add assets/data.js
+            git commit -m 'content: atualização culinária semanal'
+            git push
+          fi
+      - name: Preparar diretório público
+        run: |
+          mkdir -p _site/assets
+          cp index.html _site/index.html
+          cp assets/*.js assets/*.css assets/favicon.svg _site/assets/
+          touch _site/.nojekyll
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Enviar site estático
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
