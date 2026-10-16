@@ -134,6 +134,9 @@ def release_curated(data):
 
 def update(path, now, api_func=ai_generate):
     data=load(path)
+    if data.get('curationPolicy', {}).get('version', 0) >= 2:
+        print('Catálogo com fontes verificadas: atualização automatizada de receitas desativada; a curadoria semanal é feita por revisão de fontes.')
+        return False
     wid=week_id(now)
     if any(item.get('week')==wid for item in data.get('releaseHistory',[])):
         print(f'{wid}: conteúdo já publicado. Nenhuma alteração.')
