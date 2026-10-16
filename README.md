@@ -21,7 +21,7 @@ Os favoritos, as anotações, o cardápio e o checklist de compras ficam **somen
 4. Acesse a URL informada pelo GitHub Pages, normalmente `https://iamdanieldantas.github.io/dantas-cozinha/` (o endereço só existe após publicar).
 5. **Atenção à privacidade:** o GitHub Pages não tem senha integrada neste pacote. O site e as receitas são publicamente acessíveis, embora os dados pessoais do navegador sejam locais. Se precisar de portal restrito, será necessário configurar autenticação/hospedagem apropriada (não basta ocultar a URL).
 
-## Atualizações às segundas-feiras
+## Atualizações semanais — conteúdo e publicação
 
 O arquivo `.github/workflows/site.yml` publica automaticamente às **09h17 de segunda-feira, horário de São Paulo**. O horário pode variar se a plataforma atrasar uma tarefa agendada. O fluxo:
 
@@ -33,6 +33,10 @@ O arquivo `.github/workflows/site.yml` publica automaticamente às **09h17 de se
 ### Com geração nova por IA: atualização contínua (recomendado)
 
 Configure um segredo chamado `OPENAI_API_KEY` em **Settings → Secrets and variables → Actions → New repository secret**. A chave **não** deve aparecer no código, em chats públicos ou em capturas de tela. A execução programada faz uma solicitação à API OpenAI (`gpt-4.1-mini` como padrão) para criar **uma receita e uma técnica culinária novas por semana**, submetidas a validações básicas antes de publicar. A API pode ter custo de uso, independente da assinatura do ChatGPT. É recomendado revisar periodicamente receitas geradas automaticamente por IA: a validação é de estrutura e plausibilidade básica, não é teste de cozinha nem checagem científica.
+
+### Complemento de curadoria por ChatGPT
+
+Além do GitHub Actions, há uma tarefa semanal do ChatGPT, configurada para as segundas-feiras à tarde (fuso de São Paulo). Ela confere se a publicação da semana ocorreu e tenta pesquisar e acrescentar conteúdos verificáveis de workshops, Instagram e vídeos, usando a integração GitHub quando disponível. Essa tarefa não é um processo executado no GitHub: sua execução e o acesso aos conectores dependem da disponibilidade da automação ChatGPT; se não conseguir publicar, deverá relatar o bloqueio. O workflow do GitHub Actions permanece como mecanismo principal e independente para publicação da receita e do estudo da semana.
 
 ### Sem chave de API: fila editorial finita
 
@@ -74,7 +78,7 @@ Para modificar receitas manualmente, edite `assets/data.js` de modo que continue
 
 ## Limitações honestas
 
-- O pacote está **pronto para publicação**, mas não foi implantado numa conta real de GitHub. Hospedagem e automações só funcionam **depois** que o repositório e GitHub Pages estiverem configurados.
+- O portal foi publicado no GitHub Pages em `https://iamdanieldantas.github.io/dantas-cozinha/`. Em caso de falha posterior, confira a aba Actions.
 - A atualização via API depende da chave e do funcionamento do serviço. Se a API falhar, o sistema usa o conteúdo da fila editorial, caso ainda haja itens.
 - Novos vídeos, eventos, vagas, posts do Instagram e informações de workshop **não são capturados automaticamente** nesta versão.
 - A lista de compras soma unidades idênticas conforme o texto de cada ingrediente; itens parecidos descritos com palavras ou unidades diferentes aparecem separados. Refaça a conferência na prática.
