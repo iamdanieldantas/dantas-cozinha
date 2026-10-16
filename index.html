@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f2e9">
+<meta name="description" content="Dantas Cozinha: seu acervo pessoal de receitas, técnicas, workshops e planejamento semanal.">
+<title>Dantas Cozinha • um lugar para cozinhar bem</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+<script defer src="assets/data.js"></script>
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<div class="announcement">✦ Pequenos rituais, grandes sabores. Bem-vindo à sua cozinha.</div>
+<header class="header">
+ <div class="shell header-inner">
+  <a class="brand" href="#inicio" aria-label="Dantas Cozinha — início"><span class="brand-logo">✳</span><span class="brand-word">dantas <em>cozinha.</em></span></a>
+  <button class="mobile-toggle" id="mobile-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">☰</button>
+  <nav class="nav" id="main-nav" aria-label="Navegação principal">
+   <a href="#inicio" data-page="inicio">Início</a><a href="#receitas" data-page="receitas">Receitas</a><a href="#tecnicas" data-page="tecnicas">Escola</a><a href="#workshops" data-page="workshops">Workshops</a><a href="#videos" data-page="videos">Vídeos</a><a href="#planejamento" data-page="planejamento">Meu cardápio</a>
+  </nav>
+  <button type="button" id="fav-shortcut" class="header-saved" title="Ver favoritos" aria-label="Ver favoritos">♡ <span id="fav-count">0</span></button>
+ </div>
+</header>
+<main id="app-main">
+<section data-view="inicio" class="page active">
+ <div class="hero"><div class="shell hero-grid"><div class="hero-copy">
+   <span class="eyebrow light">O SEU CADERNO DE SABORES</span>
+   <h1>A vida fica mais gostosa <i>quando a gente cozinha.</i></h1>
+   <p>Receitas que abraçam, técnicas para aprender de verdade e novas experiências para descobrir por São Paulo.</p>
+   <div class="hero-actions"><button class="btn primary" data-goto="receitas">Explorar receitas <span>↗</span></button><button class="btn ghost" data-goto="planejamento">Planejar a semana</button></div>
+   <div class="hero-small"><span class="avatars">🍋 🥘 🍓</span> Seu espaço para guardar tudo o que dá vontade de cozinhar.</div>
+ </div><div class="hero-visual" aria-label="Comida caseira em uma mesa acolhedora"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=85" alt="Ingredientes frescos e comida caseira" onerror="this.style.display='none'"><span class="hero-fallback">🍅<br><small>feito com carinho</small></span></div><div class="hero-sticker">feito em casa <span>♥</span></div></div></div></div>
+ <div class="shell home-content">
+  <div class="quick-intro"><div><span class="eyebrow">O QUE VAMOS COZINHAR?</span><h2>Escolha por onde começar.</h2></div><p>Ideias para dias corridos e para aqueles em que você quer passar mais tempo na cozinha.</p></div>
+  <div class="category-grid">
+   <button class="category-card cat-entrada" data-category-go="entrada"><span class="category-art">🥗</span><span class="category-number">01 — COMEÇAR BEM</span><strong>Entradas</strong><span>Pequenos pratos, grandes começos <b>↗</b></span></button>
+   <button class="category-card cat-principal" data-category-go="principal"><span class="category-art">🍝</span><span class="category-number">02 — O PROTAGONISTA</span><strong>Pratos principais</strong><span>Para fazer da mesa um encontro <b>↗</b></span></button>
+   <button class="category-card cat-sobremesa" data-category-go="sobremesa"><span class="category-art">🍰</span><span class="category-number">03 — FINAL FELIZ</span><strong>Sobremesas</strong><span>Porque sempre cabe um docinho <b>↗</b></span></button>
+  </div>
+  <div class="section-heading with-action"><div><span class="eyebrow">SELEÇÃO DA CASA</span><h2>Para se inspirar hoje</h2></div><button class="text-button" data-goto="receitas">Ver todas as receitas <span>→</span></button></div>
+  <div id="home-recipes" class="recipe-grid"></div>
+  <div class="editorial-grid"><div class="editorial-feature"><span class="eyebrow light">APRENDA NA PRÁTICA</span><h2>Mais que seguir receitas: <i>entender a cozinha.</i></h2><p>Conheça técnicas, princípios e pequenos truques que fazem toda a diferença no preparo.</p><button class="btn cream" data-goto="tecnicas">Entrar na escola ↗</button></div><div class="editorial-mini"><span class="decorative">✺</span><span class="eyebrow">EXPERIÊNCIAS PERTO DE VOCÊ</span><h3>Workshops na Zona Sul de São Paulo</h3><p>Descubra escolas e aulas práticas em Moema, Vila Mariana e Santo Amaro.</p><button class="text-button" data-goto="workshops">Conhecer escolas →</button></div></div>
+ </div>
+</section>
+<section data-view="receitas" class="page"><div class="page-banner shell"><span class="eyebrow">O CADERNO DE RECEITAS</span><h1>Receitas para fazer <i>e refazer.</i></h1><p>Encontre novos pratos, salve seus favoritos e registre como ficou cada preparo.</p></div><div class="shell"><div class="filter-panel"><div class="search-box"><span aria-hidden="true">⌕</span><input id="recipe-search" type="search" placeholder="Buscar por nome ou ingrediente..." aria-label="Buscar receitas"></div><div class="filter-chips" id="recipe-filters"><button class="chip selected" data-filter="todas">Todas</button><button class="chip" data-filter="entrada">Entradas</button><button class="chip" data-filter="principal">Pratos principais</button><button class="chip" data-filter="sobremesa">Sobremesas</button><button class="chip" data-filter="favoritas">♥ Favoritas</button></div></div><div class="results-line"><span id="recipes-count"></span><small>Toque numa receita para ver ingredientes e preparo.</small></div><div id="recipe-list" class="recipe-grid"></div></div></section>
+<section data-view="tecnicas" class="page"><div class="page-banner shell"><span class="eyebrow">ESCOLA DANTAS</span><h1>O prazer de <i>entender por quê.</i></h1><p>Ciência culinária, técnicas, boas práticas e descobertas para cozinhar com mais confiança.</p></div><div class="shell"><div class="tech-lead"><span class="large-icon">📖</span><div><strong>Um estudo de cada vez.</strong><p>Da reação de Maillard à manteiga noisette: conhecimento para levar da teoria direto à panela.</p></div></div><div id="tech-grid" class="tech-grid"></div></div></section>
+<section data-view="workshops" class="page"><div class="page-banner shell"><span class="eyebrow">SAIA DA ROTINA</span><h1>Aprender junto é <i>ainda melhor.</i></h1><p>Escolas e experiências culinárias na Zona Sul de São Paulo, com canais oficiais para consultar turmas.</p></div><div class="shell"><div class="notice"><span>ⓘ</span> Estas são <b>escolas reais</b>, não reservas nem turmas confirmadas. Consulte datas, disponibilidade e preços no canal oficial antes de se inscrever.</div><div id="workshop-list" class="workshop-grid"></div><div class="instagram-feature"><span class="instagram-icon">◎</span><div><span class="eyebrow light">INSTAGRAM + COZINHA</span><h2>Inspiração também mora no feed.</h2><p>Explore ideias e perfis gastronômicos. As publicações externas ficam nas plataformas de origem.</p></div><a class="btn cream" href="https://www.instagram.com/explore/tags/culinaria/" target="_blank" rel="noopener noreferrer">Explorar Instagram ↗</a></div></div></section>
+<section data-view="videos" class="page"><div class="page-banner shell"><span class="eyebrow">ASSISTA E APRENDA</span><h1>Ver fazer, <i>aprender fazendo.</i></h1><p>Atalhos para procurar demonstrações e inspiração em vídeo.</p></div><div class="shell"><div class="notice"><span>▶</span> Estes cards abrem buscas de vídeos nas plataformas de origem. Não são vídeos próprios nem aulas verificadas individualmente.</div><div id="video-list" class="video-grid"></div></div></section>
+<section data-view="planejamento" class="page"><div class="page-banner shell"><span class="eyebrow">A SEMANA FICA MAIS LEVE</span><h1>Seu cardápio, <i>seu ritmo.</i></h1><p>Escolha receitas para cada dia e organize uma lista de compras automaticamente.</p></div><div class="shell"><div class="notice personal-data"><span>⌂</span> Seu planejamento, favoritos e anotações ficam <b>apenas neste navegador</b>. Use o backup para não perdê-los quando trocar de dispositivo.</div><div class="planner-head"><div><h2>Planejamento da semana</h2><p>Almoço e jantar de segunda a domingo.</p></div><button type="button" id="clear-plan" class="btn-outline">Limpar cardápio</button></div><div id="week-grid" class="week-grid"></div><div class="shopping-panel"><div class="shopping-head"><div><span class="eyebrow">TUDO EM UM LUGAR</span><h2>Lista de compras</h2><p>Ingredientes somados a partir das receitas do cardápio, sem descontar itens da despensa.</p></div><div class="shopping-buttons"><button id="copy-list" class="btn-outline">Copiar lista</button><button id="print-list" class="btn-outline">Imprimir</button></div></div><div id="shopping-list"></div></div><div class="backup"><div><b>Seus dados são seus.</b><p>Exporte favoritos, notas e planejamento para guardar uma cópia ou levar a outro aparelho.</p></div><div class="backup-actions"><button id="export-backup" class="btn-outline">Exportar backup</button><label class="btn-outline file-label">Importar backup<input id="import-backup" type="file" accept=".json,application/json" hidden></label></div></div></div></section>
+</main>
+<footer class="footer"><div class="shell footer-grid"><div><div class="brand footer-brand"><span class="brand-logo">✳</span><span class="brand-word">dantas <em>cozinha.</em></span></div><p>Uma cozinha cheia de ideias e receitas para guardar.</p></div><div><b>Explorar</b><button data-goto="receitas">Receitas</button><button data-goto="tecnicas">Técnicas</button><button data-goto="workshops">Workshops</button></div><div><b>Seu espaço</b><button data-goto="planejamento">Cardápio da semana</button><button id="footer-favorites">Favoritos</button><span id="last-update">Conteúdo inicial: outubro de 2026</span></div></div><div class="shell footer-bottom">Feito para cozinhar com calma. <span>© 2026 Dantas Cozinha · conteúdo editorial informativo</span></div></footer>
+<dialog class="recipe-dialog" id="recipe-dialog" aria-label="Detalhes da receita"><div id="recipe-dialog-body"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
