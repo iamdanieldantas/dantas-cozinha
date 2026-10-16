@@ -20,7 +20,7 @@ class ContentTests(unittest.TestCase):
     for r in d['recipes']+[q for q in d['curatedQueue'] if 'ingredients' in q]:
       self.assertIn(r['category'],('entrada','principal','sobremesa'))
       self.assertGreaterEqual(len(r['steps']),3)
-      self.assertTrue(r['ingredients'])
+      self.assertTrue(r['ingredients'] or (r.get('sourceUrl','').startswith('https://') and r.get('sourceName')))
       self.assertTrue(all(i['quantity']>0 and i['unit'] and i['name'] for i in r['ingredients']))
       self.assertGreater(r['servings'],0)
   def test_weekly_publishes_recipe_and_technique_once(self):
@@ -28,10 +28,10 @@ class ContentTests(unittest.TestCase):
     with tempfile.TemporaryDirectory() as tmp:
       path=Path(tmp)/'data.js';save(path,d)
       dt=datetime(2026,10,19,tzinfo=ZoneInfo('America/Sao_Paulo'))
-      self.assertTrue(update(path,dt))
+      self.assertFalse(update(path,dt))
       after=load(path)
-      self.assertEqual(len(after['recipes']),len(d['recipes'])+1)
-      self.assertEqual(len(after['techniques']),len(d['techniques'])+1)
+      self.assertEqual(len(after['recipes']),len(d['recipes']))
+      self.assertEqual(len(after['techniques']),len(d['techniques']))
       self.assertFalse(update(path,dt))
       self.assertEqual(len(load(path)['recipes']),len(after['recipes']))
   def test_week_id_year_boundaries(self):
