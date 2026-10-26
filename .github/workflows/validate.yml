@@ -1,0 +1,33 @@
+name: Validar curadoria e interface
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obter projeto
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validar dados e política editorial
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check assets/app.js
+          node --check assets/data.js
+      - name: Preparar navegador para smoke test
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Smoke test responsivo
+        run: python tests/browser_smoke.py
