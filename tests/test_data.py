@@ -15,6 +15,10 @@ class ContentTests(unittest.TestCase):
     self.assertGreaterEqual(len(d['recipes']),15)
     self.assertEqual(len({r['id'] for r in d['recipes']}),len(d['recipes']))
     self.assertEqual(len({t['id'] for t in d['techniques']}),len(d['techniques']))
+    self.assertEqual(len({r.get('sourceUrl') for r in d['recipes'] if r.get('sourceUrl')}),len([r for r in d['recipes'] if r.get('sourceUrl')]))
+    self.assertTrue(all(r.get('sourceName') and r.get('sourceUrl','').startswith('https://') for r in d['recipes'] if r.get('curationStatus')=='fonte-editorial-verificada'))
+    self.assertTrue(all(v['url'].startswith('https://') and 'results?search_query=' not in v['url'] for v in d['videos']))
+    self.assertTrue(all(w.get('eventDate','9999-12-31')>='2026-10-26' for w in d['workshops'] if w.get('verifiedAt')=='2026-10-26'))
     self.assertGreaterEqual(len(d['workshops']),3)
     self.assertTrue(all(w['url'].startswith('https://') for w in d['workshops']))
     for r in d['recipes']+[q for q in d['curatedQueue'] if 'ingredients' in q]:
