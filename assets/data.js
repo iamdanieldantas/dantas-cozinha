@@ -1,6 +1,6 @@
 window.DANTAS_DATA = {
   "siteName": "Dantas Cozinha",
-  "generatedAt": "2026-10-15T22:30:00-03:00",
+  "generatedAt": "2026-10-26T15:14:00-03:00",
   "recipes": [
     {
       "id": "curadoria-bruschetta-de-tomate",
@@ -466,6 +466,244 @@ window.DANTAS_DATA = {
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Chocolate, farinha, leite, ovos, manteiga e açúcar",
       "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-cookie-com-gotas-de-chocolate",
+      "title": "Cookie com gotas de chocolate",
+      "category": "sobremesa",
+      "description": "Cookie de inspiração americana com chocolate amargo, açúcar mascavo e etapa de congelamento para ajudar na textura. Receita compartilhada por Dora Lobo no Panelinha.",
+      "minutes": null,
+      "minutesLabel": "Mais de 2h",
+      "difficulty": "Fácil",
+      "servings": 9,
+      "servingsLabel": "9 cookies",
+      "emoji": "🍪",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/cookie-com-gotas-de-chocolate",
+      "author": "Panelinha (receita compartilhada por Dora Lobo)",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Chocolate amargo, manteiga, açúcar mascavo, açúcar, farinha de trigo, fermento e ovo",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-cookie-brownie",
+      "title": "Cookie-brownie",
+      "category": "sobremesa",
+      "description": "Versão em formato de cookie com centro úmido e superfície craquelada, feita com chocolate, cacau e ingredientes comuns de confeitaria.",
+      "minutes": null,
+      "minutesLabel": "Pá-Pum (classificação da fonte)",
+      "difficulty": "Fácil",
+      "servings": 14,
+      "servingsLabel": "14 unidades",
+      "emoji": "🍫",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/cookie-brownie",
+      "author": "Panelinha",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Chocolate 60% cacau, manteiga, ovos, açúcar, açúcar mascavo, farinha de trigo e cacau em pó",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-pao-de-queijo",
+      "title": "Pão de queijo clássico",
+      "category": "entrada",
+      "description": "Clássico mineiro com polvilhos doce e azedo e queijo meia-cura. A fonte explica a técnica de escaldar e o congelamento das unidades cruas.",
+      "minutes": null,
+      "minutesLabel": "Até 2h",
+      "difficulty": "Fácil",
+      "servings": 17,
+      "servingsLabel": "16–18 unidades",
+      "emoji": "🧀",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/pao-de-queijo",
+      "author": "Panelinha",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Polvilho azedo, polvilho doce, queijo meia-cura, ovos, água, óleo e sal",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-mac-and-cheese",
+      "title": "Mac & cheese gratinado",
+      "category": "principal",
+      "description": "Versão americana de macarrão com queijo gratinado, preparada com massa curta, creme de leite fresco e parmesão.",
+      "minutes": null,
+      "minutesLabel": "Pá-Pum (classificação da fonte)",
+      "difficulty": "Fácil",
+      "servings": 1,
+      "servingsLabel": "1 porção",
+      "emoji": "🧀",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/mac-and-cheese",
+      "author": "Panelinha",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Macarrão caracol, creme de leite fresco, parmesão, noz-moscada, sal e pimenta-do-reino",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-macarrao-molho-tomate-pressao",
+      "title": "Macarrão com tomate na pressão",
+      "category": "principal",
+      "description": "Massa curta e molho de tomate feitos juntos na panela de pressão, com alho, azeite e manjericão.",
+      "minutes": null,
+      "minutesLabel": "Pá-Pum (classificação da fonte)",
+      "difficulty": "Fácil",
+      "servings": 2,
+      "servingsLabel": "Até 2 porções",
+      "emoji": "🍝",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/macarrao-molho-tomate-pressao",
+      "author": "Panelinha",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Macarrão fusili, tomate pelado, alho, manjericão, azeite, sal e parmesão",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-brownie-chocolate-queijo-flavio-federico",
+      "title": "Brownie de chocolate e queijo",
+      "category": "sobremesa",
+      "description": "Versão de brownie do chef Flavio Federico com chocolate meio amargo, creme de queijo e laranja confitada. A preparação da laranja exige antecedência.",
+      "minutes": null,
+      "minutesLabel": "40 min informados pela fonte; laranja requer descanso adicional",
+      "difficulty": "Intermediário",
+      "servings": 10,
+      "servingsLabel": "10 porções",
+      "emoji": "🍫",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Receitas Globo",
+      "sourceName": "Receitas Globo",
+      "sourceUrl": "https://receitas.globo.com/ana-maria-braga/doces/brownie-de-chocolate-e-queijo-do-chef-flavio-federico.ghtml",
+      "author": "Chef Flavio Federico",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Chocolate meio amargo, manteiga, ovos, farinha, açúcar mascavo, cream cheese e laranja",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "curadoria-bolo-de-fuba",
+      "title": "Bolo de fubá de liquidificador",
+      "category": "sobremesa",
+      "description": "Bolo brasileiro simples com fubá, leite e erva-doce, publicado com preparo no liquidificador.",
+      "minutes": null,
+      "minutesLabel": "Até 1h",
+      "difficulty": "Fácil",
+      "servings": 12,
+      "servingsLabel": "12 porções",
+      "emoji": "🍰",
+      "image": "",
+      "ingredients": [],
+      "steps": [
+        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
+        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
+        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      ],
+      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "tags": [
+        "fonte editorial",
+        "ingredientes acessíveis",
+        "receita referenciada"
+      ],
+      "createdAt": "2026-10-26",
+      "source": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/bolo-de-fuba",
+      "author": "Panelinha",
+      "sourceVerifiedAt": "2026-10-26",
+      "curationStatus": "fonte-editorial-verificada",
+      "ingredientsSummary": "Fubá mimoso, farinha de trigo, açúcar, ovos, óleo, leite, fermento e erva-doce",
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
     }
   ],
   "techniques": [
@@ -578,48 +816,130 @@ window.DANTAS_DATA = {
       "tag": "Cursos presenciais",
       "eventDate": null,
       "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "junta-boteco-2026-10-28",
+      "name": "Aula de boteco do Junta — 28/10",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "28/10/2026, 18h30–22h30. Bolovo, bolinho de bacalhau, escondidinho de carne-seca e técnicas de fritura. R$ 305 + R$ 7,63 de taxa (preço publicado; vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-boteco-do-junta-28-10",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Aula prática · R$ 305 + taxa",
+      "eventDate": "2026-10-28",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-jantar-amigos-2026-10-29",
+      "name": "Jantar para receber amigos — 29/10",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "29/10/2026, 18h30–22h30. Brócolis à carbonara, cavatelli com linguiça e mil-folhas de milho verde. R$ 305 + R$ 7,63 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-jantar-para-receber-amigos-29-10",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Aula prática · R$ 305 + taxa",
+      "eventDate": "2026-10-29",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-massa-fresca-2026-10-30",
+      "name": "Massa fresca — 30/10",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "30/10/2026, 18h30–22h30. Técnicas de sova, abertura e modelagem de cavatelli, ravioli e talharim. R$ 320 + R$ 8 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-massa-fresca-30-10",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Massas · R$ 320 + taxa",
+      "eventDate": "2026-10-30",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-risoto-2026-11-03",
+      "name": "Risotos — 03/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "03/11/2026, 19h–23h. Risoto de pomodoro, cogumelos, camarão e tiramisù. R$ 305 + R$ 7,63 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-risoto-03-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Risoto · R$ 305 + taxa",
+      "eventDate": "2026-11-03",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-sushi-2026-11-07",
+      "name": "Sushi — 07/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "07/11/2026, 10h–14h. Manipulação de pescado, shari, sashimi, sushi e hand rolls. R$ 390 + R$ 9,75 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-sushi-07-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária japonesa · R$ 390 + taxa",
+      "eventDate": "2026-11-07",
+      "verifiedAt": "2026-10-26"
     }
   ],
   "videos": [
     {
-      "id": "vid1",
-      "title": "Aprendendo cortes básicos de vegetais",
-      "topic": "Técnicas",
-      "description": "Encontre aulas sobre julienne, brunoise e cortes de segurança.",
-      "url": "https://www.youtube.com/results?search_query=cortes+b%C3%A1sicos+legumes+chef+aula",
-      "platform": "YouTube"
+      "id": "panelinha-pao-queijo-2023",
+      "title": "Pão de queijo: passo a passo com Rita Lobo",
+      "topic": "Técnicas brasileiras",
+      "description": "Vídeo oficial do Panelinha com demonstração do pão de queijo e opções de aproveitamento da massa.",
+      "url": "https://www.youtube.com/watch?v=2kC3Ruhe2iw",
+      "platform": "YouTube · Panelinha",
+      "verifiedAt": "2026-10-26"
     },
     {
-      "id": "vid2",
-      "title": "Risoto: como acertar o ponto",
-      "topic": "Pratos principais",
-      "description": "Busque demonstrações da textura e ponto al dente.",
-      "url": "https://www.youtube.com/results?search_query=risoto+passo+a+passo+ponto+chef",
-      "platform": "YouTube"
-    },
-    {
-      "id": "vid3",
-      "title": "Bolos e fermentação química",
+      "id": "panelinha-brownie-cafe-2023",
+      "title": "Brownie de chocolate e café com Rita Lobo",
       "topic": "Sobremesas",
-      "description": "Vídeos para entender massa leve e mistura correta.",
-      "url": "https://www.youtube.com/results?search_query=bolo+fofinho+t%C3%A9cnica+fermento",
-      "platform": "YouTube"
+      "description": "Demonstração publicada no canal oficial do Panelinha sobre textura do brownie.",
+      "url": "https://www.youtube.com/watch?v=kE6qTLe17oc",
+      "platform": "YouTube · Panelinha",
+      "verifiedAt": "2026-10-26"
     },
     {
-      "id": "vid4",
-      "title": "Inspiração para cozinhar no Instagram",
-      "topic": "Instagram",
-      "description": "Explore publicações e perfis de gastronomia.",
-      "url": "https://www.instagram.com/explore/tags/receitas/",
-      "platform": "Instagram"
+      "id": "receitas-pao-queijo-liquidificador-2024",
+      "title": "Pão de queijo de liquidificador com Rita Lobo",
+      "topic": "Receitas em vídeo",
+      "description": "Vídeo publicado no canal oficial Receitas, com a versão de liquidificador.",
+      "url": "https://www.youtube.com/watch?v=p_UZdXhjeVQ",
+      "platform": "YouTube · Receitas",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "instagram-panelinha-oficial",
+      "title": "Panelinha no Instagram",
+      "topic": "Instagram oficial",
+      "description": "Perfil oficial para acompanhar publicações gastronômicas e receitas; não é um post específico.",
+      "url": "https://www.instagram.com/panelinha_ritalobo/",
+      "platform": "Instagram · Panelinha",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "instagram-junta-cozinha-oficial",
+      "title": "Junta Cozinha no Instagram",
+      "topic": "Instagram oficial",
+      "description": "Perfil oficial divulgado no site da escola; consulte publicações e atualizações de aulas.",
+      "url": "https://www.instagram.com/juntacozinha/",
+      "platform": "Instagram · Junta Cozinha",
+      "verifiedAt": "2026-10-26"
     }
   ],
   "curatedQueue": [],
-  "releaseHistory": [],
+  "releaseHistory": [
+    {
+      "date": "2026-10-26",
+      "type": "curadoria-editorial",
+      "recipesAdded": 7,
+      "workshopsAdded": 5,
+      "videosReviewed": 5,
+      "notes": "Receitas e eventos com fonte oficial; fichas não reproduzem quantidades ou modo de preparo protegidos; nenhum teste independente alegado."
+    }
+  ],
   "curationPolicy": {
     "version": 2,
     "rule": "Receitas de fontes editoriais reputadas, ingredientes encontrados em supermercados brasileiros; receitas internacionais são aceitas. Sem inventar preparo, teste ou quantidade.",
-    "reviewDate": "2026-10-15",
+    "reviewDate": "2026-10-26",
     "notes": "Fichas com referências e links oficiais; ingredientes completos e modos de preparo permanecem na fonte."
   }
 };
