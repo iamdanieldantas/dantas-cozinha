@@ -1,6 +1,6 @@
 # Dantas Cozinha 🍲
 
-Portal pessoal de culinária, com visual acolhedor e **15 receitas iniciais completas**, técnicas, vídeos para inspiração, referências a escolas de gastronomia da Zona Sul de São Paulo, favoritos, notas e planejamento semanal com lista de compras.
+Portal pessoal de culinária, com visual acolhedor e **22 fichas editoriais de receitas com fontes identificadas**, técnicas, vídeos oficiais, oficinas gastronômicas na Zona Sul de São Paulo, favoritos, notas e planejamento semanal. As fichas referenciam as receitas completas nas páginas dos autores; não reproduzem integralmente o preparo nem alegam testes independentes. A lista de compras funciona apenas para receitas com quantidades completas cadastradas.
 
 ## Testar agora
 
