@@ -1,6 +1,6 @@
 window.DANTAS_DATA = {
   "siteName": "Dantas Cozinha",
-  "generatedAt": "2026-10-26T15:14:00-03:00",
+  "generatedAt": "2026-10-31T15:00:00-03:00",
   "recipes": [
     {
       "id": "curadoria-bruschetta-de-tomate",
@@ -704,6 +704,116 @@ window.DANTAS_DATA = {
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Fubá mimoso, farinha de trigo, açúcar, ovos, óleo, leite, fermento e erva-doce",
       "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+    },
+    {
+      "id": "aula-cantinho-mini-burger",
+      "title": "Mini Burger — dois blends e molho da casa",
+      "category": "principal",
+      "description": "Mini-hambúrgueres da aula de Steakhouse. Escolha entre blend de acém com peito ou acém com costela; acompanhe com molho da casa e toppings opcionais.",
+      "minutes": 40,
+      "difficulty": "Médio",
+      "emoji": "🍔",
+      "ingredients": [
+        "Blend 1: 170 g de acém + 70 g de peito bovino (ou blend 2: 170 g de acém + 70 g de costela bovina desossada)",
+        "8 mini pães de hambúrguer",
+        "8 fatias pequenas de American cheese",
+        "80 g de picles de pepino",
+        "Manteiga para dourar os pães",
+        "Sal e pimenta-do-reino a gosto",
+        "Toppings opcionais: farofa de bacon, jalapeño em conserva, molho barbecue",
+        "Molho da casa: 100 g de maionese, 20 g de ketchup, 15 g de mostarda amarela, 20 g de picles bem picado, 5 ml de conserva de picles, 3 g de açúcar, 2 g de páprica doce, 2 g de alho em pó e pimenta-do-reino"
+      ],
+      "steps": [
+        "Mantenha as carnes bem geladas. Misture os dois cortes do blend escolhido sem trabalhar excessivamente a carne; divida em quatro porções de cerca de 60 g e molde discos sem compactar demais. Mantenha refrigerados.",
+        "Aqueça bem uma chapa ou frigideira. Tempere os hambúrgueres com sal e pimenta apenas antes de levá-los ao fogo.",
+        "Grelhe até formar crosta dourada, vire, adicione o American cheese e termine a cocção até o ponto seguro desejado.",
+        "Abra os mini pães, passe um pouco de manteiga e doure a parte interna na chapa.",
+        "Misture os ingredientes do molho até ficar homogêneo e mantenha refrigerado. Monte os mini burgers com queijo, molho, picles e toppings opcionais."
+      ],
+      "tip": "Anotações da aula: não trabalhar demais o blend; selar o pão. Para hambúrguer de carne moída, a referência de segurança é 71 °C no centro. A apostila menciona quatro porções de 60 g, embora liste oito pães — confira o rendimento desejado.",
+      "servings": 4,
+      "createdAt": "2026-10-31",
+      "source": "Cantinho Gastronomia — aula de Steakhouse, professora Adriana (apostila fornecida pelo aluno)",
+      "sourceName": "Cantinho Gastronomia",
+      "sourceUrl": "https://www.cantinhogastronomia.com.br",
+      "curationStatus": "material-de-aula-fornecido-pelo-aluno",
+      "verifiedTestClaim": "Receita da apostila da aula; não há alegação de teste independente pelo portal.",
+      "tags": [
+        "steakhouse",
+        "aula presencial",
+        "anotações do aluno"
+      ]
+    },
+    {
+      "id": "aula-cantinho-prime-rib",
+      "title": "Prime Rib com salada de batatas e cebola assada",
+      "category": "principal",
+      "description": "Prime rib selado na frigideira e finalizado no forno, servido com salada de batatas com maionese caseira e cebolas assadas.",
+      "minutes": 80,
+      "difficulty": "Médio",
+      "emoji": "🥩",
+      "ingredients": [
+        "Prime rib: 750 g de prime rib com osso, 15 ml de óleo, 30 g de manteiga, 2 dentes de alho, 2 ramos de alecrim, sal e pimenta-do-reino",
+        "Salada: 500 g de batata inglesa, 2 gemas, 10 g de mostarda Dijon, 10 ml de suco de limão, 150 ml de óleo, 15 g de picles de pepino, 15 g de cebolinha, sal e pimenta-do-reino",
+        "Cebolas: 2 cebolas médias, 15 ml de azeite, 15 g de manteiga, 2 ramos de tomilho, sal e pimenta-do-reino"
+      ],
+      "steps": [
+        "Retire o prime rib da geladeira cerca de 30 minutos antes do preparo e seque bem a superfície. Tempere com sal e pimenta.",
+        "Aqueça uma frigideira de ferro, adicione óleo e sele ambos os lados até formar crosta intensa. Acrescente manteiga, alho e alecrim e regue a carne com a manteiga espumante.",
+        "Leve ao forno preaquecido a 180 °C até o ponto desejado. A apostila sugere 52–54 °C no centro para malpassado; esse ponto é inferior à referência conservadora de segurança de 63 °C com descanso de 3 minutos para cortes bovinos inteiros.",
+        "Descanse a carne por 8–10 minutos. Retire do osso e fatie contra as fibras.",
+        "Cozinhe as batatas inteiras em água salgada até ficarem macias sem desmanchar; escorra, deixe amornar e corte.",
+        "Para a maionese, bata gemas, mostarda e limão; adicione óleo aos poucos até emulsionar. Tempere e misture às batatas com picles e cebolinha. Por segurança alimentar, prefira gemas pasteurizadas na maionese sem cocção.",
+        "Corte as cebolas ao meio mantendo a raiz. Tempere com azeite, sal e pimenta; asse com a face cortada para baixo a 200 °C por cerca de 25–35 minutos. Finalize com manteiga e tomilho e volte ao forno por alguns minutos."
+      ],
+      "tip": "Anotações da aula: risoto não deve receber água durante a finalização (observação avulsa, não integrante desta receita). Para a salada, use apenas a maionese necessária para envolver as batatas.",
+      "servings": 4,
+      "createdAt": "2026-10-31",
+      "source": "Cantinho Gastronomia — aula de Steakhouse, professora Adriana (apostila fornecida pelo aluno)",
+      "sourceName": "Cantinho Gastronomia",
+      "sourceUrl": "https://www.cantinhogastronomia.com.br",
+      "curationStatus": "material-de-aula-fornecido-pelo-aluno",
+      "verifiedTestClaim": "Receita da apostila da aula; não há alegação de teste independente pelo portal.",
+      "tags": [
+        "steakhouse",
+        "aula presencial",
+        "anotações do aluno"
+      ]
+    },
+    {
+      "id": "aula-cantinho-cookie-skillet",
+      "title": "Cookie Skillet com caramelo salgado e sorvete",
+      "category": "sobremesa",
+      "description": "Cookie de frigideira com chocolate meio amargo, centro macio e caramelo salgado. Sirva com sorvete.",
+      "minutes": 55,
+      "difficulty": "Médio",
+      "emoji": "🍪",
+      "ingredients": [
+        "Cookie: 100 g de manteiga sem sal, 70 g de açúcar mascavo, 40 g de açúcar refinado, 1 ovo, 5 ml de extrato de baunilha, 160 g de farinha de trigo, 2 g de bicarbonato de sódio, 2 g de sal e 120 g de chocolate meio amargo picado",
+        "Caramelo: 100 g de açúcar, 80 g de creme de leite fresco, 30 g de manteiga sem sal e 2 g de flor de sal",
+        "Sorvete para servir (quantidade a gosto)"
+      ],
+      "steps": [
+        "Misture manteiga, açúcar mascavo e açúcar refinado até formar creme homogêneo. Adicione ovo e baunilha.",
+        "Incorpore farinha, bicarbonato e sal apenas até homogeneizar. Acrescente o chocolate picado, reservando um pouco para finalizar.",
+        "Distribua em frigideira de ferro de 18–20 cm sem compactar demais. Espalhe o chocolate reservado por cima.",
+        "Asse em forno preaquecido a 180 °C por aproximadamente 15–20 minutos, até bordas firmes e douradas e centro ainda macio. A anotação manuscrita registra 35 minutos; acompanhe o ponto conforme o forno e a frigideira.",
+        "Para o caramelo, derreta o açúcar em fogo médio até âmbar. Aqueça o creme de leite separadamente e adicione com cuidado ao caramelo quente, misturando até homogeneizar.",
+        "Retire do fogo, incorpore a manteiga e finalize com flor de sal. Deixe amornar até ficar cremoso e sirva com o cookie e sorvete."
+      ],
+      "tip": "Anotações da aula: manteiga em ponto de pomada, chocolate nobre, bicarbonato para bordas crocantes e centro macio; possibilidade de adicionar licor de laranja ao caramelo (sem quantidade especificada). A nota de 35 minutos diverge dos 15–20 minutos impressos: conferir o ponto visual.",
+      "servings": 4,
+      "createdAt": "2026-10-31",
+      "source": "Cantinho Gastronomia — aula de Steakhouse, professora Adriana (apostila fornecida pelo aluno)",
+      "sourceName": "Cantinho Gastronomia",
+      "sourceUrl": "https://www.cantinhogastronomia.com.br",
+      "curationStatus": "material-de-aula-fornecido-pelo-aluno",
+      "verifiedTestClaim": "Receita da apostila da aula; não há alegação de teste independente pelo portal.",
+      "tags": [
+        "steakhouse",
+        "aula presencial",
+        "anotações do aluno"
+      ]
     }
   ],
   "techniques": [
@@ -934,6 +1044,12 @@ window.DANTAS_DATA = {
       "workshopsAdded": 5,
       "videosReviewed": 5,
       "notes": "Receitas e eventos com fonte oficial; fichas não reproduzem quantidades ou modo de preparo protegidos; nenhum teste independente alegado."
+    },
+    {
+      "date": "2026-10-31",
+      "type": "receitas-de-aula",
+      "recipesAdded": 3,
+      "notes": "Três receitas transcritas da apostila de Steakhouse fornecida pelo usuário, com observações manuscritas, créditos à escola e ressalvas de segurança alimentar."
     }
   ],
   "curationPolicy": {
