@@ -837,6 +837,53 @@ window.DANTAS_DATA = {
       "image": "https://images.pexels.com/photos/25749304/pexels-photo-25749304.jpeg?auto=compress&cs=tinysrgb&w=940",
       "imageCredit": "Foto ilustrativa: Zehra Yılmaz / Pexels",
       "imageSourceUrl": "https://www.pexels.com/photo/top-view-of-a-cake-with-ice-cream-on-top-25749304/"
+    },
+    {
+      "id": "adaptacao-brownie-forma-20x30",
+      "title": "Brownie de chocolate — adaptação para forma 20 × 30 cm",
+      "category": "sobremesa",
+      "description": "Brownie adaptado para forma de 20 × 30 cm, com manteiga com sal, chocolate picado e cacau em pó. Tempo e temperatura de forno estimados.",
+      "minutes": 35,
+      "minutesLabel": "25–35 min de forno (estimativa)",
+      "difficulty": "Fácil",
+      "servings": 12,
+      "servingsLabel": "1 forma de 20 × 30 cm",
+      "emoji": "🍫",
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=940&q=80",
+      "ingredients": [
+        "160 g de manteiga com sal",
+        "3 ovos",
+        "283 g de açúcar refinado",
+        "240 g de chocolate picado ou em gotas",
+        "60 g de cacau em pó 100%",
+        "127 g de farinha de trigo",
+        "¾ de colher de chá de fermento químico",
+        "2 colheres de chá de essência de baunilha",
+        "5,7 g de café solúvel tipo espresso (opcional)",
+        "Não adicionar sal extra"
+      ],
+      "steps": [
+        "Misture os ovos com o cacau, fermento, café e baunilha.",
+        "Em outra tigela, misture a manteiga derretida com o açúcar. Aqueça cuidadosamente em intervalos de 15 segundos no micro-ondas, mexendo, até ficar brilhante.",
+        "Junte as duas misturas.",
+        "Acrescente a farinha, mexendo delicadamente.",
+        "Incorpore o chocolate picado.",
+        "Coloque na forma de 20 × 30 cm forrada com papel-manteiga.",
+        "Asse a 175–180 °C. Comece a verificar o ponto após 20 minutos; o tempo total pode ficar em torno de 25–35 minutos."
+      ],
+      "tip": "O tempo e a temperatura são estimativas para a receita adaptada, pois não aparecem na captura do TikTok. Observe o ponto do brownie e evite assar demais. A receita não foi testada independentemente pelo portal.",
+      "tags": [
+        "brownie",
+        "chocolate",
+        "receita adaptada",
+        "forma 20 × 30 cm"
+      ],
+      "createdAt": "2026-10-31",
+      "source": "Adaptação compartilhada pelo usuário a partir de receita em vídeo no TikTok",
+      "sourceName": "Adaptação do usuário",
+      "curationStatus": "adaptacao-fornecida-pelo-usuario",
+      "verifiedTestClaim": "Adaptação compartilhada pelo usuário; temperatura e tempo estimados, sem teste independente do portal.",
+      "imageCredit": "Fotografia ilustrativa de brownie / Unsplash"
     }
   ],
   "techniques": [
