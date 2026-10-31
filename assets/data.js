@@ -478,7 +478,7 @@ window.DANTAS_DATA = {
       "servings": 9,
       "servingsLabel": "9 cookies",
       "emoji": "🍪",
-      "image": "",
+      "image": "https://images.pexels.com/photos/7886759/pexels-photo-7886759.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -499,7 +499,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Chocolate amargo, manteiga, açúcar mascavo, açúcar, farinha de trigo, fermento e ovo",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Meggy Kadam Aryanto / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/7886759/"
     },
     {
       "id": "curadoria-cookie-brownie",
@@ -512,7 +514,7 @@ window.DANTAS_DATA = {
       "servings": 14,
       "servingsLabel": "14 unidades",
       "emoji": "🍫",
-      "image": "",
+      "image": "https://images.pexels.com/photos/14576527/pexels-photo-14576527.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -533,7 +535,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Chocolate 60% cacau, manteiga, ovos, açúcar, açúcar mascavo, farinha de trigo e cacau em pó",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Bethany Hicks / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/14576527/"
     },
     {
       "id": "curadoria-pao-de-queijo",
@@ -546,7 +550,7 @@ window.DANTAS_DATA = {
       "servings": 17,
       "servingsLabel": "16–18 unidades",
       "emoji": "🧀",
-      "image": "",
+      "image": "https://images.pexels.com/photos/34259860/pexels-photo-34259860.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -567,7 +571,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Polvilho azedo, polvilho doce, queijo meia-cura, ovos, água, óleo e sal",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Nathalia Crispim / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/34259860/"
     },
     {
       "id": "curadoria-mac-and-cheese",
@@ -580,7 +586,7 @@ window.DANTAS_DATA = {
       "servings": 1,
       "servingsLabel": "1 porção",
       "emoji": "🧀",
-      "image": "",
+      "image": "https://images.pexels.com/photos/9397238/pexels-photo-9397238.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -601,7 +607,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Macarrão caracol, creme de leite fresco, parmesão, noz-moscada, sal e pimenta-do-reino",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Hayden Walker / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/9397238/"
     },
     {
       "id": "curadoria-macarrao-molho-tomate-pressao",
@@ -614,7 +622,7 @@ window.DANTAS_DATA = {
       "servings": 2,
       "servingsLabel": "Até 2 porções",
       "emoji": "🍝",
-      "image": "",
+      "image": "https://images.pexels.com/photos/26207779/pexels-photo-26207779.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -635,7 +643,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Macarrão fusili, tomate pelado, alho, manjericão, azeite, sal e parmesão",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Esra Erdem / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/26207779/"
     },
     {
       "id": "curadoria-brownie-chocolate-queijo-flavio-federico",
@@ -648,7 +658,7 @@ window.DANTAS_DATA = {
       "servings": 10,
       "servingsLabel": "10 porções",
       "emoji": "🍫",
-      "image": "",
+      "image": "https://images.pexels.com/photos/6095744/pexels-photo-6095744.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -669,7 +679,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Chocolate meio amargo, manteiga, ovos, farinha, açúcar mascavo, cream cheese e laranja",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Nonik Yench / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/6095744/"
     },
     {
       "id": "curadoria-bolo-de-fuba",
@@ -682,7 +694,7 @@ window.DANTAS_DATA = {
       "servings": 12,
       "servingsLabel": "12 porções",
       "emoji": "🍰",
-      "image": "",
+      "image": "https://images.pexels.com/photos/13991401/pexels-photo-13991401.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -703,7 +715,9 @@ window.DANTAS_DATA = {
       "sourceVerifiedAt": "2026-10-26",
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Fubá mimoso, farinha de trigo, açúcar, ovos, óleo, leite, fermento e erva-doce",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "imageCredit": "Foto ilustrativa: Reveca Chavez Perez / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/13991401/"
     },
     {
       "id": "aula-cantinho-mini-burger",
