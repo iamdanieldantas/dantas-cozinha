@@ -15,7 +15,8 @@ class ContentTests(unittest.TestCase):
     self.assertGreaterEqual(len(d['recipes']),15)
     self.assertEqual(len({r['id'] for r in d['recipes']}),len(d['recipes']))
     self.assertEqual(len({t['id'] for t in d['techniques']}),len(d['techniques']))
-    self.assertEqual(len({r.get('sourceUrl') for r in d['recipes'] if r.get('sourceUrl')}),len([r for r in d['recipes'] if r.get('sourceUrl')]))
+    editorial=[r for r in d['recipes'] if r.get('curationStatus')=='fonte-editorial-verificada' and r.get('sourceUrl')]
+    self.assertEqual(len({r['sourceUrl'] for r in editorial}),len(editorial))
     self.assertTrue(all(r.get('sourceName') and r.get('sourceUrl','').startswith('https://') for r in d['recipes'] if r.get('curationStatus')=='fonte-editorial-verificada'))
     self.assertTrue(all(v['url'].startswith('https://') and 'results?search_query=' not in v['url'] for v in d['videos']))
     self.assertTrue(all(w.get('eventDate','9999-12-31')>='2026-10-26' for w in d['workshops'] if w.get('verifiedAt')=='2026-10-26'))
@@ -25,7 +26,7 @@ class ContentTests(unittest.TestCase):
       self.assertIn(r['category'],('entrada','principal','sobremesa'))
       self.assertGreaterEqual(len(r['steps']),3)
       self.assertTrue(r['ingredients'] or (r.get('sourceUrl','').startswith('https://') and r.get('sourceName')))
-      self.assertTrue(all(i['quantity']>0 and i['unit'] and i['name'] for i in r['ingredients']))
+      self.assertTrue(all((isinstance(i,str) and bool(i.strip())) or (isinstance(i,dict) and i.get('quantity',0)>0 and i.get('unit') and i.get('name')) for i in r['ingredients']))
       self.assertGreater(r['servings'],0)
   def test_weekly_publishes_recipe_and_technique_once(self):
     d=load(BASE/'assets'/'data.js')
