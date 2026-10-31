@@ -694,7 +694,7 @@ window.DANTAS_DATA = {
       "servings": 12,
       "servingsLabel": "12 porções",
       "emoji": "🍰",
-      "image": "https://images.pexels.com/photos/13991401/pexels-photo-13991401.jpeg?auto=compress&cs=tinysrgb&w=940",
+      "image": "https://images.pexels.com/photos/34637996/pexels-photo-34637996.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [],
       "steps": [
         "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
@@ -716,8 +716,8 @@ window.DANTAS_DATA = {
       "curationStatus": "fonte-editorial-verificada",
       "ingredientsSummary": "Fubá mimoso, farinha de trigo, açúcar, ovos, óleo, leite, fermento e erva-doce",
       "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
-      "imageCredit": "Foto ilustrativa: Reveca Chavez Perez / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/13991401/"
+      "imageCredit": "Foto ilustrativa de bolo de milho: Alejandro JV / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/mexican-elote-cake-on-decorative-plate-34637996/"
     },
     {
       "id": "aula-cantinho-mini-burger",
