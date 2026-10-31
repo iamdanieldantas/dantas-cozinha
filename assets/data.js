@@ -742,7 +742,10 @@ window.DANTAS_DATA = {
         "steakhouse",
         "aula presencial",
         "anotações do aluno"
-      ]
+      ],
+      "image": "https://images.pexels.com/photos/7015324/pexels-photo-7015324.jpeg?auto=compress&cs=tinysrgb&w=940",
+      "imageCredit": "Foto ilustrativa: Dmitry Sidorov / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/photo-of-mini-burgers-7015324/"
     },
     {
       "id": "aula-cantinho-prime-rib",
@@ -778,7 +781,10 @@ window.DANTAS_DATA = {
         "steakhouse",
         "aula presencial",
         "anotações do aluno"
-      ]
+      ],
+      "image": "https://images.pexels.com/photos/8753745/pexels-photo-8753745.jpeg?auto=compress&cs=tinysrgb&w=940",
+      "imageCredit": "Foto ilustrativa: Team Picsfast / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/grilled-steak-on-a-ceramic-plate-8753745/"
     },
     {
       "id": "aula-cantinho-cookie-skillet",
@@ -813,7 +819,10 @@ window.DANTAS_DATA = {
         "steakhouse",
         "aula presencial",
         "anotações do aluno"
-      ]
+      ],
+      "image": "https://images.pexels.com/photos/25749304/pexels-photo-25749304.jpeg?auto=compress&cs=tinysrgb&w=940",
+      "imageCredit": "Foto ilustrativa: Zehra Yılmaz / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/top-view-of-a-cake-with-ice-cream-on-top-25749304/"
     }
   ],
   "techniques": [
