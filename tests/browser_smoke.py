@@ -32,6 +32,10 @@ def run():
 
             desktop.locator(".hero-actions [data-goto='receitas']").click()
             assert desktop.locator("#recipe-list .recipe-card").count() == 26
+            assert desktop.locator("#curation-list .curation-card").count() == 3, "Seleções da semana ausentes"
+            assert desktop.locator("#curation-list a[href='https://panelinha.com.br/receita/empanadas-de-carne']").count() == 1
+            assert desktop.locator("#curation-list .curation-ingredients li").count() >= 10
+            assert desktop.locator("#curation-list .detail-steps").count() == 0
             desktop.locator("#recipe-search").fill("brownie")
             assert desktop.locator("#recipe-list .recipe-card").count() >= 3
 
@@ -60,6 +64,10 @@ def run():
             mobile.route("https://**/*", lambda route: route.abort())
             mobile.goto(base + "#receitas", wait_until="domcontentloaded")
             assert mobile.locator("#recipe-list .recipe-card").count() == 26
+            assert mobile.locator("#curation-list .curation-card").count() == 3
+            mobile.goto(base + "#workshops", wait_until="domcontentloaded")
+            assert mobile.locator("#workshop-list .workshop-card").count() == 9
+            mobile.goto(base + "#receitas", wait_until="domcontentloaded")
             mobile.locator("#recipe-list button.inline-link[data-recipe='curadoria-torta-de-frango-classica']").click()
             assert mobile.locator("#recipe-detail h1").inner_text() == "Torta de frango clássica"
             assert mobile.locator("#ingredients-list .ingredient-entry").count() >= 10
@@ -67,7 +75,7 @@ def run():
             assert mobile.locator("#recipe-detail").is_visible()
 
             assert not errors, "Erros JavaScript no navegador: " + repr(errors)
-            print("SMOKE OK: desktop, celular, ingredientes, preparo, quantidades, aulas e navegação direta")
+            print("SMOKE OK: desktop, celular, curadoria verificada, oficinas, ingredientes, preparo, aulas e navegação direta")
             browser.close()
     finally:
         server.shutdown()
