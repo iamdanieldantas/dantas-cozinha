@@ -1,6 +1,6 @@
 window.DANTAS_DATA = {
   "siteName": "Dantas Cozinha",
-  "generatedAt": "2026-11-02T15:00:00-03:00",
+  "generatedAt": "2026-11-02T15:21:00-03:00",
   "recipes": [
     {
       "id": "curadoria-bruschetta-de-tomate",
@@ -2565,6 +2565,78 @@ window.DANTAS_DATA = {
   ],
   "workshops": [
     {
+      "id": "junta-risoto-2026-11-03",
+      "name": "Risotos — 03/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "03/11/2026, 19h–23h. Risoto de pomodoro, cogumelos, camarão e tiramisù. R$ 305 + R$ 7,63 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-risoto-03-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Risoto · R$ 305 + taxa",
+      "eventDate": "2026-11-03",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-bao-guioza-2026-11-04",
+      "name": "Bao e guioza — 04/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "04/11/2026, 19h–23h. Massa de bao, porco agridoce, frango frito coreano, guioza e acompanhamentos. Valor publicado: R$ 305 + R$ 7,63 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-bao-e-guioza-04-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária asiática · R$ 305 + taxa",
+      "eventDate": "2026-11-04",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "junta-sushi-2026-11-07",
+      "name": "Sushi — 07/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "07/11/2026, 10h–14h. Manipulação de pescado, shari, sashimi, sushi e hand rolls. R$ 390 + R$ 9,75 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-sushi-07-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária japonesa · R$ 390 + taxa",
+      "eventDate": "2026-11-07",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-gnocchi-2026-11-09",
+      "name": "Gnocchi — 09/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "09/11/2026, 19h–23h. Massas de batata, banana-da-terra e mandioquinha com molhos. Valor publicado: R$ 305 + R$ 7,63 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-gnocchi-09-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Massas italianas · R$ 305 + taxa",
+      "eventDate": "2026-11-09",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "junta-pizza-2026-11-11",
+      "name": "Pizza do zero — 11/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "11/11/2026, 19h–23h. Massa de pizza, abertura, montagem e sabores marinara, pepperoni e marguerita. Valor publicado: R$ 305 + R$ 7,63 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-pizza-11-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Pizza artesanal · R$ 305 + taxa",
+      "eventDate": "2026-11-11",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "junta-massa-fresca-2026-11-13",
+      "name": "Massa fresca — 13/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "13/11/2026, 19h–23h. Raviolo, talharim e cavatelli com diferentes molhos, além de panacota de milho. Valor publicado: R$ 330 + R$ 8,25 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-massa-fresca-13-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Massa fresca · R$ 330 + taxa",
+      "eventDate": "2026-11-13",
+      "verifiedAt": "2026-11-02"
+    },
+    {
       "id": "accademia",
       "name": "Accademia Gastronomica",
       "neighborhood": "Moema",
@@ -2599,66 +2671,6 @@ window.DANTAS_DATA = {
       "tag": "Cursos presenciais",
       "eventDate": null,
       "verifiedAt": "2026-10-15"
-    },
-    {
-      "id": "junta-boteco-2026-10-28",
-      "name": "Aula de boteco do Junta — 28/10",
-      "neighborhood": "Vila Clementino",
-      "address": "Rua Gandavo, 363",
-      "description": "28/10/2026, 18h30–22h30. Bolovo, bolinho de bacalhau, escondidinho de carne-seca e técnicas de fritura. R$ 305 + R$ 7,63 de taxa (preço publicado; vagas não confirmadas).",
-      "url": "https://www.juntacozinha.com.br/event-details/aula-de-boteco-do-junta-28-10",
-      "instagram": "https://www.instagram.com/juntacozinha/",
-      "tag": "Aula prática · R$ 305 + taxa",
-      "eventDate": "2026-10-28",
-      "verifiedAt": "2026-10-26"
-    },
-    {
-      "id": "junta-jantar-amigos-2026-10-29",
-      "name": "Jantar para receber amigos — 29/10",
-      "neighborhood": "Vila Clementino",
-      "address": "Rua Gandavo, 363",
-      "description": "29/10/2026, 18h30–22h30. Brócolis à carbonara, cavatelli com linguiça e mil-folhas de milho verde. R$ 305 + R$ 7,63 de taxa (vagas não confirmadas).",
-      "url": "https://www.juntacozinha.com.br/event-details/aula-de-jantar-para-receber-amigos-29-10",
-      "instagram": "https://www.instagram.com/juntacozinha/",
-      "tag": "Aula prática · R$ 305 + taxa",
-      "eventDate": "2026-10-29",
-      "verifiedAt": "2026-10-26"
-    },
-    {
-      "id": "junta-massa-fresca-2026-10-30",
-      "name": "Massa fresca — 30/10",
-      "neighborhood": "Vila Clementino",
-      "address": "Rua Gandavo, 363",
-      "description": "30/10/2026, 18h30–22h30. Técnicas de sova, abertura e modelagem de cavatelli, ravioli e talharim. R$ 320 + R$ 8 de taxa (vagas não confirmadas).",
-      "url": "https://www.juntacozinha.com.br/event-details/aula-de-massa-fresca-30-10",
-      "instagram": "https://www.instagram.com/juntacozinha/",
-      "tag": "Massas · R$ 320 + taxa",
-      "eventDate": "2026-10-30",
-      "verifiedAt": "2026-10-26"
-    },
-    {
-      "id": "junta-risoto-2026-11-03",
-      "name": "Risotos — 03/11",
-      "neighborhood": "Vila Clementino",
-      "address": "Rua Gandavo, 363",
-      "description": "03/11/2026, 19h–23h. Risoto de pomodoro, cogumelos, camarão e tiramisù. R$ 305 + R$ 7,63 de taxa (vagas não confirmadas).",
-      "url": "https://www.juntacozinha.com.br/event-details/aula-de-risoto-03-11",
-      "instagram": "https://www.instagram.com/juntacozinha/",
-      "tag": "Risoto · R$ 305 + taxa",
-      "eventDate": "2026-11-03",
-      "verifiedAt": "2026-10-26"
-    },
-    {
-      "id": "junta-sushi-2026-11-07",
-      "name": "Sushi — 07/11",
-      "neighborhood": "Vila Clementino",
-      "address": "Rua Gandavo, 363",
-      "description": "07/11/2026, 10h–14h. Manipulação de pescado, shari, sashimi, sushi e hand rolls. R$ 390 + R$ 9,75 de taxa (vagas não confirmadas).",
-      "url": "https://www.juntacozinha.com.br/event-details/aula-de-sushi-07-11",
-      "instagram": "https://www.instagram.com/juntacozinha/",
-      "tag": "Culinária japonesa · R$ 390 + taxa",
-      "eventDate": "2026-11-07",
-      "verifiedAt": "2026-10-26"
     }
   ],
   "videos": [
@@ -2723,12 +2735,90 @@ window.DANTAS_DATA = {
       "type": "receitas-de-aula",
       "recipesAdded": 3,
       "notes": "Três receitas transcritas da apostila de Steakhouse fornecida pelo usuário, com observações manuscritas, créditos à escola e ressalvas de segurança alimentar."
+    },
+    {
+      "date": "2026-11-02",
+      "type": "curadoria-editorial",
+      "recipesAdded": 0,
+      "editorialSelectionsAdded": 3,
+      "workshopsAdded": 4,
+      "workshopsExpiredRemoved": 3,
+      "videosAdded": 0,
+      "notes": "Três novas seleções com autoria e URL oficial verificadas, sem reproduzir preparo. Quatro aulas futuras com datas e preços publicados nas páginas da escola; vagas não confirmadas. Nenhum vídeo novo por falta de URL adicional verificável."
     }
   ],
   "curationPolicy": {
     "version": 2,
     "rule": "Receitas de fontes editoriais reputadas, ingredientes encontrados em supermercados brasileiros; receitas internacionais são aceitas. Sem inventar preparo, teste ou quantidade.",
-    "reviewDate": "2026-10-26",
-    "notes": "Fichas com referências e links oficiais; ingredientes completos e modos de preparo permanecem na fonte."
-  }
+    "reviewDate": "2026-11-02",
+    "notes": "Fichas editoriais semanais de novas fontes incluem título, descrição própria, ingredientes principais, autoria e URL original; não reproduzem quantidades ou preparo. O catálogo legado mantém seu próprio esquema."
+  },
+  "curatedDiscoveries": [
+    {
+      "id": "selecao-2026-11-02-nhoque-de-batata",
+      "title": "Nhoque de batata",
+      "category": "principal",
+      "description": "Massa caseira italiana feita com batata, gemas e farinha. Uma opção para preparar com molho de tomate, manteiga ou o acompanhamento preferido; o passo a passo e as medidas permanecem na publicação original.",
+      "mainIngredients": [
+        "batata asterix",
+        "gemas",
+        "farinha de trigo",
+        "sal"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-02-empanadas-de-carne",
+      "title": "Empanadas de carne",
+      "category": "principal",
+      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias. A versão publicada utiliza manteiga e ingredientes comuns em supermercados brasileiros; consulte a fonte para medidas e instruções.",
+      "mainIngredients": [
+        "farinha de trigo",
+        "manteiga",
+        "contrafilé",
+        "cebola",
+        "ovos",
+        "salsinha",
+        "cominho",
+        "páprica"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-02-focaccia-sem-sova",
+      "title": "Focaccia sem sova",
+      "category": "entrada",
+      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes. Uma escolha para servir como entrada ou acompanhar refeições, com instruções de fermentação na fonte original.",
+      "mainIngredients": [
+        "farinha de trigo",
+        "fermento biológico seco instantâneo",
+        "sal",
+        "água",
+        "azeite",
+        "sal grosso"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    }
+  ]
 };
