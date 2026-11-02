@@ -38,6 +38,12 @@ jobs:
         run: |
           node --check assets/app.js
           node --check assets/data.js
+      - name: Instalar navegador de testes
+        run: |
+          python -m pip install --disable-pip-version-check playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Testar receitas e Escola no navegador
+        run: python tests/browser_smoke.py
       - name: Preparar diretório público
         run: |
           mkdir -p _site/assets
