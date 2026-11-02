@@ -31,6 +31,14 @@ A partir de 16/10/2026, as novas receitas do Dantas Cozinha serão selecionadas 
 - O workflow do GitHub Actions executa testes e publica o site quando houver commits, além de uma republicação agendada toda segunda de manhã. **Não executa mais o gerador anterior de receitas por IA/fila editorial.** O script `scripts/weekly_update.py` foi mantido apenas como legado.
 - Para workshops e vídeos, usar links reais e não inventar datas, preços ou disponibilidade.
 
+## Seleções semanais com autoria e fonte verificadas
+
+O campo `curatedDiscoveries` de `assets/data.js` armazena **fichas editoriais** selecionadas de fontes externas. Cada ficha inclui título, categoria, descrição escrita para o portal, ingredientes principais sem quantidades, autoria, veículo e URL original. Elas aparecem em **Receitas → Novidades da curadoria** e levam ao preparo no site da fonte. **Não são fichas completas**: não entram no planejador nem geram listas de compras, e não afirmam teste independente.
+
+O campo `recipes` permanece reservado às receitas com medidas e etapas completas. As fichas externas nunca devem ser inseridas ali apenas para cumprir a atualização semanal. A suíte de testes impede URLs duplicadas, ausência de autoria e eventos expirados. Os valores e horários das oficinas são os publicados pela escola na data da revisão; a existência de vagas não é confirmada.
+
+A revisão de 02/11/2026 incluiu três fichas editoriais de receitas do Panelinha e quatro aulas futuras do Junta Cozinha, retirando três eventos encerrados. Nenhum vídeo ou post novo foi acrescentado sem URL adicional verificável.
+
 ## Conteúdo e fontes
 
 Receitas e artigos iniciais são textos editoriais próprios, com imagens meramente ilustrativas carregadas do Unsplash. Endereços e escolas foram conferidos nas páginas oficiais em 15/10/2026:
