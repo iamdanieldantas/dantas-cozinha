@@ -9,29 +9,69 @@ window.DANTAS_DATA = {
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Pão, tomate, alho, azeite e manjericão. Confira as quantidades e o preparo exatos no site original.",
       "minutes": 20,
       "difficulty": "Fácil",
-      "servings": 18,
+      "servings": 6,
       "emoji": "🍅",
       "image": "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 6,
+          "unit": "fatias",
+          "name": "pão italiano"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "tomates maduros"
+        },
+        {
+          "quantity": 1,
+          "unit": "dente",
+          "name": "alho"
+        },
+        {
+          "quantity": 30,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 10,
+          "unit": "folhas",
+          "name": "manjericão fresco"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Lave os tomates, retire a parte mais úmida das sementes e corte a polpa em cubinhos. Tempere com sal, pimenta e metade do azeite.",
+        "Corte o pão em fatias grossas. Doure dos dois lados em frigideira ou forno até ficar crocante por fora.",
+        "Descasque o alho e esfregue delicadamente sobre um dos lados de cada fatia ainda quente.",
+        "Distribua o tomate temperado sobre o pão, regue com o azeite restante e acrescente as folhas de manjericão.",
+        "Sirva imediatamente para manter o contraste entre o pão crocante e o tomate fresco."
+      ],
+      "tip": "Monte a bruschetta apenas na hora de servir, para o pão não amolecer.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/bruschetta-de-tomate",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Pão, tomate, alho, azeite e manjericão",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "20 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-salada-caprese-classica",
@@ -40,29 +80,64 @@ window.DANTAS_DATA = {
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Tomate, muçarela de búfala, manjericão e azeite. Confira as quantidades e o preparo exatos no site original.",
       "minutes": 15,
       "difficulty": "Fácil",
-      "servings": 6,
+      "servings": 4,
       "emoji": "🥗",
       "image": "https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "tomates maduros grandes"
+        },
+        {
+          "quantity": 250,
+          "unit": "g",
+          "name": "muçarela de búfala"
+        },
+        {
+          "quantity": 15,
+          "unit": "folhas",
+          "name": "manjericão fresco"
+        },
+        {
+          "quantity": 30,
+          "unit": "ml",
+          "name": "azeite de oliva extravirgem"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Lave e seque cuidadosamente tomates e manjericão.",
+        "Corte os tomates e a muçarela de búfala em rodelas de espessura semelhante.",
+        "Em uma travessa, intercale fatias de tomate e queijo, distribuindo o manjericão entre elas.",
+        "Regue com azeite e tempere com uma pequena pitada de sal e pimenta.",
+        "Sirva fresca, sem deixar a salada muito tempo montada para não soltar líquido em excesso."
+      ],
+      "tip": "Prefira tomates maduros, mas firmes, e deixe a muçarela escorrer antes de cortar.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/salada-caprese-classica",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Tomate, muçarela de búfala, manjericão e azeite",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "15 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-guacamole",
@@ -71,653 +146,1691 @@ window.DANTAS_DATA = {
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Avocado, tomate, limão e coentro. Confira as quantidades e o preparo exatos no site original.",
       "minutes": 15,
       "difficulty": "Fácil",
-      "servings": 6,
+      "servings": 4,
       "emoji": "🥑",
       "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "avocados maduros"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "tomate pequeno"
+        },
+        {
+          "quantity": 0.5,
+          "unit": "unidade",
+          "name": "cebola roxa pequena"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "limão"
+        },
+        {
+          "quantity": 10,
+          "unit": "g",
+          "name": "coentro fresco"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Corte os avocados, descarte os caroços e retire a polpa com uma colher.",
+        "Amasse a polpa com um garfo, mantendo alguns pedaços para dar textura.",
+        "Pique o tomate sem sementes, a cebola e o coentro; misture delicadamente.",
+        "Esprema o limão aos poucos e tempere com sal e pimenta.",
+        "Prove, ajuste a acidez e sirva na hora com torradas ou tortilhas."
+      ],
+      "tip": "O limão ajuda a equilibrar a gordura do avocado; guarde com filme encostado na superfície por pouco tempo.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/guacamole",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Avocado, tomate, limão e coentro",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "15 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-salada-de-grao-de-bico-com-frango-no-pote",
       "title": "Salada de grão-de-bico com frango no pote",
       "category": "entrada",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Grão-de-bico, frango, cenoura, cebola, folhas e limão. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 30,
+      "minutes": 35,
       "difficulty": "Fácil",
-      "servings": 1,
+      "servings": 4,
       "emoji": "🥗",
       "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 400,
+          "unit": "g",
+          "name": "grão-de-bico cozido e escorrido"
+        },
+        {
+          "quantity": 350,
+          "unit": "g",
+          "name": "peito de frango sem osso"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cenoura"
+        },
+        {
+          "quantity": 0.5,
+          "unit": "unidade",
+          "name": "cebola roxa"
+        },
+        {
+          "quantity": 80,
+          "unit": "g",
+          "name": "folhas verdes higienizadas"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "limão"
+        },
+        {
+          "quantity": 30,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Tempere o frango com sal e pimenta, cozinhe em frigideira até atingir 74 °C no centro, deixe amornar e desfie.",
+        "Escorra e seque o grão-de-bico. Rale a cenoura, fatie a cebola e lave bem as folhas.",
+        "Faça um molho com o suco de limão, azeite, sal e pimenta.",
+        "Em quatro potes limpos, coloque primeiro o molho, depois grão-de-bico, frango, cenoura e cebola.",
+        "Finalize com as folhas bem secas na parte superior; tampe e mantenha refrigerado até servir.",
+        "Misture na hora de comer. Transporte em recipiente térmico quando necessário."
+      ],
+      "tip": "Mantenha refrigerada a 4 °C ou menos e consuma preferencialmente em até 2 dias.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/salada-de-grao-de-bico-com-frango-no-pote",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Grão-de-bico, frango, cenoura, cebola, folhas e limão",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "35 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-lasanha-a-bolonhesa",
       "title": "Lasanha à bolonhesa",
       "category": "principal",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Massa de lasanha, carne moída, tomate, leite e queijo. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 210,
+      "minutes": 100,
       "difficulty": "Intermediário",
       "servings": 6,
       "emoji": "🍝",
       "image": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 350,
+          "unit": "g",
+          "name": "massa de lasanha"
+        },
+        {
+          "quantity": 500,
+          "unit": "g",
+          "name": "carne bovina moída"
+        },
+        {
+          "quantity": 650,
+          "unit": "g",
+          "name": "passata de tomate"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho"
+        },
+        {
+          "quantity": 20,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 500,
+          "unit": "ml",
+          "name": "leite"
+        },
+        {
+          "quantity": 35,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 35,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 300,
+          "unit": "g",
+          "name": "muçarela fatiada"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "parmesão ralado"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Refogue cebola e alho no azeite; adicione a carne e deixe dourar, quebrando os grumos.",
+        "Junte a passata, tempere e cozinhe em fogo baixo por 25 a 35 minutos, até formar molho encorpado.",
+        "Para o molho branco, derreta a manteiga, adicione a farinha e mexa por 1 minuto. Junte o leite gradualmente e cozinhe até engrossar; tempere com sal e noz-moscada.",
+        "Espalhe uma camada de molho de carne em refratário; intercale massa, bolonhesa, molho branco e muçarela, terminando com molho e parmesão.",
+        "Confira na embalagem se a massa exige pré-cozimento ou cobertura suficiente de molho.",
+        "Asse a 180 °C, coberta com papel-alumínio, por cerca de 30 minutos. Retire a cobertura e gratine por mais 10 a 15 minutos.",
+        "Aguarde 10 minutos antes de cortar para firmar as camadas."
+      ],
+      "tip": "Evite camadas muito secas: a massa precisa de umidade para cozinhar.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/lasanha-a-bolonhesa",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Massa de lasanha, carne moída, tomate, leite e queijo",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "100 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-estrogonofe-de-frango",
       "title": "Estrogonofe de frango",
       "category": "principal",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Frango, creme de leite, cogumelos, cebola e extrato de tomate. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 55,
+      "minutes": 35,
       "difficulty": "Fácil",
       "servings": 4,
       "emoji": "🍗",
       "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 600,
+          "unit": "g",
+          "name": "peito de frango em cubos"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "cogumelos fatiados"
+        },
+        {
+          "quantity": 200,
+          "unit": "g",
+          "name": "creme de leite"
+        },
+        {
+          "quantity": 25,
+          "unit": "g",
+          "name": "extrato de tomate"
+        },
+        {
+          "quantity": 10,
+          "unit": "g",
+          "name": "mostarda"
+        },
+        {
+          "quantity": 20,
+          "unit": "ml",
+          "name": "óleo vegetal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Corte o frango em tiras ou cubos semelhantes e tempere com sal e pimenta.",
+        "Aqueça uma panela larga com óleo e doure o frango em pequenas levas, sem amontoar.",
+        "Na mesma panela, refogue a cebola picada e acrescente os cogumelos até perderem parte da água.",
+        "Misture o extrato de tomate e a mostarda; devolva o frango e cozinhe até o centro atingir 74 °C.",
+        "Abaixe o fogo, incorpore o creme de leite e aqueça delicadamente sem ferver forte.",
+        "Ajuste o tempero e sirva com arroz e batata-palha, se desejar."
+      ],
+      "tip": "Selar o frango em etapas ajuda a formar uma cor mais bonita.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/estrogonofe-de-frango",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Frango, creme de leite, cogumelos, cebola e extrato de tomate",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "35 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-risoto-de-funghi",
       "title": "Risoto de funghi",
       "category": "principal",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Arroz para risoto, funghi seco, caldo de legumes, manteiga e parmesão. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 60,
+      "minutes": 45,
       "difficulty": "Fácil",
       "servings": 4,
       "emoji": "🍚",
       "image": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 300,
+          "unit": "g",
+          "name": "arroz arbóreo ou carnaroli"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "funghi seco"
+        },
+        {
+          "quantity": 1200,
+          "unit": "ml",
+          "name": "caldo de legumes"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola pequena"
+        },
+        {
+          "quantity": 40,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "parmesão ralado"
+        },
+        {
+          "quantity": 80,
+          "unit": "ml",
+          "name": "vinho branco seco (opcional)"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Hidrate o funghi em 250 ml de água morna por 20 minutos; coe o líquido em filtro fino e reserve. Pique os cogumelos.",
+        "Aqueça o caldo de legumes com o líquido coado do funghi, mantendo-o quente ao lado do fogão.",
+        "Refogue a cebola picada no azeite e em metade da manteiga até ficar translúcida.",
+        "Adicione o arroz cru, mexa por 1 minuto e, se usar, incorpore o vinho até quase evaporar.",
+        "Acrescente caldo quente aos poucos, mexendo com frequência, e junte o funghi. Repita à medida que o arroz absorver o líquido.",
+        "Quando os grãos estiverem al dente e o conjunto cremoso, desligue o fogo e incorpore a manteiga restante e o parmesão.",
+        "Ajuste sal e pimenta, deixe repousar 1 minuto e sirva imediatamente."
+      ],
+      "tip": "O ponto ideal é cremoso e fluido, sem transformar o risoto em uma massa compacta.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/risoto-de-funghi",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Arroz para risoto, funghi seco, caldo de legumes, manteiga e parmesão",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "45 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-escondidinho-de-mandioca-com-carne-seca",
       "title": "Escondidinho de mandioca com carne-seca",
       "category": "principal",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Mandioca, carne-seca, cebola e tomate. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 180,
+      "minutes": 80,
       "difficulty": "Intermediário",
       "servings": 6,
       "emoji": "🥘",
       "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 1000,
+          "unit": "g",
+          "name": "mandioca descascada"
+        },
+        {
+          "quantity": 500,
+          "unit": "g",
+          "name": "carne-seca dessalgada e cozida"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "tomate"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho"
+        },
+        {
+          "quantity": 200,
+          "unit": "ml",
+          "name": "leite"
+        },
+        {
+          "quantity": 35,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "muçarela ralada"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Cozinhe a mandioca em água até ficar muito macia, retire os fios centrais e amasse ainda quente.",
+        "Misture a mandioca com leite quente e manteiga até obter um purê cremoso; tempere com sal com cuidado.",
+        "Desfie a carne-seca previamente dessalgada e cozida.",
+        "Refogue cebola e alho no azeite, acrescente os tomates picados e cozinhe até formar um refogado úmido.",
+        "Incorpore a carne-seca, prove o sal e tempere com pimenta.",
+        "Distribua a carne em refratário, cubra com o purê e finalize com muçarela.",
+        "Leve ao forno a 200 °C por cerca de 20 minutos ou até borbulhar e dourar a superfície."
+      ],
+      "tip": "Prove a carne-seca antes de salgar o recheio; o processo de dessalga varia.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/escondidinho-de-mandioca-com-carne-seca",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Mandioca, carne-seca, cebola e tomate",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "80 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-torta-de-frango-classica",
       "title": "Torta de frango clássica",
       "category": "principal",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Frango, farinha de trigo, manteiga, tomate e cebola. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 120,
+      "minutes": 85,
       "difficulty": "Intermediário",
-      "servings": 6,
+      "servings": 8,
       "emoji": "🥧",
-      "image": "https://images.unsplash.com/photo-1604908176997-431cd231a1de?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "image": "https://images.pexels.com/photos/39070797/pexels-photo-39070797.jpeg?auto=compress&cs=tinysrgb&w=940",
+      "ingredients": [
+        {
+          "quantity": 350,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 170,
+          "unit": "g",
+          "name": "manteiga gelada"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "ovo para a massa"
+        },
+        {
+          "quantity": 30,
+          "unit": "ml",
+          "name": "água gelada (aproximadamente)"
+        },
+        {
+          "quantity": 500,
+          "unit": "g",
+          "name": "frango cozido e desfiado"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "tomates"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "requeijão cremoso"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "gema para pincelar"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Para a massa, misture farinha e uma pitada de sal. Acrescente manteiga gelada em cubos e esfarele com a ponta dos dedos até virar farofa.",
+        "Junte o ovo e a água gelada aos poucos, somente até a massa unir. Não sove; cubra e refrigere por 20 minutos.",
+        "Para o recheio, refogue cebola e alho no azeite. Acrescente os tomates picados e o frango desfiado; cozinhe até reduzir o excesso de umidade.",
+        "Desligue o fogo, misture o requeijão e ajuste sal e pimenta. Deixe esfriar totalmente antes de montar.",
+        "Separe cerca de um terço da massa para a tampa. Abra o restante e forre fundo e laterais de uma forma de aproximadamente 24 cm.",
+        "Distribua o recheio frio, cubra com a massa reservada, feche as bordas e faça pequenos cortes para o vapor sair.",
+        "Pincele gema na superfície e asse no forno preaquecido a 190 °C por 35 a 45 minutos, até dourar e assar por completo.",
+        "Deixe descansar 10 minutos antes de desenformar ou cortar."
+      ],
+      "tip": "Recheio frio e relativamente seco evita que a base da torta fique encharcada.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/torta-de-frango-classica",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Frango, farinha de trigo, manteiga, tomate e cebola",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "85 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
+      "imageCredit": "Foto ilustrativa: Mayara Caroline Mombelli / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/delicious-chicken-pot-pie-on-orange-plate-39070797/"
     },
     {
       "id": "curadoria-panqueca-de-carne-com-molho-branco",
       "title": "Panqueca de carne com molho branco",
       "category": "principal",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Farinha de trigo, leite, ovos, carne moída e molho branco. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 90,
+      "minutes": 60,
       "difficulty": "Fácil",
       "servings": 6,
       "emoji": "🥞",
       "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "ovos para a massa"
+        },
+        {
+          "quantity": 250,
+          "unit": "ml",
+          "name": "leite para a massa"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "farinha de trigo para a massa"
+        },
+        {
+          "quantity": 10,
+          "unit": "ml",
+          "name": "óleo para a massa"
+        },
+        {
+          "quantity": 400,
+          "unit": "g",
+          "name": "carne moída"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho"
+        },
+        {
+          "quantity": 200,
+          "unit": "g",
+          "name": "tomate pelado ou molho de tomate"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 500,
+          "unit": "ml",
+          "name": "leite para o molho branco"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "manteiga para o molho branco"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "farinha de trigo para o molho branco"
+        },
+        {
+          "quantity": 50,
+          "unit": "g",
+          "name": "parmesão ralado"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Bata ovos, leite, farinha e óleo até formar massa lisa; deixe descansar 10 minutos.",
+        "Em frigideira antiaderente levemente untada, faça discos finos, virando quando as bordas soltarem.",
+        "Refogue cebola e alho no azeite, junte a carne moída e doure bem. Adicione o tomate, tempere e reduza até obter recheio úmido, mas não líquido.",
+        "Para o molho branco, cozinhe manteiga com farinha por 1 minuto. Acrescente o leite aos poucos, mexendo para evitar grumos, e tempere com noz-moscada.",
+        "Recheie as panquecas, enrole e organize em refratário.",
+        "Cubra com o molho branco, polvilhe parmesão e leve ao forno a 200 °C por 15 minutos, até aquecer e dourar levemente."
+      ],
+      "tip": "Se a massa estiver grossa, acrescente pequenas quantidades de leite antes de fazer os discos.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/panqueca-de-carne-com-molho-branco",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Farinha de trigo, leite, ovos, carne moída e molho branco",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "60 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-bolo-de-cenoura-com-cobertura-de-chocolate",
       "title": "Bolo de cenoura com cobertura de chocolate",
       "category": "sobremesa",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Cenoura, ovos, farinha, açúcar, óleo e chocolate. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 120,
+      "minutes": 65,
       "difficulty": "Intermediário",
       "servings": 12,
       "emoji": "🍰",
       "image": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 250,
+          "unit": "g",
+          "name": "cenoura sem casca"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 180,
+          "unit": "ml",
+          "name": "óleo vegetal"
+        },
+        {
+          "quantity": 240,
+          "unit": "g",
+          "name": "açúcar"
+        },
+        {
+          "quantity": 260,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 12,
+          "unit": "g",
+          "name": "fermento químico em pó"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "chocolate meio amargo para cobertura"
+        },
+        {
+          "quantity": 100,
+          "unit": "g",
+          "name": "creme de leite para cobertura"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Preaqueça o forno a 180 °C e unte uma forma média de aproximadamente 22 × 30 cm.",
+        "Bata no liquidificador a cenoura picada, os ovos, o óleo e o açúcar até obter mistura homogênea.",
+        "Transfira para uma tigela e incorpore a farinha peneirada em duas adições.",
+        "Misture o fermento delicadamente, distribua na forma e leve ao forno.",
+        "Asse por cerca de 35 a 45 minutos, verificando com um palito no centro; retire quando sair sem massa crua.",
+        "Derreta o chocolate e misture ao creme de leite até obter uma ganache lisa.",
+        "Espere o bolo amornar antes de espalhar a cobertura."
+      ],
+      "tip": "Cenoura em excesso pode deixar o bolo pesado; pese depois de descascar.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-cobertura-de-chocolate",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Cenoura, ovos, farinha, açúcar, óleo e chocolate",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "65 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-brownie",
       "title": "Brownie de chocolate",
       "category": "sobremesa",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Chocolate, manteiga, ovos, farinha e açúcar. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 60,
+      "minutes": 40,
       "difficulty": "Fácil",
-      "servings": 12,
+      "servings": 9,
       "emoji": "🍫",
       "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 200,
+          "unit": "g",
+          "name": "chocolate meio amargo"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 170,
+          "unit": "g",
+          "name": "açúcar"
+        },
+        {
+          "quantity": 95,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 25,
+          "unit": "g",
+          "name": "cacau em pó"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Preaqueça o forno a 180 °C e forre uma forma de aproximadamente 20 × 20 cm com papel-manteiga.",
+        "Derreta chocolate e manteiga juntos em banho-maria ou no micro-ondas em intervalos curtos; mexa e deixe amornar.",
+        "Em outra tigela, misture ovos e açúcar manualmente até ficar uniforme, sem bater em excesso.",
+        "Incorpore o chocolate derretido e depois a farinha, o cacau e o sal, mexendo apenas até desaparecerem os grumos secos.",
+        "Espalhe a massa na forma, nivele e asse por aproximadamente 20 a 27 minutos.",
+        "Retire quando as bordas estiverem firmes e o centro ainda levemente úmido; deixe esfriar antes de cortar."
+      ],
+      "tip": "Para textura cremosa, não espere o palito sair completamente seco.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/brownie",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Chocolate, manteiga, ovos, farinha e açúcar",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "40 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-brigadeiro",
       "title": "Brigadeiro tradicional",
       "category": "sobremesa",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Leite condensado, chocolate em pó, manteiga e leite. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 35,
+      "minutes": 30,
       "difficulty": "Fácil",
-      "servings": 30,
+      "servings": 20,
       "emoji": "🍫",
       "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 395,
+          "unit": "g",
+          "name": "leite condensado"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "chocolate em pó"
+        },
+        {
+          "quantity": 80,
+          "unit": "g",
+          "name": "granulado de chocolate para enrolar"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Misture leite condensado, manteiga e chocolate em pó em panela de fundo grosso, ainda fora do fogo.",
+        "Leve ao fogo baixo, mexendo sem parar e raspando fundo e laterais da panela.",
+        "Continue até a mistura ficar brilhante e se soltar do fundo em bloco quando inclinada.",
+        "Transfira para prato untado, cubra em contato e espere esfriar completamente.",
+        "Unte levemente as mãos, faça bolinhas pequenas e passe no granulado."
+      ],
+      "tip": "Para brigadeiro de colher, desligue o fogo um pouco antes do ponto de enrolar.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/brigadeiro",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Leite condensado, chocolate em pó, manteiga e leite",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "30 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-pudim-de-leite",
       "title": "Pudim de leite com furinhos",
       "category": "sobremesa",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Leite condensado, leite, ovos e açúcar. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 120,
+      "minutes": 110,
       "difficulty": "Intermediário",
       "servings": 10,
       "emoji": "🍮",
       "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 395,
+          "unit": "g",
+          "name": "leite condensado"
+        },
+        {
+          "quantity": 395,
+          "unit": "ml",
+          "name": "leite integral"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "açúcar para calda"
+        },
+        {
+          "quantity": 80,
+          "unit": "ml",
+          "name": "água para calda"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Prepare uma calda dissolvendo açúcar e água em panela; aqueça até atingir tom âmbar, sem mexer com colher após ferver.",
+        "Com cuidado para evitar queimaduras, espalhe a calda ainda quente no fundo de uma forma de pudim.",
+        "Misture leite condensado, leite e ovos apenas até homogeneizar; se desejar menos bolhas, passe por peneira.",
+        "Despeje delicadamente na forma caramelizada e cubra com papel-alumínio.",
+        "Acomode a forma numa assadeira com água quente e asse em banho-maria a 160–170 °C por cerca de 60 a 90 minutos, até firmar com leve tremor no centro.",
+        "Deixe esfriar e leve à geladeira por pelo menos 6 horas antes de desenformar."
+      ],
+      "tip": "Não encha demais o banho-maria e tome cuidado ao transportar água quente.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/pudim-de-leite",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Leite condensado, leite, ovos e açúcar",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "110 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-bolo-classico-de-chocolate",
       "title": "Bolo clássico de chocolate",
       "category": "sobremesa",
       "description": "Receita clássica selecionada no acervo Panelinha. Ingredientes principais: Chocolate, farinha, leite, ovos, manteiga e açúcar. Confira as quantidades e o preparo exatos no site original.",
-      "minutes": 120,
+      "minutes": 60,
       "difficulty": "Intermediário",
-      "servings": 10,
+      "servings": 12,
       "emoji": "🎂",
       "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=940&q=80",
-      "ingredients": [],
-      "steps": [
-        "Esta é uma ficha de curadoria, não a reprodução da receita original.",
-        "Confira os ingredientes, as quantidades, o tempo e as instruções completas no link da fonte antes de cozinhar.",
-        "Utilize a página oficial para seguir a receita fielmente; esta ficha registra a referência e permite salvar notas."
+      "ingredients": [
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 190,
+          "unit": "g",
+          "name": "açúcar"
+        },
+        {
+          "quantity": 210,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 55,
+          "unit": "g",
+          "name": "cacau em pó"
+        },
+        {
+          "quantity": 180,
+          "unit": "ml",
+          "name": "leite"
+        },
+        {
+          "quantity": 100,
+          "unit": "ml",
+          "name": "óleo vegetal"
+        },
+        {
+          "quantity": 12,
+          "unit": "g",
+          "name": "fermento químico"
+        },
+        {
+          "quantity": 180,
+          "unit": "g",
+          "name": "chocolate meio amargo para cobertura"
+        },
+        {
+          "quantity": 140,
+          "unit": "g",
+          "name": "creme de leite para cobertura"
+        }
       ],
-      "tip": "O preparo completo e as quantidades exatas estão disponíveis na fonte oficial; não foram reproduzidos no portal.",
+      "steps": [
+        "Preaqueça o forno a 180 °C e prepare uma forma redonda de aproximadamente 23 cm.",
+        "Misture ovos, açúcar e óleo até obter base uniforme; incorpore o leite.",
+        "Peneire farinha e cacau sobre a mistura, mexendo até desaparecer a farinha seca.",
+        "Acrescente o fermento por último e misture delicadamente.",
+        "Asse por 35 a 45 minutos ou até um palito sair sem massa crua; deixe amornar.",
+        "Para a cobertura, derreta o chocolate e misture com o creme de leite até formar ganache.",
+        "Espalhe a cobertura sobre o bolo frio ou morno."
+      ],
+      "tip": "Use cacau sem açúcar para controlar melhor a doçura da massa.",
       "tags": [
         "receita publicada",
         "ingredientes acessíveis",
         "fonte verificada"
       ],
       "createdAt": "2026-10-15",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/bolo-classico-de-chocolate",
       "sourceVerifiedAt": "2026-10-15",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Chocolate, farinha, leite, ovos, manteiga e açúcar",
-      "verifiedTestClaim": "Publicada pelo Panelinha; não testada pela equipe Dantas Cozinha."
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
+      "minutesLabel": "60 min (aprox.)",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-cookie-com-gotas-de-chocolate",
       "title": "Cookie com gotas de chocolate",
       "category": "sobremesa",
       "description": "Cookie de inspiração americana com chocolate amargo, açúcar mascavo e etapa de congelamento para ajudar na textura. Receita compartilhada por Dora Lobo no Panelinha.",
-      "minutes": null,
-      "minutesLabel": "Mais de 2h",
+      "minutes": 30,
+      "minutesLabel": "30 min (aprox.)",
       "difficulty": "Fácil",
-      "servings": 9,
-      "servingsLabel": "9 cookies",
+      "servings": 18,
       "emoji": "🍪",
       "image": "https://images.pexels.com/photos/7886759/pexels-photo-7886759.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 125,
+          "unit": "g",
+          "name": "manteiga em ponto de pomada"
+        },
+        {
+          "quantity": 110,
+          "unit": "g",
+          "name": "açúcar mascavo"
+        },
+        {
+          "quantity": 75,
+          "unit": "g",
+          "name": "açúcar refinado"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "ovo"
+        },
+        {
+          "quantity": 210,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 3,
+          "unit": "g",
+          "name": "bicarbonato de sódio"
+        },
+        {
+          "quantity": 3,
+          "unit": "g",
+          "name": "sal"
+        },
+        {
+          "quantity": 170,
+          "unit": "g",
+          "name": "gotas ou pedaços de chocolate"
+        },
+        {
+          "quantity": 5,
+          "unit": "ml",
+          "name": "extrato de baunilha"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Bata ou misture a manteiga macia com os dois açúcares até formar creme uniforme.",
+        "Acrescente ovo e baunilha e misture até incorporar.",
+        "Junte farinha, bicarbonato e sal sem trabalhar a massa em excesso; adicione o chocolate.",
+        "Leve a massa à geladeira por pelo menos 20 minutos, para controlar o espalhamento.",
+        "Distribua porções separadas em assadeira forrada, sem achatar demais.",
+        "Asse no forno preaquecido a 180 °C por 10 a 13 minutos, até bordas douradas e centro ainda macio.",
+        "Deixe repousar na assadeira por 5 minutos antes de transferir."
+      ],
+      "tip": "O centro termina de firmar fora do forno; não espere o cookie endurecer completamente enquanto assa.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/cookie-com-gotas-de-chocolate",
       "author": "Panelinha (receita compartilhada por Dora Lobo)",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Chocolate amargo, manteiga, açúcar mascavo, açúcar, farinha de trigo, fermento e ovo",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa: Meggy Kadam Aryanto / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/7886759/"
+      "imageSourceUrl": "https://www.pexels.com/photo/7886759/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-cookie-brownie",
       "title": "Cookie-brownie",
       "category": "sobremesa",
       "description": "Versão em formato de cookie com centro úmido e superfície craquelada, feita com chocolate, cacau e ingredientes comuns de confeitaria.",
-      "minutes": null,
-      "minutesLabel": "Pá-Pum (classificação da fonte)",
+      "minutes": 35,
+      "minutesLabel": "35 min (aprox.)",
       "difficulty": "Fácil",
       "servings": 14,
-      "servingsLabel": "14 unidades",
       "emoji": "🍫",
       "image": "https://images.pexels.com/photos/14576527/pexels-photo-14576527.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 170,
+          "unit": "g",
+          "name": "chocolate meio amargo"
+        },
+        {
+          "quantity": 70,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 90,
+          "unit": "g",
+          "name": "açúcar refinado"
+        },
+        {
+          "quantity": 45,
+          "unit": "g",
+          "name": "açúcar mascavo"
+        },
+        {
+          "quantity": 65,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "cacau em pó"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "fermento químico em pó"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Preaqueça o forno a 175 °C e forre duas assadeiras com papel-manteiga.",
+        "Derreta chocolate com manteiga e deixe amornar, sem solidificar.",
+        "Misture ovos e açúcares vigorosamente por alguns minutos até obter textura espessa e mais clara.",
+        "Incorpore o chocolate derretido e, depois, farinha, cacau, fermento e sal.",
+        "Distribua colheradas de massa em assadeiras, com espaço entre elas; a massa é mais fluida que a de cookies tradicionais.",
+        "Asse por 10 a 13 minutos, até a superfície ficar brilhante e craquelada e as bordas firmarem.",
+        "Deixe esfriar sobre a assadeira antes de mover os cookies."
+      ],
+      "tip": "Trabalhe sem demora depois de misturar o chocolate, pois a textura muda conforme ele esfria.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/cookie-brownie",
       "author": "Panelinha",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Chocolate 60% cacau, manteiga, ovos, açúcar, açúcar mascavo, farinha de trigo e cacau em pó",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa: Bethany Hicks / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/14576527/"
+      "imageSourceUrl": "https://www.pexels.com/photo/14576527/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-pao-de-queijo",
       "title": "Pão de queijo clássico",
       "category": "entrada",
       "description": "Clássico mineiro com polvilhos doce e azedo e queijo meia-cura. A fonte explica a técnica de escaldar e o congelamento das unidades cruas.",
-      "minutes": null,
-      "minutesLabel": "Até 2h",
+      "minutes": 45,
+      "minutesLabel": "45 min (aprox.)",
       "difficulty": "Fácil",
-      "servings": 17,
-      "servingsLabel": "16–18 unidades",
+      "servings": 20,
       "emoji": "🧀",
       "image": "https://images.pexels.com/photos/34259860/pexels-photo-34259860.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 250,
+          "unit": "g",
+          "name": "polvilho azedo"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "polvilho doce"
+        },
+        {
+          "quantity": 170,
+          "unit": "ml",
+          "name": "leite"
+        },
+        {
+          "quantity": 90,
+          "unit": "ml",
+          "name": "óleo vegetal"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 220,
+          "unit": "g",
+          "name": "queijo meia-cura ralado"
+        },
+        {
+          "quantity": 7,
+          "unit": "g",
+          "name": "sal"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Preaqueça o forno a 200 °C e separe uma assadeira, sem necessidade de untar se usar papel apropriado.",
+        "Misture os dois polvilhos e o sal em uma tigela grande.",
+        "Aqueça leite e óleo até começar a ferver; despeje cuidadosamente sobre o polvilho para escaldar, misturando com colher.",
+        "Deixe amornar antes de incorporar os ovos, um de cada vez, e o queijo ralado.",
+        "Misture até obter massa pegajosa, porém moldável. Se necessário, umedeça as mãos com um pouco de água.",
+        "Faça cerca de 20 bolinhas e distribua com espaço entre elas.",
+        "Asse por 20 a 30 minutos, até crescerem e dourarem levemente."
+      ],
+      "tip": "O ponto da massa varia conforme os polvilhos e o tamanho dos ovos; evite acrescentar água em excesso.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/pao-de-queijo",
       "author": "Panelinha",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Polvilho azedo, polvilho doce, queijo meia-cura, ovos, água, óleo e sal",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa: Nathalia Crispim / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/34259860/"
+      "imageSourceUrl": "https://www.pexels.com/photo/34259860/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-mac-and-cheese",
       "title": "Mac & cheese gratinado",
       "category": "principal",
       "description": "Versão americana de macarrão com queijo gratinado, preparada com massa curta, creme de leite fresco e parmesão.",
-      "minutes": null,
-      "minutesLabel": "Pá-Pum (classificação da fonte)",
+      "minutes": 40,
+      "minutesLabel": "40 min (aprox.)",
       "difficulty": "Fácil",
-      "servings": 1,
-      "servingsLabel": "1 porção",
+      "servings": 4,
       "emoji": "🧀",
       "image": "https://images.pexels.com/photos/9397238/pexels-photo-9397238.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 350,
+          "unit": "g",
+          "name": "macarrão curto (caracol ou cotovelo)"
+        },
+        {
+          "quantity": 600,
+          "unit": "ml",
+          "name": "leite"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 180,
+          "unit": "g",
+          "name": "queijo cheddar"
+        },
+        {
+          "quantity": 90,
+          "unit": "g",
+          "name": "parmesão ralado"
+        },
+        {
+          "quantity": 40,
+          "unit": "g",
+          "name": "farinha panko ou de rosca"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Cozinhe o macarrão em água salgada até um minuto antes do tempo indicado para ficar al dente; escorra.",
+        "Em panela, derreta a manteiga, junte a farinha e mexa por 1 minuto para cozinhar o roux.",
+        "Acrescente o leite aos poucos, mexendo até formar molho branco sem grumos.",
+        "Em fogo baixo, incorpore cheddar e metade do parmesão até derreter. Tempere com noz-moscada e pimenta; prove o sal.",
+        "Misture o macarrão ao molho e transfira para refratário.",
+        "Polvilhe o parmesão restante e a farinha panko.",
+        "Gratine a 220 °C por 10 a 15 minutos, até dourar. Sirva quente."
+      ],
+      "tip": "O molho deve ficar ligeiramente mais fluido antes de gratinar, pois a massa continua absorvendo líquido.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/mac-and-cheese",
       "author": "Panelinha",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Macarrão caracol, creme de leite fresco, parmesão, noz-moscada, sal e pimenta-do-reino",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa: Hayden Walker / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/9397238/"
+      "imageSourceUrl": "https://www.pexels.com/photo/9397238/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-macarrao-molho-tomate-pressao",
       "title": "Macarrão com tomate na pressão",
       "category": "principal",
       "description": "Massa curta e molho de tomate feitos juntos na panela de pressão, com alho, azeite e manjericão.",
-      "minutes": null,
-      "minutesLabel": "Pá-Pum (classificação da fonte)",
+      "minutes": 25,
+      "minutesLabel": "25 min (aprox.)",
       "difficulty": "Fácil",
-      "servings": 2,
-      "servingsLabel": "Até 2 porções",
+      "servings": 4,
       "emoji": "🍝",
       "image": "https://images.pexels.com/photos/26207779/pexels-photo-26207779.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 350,
+          "unit": "g",
+          "name": "macarrão fusilli"
+        },
+        {
+          "quantity": 400,
+          "unit": "g",
+          "name": "tomate pelado picado"
+        },
+        {
+          "quantity": 650,
+          "unit": "ml",
+          "name": "água"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho"
+        },
+        {
+          "quantity": 25,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 10,
+          "unit": "g",
+          "name": "manjericão fresco"
+        },
+        {
+          "quantity": 35,
+          "unit": "g",
+          "name": "parmesão ralado"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Verifique no manual da panela de pressão se é permitido cozinhar massas, que podem produzir espuma; não ultrapasse o nível máximo indicado pelo fabricante.",
+        "Na panela destampada, aqueça o azeite e refogue rapidamente o alho, sem dourar demais.",
+        "Acrescente tomate, água, sal, pimenta e macarrão. Misture para que a massa fique coberta pelo líquido.",
+        "Tampe conforme as instruções da panela e leve ao fogo. Após começar a pressão, cozinhe por aproximadamente 2 minutos, ajustando ao tipo de massa e às instruções do fabricante.",
+        "Desligue, aguarde a pressão sair totalmente de forma segura e só então abra a tampa.",
+        "Misture o manjericão, ajuste a textura com água quente se necessário e finalize com parmesão."
+      ],
+      "tip": "Massas podem espumar e obstruir válvulas em alguns modelos: se o manual não recomendar, faça em panela comum e cozinhe até ficar al dente.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/macarrao-molho-tomate-pressao",
       "author": "Panelinha",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Macarrão fusili, tomate pelado, alho, manjericão, azeite, sal e parmesão",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa: Esra Erdem / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/26207779/"
+      "imageSourceUrl": "https://www.pexels.com/photo/26207779/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-brownie-chocolate-queijo-flavio-federico",
       "title": "Brownie de chocolate e queijo",
       "category": "sobremesa",
       "description": "Versão de brownie do chef Flavio Federico com chocolate meio amargo, creme de queijo e laranja confitada. A preparação da laranja exige antecedência.",
-      "minutes": null,
-      "minutesLabel": "40 min informados pela fonte; laranja requer descanso adicional",
+      "minutes": 55,
+      "minutesLabel": "55 min (aprox.)",
       "difficulty": "Intermediário",
-      "servings": 10,
-      "servingsLabel": "10 porções",
+      "servings": 12,
       "emoji": "🍫",
       "image": "https://images.pexels.com/photos/6095744/pexels-photo-6095744.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "chocolate meio amargo"
+        },
+        {
+          "quantity": 100,
+          "unit": "g",
+          "name": "manteiga"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "ovos para a massa"
+        },
+        {
+          "quantity": 140,
+          "unit": "g",
+          "name": "açúcar para a massa"
+        },
+        {
+          "quantity": 80,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 10,
+          "unit": "g",
+          "name": "cacau em pó"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "cream cheese"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "gema para a cobertura"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "açúcar para a cobertura"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "laranja (raspas da casca)"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Preaqueça o forno a 175 °C e forre uma forma de 20 × 20 cm com papel-manteiga.",
+        "Derreta chocolate com manteiga e deixe amornar. Misture ovos e açúcar em outra tigela até homogeneizar.",
+        "Junte o chocolate, acrescente farinha e cacau e mexa apenas até incorporar.",
+        "À parte, misture cream cheese, gema, açúcar e raspas de laranja até formar creme liso.",
+        "Despeje a massa de chocolate na forma e distribua colheradas do creme de queijo sobre ela.",
+        "Passe a ponta de uma faca em movimentos largos para formar efeito marmorizado, sem misturar tudo.",
+        "Asse por cerca de 25 a 35 minutos, até bordas firmes e centro úmido, mas sem massa crua; esfrie completamente antes de cortar."
+      ],
+      "tip": "Esta é uma versão autoral de brownie marmorizado, inspirada na combinação de chocolate e queijo divulgada na referência; não é reprodução da receita do chef.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Receitas Globo",
+      "source": "Referência gastronômica: Receitas Globo. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Receitas Globo",
       "sourceUrl": "https://receitas.globo.com/ana-maria-braga/doces/brownie-de-chocolate-e-queijo-do-chef-flavio-federico.ghtml",
       "author": "Chef Flavio Federico",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Chocolate meio amargo, manteiga, ovos, farinha, açúcar mascavo, cream cheese e laranja",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa: Nonik Yench / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/6095744/"
+      "imageSourceUrl": "https://www.pexels.com/photo/6095744/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "curadoria-bolo-de-fuba",
       "title": "Bolo de fubá de liquidificador",
       "category": "sobremesa",
       "description": "Bolo brasileiro simples com fubá, leite e erva-doce, publicado com preparo no liquidificador.",
-      "minutes": null,
-      "minutesLabel": "Até 1h",
+      "minutes": 55,
+      "minutesLabel": "55 min (aprox.)",
       "difficulty": "Fácil",
       "servings": 12,
-      "servingsLabel": "12 porções",
       "emoji": "🍰",
       "image": "https://images.pexels.com/photos/34637996/pexels-photo-34637996.jpeg?auto=compress&cs=tinysrgb&w=940",
-      "ingredients": [],
-      "steps": [
-        "Esta ficha apresenta uma referência editorial, não a reprodução integral do preparo.",
-        "Confira os ingredientes, as quantidades e o passo a passo completos na página original da fonte.",
-        "Respeite as orientações da publicação, incluindo repouso, tempo de forno e ponto de cozimento."
+      "ingredients": [
+        {
+          "quantity": 180,
+          "unit": "g",
+          "name": "fubá mimoso"
+        },
+        {
+          "quantity": 110,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 200,
+          "unit": "g",
+          "name": "açúcar"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 220,
+          "unit": "ml",
+          "name": "leite"
+        },
+        {
+          "quantity": 100,
+          "unit": "ml",
+          "name": "óleo vegetal"
+        },
+        {
+          "quantity": 12,
+          "unit": "g",
+          "name": "fermento químico em pó"
+        },
+        {
+          "quantity": 4,
+          "unit": "g",
+          "name": "sementes de erva-doce (opcional)"
+        }
       ],
-      "tip": "As medidas e o preparo integral devem ser consultados no endereço oficial. Receita publicada pela fonte indicada, sem teste independente do Dantas Cozinha.",
+      "steps": [
+        "Preaqueça o forno a 180 °C e unte uma forma com furo central de cerca de 22 cm.",
+        "Bata no liquidificador ovos, leite, óleo e açúcar até obter mistura uniforme.",
+        "Acrescente o fubá e bata rapidamente. Transfira para tigela e incorpore a farinha.",
+        "Misture o fermento e, se desejar, a erva-doce, sem bater em excesso.",
+        "Despeje na forma e asse por cerca de 35 a 45 minutos, até dourar e o centro firmar.",
+        "Espere amornar antes de desenformar."
+      ],
+      "tip": "Para uma textura mais delicada, use fubá mimoso, de moagem fina.",
       "tags": [
         "fonte editorial",
         "ingredientes acessíveis",
         "receita referenciada"
       ],
       "createdAt": "2026-10-26",
-      "source": "Panelinha",
+      "source": "Referência gastronômica: Panelinha. Receita e quantidades desta página elaboradas independentemente para o portal.",
       "sourceName": "Panelinha",
       "sourceUrl": "https://panelinha.com.br/receita/bolo-de-fuba",
       "author": "Panelinha",
       "sourceVerifiedAt": "2026-10-26",
-      "curationStatus": "fonte-editorial-verificada",
+      "curationStatus": "versao-autoral-com-referencia",
       "ingredientsSummary": "Fubá mimoso, farinha de trigo, açúcar, ovos, óleo, leite, fermento e erva-doce",
-      "verifiedTestClaim": "Publicada pela fonte original; não testada pela equipe Dantas Cozinha.",
+      "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "imageCredit": "Foto ilustrativa de bolo de milho: Alejandro JV / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/mexican-elote-cake-on-decorative-plate-34637996/"
+      "imageSourceUrl": "https://www.pexels.com/photo/mexican-elote-cake-on-decorative-plate-34637996/",
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
     },
     {
       "id": "aula-cantinho-mini-burger",
