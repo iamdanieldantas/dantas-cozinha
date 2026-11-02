@@ -87,3 +87,25 @@
 .tech-card .tech-practice{background:#eaf0e4;padding:15px;border-radius:10px}
 @media(max-width:800px){.detail-hero{gap:22px}.detail-photo img{height:330px}.detail-content{gap:25px;padding:30px 26px}}
 @media(max-width:660px){.detail-shell{padding-top:18px;padding-bottom:55px}.detail-hero{grid-template-columns:1fr;gap:20px;margin-bottom:25px}.detail-photo img{height:310px}.detail-intro h1{font-size:39px;letter-spacing:-1px}.detail-stats{margin:16px 0}.detail-content{grid-template-columns:1fr;padding:26px 20px;gap:20px}.detail-content h2{font-size:30px}.detail-steps li{font-size:14px}.detail-extra .modal-tip{font-size:13px}.brand-logo,.footer-brand .brand-logo{width:39px!important;height:39px!important;flex-basis:39px}}
+
+/* Curadoria editorial: referências verificadas, sem reproduzir receitas de terceiros. */
+.curation-feature{margin:64px 0 80px;padding-top:34px;border-top:1px solid var(--line)}
+.curation-feature .section-heading{max-width:760px;margin-bottom:27px}
+.curation-feature .section-heading h2{margin:10px 0 12px}
+.curation-feature .section-heading p{font-size:14px;line-height:1.8;color:var(--muted)}
+.curation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.curation-card{display:flex;flex-direction:column;gap:13px;background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 7px 22px #213c2d09}
+.curation-card-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.curation-verified{font-size:10px;color:var(--muted)}
+.curation-card h3{font-size:27px;line-height:1.16;margin:4px 0 0}
+.curation-card>p{font-size:13px;line-height:1.75;color:#61675d;margin:0}
+.curation-ingredients{padding:14px 16px;border-radius:12px;background:#f7f1e9}
+.curation-ingredients strong{font-size:12px;color:var(--forest)}
+.curation-ingredients ul{display:flex;flex-wrap:wrap;gap:6px 16px;padding:0;margin:10px 0 0;list-style:none}
+.curation-ingredients li{font-size:12px;color:#555e52}
+.curation-ingredients li:before{content:"• ";color:var(--rust)}
+.curation-credit{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted);margin-top:auto}
+.curation-card .btn{align-self:flex-start;white-space:normal;text-align:center;margin-top:4px}
+.curation-card>small{font-size:10px;color:var(--muted);line-height:1.5}
+@media(max-width:960px){.curation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.curation-grid{grid-template-columns:1fr}.curation-card{padding:21px}.curation-feature{margin-top:40px}}
