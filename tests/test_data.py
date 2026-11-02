@@ -41,6 +41,29 @@ class ContentTests(unittest.TestCase):
         self.assertGreaterEqual(len(lesson.get('lesson',[])),2)
         self.assertTrue(lesson.get('mistakes'))
 
+  def test_verified_editorial_selections_and_upcoming_workshops(self):
+    d=load(BASE/'assets'/'data.js')
+    published_urls={r.get('sourceUrl') for r in d['recipes'] if r.get('sourceUrl')}
+    selected=d.get('curatedDiscoveries',[])
+    self.assertGreaterEqual(len(selected),3)
+    self.assertEqual(len({r['id'] for r in selected}),len(selected))
+    self.assertEqual(len({r['sourceUrl'] for r in selected}),len(selected))
+    for r in selected:
+      with self.subTest(selection=r['id']):
+        self.assertNotIn(r['sourceUrl'],published_urls,'Fonte duplicada no catálogo')
+        self.assertTrue(r['sourceUrl'].startswith('https://'))
+        self.assertTrue(r.get('author') and r.get('sourceName'))
+        self.assertTrue(r.get('description') and len(r.get('mainIngredients',[]))>=3)
+        self.assertEqual(r.get('curationStatus'),'fonte-editorial-verificada')
+        self.assertNotIn('steps',r,'Curadoria não deve copiar modo de preparo')
+        self.assertNotIn('ingredients',r,'Curadoria não deve inventar quantidades')
+        self.assertNotIn('tested',r,'Curadoria não deve alegar teste')
+    self.assertEqual(len({w['url'] for w in d['workshops']}),len(d['workshops']))
+    for w in d['workshops']:
+      if w.get('eventDate'):
+        self.assertGreaterEqual(w['eventDate'],'2026-11-02','Não publicar oficina expirada')
+        self.assertTrue(w.get('verifiedAt'))
+
   def test_weekly_publishes_recipe_and_technique_once(self):
     d=load(BASE/'assets'/'data.js')
     with tempfile.TemporaryDirectory() as tmp:
