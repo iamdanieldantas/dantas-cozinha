@@ -3,3 +3,21 @@
 .hero-photo{position:relative}
 .hero-photo .hero-fallback{display:grid;place-content:center;position:absolute;inset:0;z-index:0}
 .hero-photo img{position:absolute;inset:0;z-index:1}
+
+
+/* Recipe reading experience: immersive full-screen sheet */
+#recipe-dialog[open]{position:fixed!important;inset:0!important;width:100vw!important;max-width:none!important;height:100dvh!important;max-height:none!important;margin:0!important;border:0!important;border-radius:0!important;overflow-y:auto!important;background:#fffaf3!important}
+#recipe-dialog::backdrop{background:rgba(24,22,17,.2)}
+#recipe-dialog-body{max-width:1160px;margin:0 auto;padding-bottom:56px}
+#recipe-dialog .modal-close{position:sticky;top:12px;float:right;z-index:15;background:#fff;border-radius:50%;box-shadow:0 2px 15px #0002}
+.technique-lesson{cursor:default}
+.technique-lesson>summary{cursor:pointer;list-style:none}
+.technique-lesson>summary::-webkit-details-marker{display:none}
+.technique-lesson .tech-detail{display:none}
+.technique-lesson[open] .tech-detail{display:block;border-top:1px solid #ddd1c1;padding-top:18px;margin-top:18px}
+.technique-lesson .tech-detail h4{margin:16px 0 6px;font-size:16px}
+.lesson-open-label{display:inline-block;margin-top:14px;color:#996239;font-weight:700;font-size:13px}
+.technique-lesson[open] .lesson-open-label{font-size:0}
+.technique-lesson[open] .lesson-open-label:after{content:"Fechar aula −";font-size:13px}
+.brand-logo{font-family:Georgia,serif!important;font-weight:800!important;font-size:25px!important;letter-spacing:-3px!important}
+#serving-minus[hidden],#serving-plus[hidden]{display:none!important}
