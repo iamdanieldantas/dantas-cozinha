@@ -1,6 +1,6 @@
 window.DANTAS_DATA = {
   "siteName": "Dantas Cozinha",
-  "generatedAt": "2026-10-31T15:00:00-03:00",
+  "generatedAt": "2026-11-02T15:00:00-03:00",
   "recipes": [
     {
       "id": "curadoria-bruschetta-de-tomate",
@@ -579,7 +579,7 @@ window.DANTAS_DATA = {
       "difficulty": "Intermediário",
       "servings": 6,
       "emoji": "🥘",
-      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=940&q=80",
+      "image": "https://images.pexels.com/photos/38103943/pexels-photo-38103943.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [
         {
           "quantity": 1000,
@@ -661,7 +661,9 @@ window.DANTAS_DATA = {
       "ingredientsSummary": "Mandioca, carne-seca, cebola e tomate",
       "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "minutesLabel": "80 min (aprox.)",
-      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
+      "imageCredit": "Gratinado cremoso ilustrativo — Hilal Diken / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/delicious-creamy-baked-potato-casserole-38103943/"
     },
     {
       "id": "curadoria-torta-de-frango-classica",
@@ -778,7 +780,7 @@ window.DANTAS_DATA = {
       "difficulty": "Fácil",
       "servings": 6,
       "emoji": "🥞",
-      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=940&q=80",
+      "image": "https://images.pexels.com/photos/15671379/pexels-photo-15671379.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [
         {
           "quantity": 2,
@@ -884,7 +886,9 @@ window.DANTAS_DATA = {
       "ingredientsSummary": "Farinha de trigo, leite, ovos, carne moída e molho branco",
       "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "minutesLabel": "60 min (aprox.)",
-      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
+      "imageCredit": "Panqueca salgada com queijo e molho — Luis Becerra / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/food-on-plate-15671379/"
     },
     {
       "id": "curadoria-bolo-de-cenoura-com-cobertura-de-chocolate",
@@ -1045,7 +1049,7 @@ window.DANTAS_DATA = {
       "difficulty": "Fácil",
       "servings": 20,
       "emoji": "🍫",
-      "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=940&q=80",
+      "image": "https://images.pexels.com/photos/37306625/pexels-photo-37306625.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [
         {
           "quantity": 395,
@@ -1090,7 +1094,9 @@ window.DANTAS_DATA = {
       "ingredientsSummary": "Leite condensado, chocolate em pó, manteiga e leite",
       "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "minutesLabel": "30 min (aprox.)",
-      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
+      "imageCredit": "Brigadeiros com granulado — Luriko Yamaguchi / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/pt-br/foto/brigadeiros-de-chocolate-com-granulado-na-bandeja-37306625/"
     },
     {
       "id": "curadoria-pudim-de-leite",
@@ -1101,7 +1107,7 @@ window.DANTAS_DATA = {
       "difficulty": "Intermediário",
       "servings": 10,
       "emoji": "🍮",
-      "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=940&q=80",
+      "image": "https://images.pexels.com/photos/34462833/pexels-photo-34462833.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [
         {
           "quantity": 395,
@@ -1152,7 +1158,9 @@ window.DANTAS_DATA = {
       "ingredientsSummary": "Leite condensado, leite, ovos e açúcar",
       "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "minutesLabel": "110 min (aprox.)",
-      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
+      "imageCredit": "Pudim brasileiro com caramelo — Bia Metidieri / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/delicious-brazilian-pudim-with-caramel-sauce-34462833/"
     },
     {
       "id": "curadoria-bolo-classico-de-chocolate",
