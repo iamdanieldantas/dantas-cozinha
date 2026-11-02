@@ -672,7 +672,7 @@ window.DANTAS_DATA = {
       "difficulty": "Intermediário",
       "servings": 8,
       "emoji": "🥧",
-      "image": "https://images.pexels.com/photos/39070797/pexels-photo-39070797.jpeg?auto=compress&cs=tinysrgb&w=940",
+      "image": "https://images.pexels.com/photos/29535632/pexels-photo-29535632.jpeg?auto=compress&cs=tinysrgb&w=940",
       "ingredients": [
         {
           "quantity": 350,
@@ -766,8 +766,8 @@ window.DANTAS_DATA = {
       "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "minutesLabel": "85 min (aprox.)",
       "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
-      "imageCredit": "Foto ilustrativa: Mayara Caroline Mombelli / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/delicious-chicken-pot-pie-on-orange-plate-39070797/"
+      "imageCredit": "Foto ilustrativa de torta de frango: Nano Erdozain / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/delicious-chicken-pot-pie-with-flaky-crust-29535632/"
     },
     {
       "id": "curadoria-panqueca-de-carne-com-molho-branco",
