@@ -21,3 +21,69 @@
 .technique-lesson[open] .lesson-open-label:after{content:"Fechar aula −";font-size:13px}
 .brand-logo{font-family:Georgia,serif!important;font-weight:800!important;font-size:25px!important;letter-spacing:-3px!important}
 #serving-minus[hidden],#serving-plus[hidden]{display:none!important}
+
+/* Dantas Cozinha: marca gastronômica e navegação em páginas */
+.brand-logo,.footer-brand .brand-logo{width:43px!important;height:43px!important;border-radius:13px!important;background:transparent!important;display:grid;place-items:center;overflow:hidden;flex:0 0 43px;font-size:0!important;letter-spacing:0!important}
+.brand-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.recipe-card [data-recipe]{cursor:pointer}
+.recipe-card .recipe-title[data-recipe]:hover{color:var(--rust-dark)}
+.recipe-detail-page{background:#f9f4ec;min-height:80vh}
+.detail-shell{padding-top:35px;padding-bottom:90px}
+.detail-breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:25px;color:#948777;font-size:12px}
+.detail-back{border:0;background:transparent;color:var(--rust-dark);font-size:13px;font-weight:750;cursor:pointer;padding:8px 0}
+.detail-back:hover{text-decoration:underline}
+.detail-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:45px;align-items:center;margin-bottom:46px}
+.detail-photo{margin:0;position:relative;overflow:hidden;border-radius:22px;background:#efe0cc;box-shadow:0 12px 35px #3a302819}
+.detail-photo img{width:100%;height:430px;object-fit:cover;display:block}
+.detail-photo figcaption{background:#fffdf8dd;position:absolute;bottom:10px;left:10px;right:10px;padding:7px 12px;border-radius:9px;color:#5e6757;font-size:11px}
+.detail-intro h1{font-size:clamp(36px,4.3vw,62px);line-height:1.06;margin:15px 0 18px;letter-spacing:-2px}
+.detail-intro>p{color:#62685c;font-size:15px;line-height:1.8}
+.detail-stats{display:flex;flex-wrap:wrap;gap:12px;margin:23px 0;border-block:1px solid var(--line);padding:18px 0;font-size:12px;color:#626b5c}
+.detail-stats span{display:inline-flex;gap:7px;align-items:center}
+.detail-content{display:grid;grid-template-columns:minmax(280px,.88fr) minmax(0,1.12fr);gap:48px;background:var(--paper);border:1px solid #eee8df;border-radius:22px;padding:37px 42px 42px}
+.detail-content h2{font-size:clamp(29px,3vw,38px);margin-bottom:13px}
+.detail-subtitle{font-size:12px;color:var(--muted)}
+.detail-ingredients ul{list-style:none;margin:14px 0 0;padding:0}
+.detail-ingredients li.ingredient-entry{border-bottom:1px solid #ede7df;margin:0;padding:11px 0;color:#555b52;font-size:14px;line-height:1.65}
+.detail-ingredients li.ingredient-group{list-style:none;margin:22px 0 5px;padding:10px 0 3px;font-size:12px;letter-spacing:.08em;color:var(--rust-dark);text-transform:uppercase;font-weight:800}
+.detail-ingredients li.ingredient-entry:last-child{border-bottom:0}
+.detail-ingredients .ingredient-row{gap:12px;cursor:pointer}
+.detail-ingredients .ingredient-row input{flex:0 0 auto;width:17px;height:17px;margin-top:3px;accent-color:var(--forest)}
+.ingredient-amount{font-weight:800;color:var(--forest)}
+.detail-content .serving-control{gap:12px;flex-wrap:wrap;margin:20px 0 7px;padding:12px 15px;background:#f6f0e7;border-radius:12px;font-size:13px;color:#4e5d4e}
+.detail-content .serving-control span{margin-right:auto}
+.detail-content .serving-control button{width:32px;height:32px;font-size:19px;cursor:pointer}
+.detail-steps ol{counter-reset:step;list-style:none;padding:0;margin:13px 0}
+.detail-steps li{position:relative;padding:0 0 21px 52px;margin-bottom:22px;border-bottom:1px solid #eee9e1;color:#555b52;font-size:15px;line-height:1.75}
+.detail-steps li::before{counter-increment:step;content:counter(step);display:grid;place-items:center;position:absolute;left:0;top:0;border-radius:50%;width:34px;height:34px;background:#e7ecdf;color:var(--forest);font:700 18px Georgia,serif}
+.detail-steps li:last-child{border-bottom:0;margin-bottom:0}
+.detail-extra{max-width:980px;margin:30px auto 0}
+.detail-extra .modal-tip{font-size:14px;line-height:1.65;padding:20px}
+.recipe-version{color:#73746a;font-size:12px;line-height:1.7;margin:15px 0 20px}
+.detail-source{padding:23px 26px;border:1px solid var(--line);border-radius:14px;background:var(--paper);margin:23px 0}
+.detail-source p{color:#62685e;line-height:1.55;font-size:13px;margin:12px 0}
+.detail-source a{color:var(--rust-dark);font-size:13px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.detail-extra .modal-notes{background:var(--paper);padding:24px 26px;border:1px solid var(--line);border-radius:14px}
+.detail-extra .modal-notes textarea{font-size:14px}
+.detail-not-found{padding:80px 20px}
+.tech-grid .tech-card{padding:0;overflow:hidden;transition:border-color .18s,box-shadow .18s}
+.tech-grid .tech-card[open]{border-color:#d7c7b3;box-shadow:0 9px 30px #2547350b}
+.tech-card summary{list-style:none;display:flex;justify-content:space-between;gap:18px;align-items:flex-start;padding:27px 29px;cursor:pointer}
+.tech-card summary::-webkit-details-marker{display:none}
+.tech-card summary:focus-visible{outline:3px solid #ad8666;outline-offset:-4px;border-radius:18px}
+.tech-summary{flex:1}
+.tech-card summary h3{margin:10px 0}
+.tech-card summary p{line-height:1.65;margin-bottom:0}
+.tech-toggle{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#e9eee2;color:var(--forest);display:grid;place-items:center;font-size:24px;font-weight:300}
+.tech-toggle:before{content:"+"}
+.tech-card[open] .tech-toggle:before{content:"−"}
+.tech-card[open] .tech-detail{border-top:1px solid var(--line);margin:0;padding:24px 29px 28px;background:#fcf8f1}
+.tech-card .tech-lesson{margin:0 0 18px}
+.tech-card .tech-lesson:last-child{margin-bottom:0}
+.tech-card .tech-lesson h4{font-size:14px;color:var(--forest);font-weight:800;margin:0 0 8px}
+.tech-card .tech-lesson p{font-size:13px;line-height:1.8;color:#565d52}
+.tech-card .tech-lesson ul{margin:8px 0;padding-left:20px}
+.tech-card .tech-lesson li{font-size:13px;line-height:1.7;color:#565d52;margin:0 0 6px}
+.tech-card .tech-practice{background:#eaf0e4;padding:15px;border-radius:10px}
+@media(max-width:800px){.detail-hero{gap:22px}.detail-photo img{height:330px}.detail-content{gap:25px;padding:30px 26px}}
+@media(max-width:660px){.detail-shell{padding-top:18px;padding-bottom:55px}.detail-hero{grid-template-columns:1fr;gap:20px;margin-bottom:25px}.detail-photo img{height:310px}.detail-intro h1{font-size:39px;letter-spacing:-1px}.detail-stats{margin:16px 0}.detail-content{grid-template-columns:1fr;padding:26px 20px;gap:20px}.detail-content h2{font-size:30px}.detail-steps li{font-size:14px}.detail-extra .modal-tip{font-size:13px}.brand-logo,.footer-brand .brand-logo{width:39px!important;height:39px!important;flex-basis:39px}}
