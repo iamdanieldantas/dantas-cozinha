@@ -17,6 +17,19 @@ function card(r){return `<article class="recipe-card"><div class="recipe-photo" 
 function updateFavCount(){el('fav-count').textContent=state.favorites.length}
 function renderRecipes(){const term=selectedSearch.trim().toLocaleLowerCase('pt-BR');const arr=RECIPES.filter(r=>(selectedFilter==='todas'||selectedFilter==='favoritas'&&isFav(r.id)||r.category===selectedFilter)&&(!term||[r.title,r.description,...(r.ingredients||[]).map(i=>typeof i==='string'?i:i.name)].join(' ').toLocaleLowerCase('pt-BR').includes(term)));
 el('recipe-list').innerHTML=arr.length?arr.map(card).join(''):'<div class="empty-state"><strong>Nenhuma receita por aqui.</strong> Experimente outro filtro ou termo de busca.</div>';el('recipes-count').textContent=`${arr.length} ${arr.length===1?'receita encontrada':'receitas encontradas'}`;document.querySelectorAll('#recipe-filters .chip').forEach(b=>b.classList.toggle('selected',b.dataset.filter===selectedFilter));updateFavCount()}
+function renderCuratedDiscoveries(){
+const root=el('curation-list');if(!root)return;
+const discoveries=[...(DATA.curatedDiscoveries||[])].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
+root.innerHTML=discoveries.length?discoveries.map(item=>`<article class="curation-card">
+<div class="curation-card-top"><span class="tech-pill">${esc(categoryName[item.category]||'Receita')}</span><span class="curation-verified">Fonte verificada · ${esc(item.verifiedAt)}</span></div>
+<h3>${esc(item.title)}</h3>
+<p>${esc(item.description)}</p>
+<div class="curation-ingredients"><strong>Ingredientes principais</strong><ul>${(item.mainIngredients||[]).map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>
+<div class="curation-credit"><span>Autoria: <b>${esc(item.author)}</b></span><span>Fonte: ${esc(item.sourceName)}</span></div>
+<a class="btn primary" href="${esc(safeUrl(item.sourceUrl))}" target="_blank" rel="noopener noreferrer" aria-label="Ver preparo original de ${esc(item.title)} em ${esc(item.sourceName)}">Ver preparo na fonte original ↗</a>
+<small>Ficha editorial, sem reprodução do preparo ou alegação de teste pelo portal.</small>
+</article>`).join(''):'<p>Nenhuma seleção editorial nova nesta semana.</p>';
+}
 function renderHome(){el('home-recipes').innerHTML=RECIPES.slice(0,3).map(card).join('')}
 function renderTechniques(){
 el('tech-grid').innerHTML=(DATA.techniques||[]).map((t,i)=>`<details class="tech-card">
@@ -127,6 +140,6 @@ el('clear-plan').onclick=()=>{if(!Object.keys(state.planner).length)return;if(co
 el('copy-list').onclick=async()=>{const list=grocery();if(!list.length){toast('Escolha receitas primeiro.');return}try{await navigator.clipboard.writeText(textGrocery());toast('Lista copiada!')}catch{download('lista-de-compras.txt',textGrocery(),'text/plain');toast('Lista salva como arquivo.')}};
 el('print-list').onclick=()=>{if(!grocery().length){toast('Escolha receitas primeiro.');return}window.print()};el('export-backup').onclick=doBackup;el('import-backup').onchange=e=>{importBackup(e.target.files?.[0]);e.target.value=''};
 }
-function main(){updateFavCount();renderHome();renderRecipes();renderTechniques();renderWorkshops();renderVideos();renderPlanner();initEvents();const last=DATA.generatedAt?new Date(DATA.generatedAt):null;if(last&&!isNaN(last))el('last-update').textContent=`Conteúdo: ${last.toLocaleDateString('pt-BR')}`;goto(decodeURIComponent(location.hash.slice(1))||'inicio')}
+function main(){updateFavCount();renderHome();renderRecipes();renderCuratedDiscoveries();renderTechniques();renderWorkshops();renderVideos();renderPlanner();initEvents();const last=DATA.generatedAt?new Date(DATA.generatedAt):null;if(last&&!isNaN(last))el('last-update').textContent=`Conteúdo: ${last.toLocaleDateString('pt-BR')}`;goto(decodeURIComponent(location.hash.slice(1))||'inicio')}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',main);else main();
 })();
