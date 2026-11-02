@@ -28,6 +28,19 @@ class ContentTests(unittest.TestCase):
       self.assertTrue(r['ingredients'] or (r.get('sourceUrl','').startswith('https://') and r.get('sourceName')))
       self.assertTrue(all((isinstance(i,str) and bool(i.strip())) or (isinstance(i,dict) and i.get('quantity',0)>0 and i.get('unit') and i.get('name')) for i in r['ingredients']))
       self.assertGreater(r['servings'],0)
+  def test_all_published_recipes_are_complete(self):
+    d=load(BASE/'assets'/'data.js')
+    for r in d['recipes']:
+      with self.subTest(recipe=r['id']):
+        self.assertTrue(r['ingredients'], 'Receita sem ingredientes ou quantidades')
+        self.assertTrue(all(isinstance(i,dict) and i.get('quantity',0)>0 and i.get('unit') and i.get('name') for i in r['ingredients']))
+        self.assertGreaterEqual(len(r['steps']),3)
+        self.assertFalse(any('consulte a fonte' in step.lower() or 'confira os ingredientes' in step.lower() for step in r['steps']))
+    for lesson in d['techniques']:
+      with self.subTest(lesson=lesson['id']):
+        self.assertGreaterEqual(len(lesson.get('lesson',[])),2)
+        self.assertTrue(lesson.get('mistakes'))
+
   def test_weekly_publishes_recipe_and_technique_once(self):
     d=load(BASE/'assets'/'data.js')
     with tempfile.TemporaryDirectory() as tmp:
