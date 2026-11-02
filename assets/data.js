@@ -1841,14 +1841,102 @@ window.DANTAS_DATA = {
       "difficulty": "Médio",
       "emoji": "🍔",
       "ingredients": [
-        "Blend 1: 170 g de acém + 70 g de peito bovino (ou blend 2: 170 g de acém + 70 g de costela bovina desossada)",
-        "8 mini pães de hambúrguer",
-        "8 fatias pequenas de American cheese",
-        "80 g de picles de pepino",
-        "Manteiga para dourar os pães",
-        "Sal e pimenta-do-reino a gosto",
-        "Toppings opcionais: farofa de bacon, jalapeño em conserva, molho barbecue",
-        "Molho da casa: 100 g de maionese, 20 g de ketchup, 15 g de mostarda amarela, 20 g de picles bem picado, 5 ml de conserva de picles, 3 g de açúcar, 2 g de páprica doce, 2 g de alho em pó e pimenta-do-reino"
+        {
+          "quantity": 170,
+          "unit": "g",
+          "name": "acém moído",
+          "group": "Blend de carne"
+        },
+        {
+          "quantity": 70,
+          "unit": "g",
+          "name": "peito bovino moído (ou costela bovina desossada)",
+          "group": "Blend de carne"
+        },
+        {
+          "quantity": 8,
+          "unit": "unidades",
+          "name": "mini pães de hambúrguer",
+          "group": "Montagem"
+        },
+        {
+          "quantity": 8,
+          "unit": "fatias",
+          "name": "queijo tipo americano pequeno",
+          "group": "Montagem"
+        },
+        {
+          "quantity": 80,
+          "unit": "g",
+          "name": "picles de pepino",
+          "group": "Montagem"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "manteiga para tostar os pães",
+          "group": "Montagem"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal a gosto",
+          "group": "Montagem"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino a gosto",
+          "group": "Montagem"
+        },
+        {
+          "quantity": 100,
+          "unit": "g",
+          "name": "maionese",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "ketchup",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "mostarda amarela",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "picles de pepino picado",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 5,
+          "unit": "ml",
+          "name": "líquido da conserva de picles",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 3,
+          "unit": "g",
+          "name": "açúcar (opcional, da anotação da aula)",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "páprica doce (opcional)",
+          "group": "Molho da casa"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "alho em pó (opcional)",
+          "group": "Molho da casa"
+        }
       ],
       "steps": [
         "Mantenha as carnes bem geladas. Misture os dois cortes do blend escolhido sem trabalhar excessivamente a carne; divida em quatro porções de cerca de 60 g e molde discos sem compactar demais. Mantenha refrigerados.",
@@ -1857,7 +1945,7 @@ window.DANTAS_DATA = {
         "Abra os mini pães, passe um pouco de manteiga e doure a parte interna na chapa.",
         "Misture os ingredientes do molho até ficar homogêneo e mantenha refrigerado. Monte os mini burgers com queijo, molho, picles e toppings opcionais."
       ],
-      "tip": "Anotações da aula: não trabalhar demais o blend; selar o pão. Para hambúrguer de carne moída, a referência de segurança é 71 °C no centro. A apostila menciona quatro porções de 60 g, embora liste oito pães — confira o rendimento desejado.",
+      "tip": "A apostila lista 240 g de carne (4 unidades de cerca de 60 g), mas 8 pães e 8 queijos. Para preparar 8 burgers, dobre o blend e mantenha os pães e queijos. Para carne moída, cozinhe até 71 °C no centro. Peito pode ser substituído por costela bovina desossada.",
       "servings": 4,
       "createdAt": "2026-10-31",
       "source": "Cantinho Gastronomia — aula de Steakhouse, professora Adriana (apostila fornecida pelo aluno)",
@@ -1872,7 +1960,8 @@ window.DANTAS_DATA = {
       ],
       "image": "https://images.pexels.com/photos/7015324/pexels-photo-7015324.jpeg?auto=compress&cs=tinysrgb&w=940",
       "imageCredit": "Foto ilustrativa: Dmitry Sidorov / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/photo-of-mini-burgers-7015324/"
+      "imageSourceUrl": "https://www.pexels.com/photo/photo-of-mini-burgers-7015324/",
+      "servingsLabel": "4 hambúrgueres de 60 g; conferir os 8 pães da apostila"
     },
     {
       "id": "aula-cantinho-prime-rib",
@@ -1883,9 +1972,126 @@ window.DANTAS_DATA = {
       "difficulty": "Médio",
       "emoji": "🥩",
       "ingredients": [
-        "Prime rib: 750 g de prime rib com osso, 15 ml de óleo, 30 g de manteiga, 2 dentes de alho, 2 ramos de alecrim, sal e pimenta-do-reino",
-        "Salada: 500 g de batata inglesa, 2 gemas, 10 g de mostarda Dijon, 10 ml de suco de limão, 150 ml de óleo, 15 g de picles de pepino, 15 g de cebolinha, sal e pimenta-do-reino",
-        "Cebolas: 2 cebolas médias, 15 ml de azeite, 15 g de manteiga, 2 ramos de tomilho, sal e pimenta-do-reino"
+        {
+          "quantity": 750,
+          "unit": "g",
+          "name": "prime rib com osso",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "óleo",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "manteiga",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 2,
+          "unit": "ramos",
+          "name": "alecrim",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal a gosto",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino",
+          "group": "Prime rib"
+        },
+        {
+          "quantity": 500,
+          "unit": "g",
+          "name": "batata inglesa",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "gemas pasteurizadas",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 10,
+          "unit": "g",
+          "name": "mostarda Dijon",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 10,
+          "unit": "ml",
+          "name": "suco de limão",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 150,
+          "unit": "ml",
+          "name": "óleo para a maionese",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "picles de pepino picado",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "cebolinha",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal e pimenta para a salada",
+          "group": "Salada de batatas"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "cebolas médias",
+          "group": "Cebolas assadas"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "azeite de oliva",
+          "group": "Cebolas assadas"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "manteiga",
+          "group": "Cebolas assadas"
+        },
+        {
+          "quantity": 2,
+          "unit": "ramos",
+          "name": "tomilho",
+          "group": "Cebolas assadas"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal e pimenta para a cebola",
+          "group": "Cebolas assadas"
+        }
       ],
       "steps": [
         "Retire o prime rib da geladeira cerca de 30 minutos antes do preparo e seque bem a superfície. Tempere com sal e pimenta.",
@@ -1922,9 +2128,90 @@ window.DANTAS_DATA = {
       "difficulty": "Médio",
       "emoji": "🍪",
       "ingredients": [
-        "Cookie: 100 g de manteiga sem sal, 70 g de açúcar mascavo, 40 g de açúcar refinado, 1 ovo, 5 ml de extrato de baunilha, 160 g de farinha de trigo, 2 g de bicarbonato de sódio, 2 g de sal e 120 g de chocolate meio amargo picado",
-        "Caramelo: 100 g de açúcar, 80 g de creme de leite fresco, 30 g de manteiga sem sal e 2 g de flor de sal",
-        "Sorvete para servir (quantidade a gosto)"
+        {
+          "quantity": 100,
+          "unit": "g",
+          "name": "manteiga sem sal em ponto de pomada",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 70,
+          "unit": "g",
+          "name": "açúcar mascavo",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 40,
+          "unit": "g",
+          "name": "açúcar refinado",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "ovo",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 5,
+          "unit": "ml",
+          "name": "extrato de baunilha",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 160,
+          "unit": "g",
+          "name": "farinha de trigo",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "bicarbonato de sódio",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "sal",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "chocolate meio amargo picado",
+          "group": "Cookie"
+        },
+        {
+          "quantity": 100,
+          "unit": "g",
+          "name": "açúcar",
+          "group": "Caramelo salgado"
+        },
+        {
+          "quantity": 80,
+          "unit": "g",
+          "name": "creme de leite fresco",
+          "group": "Caramelo salgado"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "manteiga sem sal",
+          "group": "Caramelo salgado"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "flor de sal",
+          "group": "Caramelo salgado"
+        },
+        {
+          "quantity": 4,
+          "unit": "bolas",
+          "name": "sorvete de creme para servir",
+          "group": "Finalização"
+        }
       ],
       "steps": [
         "Misture manteiga, açúcar mascavo e açúcar refinado até formar creme homogêneo. Adicione ovo e baunilha.",
@@ -1964,16 +2251,51 @@ window.DANTAS_DATA = {
       "emoji": "🍫",
       "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=940&q=80",
       "ingredients": [
-        "160 g de manteiga com sal",
-        "3 ovos",
-        "283 g de açúcar refinado",
-        "240 g de chocolate picado ou em gotas",
-        "60 g de cacau em pó 100%",
-        "127 g de farinha de trigo",
-        "¾ de colher de chá de fermento químico",
-        "2 colheres de chá de essência de baunilha",
-        "5,7 g de café solúvel tipo espresso (opcional)",
-        "Não adicionar sal extra"
+        {
+          "quantity": 160,
+          "unit": "g",
+          "name": "manteiga com sal"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 283,
+          "unit": "g",
+          "name": "açúcar refinado"
+        },
+        {
+          "quantity": 240,
+          "unit": "g",
+          "name": "chocolate picado ou em gotas"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "cacau em pó 100%"
+        },
+        {
+          "quantity": 127,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 0.75,
+          "unit": "colher (chá)",
+          "name": "fermento químico em pó"
+        },
+        {
+          "quantity": 2,
+          "unit": "colheres (chá)",
+          "name": "essência de baunilha"
+        },
+        {
+          "quantity": 5.7,
+          "unit": "g",
+          "name": "café solúvel tipo espresso (opcional)"
+        }
       ],
       "steps": [
         "Misture os ovos com o cacau, fermento, café e baunilha.",
@@ -1984,7 +2306,7 @@ window.DANTAS_DATA = {
         "Coloque na forma de 20 × 30 cm forrada com papel-manteiga.",
         "Asse a 175–180 °C. Comece a verificar o ponto após 20 minutos; o tempo total pode ficar em torno de 25–35 minutos."
       ],
-      "tip": "O tempo e a temperatura são estimativas para a receita adaptada, pois não aparecem na captura do TikTok. Observe o ponto do brownie e evite assar demais. A receita não foi testada independentemente pelo portal.",
+      "tip": "O tempo e a temperatura são estimativas para a receita adaptada, pois não aparecem na captura do TikTok. Observe o ponto do brownie e evite assar demais. A receita não foi testada independentemente pelo portal. Como a manteiga já contém sal, não adicionar sal extra.",
       "tags": [
         "brownie",
         "chocolate",
@@ -2007,7 +2329,26 @@ window.DANTAS_DATA = {
       "summary": "Separe, meça e corte ingredientes antes de ligar o fogo. Leia a receita completa e deixe utensílios à mão.",
       "why": "Reduz esquecimentos e evita que alimentos queimem enquanto você procura o próximo ingrediente.",
       "practice": "Comece com três potinhos: aromáticos, ingredientes secos e finalização.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Antes de começar",
+          "body": "Mise en place significa deixar a bancada e o raciocínio preparados. Leia a receita até o fim, identifique tempos de forno, repouso e refrigeração, e veja quais etapas podem ser feitas em paralelo. Depois pese os ingredientes, separe utensílios e organize a ordem de uso."
+        },
+        {
+          "heading": "Como aplicar na prática",
+          "body": "Separe ingredientes por etapa: massa, recheio e finalização, por exemplo. Deixe o lixo orgânico próximo da bancada, reserve uma tábua para ingredientes crus e outra para alimentos prontos e aqueça o forno apenas no momento adequado."
+        },
+        {
+          "heading": "Um exemplo real",
+          "body": "No risoto, deixe caldo quente, parmesão ralado, funghi hidratado e cebola cortada antes de começar a refogar. Assim, você consegue mexer e controlar a textura sem interromper o cozimento."
+        }
+      ],
+      "mistakes": [
+        "Começar a aquecer a frigideira sem ler os próximos passos.",
+        "Separar ingredientes crus e prontos na mesma superfície sem higienização.",
+        "Medir todos os líquidos em um único copo e esquecer o que deveria entrar depois."
+      ]
     },
     {
       "id": "tec-2",
@@ -2016,7 +2357,26 @@ window.DANTAS_DATA = {
       "summary": "A reação entre aminoácidos e açúcares favorece aromas quando a superfície está relativamente seca e quente.",
       "why": "Panela muito cheia faz a temperatura cair e os alimentos soltarem água.",
       "practice": "Seque cogumelos e carnes com papel-toalha e doure em pequenas levas.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que é a reação de Maillard",
+          "body": "O escurecimento que cria aromas de carne grelhada, pão tostado e cogumelos dourados envolve reações entre aminoácidos e açúcares. Ela é favorecida pela combinação de calor e superfície com pouca umidade; não é a mesma coisa que a caramelização do açúcar."
+        },
+        {
+          "heading": "Como alcançar uma boa crosta",
+          "body": "Seque a superfície do alimento, use frigideira aquecida e deixe espaço entre as porções. Não mova a carne a cada segundo: dê tempo para formar crosta antes de virar. Ajuste a intensidade do fogo conforme a espessura e evite carbonizar temperos."
+        },
+        {
+          "heading": "Onde aparece",
+          "body": "Hambúrguer, prime rib e cogumelos para risoto são ótimos exercícios. Observe que a água acumulada na frigideira produz vapor e atrasa o dourado."
+        }
+      ],
+      "mistakes": [
+        "Encher uma frigideira pequena com muitos ingredientes.",
+        "Virar a carne a cada poucos segundos sem formar crosta.",
+        "Confundir alimento muito escuro ou queimado com dourado bem desenvolvido."
+      ]
     },
     {
       "id": "tec-3",
@@ -2025,7 +2385,26 @@ window.DANTAS_DATA = {
       "summary": "Emulsões dispersam gotículas de gordura em uma fase aquosa. Agitação e ingredientes emulsificantes ajudam a manter a mistura.",
       "why": "Na massa, amido da água do cozimento facilita um molho brilhante.",
       "practice": "Adicione um pouco de água da massa ao molho e mexa vigorosamente.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O princípio da emulsão",
+          "body": "Óleo e água não se misturam espontaneamente por muito tempo. Quando a gordura é fragmentada em gotículas pequenas e estabilizada por ingredientes como gema ou mostarda, formamos uma emulsão. A maionese é um exemplo clássico."
+        },
+        {
+          "heading": "Maionese e molhos",
+          "body": "Para maionese, adicione o óleo lentamente sobre a fase aquosa enquanto bate. Se a mistura separar, comece outra emulsão com pequena quantidade de água ou mostarda e incorpore aos poucos o molho quebrado. Para preparos sem cocção, utilize ovos pasteurizados."
+        },
+        {
+          "heading": "Emulsão da massa",
+          "body": "Em uma carbonara ou molho de manteiga, um pouco de água do cozimento da massa ajuda a ligar gordura e líquido. Ajuste o calor: excesso de temperatura pode separar o molho ou coagular o ovo."
+        }
+      ],
+      "mistakes": [
+        "Acrescentar todo o óleo de uma vez em uma maionese iniciada à mão.",
+        "Aquecer demais um molho que leva gema.",
+        "Descartar toda a água do cozimento antes de ajustar a textura."
+      ]
     },
     {
       "id": "tec-4",
@@ -2034,7 +2413,26 @@ window.DANTAS_DATA = {
       "summary": "Tempere aos poucos, prove no fim e considere ingredientes já salgados, como queijo e caldo pronto.",
       "why": "Sal realça sabores; adição excessiva é difícil de corrigir.",
       "practice": "Reserve metade do sal previsto para o ajuste final.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O sal tem camadas",
+          "body": "O sal intensifica a percepção de sabores e deve ser pensado ao longo do preparo. Alguns ingredientes já contêm bastante sódio — queijos curados, bacon, caldo pronto, azeitonas e carne-seca — e mudam a necessidade de tempero."
+        },
+        {
+          "heading": "Quando ajustar",
+          "body": "Em carnes, tempere segundo a técnica escolhida. Em molhos, experimente depois de reduzir, porque a evaporação concentra o sal. Para arroz e massa, siga uma proporção adequada, lembrando que o líquido de cozimento pode ser descartado."
+        },
+        {
+          "heading": "Como corrigir",
+          "body": "Se o prato ficou salgado, o caminho mais confiável é aumentar a porção de ingredientes sem sal ou adicionar líquido sem sal quando a receita permitir. Açúcar e batata crua não retiram magicamente o excesso."
+        }
+      ],
+      "mistakes": [
+        "Salgar de novo antes de provar um molho reduzido.",
+        "Esquecer o sal presente no queijo ou na conserva.",
+        "Tentar corrigir excesso de sal apenas com açúcar."
+      ]
     },
     {
       "id": "tec-5",
@@ -2043,7 +2441,26 @@ window.DANTAS_DATA = {
       "summary": "Fermento químico geralmente contém componentes ácidos e básicos. Bicarbonato funciona melhor quando há ingrediente ácido na receita.",
       "why": "Trocar um pelo outro sem ajustar a fórmula pode mudar sabor, cor e crescimento.",
       "practice": "Meça com colher nivelada e asse logo após finalizar massas com fermentação química.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que muda entre os dois",
+          "body": "Bicarbonato de sódio é uma base que reage com componentes ácidos, liberando gás carbônico. Já o fermento químico comercial costuma reunir bicarbonato e agentes ácidos, permitindo uma fermentação química mais previsível em bolos."
+        },
+        {
+          "heading": "O efeito na textura",
+          "body": "Além da expansão, o bicarbonato pode alterar a cor e o espalhamento de cookies. O fermento químico tende a contribuir para uma textura mais aerada em massas de bolo. A quantidade deve seguir a proporção da receita."
+        },
+        {
+          "heading": "Como usar",
+          "body": "Peneire com os secos, evite misturar excessivamente depois de hidratar e asse conforme o tempo de espera recomendado. Em biscoitos, repouso na geladeira pode controlar o formato."
+        }
+      ],
+      "mistakes": [
+        "Trocar fermento químico por bicarbonato na proporção de 1:1.",
+        "Usar bicarbonato em excesso, deixando gosto residual.",
+        "Abrir o forno repetidas vezes nos primeiros minutos de um bolo."
+      ]
     },
     {
       "id": "tec-6",
@@ -2052,7 +2469,26 @@ window.DANTAS_DATA = {
       "summary": "Aqueça manteiga em fogo médio: ela espuma, a água evapora e os sólidos do leite douram, criando aroma de avelã.",
       "why": "Retire do fogo quando os sólidos ficarem dourados; eles podem queimar rapidamente.",
       "practice": "Transfira imediatamente para um recipiente frio para interromper o cozimento.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que acontece na panela",
+          "body": "Ao aquecer manteiga, a água evapora, a espuma muda de aparência e os sólidos do leite começam a dourar no fundo. Esse processo produz aromas que lembram avelãs tostadas, especialmente úteis em cookies e molhos."
+        },
+        {
+          "heading": "Passo a passo seguro",
+          "body": "Use panela de fundo claro para enxergar a cor. Aqueça em fogo médio, mexendo ou girando a panela. Quando os sólidos passarem do amarelo para o dourado e o aroma ficar tostado, transfira imediatamente para recipiente resistente ao calor."
+        },
+        {
+          "heading": "Como usar depois",
+          "body": "Em massa de cookie, resfrie antes de incorporar ovos e considere a perda de água da manteiga, pois ela altera a hidratação. Em legumes e massas, use pequenas quantidades como finalização."
+        }
+      ],
+      "mistakes": [
+        "Deixar a manteiga na panela quente depois de atingir a cor desejada.",
+        "Usar panela muito escura sem conseguir perceber o ponto.",
+        "Adicionar ovos à manteiga excessivamente quente."
+      ]
     },
     {
       "id": "tec-7",
@@ -2061,7 +2497,26 @@ window.DANTAS_DATA = {
       "summary": "Evite contaminação cruzada entre frango cru e alimentos prontos para consumo. Use utensílios separados ou lave-os bem.",
       "why": "Temperatura interna mínima segura: 74 °C, medida com termômetro culinário.",
       "practice": "Não lave o frango cru; higienize bancadas, tábuas e mãos após o manuseio.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Atenção à temperatura",
+          "body": "Frango cru pode conter microrganismos nocivos. Cozinhe até atingir 74 °C no centro da parte mais espessa, medindo com termômetro culinário. A cor branca da carne, isoladamente, não garante segurança."
+        },
+        {
+          "heading": "Evite contaminação cruzada",
+          "body": "Não lave frango cru: os respingos podem espalhar microrganismos. Higienize mãos e utensílios depois do contato. Separe tábuas e facas usadas para carne crua daquelas que manipulam verduras e alimentos prontos."
+        },
+        {
+          "heading": "Armazenamento",
+          "body": "Mantenha frango cru refrigerado e descongele dentro da geladeira, protegido de outros alimentos. Refrigere sobras prontamente, de preferência em recipientes rasos, e reaqueça completamente."
+        }
+      ],
+      "mistakes": [
+        "Lavar o frango sob água corrente.",
+        "Usar a mesma tábua para frango cru e tomate da salada.",
+        "Avaliar o ponto seguro somente pela cor externa."
+      ]
     },
     {
       "id": "tec-8",
@@ -2070,7 +2525,26 @@ window.DANTAS_DATA = {
       "summary": "Redução evapora parte da água; roux cozinha gordura e farinha; amido disperso em água fria engrossa ao aquecer.",
       "why": "Cada método altera sabor e textura de forma diferente.",
       "practice": "Comece com pouco espessante e ajuste gradualmente.",
-      "createdAt": "2026-10-15"
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Redução",
+          "body": "A redução concentra um molho pela evaporação da água, intensificando sabores e também o sal. Funciona bem em molhos de tomate e fundos de carne; mexa quando necessário para evitar que grudem."
+        },
+        {
+          "heading": "Roux",
+          "body": "Roux é a combinação de farinha e gordura aquecidas em proporções próximas. Cozinhe a farinha com manteiga por alguns instantes e incorpore leite ou caldo gradualmente para criar molho branco sem grumos."
+        },
+        {
+          "heading": "Amido em suspensão",
+          "body": "Amido de milho deve ser dissolvido primeiro em uma pequena porção de líquido frio. Depois, incorpore à preparação quente e cozinhe até engrossar. Adicione aos poucos para não deixar textura gelatinosa."
+        }
+      ],
+      "mistakes": [
+        "Adicionar amido seco diretamente ao líquido fervendo.",
+        "Não cozinhar a farinha do roux, deixando gosto de farinha crua.",
+        "Reduzir muito um molho já salgado."
+      ]
     }
   ],
   "workshops": [
