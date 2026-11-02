@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e9dac5"/><stop offset="1" stop-color="#f5e9db"/></linearGradient></defs>
+<rect width="720" height="480" fill="url(#bg)"/>
+<ellipse cx="360" cy="268" rx="225" ry="157" fill="#e5d0b9"/>
+<ellipse cx="360" cy="248" rx="203" ry="144" fill="#fffaf3"/>
+<ellipse cx="360" cy="248" rx="170" ry="113" fill="#e5dbc6"/>
+<path d="M282 205c30-41 120-54 159 2 31 44 11 101-47 117-57 16-133-5-148-54-6-19 11-48 36-65z" fill="#b97852"/>
+<path d="M290 236c31-30 111-41 148 2" stroke="#e1a76c" stroke-width="13" stroke-linecap="round" fill="none"/>
+<path d="M324 180c-15-25 10-28 2-52m39 49c-16-26 12-28 5-53m37 57c-11-28 12-24 8-49" stroke="#bfa995" stroke-width="7" fill="none" stroke-linecap="round" opacity=".55"/>
+<path d="M175 174q-22 18-8 41 29-5 37-27M525 330q28 18 44-3-18-24-40-22" fill="#7b987a"/>
+<text x="360" y="424" text-anchor="middle" fill="#6f6b5d" font-size="20" font-family="Georgia,serif">Dantas Cozinha • foto em atualização</text>
+</svg>
