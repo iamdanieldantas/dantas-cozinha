@@ -2348,7 +2348,8 @@ window.DANTAS_DATA = {
         "Começar a aquecer a frigideira sem ler os próximos passos.",
         "Separar ingredientes crus e prontos na mesma superfície sem higienização.",
         "Medir todos os líquidos em um único copo e esquecer o que deveria entrar depois."
-      ]
+      ],
+      "deepDive": "Organize ingredientes por ordem de uso; pese tudo antes de ligar o fogo. Separe também tigelas para resíduos, panos limpos e utensílios. Para receitas com etapas simultâneas, identifique o que pode ser preparado antecipadamente e o que precisa ser feito na hora. A mise en place reduz esquecimentos e ajuda a manter a temperatura e o tempo sob controle."
     },
     {
       "id": "tec-2",
@@ -2376,7 +2377,8 @@ window.DANTAS_DATA = {
         "Encher uma frigideira pequena com muitos ingredientes.",
         "Virar a carne a cada poucos segundos sem formar crosta.",
         "Confundir alimento muito escuro ou queimado com dourado bem desenvolvido."
-      ]
+      ],
+      "deepDive": "A reação de Maillard é favorecida por superfície relativamente seca, calor e contato com a panela. Se houver excesso de alimento, a água liberada resfria a frigideira e a carne cozinha no vapor em vez de dourar. Seque a proteína, aqueça a panela e doure em lotes; observe a crosta sem confundir dourado com queimado."
     },
     {
       "id": "tec-3",
@@ -2404,7 +2406,8 @@ window.DANTAS_DATA = {
         "Acrescentar todo o óleo de uma vez em uma maionese iniciada à mão.",
         "Aquecer demais um molho que leva gema.",
         "Descartar toda a água do cozimento antes de ajustar a textura."
-      ]
+      ],
+      "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas."
     },
     {
       "id": "tec-4",
@@ -2432,7 +2435,8 @@ window.DANTAS_DATA = {
         "Salgar de novo antes de provar um molho reduzido.",
         "Esquecer o sal presente no queijo ou na conserva.",
         "Tentar corrigir excesso de sal apenas com açúcar."
-      ]
+      ],
+      "deepDive": "Tempere em camadas: um pouco no início e correção perto do final. Ingredientes como queijo curado, azeitona, shoyu e caldos concentrados já fornecem sal. Ao provar, considere também acidez e gordura, que alteram a percepção do tempero. Se exagerar, aumente o volume com ingredientes sem sal, quando a receita permitir."
     },
     {
       "id": "tec-5",
@@ -2460,7 +2464,8 @@ window.DANTAS_DATA = {
         "Trocar fermento químico por bicarbonato na proporção de 1:1.",
         "Usar bicarbonato em excesso, deixando gosto residual.",
         "Abrir o forno repetidas vezes nos primeiros minutos de um bolo."
-      ]
+      ],
+      "deepDive": "O bicarbonato precisa de um componente ácido para produzir gás com eficiência; o fermento químico já combina agentes que reagem com umidade e calor. Em bolos e cookies, a troca direta entre eles altera sabor, cor, crescimento e textura. Misture os agentes secos de forma homogênea e leve a massa ao forno conforme a receita."
     },
     {
       "id": "tec-6",
@@ -2488,7 +2493,8 @@ window.DANTAS_DATA = {
         "Deixar a manteiga na panela quente depois de atingir a cor desejada.",
         "Usar panela muito escura sem conseguir perceber o ponto.",
         "Adicionar ovos à manteiga excessivamente quente."
-      ]
+      ],
+      "deepDive": "A manteiga passa por etapas: derrete, perde água e os sólidos do leite começam a dourar. Use panela clara e fogo médio-baixo para enxergar a cor e sentir o aroma de castanhas. Retire imediatamente do fogo ao atingir tom âmbar, pois o calor residual continua o cozimento. Se os sólidos ficarem pretos, o sabor pode ficar amargo."
     },
     {
       "id": "tec-7",
@@ -2516,7 +2522,8 @@ window.DANTAS_DATA = {
         "Lavar o frango sob água corrente.",
         "Usar a mesma tábua para frango cru e tomate da salada.",
         "Avaliar o ponto seguro somente pela cor externa."
-      ]
+      ],
+      "deepDive": "Evite lavar frango cru: respingos podem espalhar microrganismos. Separe tábuas e utensílios de alimentos prontos para consumo e higienize superfícies após o contato. Cozinhe até 74 °C no centro da parte mais espessa, medindo com termômetro culinário. Refrigere sobras prontamente em recipientes rasos."
     },
     {
       "id": "tec-8",
@@ -2544,7 +2551,8 @@ window.DANTAS_DATA = {
         "Adicionar amido seco diretamente ao líquido fervendo.",
         "Não cozinhar a farinha do roux, deixando gosto de farinha crua.",
         "Reduzir muito um molho já salgado."
-      ]
+      ],
+      "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível."
     }
   ],
   "workshops": [
