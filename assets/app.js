@@ -29,9 +29,26 @@ ${t.mistakes?.length?`<div class="tech-lesson"><h4>Erros comuns</h4><ul>${t.mist
 }
 function renderWorkshops(){const now=new Date();const today=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');el('workshop-list').innerHTML=(DATA.workshops||[]).filter(w=>!w.eventDate||w.eventDate>=today).map((w,i)=>`<article class="workshop-card"><div class="workshop-head"><span class="workshop-letter">${['A','I','G'][i%3]}</span><span class="workshop-tag">${esc(w.tag)}</span></div><h3>${esc(w.name)}</h3><div class="workshop-location">📍 ${esc(w.neighborhood)} · ${esc(w.address)}</div><p>${esc(w.description)}</p><div class="workshop-links"><a href="${esc(safeUrl(w.url))}" target="_blank" rel="noopener noreferrer">${w.eventDate?"Detalhes e inscrição ↗":"Site e programação ↗"}</a>${w.instagram?`<a href="${esc(safeUrl(w.instagram))}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>`:''}</div></article>`).join('')}
 function renderVideos(){el('video-list').innerHTML=(DATA.videos||[]).map(v=>`<article class="video-card"><span class="video-play">▶</span><div><span class="tech-pill">${esc(v.platform)} · ${esc(v.topic)}</span><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p><a href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener noreferrer" class="text-button">Abrir conteúdo oficial ↗</a></div></article>`).join('')}
+function ensureRecipePage(){
+  let root=el('recipe-detail');
+  if(root)return root;
+  let section=document.querySelector('[data-view="receita"]');
+  if(!section){
+    section=document.createElement('section');
+    section.className='page recipe-detail-page';
+    section.dataset.view='receita';
+    section.setAttribute('aria-label','Receita completa');
+    el('app-main').appendChild(section);
+  }
+  root=document.createElement('div');
+  root.id='recipe-detail';
+  section.appendChild(root);
+  return root;
+}
 function goto(page){
 const recipeRoute=page.startsWith('receita/');
 const recipeId=recipeRoute?page.slice('receita/'.length):null;
+if(recipeRoute)ensureRecipePage();
 if(recipeRoute)page='receita';
 const available=['inicio','receitas','receita','tecnicas','workshops','videos','planejamento'];
 if(!available.includes(page))page='inicio';
@@ -60,7 +77,7 @@ return section+`<li class="ingredient-entry"><label class="ingredient-row"><inpu
 }
 function openRecipe(id){location.hash='receita/'+encodeURIComponent(id);goto('receita/'+id)}
 function renderRecipePage(id){
-const r=RECIPES.find(x=>x.id===id),root=el('recipe-detail');
+const r=RECIPES.find(x=>x.id===id),root=ensureRecipePage();
 if(!r){root.innerHTML='<div class="shell detail-not-found"><h1>Receita não encontrada</h1><a href="#receitas">Voltar ao catálogo</a></div>';return}
 modalRecipe=r;modalServings=Number(r.servings)||1;
 document.title=r.title+' • Dantas Cozinha';
