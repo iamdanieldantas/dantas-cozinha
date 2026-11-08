@@ -23,7 +23,7 @@ workflows:
           npm run mobile:check
       - name: Gerar projeto iOS com Capacitor
         script: |
-          npx cap add ios
+          npm run ios:add
       - name: Aplicar certificados e provisioning profiles
         script: |
           xcode-project use-profiles
