@@ -1,0 +1,43 @@
+# Dantas Cozinha — distribuição iOS sem Mac próprio
+# A assinatura será habilitada quando a inscrição Apple Developer estiver ativa.
+# No Codemagic, conecte a integração Apple com o nome: dantas-app-store
+workflows:
+  ios-app-store-connect:
+    name: Dantas Cozinha — iOS para App Store Connect
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    integrations:
+      app_store_connect: dantas-app-store
+    environment:
+      node: 22
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.iamdanieldantas.dantascozinha
+      vars:
+        XCODE_PROJECT: "ios/App/App.xcodeproj"
+        XCODE_SCHEME: "App"
+    scripts:
+      - name: Instalar dependências e preparar o pacote web
+        script: |
+          npm install --no-audit --no-fund
+          npm run mobile:check
+      - name: Gerar projeto iOS com Capacitor
+        script: |
+          npx cap add ios
+      - name: Aplicar certificados e provisioning profiles
+        script: |
+          xcode-project use-profiles
+      - name: Compilar e exportar IPA para distribuição
+        script: |
+          xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
+    artifacts:
+      - ios/App/build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      app_store_connect:
+        auth: integration
+        # Primeiramente apenas enviar build para a conta; nenhum envio
+        # automático para revisão ou liberação pública sem confirmação.
+        submit_to_testflight: false
+        submit_to_app_store: false
