@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": {"node": ">=22"},
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "mobile:build": "node scripts/build_mobile.mjs",
     "mobile:check": "node --check scripts/build_mobile.mjs && node --check mobile/mobile.js && node scripts/build_mobile.mjs && node scripts/test_mobile.mjs",
@@ -17,5 +19,8 @@
     "@capacitor/ios": "^8.0.0",
     "@capacitor/share": "^8.0.0"
   },
-  "devDependencies": {"@capacitor/cli": "^8.0.0"}
+  "devDependencies": {
+    "@capacitor/cli": "^8.0.0",
+    "esbuild": "^0.25.0"
+  }
 }
