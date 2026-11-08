@@ -1,6 +1,6 @@
 # Dantas Cozinha no iPhone — projeto inicial
 
-Esta branch prepara o aplicativo iOS do Dantas Cozinha com Capacitor 8, sem mudar os arquivos do site em produção. A estrutura está pronta para gerar o projeto do Xcode; **ainda não houve compilação em Mac, instalação em iPhone nem publicação na App Store**.
+Esta branch prepara o aplicativo iOS do Dantas Cozinha com Capacitor 8, sem mudar os arquivos do site em produção. A estrutura está pronta para gerar o projeto do Xcode; **a compilação no simulador macOS do GitHub Actions foi aprovada, mas ainda não houve compilação assinada, instalação em iPhone nem publicação na App Store**.
 
 ## Recursos preparados
 
@@ -11,9 +11,13 @@ Esta branch prepara o aplicativo iOS do Dantas Cozinha com Capacitor 8, sem muda
 - Aviso quando estiver offline. Fotos hospedadas fora do aplicativo, workshops e links externos precisam de internet.
 - O projeto do site em GitHub Pages continua independente do aplicativo.
 
-## Requisitos para gerar o aplicativo
+## Caminho recomendado sem Mac
 
-- Mac com Node.js 22 ou superior.
+Como o proprietário não tem um Mac, **não é necessário executar Xcode localmente**. O workflow de distribuição está preparado em `codemagic.yaml`; consulte [PUBLICAR_APP_STORE_SEM_MAC.md](PUBLICAR_APP_STORE_SEM_MAC.md) para inscrição Apple Developer individual, integração segura, assinatura, geração de IPA e envio ao App Store Connect. A configuração pressupõe a integração Codemagic chamada `dantas-app-store`. A conta Apple ainda precisa ser cadastrada pelo titular.
+
+## Requisitos para gerar o aplicativo localmente (opcional)
+
+- Apenas para testes locais: Mac com Node.js 22 ou superior.
 - Xcode 26 ou superior e ferramentas de linha de comando (para Capacitor 8).
 - Conta Apple para configurar assinatura e executar no iPhone; Apple Developer Program para distribuição na App Store.
 
