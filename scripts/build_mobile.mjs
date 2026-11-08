@@ -1,4 +1,5 @@
 import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { buildSync } from 'esbuild';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 
@@ -14,7 +15,14 @@ rmSync(webDir, { recursive: true, force: true });
 mkdirSync(webDir, { recursive: true });
 cpSync(assetsPath, join(webDir, 'assets'), { recursive: true });
 cpSync(join(root, 'mobile', 'mobile.css'), join(webDir, 'assets', 'mobile.css'));
-cpSync(join(root, 'mobile', 'mobile.js'), join(webDir, 'assets', 'mobile.js'));
+buildSync({
+  entryPoints: [join(root, 'mobile', 'mobile.js')],
+  outfile: join(webDir, 'assets', 'mobile.js'),
+  bundle: true,
+  platform: 'browser',
+  format: 'iife',
+  target: 'es2020'
+});
 
 let html = readFileSync(indexPath, 'utf8');
 if (!html.includes('</head>') || !html.includes('</body>')) {
