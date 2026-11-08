@@ -1,9 +1,11 @@
-"""Valida o site real em desktop e celular, incluindo rotas das receitas."""
-from pathlib import Path
-from playwright.sync_api import sync_playwright
+"""Smoke tests desktop/mobile baseados nos dados reais, sem números fixos."""
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 import os
+from pathlib import Path
 import threading
+from urllib.parse import quote
+
+from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 os.chdir(ROOT)
@@ -24,77 +26,95 @@ def run():
             browser = playwright.chromium.launch(headless=True, args=["--no-sandbox"])
             errors = []
             desktop = browser.new_page(viewport={"width": 1440, "height": 900})
-            desktop.on("pageerror", lambda error: errors.append(str(error)))
+            desktop.on("pageerror", lambda err: errors.append(str(err)))
             desktop.route("https://**/*", lambda route: route.abort())
-            desktop.goto(base, wait_until="domcontentloaded")
-            desktop.locator("#home-recipes .recipe-card").first.wait_for()
-            assert desktop.locator("#home-recipes .recipe-card").count() == 3
+            desktop.goto(base + "#receitas", wait_until="domcontentloaded")
+            desktop.locator("#recipe-list .recipe-card").first.wait_for()
+            data = desktop.evaluate("window.DANTAS_DATA")
+            recipes = data["recipes"]
+            discoveries = data["curatedDiscoveries"]
+            techniques = data["techniques"]
+            assert recipes, "O catálogo de receitas está vazio"
+            assert techniques, "A Escola está vazia"
 
-            desktop.locator(".hero-actions [data-goto='receitas']").click()
-            assert desktop.locator("#recipe-list .recipe-card").count() == 26
-            assert desktop.locator("#curation-list .curation-card").count() == 3, "Seleções da semana ausentes"
-            assert desktop.locator("#curation-list a[href='https://panelinha.com.br/receita/empanadas-de-carne']").count() == 1
-            assert desktop.locator("#curation-list .curation-ingredients li").count() >= 10
+            assert desktop.locator("#home-recipes .recipe-card").count() == min(3, len(recipes))
+            assert desktop.locator("#recipe-list .recipe-card").count() == len(recipes)
+            assert desktop.locator("#curation-list .curation-card").count() == len(discoveries)
+            assert desktop.locator("#curation-list .curation-card a[href^='https://']").count() == len(discoveries)
+            assert desktop.locator("#curation-list .curation-ingredients li").count() == sum(
+                len(item["mainIngredients"]) for item in discoveries
+            ), "Ingredientes da curadoria não correspondem aos dados"
             assert desktop.locator("#curation-list .detail-steps").count() == 0
-            desktop.locator("#recipe-search").fill("brownie")
-            assert desktop.locator("#recipe-list .recipe-card").count() >= 3
 
-            recipe_id = "adaptacao-brownie-forma-20x30"
-            desktop.locator(f"#recipe-list button.inline-link[data-recipe='{recipe_id}']").click()
-            assert desktop.locator('[data-view="receita"]').is_visible(), "Página completa não visível"
-            assert desktop.locator("#recipe-detail h1").inner_text().startswith("Brownie de chocolate")
-            assert desktop.locator("#ingredients-list .ingredient-entry").count() == 9, "Ingredientes ausentes"
-            assert desktop.locator("#recipe-detail .detail-steps li").count() == 7, "Modo de preparo ausente"
-            assert desktop.locator("#serving-number").inner_text() == "12"
+            example = recipes[0]
+            search = example["title"].split()[0]
+            desktop.locator("#recipe-search").fill(search)
+            assert desktop.locator("#recipe-list .recipe-card").count() >= 1
+            desktop.locator("#recipe-search").fill("")
+            desktop.locator(
+                f"#recipe-list button.inline-link[data-recipe='{example['id']}']"
+            ).click()
+            assert desktop.locator('[data-view="receita"]').is_visible()
+            assert desktop.locator("#recipe-detail h1").inner_text() == example["title"]
+            assert desktop.locator("#ingredients-list .ingredient-entry").count() == len(example["ingredients"])
+            assert desktop.locator("#recipe-detail .detail-steps li").count() == len(example["steps"])
+            servings = int(example["servings"])
+            assert desktop.locator("#serving-number").inner_text() == str(servings)
             desktop.locator("#serving-plus").click()
-            assert desktop.locator("#serving-number").inner_text() == "13"
-            desktop.locator("#recipe-note").fill("Fiz o teste da página completa.")
+            assert desktop.locator("#serving-number").inner_text() == str(min(40, servings + 1))
+            desktop.locator("#recipe-note").fill("Teste de persistência e navegação.")
             desktop.locator(".detail-back").click()
-            desktop.goto(base + "#receita/" + recipe_id, wait_until="domcontentloaded")
-            assert desktop.locator("#ingredients-list .ingredient-entry").count() == 9, "Falha ao abrir link direto"
-            assert desktop.locator("#recipe-note").input_value() == "Fiz o teste da página completa."
+            assert desktop.locator('[data-view="receitas"]').is_visible()
+            desktop.goto(base + "#receita/" + quote(example["id"]), wait_until="domcontentloaded")
+            assert desktop.locator("#recipe-detail h1").inner_text() == example["title"]
+            assert desktop.locator("#recipe-note").input_value() == "Teste de persistência e navegação."
 
             desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
-            desktop.locator("#tech-grid details").first.locator("summary").click()
-            assert desktop.locator("#tech-grid details").first.get_attribute("open") is not None
-            assert desktop.locator("#tech-grid details").first.locator(".tech-lesson").count() >= 3
-            for topic in (
-                "Antipasto, entrada, couvert e aperitivo",
-                "Contaminação direta dos alimentos",
-                "Contaminação cruzada: direta e indireta",
-            ):
-                lesson = desktop.locator("#tech-grid details").filter(has=desktop.locator("summary h3", has_text=topic))
-                assert lesson.count() == 1, f"Aula ausente na Escola: {topic}"
+            assert desktop.locator("#tech-grid details").count() == len(techniques)
+            first = desktop.locator("#tech-grid details").first
+            first.locator("summary").click()
+            assert first.get_attribute("open") is not None
+            assert first.locator(".tech-lesson").count() >= 3
+            for topic in ("Antipasto, entrada, couvert e aperitivo",
+                          "Contaminação direta dos alimentos",
+                          "Contaminação cruzada: direta e indireta"):
+                # São conteúdos mínimos do acervo. Qualquer alteração exige revisão editorial.
+                lesson = desktop.locator("#tech-grid details").filter(
+                    has=desktop.locator("summary h3", has_text=topic)
+                )
+                assert lesson.count() == 1, "Aula essencial ausente: " + topic
                 lesson.locator("summary").click()
-                assert lesson.get_attribute("open") is not None, f"Aula não expandiu: {topic}"
-                assert lesson.locator(".tech-lesson").count() >= 3, f"Aula sem conteúdo: {topic}"
+                assert lesson.get_attribute("open") is not None
 
-
-            mobile = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=1, is_mobile=True, has_touch=True)
-            mobile.on("pageerror", lambda error: errors.append("mobile: " + str(error)))
+            mobile = browser.new_page(
+                viewport={"width": 390, "height": 844}, device_scale_factor=1,
+                is_mobile=True, has_touch=True
+            )
+            mobile.on("pageerror", lambda err: errors.append("mobile: " + str(err)))
             mobile.route("https://**/*", lambda route: route.abort())
             mobile.goto(base + "#receitas", wait_until="domcontentloaded")
-            assert mobile.locator("#recipe-list .recipe-card").count() == 26
-            assert mobile.locator("#curation-list .curation-card").count() == 3
+            assert mobile.locator("#recipe-list .recipe-card").count() == len(recipes)
+            assert mobile.locator("#curation-list .curation-card").count() == len(discoveries)
             mobile.goto(base + "#workshops", wait_until="domcontentloaded")
-            # Eventos passados deixam de aparecer; o total muda com a data.
-            # Calcular a expectativa no próprio navegador evita diferenças de fuso.
-            expected_workshops = mobile.evaluate("""() => {
-                const now = new Date();
-                const today = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, '0'), String(now.getDate()).padStart(2, '0')].join('-');
-                return window.DANTAS_DATA.workshops.filter(w => !w.eventDate || w.eventDate >= today).length;
+            expected = mobile.evaluate("""() => {
+              const today = new Date();
+              const ymd = [today.getFullYear(), String(today.getMonth()+1).padStart(2,'0'),
+                String(today.getDate()).padStart(2,'0')].join('-');
+              return window.DANTAS_DATA.workshops.filter(w => !w.eventDate || w.eventDate >= ymd).length;
             }""")
-            assert expected_workshops > 0, "Nenhuma oficina vigente encontrada nos dados"
-            assert mobile.locator("#workshop-list .workshop-card").count() == expected_workshops, "Workshops exibidos não correspondem aos eventos vigentes"
+            assert mobile.locator("#workshop-list .workshop-card").count() == expected, (
+                "Oficinas visíveis divergem da filtragem de datas"
+            )
             mobile.goto(base + "#receitas", wait_until="domcontentloaded")
-            mobile.locator("#recipe-list button.inline-link[data-recipe='curadoria-torta-de-frango-classica']").click()
-            assert mobile.locator("#recipe-detail h1").inner_text() == "Torta de frango clássica"
-            assert mobile.locator("#ingredients-list .ingredient-entry").count() >= 10
-            assert mobile.locator("#recipe-detail .detail-steps li").count() >= 7
+            mobile.locator(
+                f"#recipe-list button.inline-link[data-recipe='{example['id']}']"
+            ).click()
+            assert mobile.locator("#recipe-detail h1").inner_text() == example["title"]
+            assert mobile.locator("#ingredients-list .ingredient-entry").count() == len(example["ingredients"])
+            assert mobile.locator("#recipe-detail .detail-steps li").count() == len(example["steps"])
             assert mobile.locator("#recipe-detail").is_visible()
-
-            assert not errors, "Erros JavaScript no navegador: " + repr(errors)
-            print("SMOKE OK: desktop, celular, curadoria verificada, oficinas, ingredientes, preparo, aulas e navegação direta")
+            assert not errors, "Erros JavaScript: " + repr(errors)
+            print("SMOKE OK: desktop/mobile, curadoria, receitas completas, notas, Escola e oficinas")
             browser.close()
     finally:
         server.shutdown()

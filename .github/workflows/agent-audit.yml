@@ -1,0 +1,42 @@
+name: Agent — Auditoria editorial
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "Tipo de conteúdo a revisar"
+        required: false
+        default: all
+        type: choice
+        options: [all, recipes, techniques, workshops, videos, curatedDiscoveries]
+  schedule:
+    - cron: '0 16 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  editorial-audit:
+    runs-on: ubuntu-24.04
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      SCOPE: ${{ inputs.scope || 'all' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar contrato e testes básicos
+        run: python -m harness.runner --mode review
+      - name: Auditoria IA opcional
+        run: python -m harness.ai_review --scope "$SCOPE"
+      - name: Arquivar auditoria e logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-editorial-report-${{ github.run_id }}
+          path: _reports/*.json
+          if-no-files-found: warn
