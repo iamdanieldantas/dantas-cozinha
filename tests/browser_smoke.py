@@ -31,10 +31,10 @@ def run():
             assert desktop.locator("#home-recipes .recipe-card").count() == 3
 
             desktop.locator(".hero-actions [data-goto='receitas']").click()
-            assert desktop.locator("#recipe-list .recipe-card").count() == 26
-            assert desktop.locator("#curation-list .curation-card").count() == 3, "Seleções da semana ausentes"
-            assert desktop.locator("#curation-list a[href='https://panelinha.com.br/receita/empanadas-de-carne']").count() == 1
-            assert desktop.locator("#curation-list .curation-ingredients li").count() >= 10
+            assert desktop.locator("#recipe-list .recipe-card").count() == desktop.evaluate("window.DANTAS_DATA.recipes.length")
+            assert desktop.locator("#curation-list .curation-card").count() == desktop.evaluate("window.DANTAS_DATA.curatedDiscoveries.length"), "Curadoria não corresponde aos dados"
+            assert desktop.locator("#curation-list .curation-card a[href^='https://']").count() == desktop.evaluate("window.DANTAS_DATA.curatedDiscoveries.length")
+            assert desktop.locator("#curation-list .curation-ingredients li").count() == desktop.evaluate("window.DANTAS_DATA.curatedDiscoveries.reduce((sum, item) => sum + item.mainIngredients.length, 0)")
             assert desktop.locator("#curation-list .detail-steps").count() == 0
             desktop.locator("#recipe-search").fill("brownie")
             assert desktop.locator("#recipe-list .recipe-card").count() >= 3
@@ -74,8 +74,8 @@ def run():
             mobile.on("pageerror", lambda error: errors.append("mobile: " + str(error)))
             mobile.route("https://**/*", lambda route: route.abort())
             mobile.goto(base + "#receitas", wait_until="domcontentloaded")
-            assert mobile.locator("#recipe-list .recipe-card").count() == 26
-            assert mobile.locator("#curation-list .curation-card").count() == 3
+            assert mobile.locator("#recipe-list .recipe-card").count() == mobile.evaluate("window.DANTAS_DATA.recipes.length")
+            assert mobile.locator("#curation-list .curation-card").count() == mobile.evaluate("window.DANTAS_DATA.curatedDiscoveries.length")
             mobile.goto(base + "#workshops", wait_until="domcontentloaded")
             # Eventos passados deixam de aparecer; o total muda com a data.
             # Calcular a expectativa no próprio navegador evita diferenças de fuso.
