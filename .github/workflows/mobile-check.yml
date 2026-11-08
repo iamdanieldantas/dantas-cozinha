@@ -1,0 +1,54 @@
+name: Validar aplicativo iOS
+
+on:
+  pull_request:
+    paths:
+      - 'mobile/**'
+      - 'scripts/build_mobile.mjs'
+      - 'scripts/test_mobile.mjs'
+      - 'scripts/set_ios_app_icon.mjs'
+      - 'codemagic.yaml'
+      - 'privacy.html'
+      - 'package.json'
+      - 'capacitor.config.json'
+      - 'index.html'
+      - 'assets/**'
+  workflow_dispatch:
+
+jobs:
+  validar-pacote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar dependências JavaScript
+        run: npm install --no-audit --no-fund
+      - name: Validar e montar pacote web iOS
+        run: npm run mobile:check
+
+  compilar-ios:
+    name: Compilar iOS no simulador (sem assinatura)
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Mostrar versão do Xcode
+        run: xcodebuild -version
+      - name: Instalar dependências
+        run: npm install --no-audit --no-fund
+      - name: Criar projeto iOS
+        run: npm run ios:add
+      - name: Compilar para o simulador
+        run: |
+          xcodebuild \
+            -project ios/App/App.xcodeproj \
+            -scheme App \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO \
+            build
