@@ -54,11 +54,11 @@ def validate(data: dict) -> dict:
         return {"ok": False, "errors": ["Raiz deve ser um objeto."], "warnings": [], "counts": {}}
 
     required = {
-        "recipes": ("id", "title", "category", "description", "difficulty", "tip", "createdAt", "source"),
+        "recipes": ("id", "title", "category", "description", "difficulty", "emoji", "image", "tip", "createdAt", "source"),
         "techniques": ("id", "title", "category", "summary", "why", "practice", "createdAt", "deepDive"),
         "workshops": ("id", "name", "neighborhood", "address", "description", "tag", "verifiedAt"),
         "videos": ("id", "title", "topic", "description", "platform", "verifiedAt"),
-        "curatedDiscoveries": ("id", "title", "category", "description", "author", "sourceName", "verifiedAt", "createdAt", "curationStatus"),
+        "curatedDiscoveries": ("id", "title", "category", "description", "author", "sourceName", "verifiedAt", "createdAt", "curationStatus", "preparation", "testClaim"),
     }
     for kind in KINDS:
         rows = data.get(kind)
@@ -115,6 +115,9 @@ def validate(data: dict) -> dict:
                     errors.append(label + ": modo de preparo precisa de etapas textuais.")
                 if not is_url(row.get("image")):
                     errors.append(label + ": imagem deve usar uma URL HTTPS.")
+                tags = row.get("tags")
+                if not isinstance(tags, list) or not tags or not all(is_text(x) for x in tags):
+                    errors.append(label + ": tags devem ser lista de rótulos.")
                 if "sourceUrl" in row and not is_url(row["sourceUrl"]):
                     errors.append(label + ": sourceUrl inválida.")
                 if not is_date(row.get("createdAt")):
@@ -137,6 +140,8 @@ def validate(data: dict) -> dict:
                     errors.append(label + ": URL da oficina inválida.")
                 if not is_date(row.get("verifiedAt")):
                     errors.append(label + ": verifiedAt inválida.")
+                if "eventDate" not in row:
+                    errors.append(label + ": eventDate precisa existir (data ISO ou null).")
                 event_date = row.get("eventDate")
                 if event_date is not None and not is_date(event_date):
                     errors.append(label + ": eventDate deve ser data ISO ou null.")
