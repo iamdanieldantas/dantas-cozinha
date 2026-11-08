@@ -10,6 +10,7 @@ for (const asset of ['styles.css', 'data.js', 'app.js', 'mobile.css', 'mobile.js
 }
 assert(html.includes('viewport-fit=cover'), 'Viewport iOS não configurado');
 assert(html.includes('assets/mobile.js'), 'Bootstrap mobile ausente');
+assert(existsSync('www/privacy.html'), 'Política de privacidade ausente do app');
 for (const topic of [
   'Antipasto, entrada, couvert e aperitivo',
   'Contaminação direta dos alimentos',
