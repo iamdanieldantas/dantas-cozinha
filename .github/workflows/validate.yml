@@ -10,24 +10,28 @@ permissions:
 
 jobs:
   validar:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Obter projeto
         uses: actions/checkout@v4
       - name: Preparar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - name: Validar dados e política editorial
-        run: python -m unittest discover -s tests -p 'test_*.py' -v
-      - name: Validar sintaxe JavaScript
+          python-version: '3.12'
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar navegador para testes
         run: |
-          node --check assets/app.js
-          node --check assets/data.js
-      - name: Preparar navegador para smoke test
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install playwright
+          python -m pip install --disable-pip-version-check playwright==1.56.0
           python -m playwright install --with-deps chromium
-      - name: Smoke test responsivo
-        run: python tests/browser_smoke.py
+      - name: Agente QA — contrato, testes, JavaScript e navegador
+        run: python -m harness.runner --mode review --browser
+      - name: Anexar relatório do harness
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-report-${{ github.run_id }}
+          path: _reports/harness-report.json
+          if-no-files-found: warn
