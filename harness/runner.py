@@ -65,6 +65,7 @@ def main() -> int:
             ("content-contract", [sys.executable, "-m", "harness.validate_content"], 45),
             ("unit-tests", [sys.executable, "-m", "unittest", "discover", "-s", "tests",
                             "-p", "test_*.py", "-v"], 180),
+            ("python-agents-syntax", [sys.executable, "-m", "compileall", "-q", "harness"], 45),
             ("javascript-app", ["node", "--check", "assets/app.js"], 45),
             ("javascript-data", ["node", "--check", "assets/data.js"], 45),
         ]
