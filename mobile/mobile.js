@@ -1,3 +1,5 @@
+import { Capacitor } from '@capacitor/core';
+import { Share } from '@capacitor/share';
 /* Camada exclusiva do app iOS; não altera o site publicado. */
 (() => {
   'use strict';
@@ -59,9 +61,8 @@
 
   async function share(payload) {
     try {
-      const nativeShare = window.Capacitor?.Plugins?.Share;
-      if (nativeShare?.share) {
-        await nativeShare.share(payload);
+      if (Capacitor.isNativePlatform()) {
+        await Share.share(payload);
       } else if (navigator.share) {
         await navigator.share(payload);
       } else if (navigator.clipboard?.writeText) {
