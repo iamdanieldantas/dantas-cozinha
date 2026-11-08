@@ -14,6 +14,7 @@ if (!existsSync(indexPath) || !existsSync(assetsPath)) {
 rmSync(webDir, { recursive: true, force: true });
 mkdirSync(webDir, { recursive: true });
 cpSync(assetsPath, join(webDir, 'assets'), { recursive: true });
+cpSync(join(root, 'privacy.html'), join(webDir, 'privacy.html'));
 cpSync(join(root, 'mobile', 'mobile.css'), join(webDir, 'assets', 'mobile.css'));
 buildSync({
   entryPoints: [join(root, 'mobile', 'mobile.js')],
