@@ -2561,6 +2561,113 @@ window.DANTAS_DATA = {
         "Reduzir muito um molho já salgado."
       ],
       "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível."
+    },
+    {
+      "id": "tec-servico-refeicao",
+      "title": "Antipasto, entrada, couvert e aperitivo",
+      "category": "Cultura gastronômica",
+      "summary": "Entenda a função de cada serviço no início de uma refeição e como eles se relacionam.",
+      "why": "Ajuda a ler cardápios, planejar menus e organizar a sequência de um jantar.",
+      "practice": "Monte um jantar: bebida aperitiva na recepção, pães à mesa e bruschetta como antipasto/entrada.",
+      "createdAt": "2026-11-08",
+      "lesson": [
+        {
+          "heading": "Antipasto",
+          "body": "Na tradição italiana, antipasto (plural antipasti) é o serviço que antecede o primo piatto. Pode incluir bruschetta, caponata, queijos, embutidos e vegetais marinados. Normalmente funciona como a entrada do menu italiano."
+        },
+        {
+          "heading": "Entrada",
+          "body": "É o primeiro prato de uma refeição estruturada, antes do prato principal. Pode ser carpaccio, salada, sopa, tartare ou outra preparação fria ou quente. É uma categoria mais ampla que antipasto."
+        },
+        {
+          "heading": "Couvert",
+          "body": "No uso brasileiro, é o conjunto de pequenos alimentos oferecidos à mesa no início do atendimento, como pães, manteiga, patês e azeite. Pode ter cobrança específica informada previamente, conforme as regras aplicáveis. Não confundir com couvert artístico."
+        },
+        {
+          "heading": "Aperitivo",
+          "body": "É consumido antes da refeição para estimular o apetite e socializar. Tradicionalmente inclui bebidas como vermute e espumante, frequentemente acompanhadas de azeitonas, castanhas ou canapés."
+        },
+        {
+          "heading": "Exemplo de sequência italiana",
+          "body": "Aperitivo na chegada; pães e azeite à mesa; burrata com tomate como antipasto/entrada; massa como primo piatto; carne como secondo piatto; tiramisù como dolce. Nem todos os serviços são obrigatórios."
+        }
+      ],
+      "mistakes": [
+        "Achar que antipasto e entrada precisam ser dois pratos diferentes.",
+        "Confundir couvert alimentício com couvert artístico.",
+        "Restringir aperitivo apenas a petiscos, ignorando as bebidas."
+      ],
+      "deepDive": "Os termos descrevem aspectos distintos: antipasto é um serviço da tradição italiana; entrada é uma função no menu; couvert é um serviço de recepção à mesa; aperitivo é o consumo pré-refeição, especialmente de bebidas. Eles podem se sobrepor."
+    },
+    {
+      "id": "tec-contaminacao-direta",
+      "title": "Contaminação direta dos alimentos",
+      "category": "Segurança alimentar",
+      "summary": "Quando um contaminante alcança o alimento diretamente, como gotículas de um espirro ou respingos de produto químico.",
+      "why": "Reconhecer as fontes de contaminação ajuda a proteger alimentos prontos e ingredientes durante o preparo.",
+      "practice": "Antes de cozinhar, higienize as mãos, proteja os alimentos de respingos e mantenha produtos de limpeza longe da bancada.",
+      "createdAt": "2026-11-08",
+      "lesson": [
+        {
+          "heading": "O que significa",
+          "body": "Contaminação direta ocorre quando um agente biológico, químico ou físico chega diretamente ao alimento a partir da fonte, sem transferência por outro utensílio ou alimento. Exemplos: espirrar sobre uma salada, um inseto pousar na comida ou produto de limpeza respingar em uma preparação."
+        },
+        {
+          "heading": "Principais riscos",
+          "body": "Gotículas respiratórias, contato de mãos sem higiene, pragas, cabelos, fragmentos de materiais e produtos químicos podem comprometer a segurança do alimento. O risco depende do contaminante e da exposição."
+        },
+        {
+          "heading": "Como prevenir",
+          "body": "Lave as mãos com água e sabão, cubra ferimentos, não manipule alimentos expostos ao tossir ou espirrar, mantenha recipientes protegidos e guarde saneantes longe dos ingredientes."
+        },
+        {
+          "heading": "O que fazer em caso de suspeita",
+          "body": "Se houver respingo de saneante ou outra contaminação potencialmente perigosa, descarte o alimento afetado. Não tente resolver apenas aquecendo: calor não remove contaminantes químicos."
+        }
+      ],
+      "mistakes": [
+        "Manipular alimentos prontos sem lavar as mãos.",
+        "Deixar pratos descobertos próximos de produtos de limpeza.",
+        "Acreditar que cozinhar sempre torna seguro um alimento contaminado."
+      ],
+      "deepDive": "Contaminação direta descreve o contato imediato da fonte contaminante com o alimento. É diferente de contaminação cruzada, que enfatiza a transferência de contaminantes entre fontes, alimentos ou superfícies. As classificações podem se sobrepor dependendo do contexto."
+    },
+    {
+      "id": "tec-contaminacao-cruzada",
+      "title": "Contaminação cruzada: direta e indireta",
+      "category": "Segurança alimentar",
+      "summary": "Transferência de contaminantes de um alimento, superfície ou utensílio para outro alimento.",
+      "why": "Evita que microrganismos presentes em carnes cruas alcancem alimentos prontos para consumo.",
+      "practice": "Corte frango cru em uma tábua, lave e higienize faca e tábua antes de preparar a salada; mantenha carnes cruas fechadas na parte inferior da geladeira.",
+      "createdAt": "2026-11-08",
+      "lesson": [
+        {
+          "heading": "O que é",
+          "body": "É a transferência de microrganismos ou outros contaminantes de uma fonte para um alimento que pode estar pronto para consumo. É especialmente perigosa quando um alimento cru contamina outro que não será cozido."
+        },
+        {
+          "heading": "Cruzada direta",
+          "body": "Acontece por contato entre alimentos, por exemplo quando carne crua encosta em uma salada pronta ou seus líquidos escorrem sobre ela na geladeira."
+        },
+        {
+          "heading": "Cruzada indireta",
+          "body": "Acontece por intermédio de mãos, facas, tábuas, panos ou bancadas. Exemplo: cortar frango cru e depois tomate com a mesma faca sem higienização adequada."
+        },
+        {
+          "heading": "Prevenção no dia a dia",
+          "body": "Separe alimentos crus dos prontos, use utensílios distintos ou higienize-os entre tarefas, lave as mãos com água e sabão e armazene carnes cruas em recipientes fechados nas prateleiras inferiores."
+        },
+        {
+          "heading": "Cozinhar resolve?",
+          "body": "O cozimento adequado reduz muitos riscos microbiológicos, mas não corrige todos os casos de contaminação, especialmente quando há toxinas resistentes ao calor ou substâncias químicas."
+        }
+      ],
+      "mistakes": [
+        "Reutilizar a faca de carne crua para legumes prontos sem higienização.",
+        "Armazenar frango cru acima de alimentos prontos e deixar líquidos escorrerem.",
+        "Usar o mesmo pano sujo em várias superfícies."
+      ],
+      "deepDive": "A distinção direta/indireta na contaminação cruzada depende do caminho de transferência: contato entre alimentos ou intermediários como utensílios e mãos. Portanto, contaminação direta e cruzada não são categorias necessariamente excludentes."
     }
   ],
   "workshops": [
