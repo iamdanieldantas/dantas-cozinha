@@ -73,4 +73,7 @@ Para modificar receitas manualmente, edite `assets/data.js` de modo que continue
 
 ## Aplicativo iOS (em preparação)
 
+**Para publicar sem possuir Mac:** consulte [Guia de publicação na App Store sem Mac](PUBLICAR_APP_STORE_SEM_MAC.md), o arquivo [codemagic.yaml](codemagic.yaml), os [metadados em português](APP_STORE_METADATA_PT_BR.md) e a [política de privacidade](privacy.html).
+
+
 A estrutura do aplicativo para iPhone com Capacitor está sendo desenvolvida separadamente do site. Consulte [MOBILE_IOS.md](MOBILE_IOS.md) para requisitos, comandos de build, testes no Xcode e pendências de publicação na App Store.
