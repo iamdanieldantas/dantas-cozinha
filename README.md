@@ -70,3 +70,16 @@ Para modificar receitas manualmente, edite `assets/data.js` de modo que continue
 - A atualização via API depende da chave e do funcionamento do serviço. Se a API falhar, o sistema usa o conteúdo da fila editorial, caso ainda haja itens.
 - Novos vídeos, eventos, vagas, posts do Instagram e informações de workshop **não são capturados automaticamente** nesta versão.
 - A lista de compras soma unidades idênticas conforme o texto de cada ingrediente; itens parecidos descritos com palavras ou unidades diferentes aparecem separados. Refaça a conferência na prática.
+
+## Skills, agentes e publicação controlada
+
+A arquitetura de automação está documentada em [AUTOMACAO_AGENTES.md](AUTOMACAO_AGENTES.md), com instruções para agentes em [AGENTS.md](AGENTS.md). As skills em .agents/skills/ definem padrões de receitas, aulas, oficinas, vídeos e curadoria, testes obrigatórios e aprovação manual.
+
+Comandos de validação:
+
+    python -m harness.validate_content
+    python -m harness.runner --mode review
+
+Para executar o smoke test completo, instale Playwright/Chromium e acrescente --browser.
+
+GitHub Actions registra relatórios do harness, bloqueia o deploy em caso de falha e mantém a publicação separada da aprovação de PR. **Para impedir push direto em main, configure proteção de branch no GitHub.** A auditoria IA opcional precisa da secret OPENAI_API_KEY; na ausência dela, o estágio é explicitamente marcado como ignorado.
