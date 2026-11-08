@@ -1,0 +1,82 @@
+name: Agent — Propor melhoria editorial via IA
+
+on:
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: Tipo de conteúdo
+        required: true
+        type: choice
+        options: [recipes, techniques]
+      record_id:
+        description: ID exato do item existente
+        required: true
+        type: string
+      instruction:
+        description: Orientação editorial sem criar fatos ou fontes
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  propose-draft-pr:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ENTITY_KIND: ${{ inputs.kind }}
+      ENTITY_ID: ${{ inputs.record_id }}
+      EDIT_INSTRUCTION: ${{ inputs.instruction }}
+      GH_TOKEN: ${{ github.token }}
+      TARGET_BRANCH: agent/editorial-${{ github.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Criar branch de trabalho
+        run: git switch -c "$TARGET_BRANCH"
+      - name: Agent IA — gerar somente proposta textual
+        run: python -m harness.ai_propose --kind "$ENTITY_KIND" --id "$ENTITY_ID" --instruction "$EDIT_INSTRUCTION"
+      - name: Harness — validar proposta antes de abrir PR
+        run: python -m harness.runner --mode review
+      - name: Criar PR em rascunho, sem integrar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data.js
+          git diff --cached --quiet && { echo "Nenhuma alteração gerada."; exit 1; }
+          git commit -m "docs(editorial): proposta IA para $ENTITY_KIND/$ENTITY_ID"
+          git push origin "$TARGET_BRANCH"
+          cat > /tmp/agent-pr-body.md <<'EOF'
+          ## Proposta de agente de IA — exige aprovação
+          Este PR foi gerado para padronizar **campos textuais de um conteúdo existente**.
+          Nenhum ingrediente, medida, preparo, ID, URL ou autoria foi alterado pelo agente.
+          
+          **Antes de integrar:** revisar diff e fonte, verificar afirmações culinárias e confirmar os testes.
+          PR em rascunho; sem auto-merge ou auto-publicação.
+          
+          Relatório: consulte os artifacts desta execução de GitHub Actions.
+          EOF
+          gh pr create --draft --base main --head "$TARGET_BRANCH" \
+            --title "docs: revisão editorial de $ENTITY_KIND/$ENTITY_ID" \
+            --body-file /tmp/agent-pr-body.md
+      - name: Solicitar validação completa da branch
+        run: gh workflow run validate.yml --ref "$TARGET_BRANCH"
+      - name: Arquivar logs da proposta
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: agent-proposal-${{ github.run_id }}
+          path: _reports/*.json
+          if-no-files-found: warn
