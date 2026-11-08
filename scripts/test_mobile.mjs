@@ -16,5 +16,6 @@ for (const topic of [
   'Contaminação cruzada: direta e indireta'
 ]) assert(data.includes(topic), 'Aula não encontrada no pacote offline: ' + topic);
 assert(script.includes('mobile-app-tabs'), 'Navegação ausente');
-assert(script.includes('Plugins?.Share'), 'Compartilhamento nativo ausente');
+assert(script.includes('Share'), 'Compartilhamento nativo ausente');
+assert(readFileSync('mobile/mobile.js', 'utf8').includes("from '@capacitor/share'"), 'O plugin Share não foi importado');
 console.log('Mobile OK: assets, aulas offline, navegação e compartilhamento.');
