@@ -58,6 +58,17 @@ def run():
             desktop.locator("#tech-grid details").first.locator("summary").click()
             assert desktop.locator("#tech-grid details").first.get_attribute("open") is not None
             assert desktop.locator("#tech-grid details").first.locator(".tech-lesson").count() >= 3
+            for topic in (
+                "Antipasto, entrada, couvert e aperitivo",
+                "Contaminação direta dos alimentos",
+                "Contaminação cruzada: direta e indireta",
+            ):
+                lesson = desktop.locator("#tech-grid details").filter(has=desktop.locator("summary h3", has_text=topic))
+                assert lesson.count() == 1, f"Aula ausente na Escola: {topic}"
+                lesson.locator("summary").click()
+                assert lesson.get_attribute("open") is not None, f"Aula não expandiu: {topic}"
+                assert lesson.locator(".tech-lesson").count() >= 3, f"Aula sem conteúdo: {topic}"
+
 
             mobile = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=1, is_mobile=True, has_touch=True)
             mobile.on("pageerror", lambda error: errors.append("mobile: " + str(error)))
@@ -66,7 +77,15 @@ def run():
             assert mobile.locator("#recipe-list .recipe-card").count() == 26
             assert mobile.locator("#curation-list .curation-card").count() == 3
             mobile.goto(base + "#workshops", wait_until="domcontentloaded")
-            assert mobile.locator("#workshop-list .workshop-card").count() == 9
+            # Eventos passados deixam de aparecer; o total muda com a data.
+            # Calcular a expectativa no próprio navegador evita diferenças de fuso.
+            expected_workshops = mobile.evaluate("""() => {
+                const now = new Date();
+                const today = [now.getFullYear(), String(now.getMonth() + 1).padStart(2, '0'), String(now.getDate()).padStart(2, '0')].join('-');
+                return window.DANTAS_DATA.workshops.filter(w => !w.eventDate || w.eventDate >= today).length;
+            }""")
+            assert expected_workshops > 0, "Nenhuma oficina vigente encontrada nos dados"
+            assert mobile.locator("#workshop-list .workshop-card").count() == expected_workshops, "Workshops exibidos não correspondem aos eventos vigentes"
             mobile.goto(base + "#receitas", wait_until="domcontentloaded")
             mobile.locator("#recipe-list button.inline-link[data-recipe='curadoria-torta-de-frango-classica']").click()
             assert mobile.locator("#recipe-detail h1").inner_text() == "Torta de frango clássica"
