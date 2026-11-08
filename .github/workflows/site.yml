@@ -4,47 +4,56 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    # Re-publicação semanal do conteúdo validado; curadoria é feita separadamente.
-    - cron: '17 12 * * 1'
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: 'dantas-cozinha-pages'
+  group: dantas-cozinha-pages
   cancel-in-progress: false
 
 jobs:
-  atualizar-e-publicar:
+  validar-release:
+    name: Publisher — validar antes de publicar
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obter projeto
+        uses: actions/checkout@v4
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar navegador para testes
+        run: |
+          python -m pip install --disable-pip-version-check playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Harness — bloquear publicação em caso de falha
+        run: python -m harness.runner --mode release --browser
+      - name: Preservar logs mesmo com falha
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-quality-report-${{ github.run_id }}
+          path: _reports/harness-report.json
+          if-no-files-found: warn
+
+  publicar:
+    name: Publisher — GitHub Pages
+    needs: validar-release
     runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Obter projeto
+      - name: Obter projeto aprovado pelo harness
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - name: Preparar Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Testar conteúdo e automação
-        run: python -m unittest discover -s tests -v
-      - name: Validar JavaScript
-        run: |
-          node --check assets/app.js
-          node --check assets/data.js
-      - name: Instalar navegador de testes
-        run: |
-          python -m pip install --disable-pip-version-check playwright==1.56.0
-          python -m playwright install --with-deps chromium
-      - name: Testar receitas e Escola no navegador
-        run: python tests/browser_smoke.py
-      - name: Preparar diretório público
+      - name: Preparar diretório estático
         run: |
           mkdir -p _site/assets
           cp index.html _site/index.html
@@ -52,10 +61,14 @@ jobs:
           touch _site/.nojekyll
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Enviar site estático
+      - name: Enviar artefato validado
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Registrar URL de publicação
+        run: |
+          echo "### Publicação concluída" >> "$GITHUB_STEP_SUMMARY"
+          echo "URL: ${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
