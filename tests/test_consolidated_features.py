@@ -20,6 +20,14 @@ class ConsolidatedTests(unittest.TestCase):
         self.assertIn("navigator.wakeLock.request('screen')",app)
         self.assertIn("function stopCookingTimer()",app)
 
+    def test_metrics_are_opt_in_and_on_device_only(self):
+        app=(ROOT/"assets/app.js").read_text(encoding="utf-8")
+        html=(ROOT/"index.html").read_text(encoding="utf-8")
+        self.assertIn("METRICS_CONSENT_KEY",app)
+        self.assertIn("recordLocalMetric",app)
+        self.assertIn("localStorage.removeItem(METRICS_KEY)",app)
+        self.assertIn('id="local-metrics-consent"',html)
+
     def test_pwa_scope_and_offline_limits(self):
         manifest=json.loads((ROOT/"manifest.webmanifest").read_text(encoding="utf-8"))
         self.assertEqual(manifest["scope"],"./")
