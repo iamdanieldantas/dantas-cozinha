@@ -11,7 +11,8 @@ function esc(x){return String(x??'').replace(/[&<>"']/g,s=>({'&':'&amp;','<':'&l
 function safeUrl(x){try{const u=new URL(x);return ['http:','https:'].includes(u.protocol)?u.href:'#'}catch{return '#'}}
 function toast(message){const t=el('toast');t.textContent=message;t.classList.add('show');clearTimeout(toast.timeout);toast.timeout=setTimeout(()=>t.classList.remove('show'),2700)}
 const categoryName={entrada:'Entrada',principal:'Prato principal',sobremesa:'Sobremesa'};
-function img(x){return `<img src="${esc(safeUrl(x.image||''))}" loading="lazy" decoding="async" alt="Foto ilustrativa: ${esc(x.title)}" onerror="this.onerror=null;this.src='assets/recipe-placeholder.svg'">`}
+function img(x){return `<img src="${esc(safeUrl(x.image||''))}" loading="lazy" decoding="async" alt="Imagem ilustrativa associada à receita: ${esc(x.title)}" onerror="this.onerror=null;this.src='assets/recipe-placeholder.svg'">`}
+function imageAttribution(r){return `<figcaption class="recipe-image-credit"><strong>Imagem ilustrativa</strong>${r.imageCredit?` · ${esc(r.imageCredit)}`:''}<span> A apresentação pode ser diferente do resultado desta receita.</span></figcaption>`}
 function isFav(id){return state.favorites.includes(id)}
 function card(r){return `<article class="recipe-card"><div class="recipe-photo" data-recipe="${esc(r.id)}"><div class="photo-fallback">${esc(r.emoji||'🍽️')}</div>${img(r)}<span class="badge">${esc(categoryName[r.category]||'Receita')}</span><button class="heart ${isFav(r.id)?'saved':''}" data-fav="${esc(r.id)}" aria-label="${isFav(r.id)?'Remover dos':'Salvar nos'} favoritos" title="Favoritos">${isFav(r.id)?'♥':'♡'}</button></div><div class="recipe-content"><h3 class="recipe-title" data-recipe="${esc(r.id)}">${esc(r.title)}</h3><p class="recipe-desc">${esc(r.description)}</p><div class="recipe-info"><span>◷ ${esc(r.minutesLabel || (r.minutes + ' min'))}</span><span>✳ ${esc(r.difficulty)}</span><span>♙ ${esc(r.servingsLabel || (r.servings + ' porções'))}</span></div><div class="card-bottom"><button class="inline-link" data-recipe="${esc(r.id)}">Ver receita →</button><button class="mini-add" data-plan-add="${esc(r.id)}" title="Adicionar ao próximo espaço vazio do cardápio">+ cardápio</button></div></div></article>`}
 function updateFavCount(){el('fav-count').textContent=state.favorites.length}
@@ -128,7 +129,7 @@ modalRecipe=r;modalServings=Number(r.servings)||1;
 document.title=r.title+' • Dantas Cozinha';
 root.innerHTML=`<div class="shell detail-shell">
 <div class="detail-breadcrumb"><button class="detail-back" type="button" data-goto="receitas">← Todas as receitas</button><span> / </span><span>${esc(categoryName[r.category]||'Receita')}</span></div>
-<div class="detail-hero"><figure class="detail-photo">${img(r)}${r.imageCredit?`<figcaption>${esc(r.imageCredit)}</figcaption>`:''}</figure>
+<div class="detail-hero"><figure class="detail-photo">${img(r)}${imageAttribution(r)}</figure>
 <div class="detail-intro"><span class="eyebrow">${esc(categoryName[r.category]||'Receita')} · CADERNO DE RECEITAS</span>
 <h1>${esc(r.title)}</h1><p>${esc(r.description)}</p>
 <div class="detail-stats"><span>◷ ${esc(r.minutesLabel || (r.minutes ? r.minutes+' min' : 'Tempo variável'))}</span><span>✳ ${esc(r.difficulty||'Preparo caseiro')}</span><span>♙ ${esc(r.servingsLabel||(r.servings+' porções'))}</span></div>
@@ -137,11 +138,11 @@ root.innerHTML=`<div class="shell detail-shell">
 <section class="detail-ingredients"><h2>Ingredientes</h2><p class="detail-subtitle">Marque os itens conforme separá-los.</p>
 <div class="serving-control"><span>Rendimento ajustável</span><button type="button" id="serving-minus" aria-label="Diminuir porções">−</button><strong id="serving-number">${esc(modalServings)}</strong><button type="button" id="serving-plus" aria-label="Aumentar porções">+</button></div>
 <ul id="ingredients-list">${ingredientsList(r,1)}</ul></section>
-<section class="detail-steps"><h2>Modo de preparo</h2><ol>${(r.steps||[]).map(step=>`<li>${esc(step)}</li>`).join('')}</ol></section>
+<section class="detail-steps"><h2>Modo de preparo</h2><p class="detail-subtitle">Siga as etapas na ordem. As quantidades acima acompanham o rendimento selecionado; o preparo não é recalculado automaticamente.</p><ol>${(r.steps||[]).map(step=>`<li>${esc(step)}</li>`).join('')}</ol></section>
 </div>
 <div class="detail-extra"><div class="modal-tip">✦ <b>Dica da cozinha:</b> ${esc(r.tip||'Siga as etapas com atenção.')}</div>
 ${r.recipeVersion?`<p class="recipe-version">${esc(r.recipeVersion)}</p>`:''}
-<div class="detail-source"><span class="eyebrow">CRÉDITOS E REFERÊNCIAS</span><p>${esc(r.source||r.sourceName||'Receita compartilhada com o Dantas Cozinha')}</p>
+<div class="detail-source"><span class="eyebrow">CRÉDITOS E REFERÊNCIAS</span><p class="recipe-editorial-notice">A referência culinária não significa reprodução literal da receita de terceiros. Consulte a origem indicada para conhecer a publicação original.</p><p>${esc(r.source||r.sourceName||'Receita compartilhada com o Dantas Cozinha')}</p>
 ${r.sourceUrl?`<a href="${esc(safeUrl(r.sourceUrl))}" target="_blank" rel="noopener noreferrer">Consultar referência: ${esc(r.sourceName||r.source)} ↗</a>`:''}</div>
 <div class="modal-notes"><label for="recipe-note">Meu caderno de anotações</label><textarea id="recipe-note" maxlength="5000" placeholder="Como ficou? O que você mudaria?" aria-label="Notas pessoais"></textarea><small>Salvo automaticamente neste navegador.</small></div>
 </div></div>`;
