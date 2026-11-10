@@ -238,3 +238,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .cooking-tools input{width:75px;padding:8px;border:1px solid #aebdaf;border-radius:8px;font:inherit}
 .cooking-tools [role=status]{flex-basis:100%;font-weight:650}
 .cooking-tools button:focus-visible,.school-complete:focus-visible{outline:3px solid #b46c40;outline-offset:3px}
+
+.privacy-settings{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:22px 0 30px;font-size:.88rem}
+.privacy-settings label{display:flex;align-items:center;gap:8px}
+.privacy-settings input{accent-color:#2e4838}
+.privacy-settings button:focus-visible{outline:3px solid #b46c40;outline-offset:3px}
