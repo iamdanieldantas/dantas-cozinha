@@ -1,6 +1,6 @@
 # Auditoria editorial — inventário para revisão humana
 
-Gerado a partir dos dados editoriais atuais. **Não representa aprovação de imagens, licença, receitas ou conteúdo técnico.**
+Inventário inicial gerado antes das correções de descrições incluídas neste PR. **As 15 descrições contraditórias foram corrigidas em `content/recipes.json` e `assets/data.js`; os demais pontos continuam pendentes de revisão humana.** **Não representa aprovação de imagens, licença, receitas ou conteúdo técnico.**
 
 - 26 receitas e 12 aulas cadastradas.
 - 16 receitas com ao menos um ponto de revisão automatizável.
