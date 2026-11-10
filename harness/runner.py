@@ -63,6 +63,7 @@ def main() -> int:
     else:
         plan = [
             ("content-contract", [sys.executable, "-m", "harness.validate_content"], 45),
+            ("dataset-sources-sync", [sys.executable, "scripts/build_dataset.py", "--check"], 45),
             ("dataset-contract", [sys.executable, "scripts/validate_dataset.py"], 45),
             ("unit-tests", [sys.executable, "-m", "unittest", "discover", "-s", "tests",
                             "-p", "test_*.py", "-v"], 180),

@@ -1,9 +1,8 @@
 """Maintainer-only helper: append original ready-to-publish recipes to the finite queue."""
 from pathlib import Path
 import json
-p=Path(__file__).resolve().parents[1]/'assets'/'data.js'
-text=p.read_text(encoding='utf-8');prefix='window.DANTAS_DATA = '
-data=json.loads(text[len(prefix):].strip()[:-1])
+p=Path(__file__).resolve().parents[1]/'content'/'curation.json'
+data=json.loads(p.read_text(encoding='utf-8'))
 
 def recipe(id,title,category,description,minutes,difficulty,servings,emoji,photo,ingredients,steps,tip):
     return {'id':id,'title':title,'category':category,'description':description,'minutes':minutes,'difficulty':difficulty,'servings':servings,'emoji':emoji,
@@ -19,5 +18,10 @@ recipe('pudim-chia-frutas','Pudim de chia com frutas','sobremesa','Sobremesa de 
 ]
 existing={x['id'] for x in data.get('curatedQueue',[])}
 data['curatedQueue'] += [r for r in new if r['id'] not in existing]
-p.write_text(prefix+json.dumps(data,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
+p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+from build_dataset import main as build_dataset
+import sys
+sys.argv=[sys.argv[0]]
+if build_dataset()!=0:
+    raise SystemExit('Could not rebuild assets/data.js')
 print('curatedQueue:',len(data['curatedQueue']))
