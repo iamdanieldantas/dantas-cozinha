@@ -106,7 +106,8 @@ def run():
             mobile.on("pageerror", lambda err: errors.append("mobile: " + str(err)))
             mobile.route("https://**/*", lambda route: route.abort())
             mobile.goto(base + "#receitas", wait_until="domcontentloaded")
-            assert mobile.locator("#recipe-list .recipe-card").count() == len(recipes)
+            assert mobile.locator("#recipe-list .recipe-card").count() == len(recipes) + len(discoveries)
+            assert mobile.locator("#recipe-list .curated-card").count() == len(discoveries)
             assert mobile.locator("#curation-list .curation-card").count() == len(discoveries)
             mobile.goto(base + "#workshops", wait_until="domcontentloaded")
             expected = mobile.evaluate("""() => {
