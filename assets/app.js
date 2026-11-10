@@ -110,6 +110,25 @@ function ensureRecipePage(){
   section.appendChild(root);
   return root;
 }
+const PAGE_META={
+ inicio:{title:'Dantas Cozinha • um lugar para cozinhar bem',description:'Receitas, técnicas culinárias, workshops e planejamento semanal para cozinhar melhor.'},
+ receitas:{title:'Receitas • Dantas Cozinha',description:'Explore receitas com ingredientes, quantidades e modo de preparo.'},
+ tecnicas:{title:'Escola de Gastronomia • Dantas Cozinha',description:'Aprenda técnicas, fundamentos e organização da cozinha.'},
+ workshops:{title:'Workshops de Gastronomia • Dantas Cozinha',description:'Conheça aulas e escolas gastronômicas; confirme programação e vagas com os organizadores.'},
+ videos:{title:'Vídeos de Gastronomia • Dantas Cozinha',description:'Conteúdos culinários selecionados e perfis oficiais para acompanhar.'},
+ planejamento:{title:'Meu cardápio • Dantas Cozinha',description:'Organize suas receitas e monte sua lista de compras no navegador.'}
+};
+function setPageMeta(page,recipe){
+ const fallback=PAGE_META.inicio;
+ const meta=recipe?{title:recipe.title+' • Dantas Cozinha',description:recipe.description||fallback.description}:(PAGE_META[page]||fallback);
+ document.title=meta.title;
+ const description=document.querySelector('meta[name="description"]');
+ if(description)description.setAttribute('content',meta.description);
+ const ogTitle=document.querySelector('meta[property="og:title"]');
+ if(ogTitle)ogTitle.setAttribute('content',meta.title);
+ const ogDescription=document.querySelector('meta[property="og:description"]');
+ if(ogDescription)ogDescription.setAttribute('content',meta.description);
+}
 function goto(page){
 const recipeRoute=page.startsWith('receita/');
 const recipeId=recipeRoute?page.slice('receita/'.length):null;
@@ -123,7 +142,7 @@ el('main-nav').classList.remove('open');el('mobile-toggle').setAttribute('aria-e
 if(page==='receitas')renderRecipes();
 if(page==='receita')renderRecipePage(recipeId);
 if(page==='planejamento')renderPlanner();
-if(page!=='receita')document.title='Dantas Cozinha • um lugar para cozinhar bem';
+setPageMeta(page,page==='receita'?RECIPES.find(r=>r.id===recipeId):null);
 window.scrollTo(0,0)
 }
 function fav(id){if(!RECIPES.some(r=>r.id===id))return;if(isFav(id)){state.favorites=state.favorites.filter(x=>x!==id);toast('Removido dos favoritos.')}else{state.favorites.push(id);toast('Receita salva nos favoritos!')}saveState();renderRecipes();renderHome();if(modalRecipe?.id===id && el('recipe-detail-fav'))el('recipe-detail-fav').textContent=isFav(id)?'♥ Salvo':'♡ Salvar receita'}
