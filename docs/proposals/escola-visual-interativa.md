@@ -78,7 +78,13 @@ Os recursos são **opcionais e combináveis por artigo**. Nenhuma aula é obriga
 3a. Garantir compatibilidade de todas as demais aulas com o renderizador, migrando/enriquecendo somente onde fizer sentido editorial e revisando cada uma.
 4. Testar navegação, acessibilidade, desktop e mobile.
 5. Executar `python -m harness.runner --mode review --browser`, registrar relatório e erros, incluindo cobertura integral das aulas.
-6. Abrir PR de implementação em rascunho; aprovação e merge exclusivamente humanos.
+6. Abrir PR de implementação em rascunho; aprovação explícita do responsável via chat e merge executado pelo agente quando autorizado, com todas as validações e proteções respeitadas.
+
+## Aprovação pelo chat e publicação
+- Uma confirmação explícita do responsável **nesta conversa** (por exemplo, “aprovado, pode publicar”) autoriza tentar o merge e deploy do PR específico apresentado, desde que todas as verificações obrigatórias tenham passado e as permissões do GitHub permitam.
+- A aprovação não é automática nem permanente: cada PR ou conjunto de mudanças apresentado exige autorização explícita; alterações materiais após a aprovação devem ser reapresentadas.
+- O harness, os testes e as proteções de branch continuam obrigatórios; aprovação no chat não os substitui nem contorna revisões obrigatórias impostas pelo GitHub.
+- Após o merge, verificar o status real do GitHub Pages e o comportamento da página antes de informar “publicado”.
 
 ## Governança
-Seguir AGENTS.md e as skills content-standards, quality-gates e release-approval. Nenhum commit na main, merge, deploy ou publicação automática. Este PR é apenas especificação; não altera o site.
+Seguir AGENTS.md e as skills content-standards, quality-gates e release-approval. Nenhum commit direto na main, merge, deploy ou publicação sem autorização explícita no chat para o PR específico. Este PR é apenas especificação; não altera o site.
