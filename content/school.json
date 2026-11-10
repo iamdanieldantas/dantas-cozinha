@@ -1,0 +1,593 @@
+{
+  "techniques": [
+    {
+      "id": "escola-brigada-pracas-funcionamento",
+      "title": "Por dentro da cozinha profissional: cargos, praças e serviço",
+      "category": "Organização",
+      "summary": "Entenda a brigada de cozinha, os cargos do chef ao commis, a praça quente e fria, o passe e o caminho de uma comanda.",
+      "why": "Ajuda a compreender como funções, estações e comunicação permitem entregar pratos coordenados com qualidade e segurança.",
+      "practice": "Desenhe as praças de um restaurante fictício e acompanhe uma comanda de entrada, principal e sobremesa, atribuindo responsáveis e ordem de saída.",
+      "createdAt": "2026-11-10",
+      "lesson": [
+        {
+          "heading": "A brigada e a cadeia de comando",
+          "body": "A brigada de cozinha é uma forma de organizar pessoas, responsabilidades e estações de produção, historicamente associada a Auguste Escoffier. Não é uma hierarquia universal: um restaurante pequeno pode reunir funções, enquanto hotéis e operações grandes podem ter várias cozinhas. Chef executivo supervisiona a operação gastronômica de uma ou mais unidades, quando o cargo existe; chef de cuisine lidera uma cozinha; sous-chef é o segundo na operação, coordena a equipe e substitui o chef. Chef de partie responde por uma praça; demi-chef atua como apoio experiente; commis é profissional em formação. Cozinheiro e auxiliar são nomenclaturas comuns no Brasil, com atribuições definidas por cada estabelecimento. Chef não significa simplesmente qualquer pessoa que cozinha: envolve liderança e responsabilidade."
+        },
+        {
+          "heading": "O que é uma praça?",
+          "body": "Praça é a estação de trabalho com equipamentos, ingredientes, mise en place e responsabilidade definidos. Praça quente concentra cocções e finalizações quentes; praça fria ou garde-manger prepara saladas, entradas frias, conservas e outras produções refrigeradas, conforme o menu. A confeitaria ou pâtisserie responde por sobremesas e massas doces. Na brigada clássica, saucier prepara molhos e certas cocções; poissonnier trabalha com peixes; rôtisseur com assados; grillardin com grelhados; entremetier com vegetais, ovos e guarnições. Essas divisões podem não existir separadamente em cozinhas atuais. Uma praça não é um cargo: chef de partie é o cargo de quem pode liderá-la."
+        },
+        {
+          "heading": "Antes do serviço: recebimento e mise en place",
+          "body": "O fluxo começa no planejamento de compras, recebimento e conferência dos insumos, armazenamento adequado e identificação de produtos. O chef define menu e padrões; responsáveis de praça revisam fichas técnicas, porcionam, preparam bases, etiquetam, organizam utensílios e verificam equipamentos. A equipe alinha itens indisponíveis, alergênicos, reservas e tarefas. Mise en place é preparar antecipadamente o que pode ser feito sem comprometer qualidade ou segurança; não significa cozinhar todos os pratos antes de o cliente pedir."
+        },
+        {
+          "heading": "Durante o serviço: comanda, passe e sincronização",
+          "body": "A equipe de salão registra o pedido no sistema ou comanda. No passe, o expedidor — frequentemente chef ou sous-chef — lê, prioriza e distribui os pedidos às praças. Cada estação confirma, prepara e informa o andamento. O passe confere composição, apresentação, modificações e sincronização para que os pratos de uma mesma mesa saiam juntos quando apropriado. O salão retira e entrega. Comunicação curta e confirmação de pedidos reduzem erros; pedidos com restrições alimentares exigem atenção especial e protocolo próprio."
+        },
+        {
+          "heading": "Simulação: uma mesa, três preparações",
+          "body": "Exemplo didático, não relato de serviço real: uma mesa pede salada de entrada, peixe grelhado com legumes e sobremesa. A praça fria monta a salada; o passe libera a entrada. Enquanto o cliente come, a praça quente coordena peixe e guarnição, ajustando o início de cada cocção para que ambos terminem próximos. A confeitaria organiza a sobremesa e finaliza após a liberação do pedido. O passe confere cada etapa e comunica ao salão. Em uma cozinha pequena, uma única pessoa pode cobrir mais de uma dessas funções."
+        },
+        {
+          "heading": "Depois do serviço: fechamento e melhoria",
+          "body": "Ao encerrar, as praças identificam e armazenam corretamente o que pode ser conservado, descartam o que não é seguro reaproveitar, limpam e sanitizam equipamentos e superfícies segundo o procedimento do estabelecimento, registram perdas e necessidades de reposição. Chef e sous-chef podem revisar atrasos, devoluções e organização do turno. Segurança alimentar, controle de tempo e temperatura e prevenção de contaminação cruzada são responsabilidades compartilhadas."
+        },
+        {
+          "heading": "Glossário para ler uma cozinha profissional",
+          "body": "Brigade de cuisine: estrutura de equipe; chef de cuisine: chefe da cozinha; sous-chef: subchefe; chef de partie: chefe de praça; commis: profissional iniciante; garde-manger: estação de preparações frias; saucier: molhos; entremetier: guarnições e preparações vegetais; pâtissier: confeitaria; mise en place: preparação e organização prévias; passe: ponto de conferência e saída dos pratos; service: período de atendimento. Os nomes franceses são referências históricas, não títulos obrigatórios no Brasil."
+        },
+        {
+          "heading": "O que muda entre restaurantes",
+          "body": "Em um bistrô pequeno, chef e cozinheiros podem alternar entre praça quente, fria e passe. Em um restaurante de alto volume, há especialização por estação e turnos. Em uma cozinha de hotel, chef executivo pode coordenar banquetes, restaurante e room service. O desenho ideal depende de menu, volume, espaço, equipe e segurança. Não confunda organograma de referência com regra legal de cargos."
+        }
+      ],
+      "mistakes": [
+        "Achar que chef executivo, chef de cuisine e cozinheiro são sempre o mesmo cargo.",
+        "Tratar praça quente e praça fria como cargos, em vez de estações.",
+        "Supor que todo restaurante tem todos os postos da brigada francesa.",
+        "Iniciar pratos de uma mesa sem coordenar os tempos no passe.",
+        "Ignorar protocolos de higiene, alergênicos e contaminação cruzada."
+      ],
+      "deepDive": "A organização de uma cozinha profissional articula liderança (chef, sous-chef), execução por estações (praças), planejamento (fichas técnicas e mise en place) e expedição (passe). Durante o serviço, o passe coordena comandas e tempos, enquanto cada praça responde por sua parte do prato. A estrutura clássica francesa é uma referência histórica; restaurantes contemporâneos adaptam cargos e praças à realidade da operação. Exercício: mapeie uma mesa com entrada fria, principal quente e sobremesa, descrevendo quem recebe, prepara, confere e entrega cada etapa.",
+      "contentBlocks": [
+        {
+          "type": "orgchart",
+          "title": "Brigada clássica: uma hierarquia de referência",
+          "items": [
+            "Chef de cuisine — liderança da cozinha",
+            "Sous-chef — coordenação do serviço",
+            "Chef de partie — responsável por uma praça",
+            "Commis e auxiliares — apoio e execução"
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Importante",
+          "text": "A hierarquia é uma referência histórica. Restaurantes menores podem combinar cargos e praças; chef executivo pode supervisionar várias unidades."
+        },
+        {
+          "type": "workflow",
+          "title": "O caminho de uma comanda",
+          "items": [
+            "Salão registra o pedido",
+            "Passe organiza a sequência",
+            "Praças executam as preparações",
+            "Passe confere e sincroniza",
+            "Salão leva os pratos à mesa"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Como identificar as praças",
+          "items": [
+            "Praça quente: cocções e preparações servidas quentes",
+            "Praça fria: entradas, saladas e preparações frias",
+            "Confeitaria: sobremesas e massas doces",
+            "Passe: coordenação, conferência e saída dos pratos"
+          ]
+        },
+        {
+          "type": "glossary",
+          "title": "Vocabulário da brigada",
+          "items": [
+            {
+              "term": "Mise en place",
+              "definition": "Preparação e organização antes do serviço."
+            },
+            {
+              "term": "Passe",
+              "definition": "Ponto de coordenação e saída dos pratos."
+            },
+            {
+              "term": "Chef de partie",
+              "definition": "Profissional responsável por uma praça."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-1",
+      "title": "Mise en place: cozinhar sem correria",
+      "category": "Organização",
+      "summary": "Separe, meça e corte ingredientes antes de ligar o fogo. Leia a receita completa e deixe utensílios à mão.",
+      "why": "Reduz esquecimentos e evita que alimentos queimem enquanto você procura o próximo ingrediente.",
+      "practice": "Comece com três potinhos: aromáticos, ingredientes secos e finalização.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Antes de começar",
+          "body": "Mise en place significa deixar a bancada e o raciocínio preparados. Leia a receita até o fim, identifique tempos de forno, repouso e refrigeração, e veja quais etapas podem ser feitas em paralelo. Depois pese os ingredientes, separe utensílios e organize a ordem de uso."
+        },
+        {
+          "heading": "Como aplicar na prática",
+          "body": "Separe ingredientes por etapa: massa, recheio e finalização, por exemplo. Deixe o lixo orgânico próximo da bancada, reserve uma tábua para ingredientes crus e outra para alimentos prontos e aqueça o forno apenas no momento adequado."
+        },
+        {
+          "heading": "Um exemplo real",
+          "body": "No risoto, deixe caldo quente, parmesão ralado, funghi hidratado e cebola cortada antes de começar a refogar. Assim, você consegue mexer e controlar a textura sem interromper o cozimento."
+        }
+      ],
+      "mistakes": [
+        "Começar a aquecer a frigideira sem ler os próximos passos.",
+        "Separar ingredientes crus e prontos na mesma superfície sem higienização.",
+        "Medir todos os líquidos em um único copo e esquecer o que deveria entrar depois."
+      ],
+      "deepDive": "Organize ingredientes por ordem de uso; pese tudo antes de ligar o fogo. Separe também tigelas para resíduos, panos limpos e utensílios. Para receitas com etapas simultâneas, identifique o que pode ser preparado antecipadamente e o que precisa ser feito na hora. A mise en place reduz esquecimentos e ajuda a manter a temperatura e o tempo sob controle.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Antes de acender o fogo",
+          "items": [
+            "Leia a receita inteira e confira o rendimento.",
+            "Separe ingredientes e equipamentos por ordem de uso.",
+            "Higienize, pese e faça os cortes necessários.",
+            "Organize uma área limpa para finalização."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-2",
+      "title": "Maillard: o segredo do dourado",
+      "category": "Ciência",
+      "summary": "A reação entre aminoácidos e açúcares favorece aromas quando a superfície está relativamente seca e quente.",
+      "why": "Panela muito cheia faz a temperatura cair e os alimentos soltarem água.",
+      "practice": "Seque cogumelos e carnes com papel-toalha e doure em pequenas levas.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que é a reação de Maillard",
+          "body": "O escurecimento que cria aromas de carne grelhada, pão tostado e cogumelos dourados envolve reações entre aminoácidos e açúcares. Ela é favorecida pela combinação de calor e superfície com pouca umidade; não é a mesma coisa que a caramelização do açúcar."
+        },
+        {
+          "heading": "Como alcançar uma boa crosta",
+          "body": "Seque a superfície do alimento, use frigideira aquecida e deixe espaço entre as porções. Não mova a carne a cada segundo: dê tempo para formar crosta antes de virar. Ajuste a intensidade do fogo conforme a espessura e evite carbonizar temperos."
+        },
+        {
+          "heading": "Onde aparece",
+          "body": "Hambúrguer, prime rib e cogumelos para risoto são ótimos exercícios. Observe que a água acumulada na frigideira produz vapor e atrasa o dourado."
+        }
+      ],
+      "mistakes": [
+        "Encher uma frigideira pequena com muitos ingredientes.",
+        "Virar a carne a cada poucos segundos sem formar crosta.",
+        "Confundir alimento muito escuro ou queimado com dourado bem desenvolvido."
+      ],
+      "deepDive": "A reação de Maillard é favorecida por superfície relativamente seca, calor e contato com a panela. Se houver excesso de alimento, a água liberada resfria a frigideira e a carne cozinha no vapor em vez de dourar. Seque a proteína, aqueça a panela e doure em lotes; observe a crosta sem confundir dourado com queimado.",
+      "contentBlocks": [
+        {
+          "type": "workflow",
+          "title": "Caminho para um bom dourado",
+          "items": [
+            "Seque a superfície do alimento",
+            "Aqueça a frigideira adequadamente",
+            "Evite sobrecarregar a panela",
+            "Observe a cor e ajuste o fogo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-3",
+      "title": "Emulsão: molhos mais cremosos",
+      "category": "Técnicas",
+      "summary": "Emulsões dispersam gotículas de gordura em uma fase aquosa. Agitação e ingredientes emulsificantes ajudam a manter a mistura.",
+      "why": "Na massa, amido da água do cozimento facilita um molho brilhante.",
+      "practice": "Adicione um pouco de água da massa ao molho e mexa vigorosamente.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O princípio da emulsão",
+          "body": "Óleo e água não se misturam espontaneamente por muito tempo. Quando a gordura é fragmentada em gotículas pequenas e estabilizada por ingredientes como gema ou mostarda, formamos uma emulsão. A maionese é um exemplo clássico."
+        },
+        {
+          "heading": "Maionese e molhos",
+          "body": "Para maionese, adicione o óleo lentamente sobre a fase aquosa enquanto bate. Se a mistura separar, comece outra emulsão com pequena quantidade de água ou mostarda e incorpore aos poucos o molho quebrado. Para preparos sem cocção, utilize ovos pasteurizados."
+        },
+        {
+          "heading": "Emulsão da massa",
+          "body": "Em uma carbonara ou molho de manteiga, um pouco de água do cozimento da massa ajuda a ligar gordura e líquido. Ajuste o calor: excesso de temperatura pode separar o molho ou coagular o ovo."
+        }
+      ],
+      "mistakes": [
+        "Acrescentar todo o óleo de uma vez em uma maionese iniciada à mão.",
+        "Aquecer demais um molho que leva gema.",
+        "Descartar toda a água do cozimento antes de ajustar a textura."
+      ],
+      "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Montando uma emulsão",
+          "items": [
+            "Comece pela fase aquosa e pelos ingredientes emulsificantes.",
+            "Adicione a gordura aos poucos, misturando continuamente.",
+            "Observe a textura e ajuste a consistência conforme a receita."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-4",
+      "title": "Como ajustar o sal sem errar",
+      "category": "Fundamentos",
+      "summary": "Tempere aos poucos, prove no fim e considere ingredientes já salgados, como queijo e caldo pronto.",
+      "why": "Sal realça sabores; adição excessiva é difícil de corrigir.",
+      "practice": "Reserve metade do sal previsto para o ajuste final.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O sal tem camadas",
+          "body": "O sal intensifica a percepção de sabores e deve ser pensado ao longo do preparo. Alguns ingredientes já contêm bastante sódio — queijos curados, bacon, caldo pronto, azeitonas e carne-seca — e mudam a necessidade de tempero."
+        },
+        {
+          "heading": "Quando ajustar",
+          "body": "Em carnes, tempere segundo a técnica escolhida. Em molhos, experimente depois de reduzir, porque a evaporação concentra o sal. Para arroz e massa, siga uma proporção adequada, lembrando que o líquido de cozimento pode ser descartado."
+        },
+        {
+          "heading": "Como corrigir",
+          "body": "Se o prato ficou salgado, o caminho mais confiável é aumentar a porção de ingredientes sem sal ou adicionar líquido sem sal quando a receita permitir. Açúcar e batata crua não retiram magicamente o excesso."
+        }
+      ],
+      "mistakes": [
+        "Salgar de novo antes de provar um molho reduzido.",
+        "Esquecer o sal presente no queijo ou na conserva.",
+        "Tentar corrigir excesso de sal apenas com açúcar."
+      ],
+      "deepDive": "Tempere em camadas: um pouco no início e correção perto do final. Ingredientes como queijo curado, azeitona, shoyu e caldos concentrados já fornecem sal. Ao provar, considere também acidez e gordura, que alteram a percepção do tempero. Se exagerar, aumente o volume com ingredientes sem sal, quando a receita permitir.",
+      "contentBlocks": [
+        {
+          "type": "bullets",
+          "title": "Checklist para temperar",
+          "items": [
+            "Prove em etapas, quando for seguro fazê-lo.",
+            "Considere ingredientes já salgados, como queijos e caldos.",
+            "Ajuste pouco a pouco, em vez de corrigir tudo no final."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-5",
+      "title": "Fermento químico x bicarbonato",
+      "category": "Panificação",
+      "summary": "Fermento químico geralmente contém componentes ácidos e básicos. Bicarbonato funciona melhor quando há ingrediente ácido na receita.",
+      "why": "Trocar um pelo outro sem ajustar a fórmula pode mudar sabor, cor e crescimento.",
+      "practice": "Meça com colher nivelada e asse logo após finalizar massas com fermentação química.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que muda entre os dois",
+          "body": "Bicarbonato de sódio é uma base que reage com componentes ácidos, liberando gás carbônico. Já o fermento químico comercial costuma reunir bicarbonato e agentes ácidos, permitindo uma fermentação química mais previsível em bolos."
+        },
+        {
+          "heading": "O efeito na textura",
+          "body": "Além da expansão, o bicarbonato pode alterar a cor e o espalhamento de cookies. O fermento químico tende a contribuir para uma textura mais aerada em massas de bolo. A quantidade deve seguir a proporção da receita."
+        },
+        {
+          "heading": "Como usar",
+          "body": "Peneire com os secos, evite misturar excessivamente depois de hidratar e asse conforme o tempo de espera recomendado. Em biscoitos, repouso na geladeira pode controlar o formato."
+        }
+      ],
+      "mistakes": [
+        "Trocar fermento químico por bicarbonato na proporção de 1:1.",
+        "Usar bicarbonato em excesso, deixando gosto residual.",
+        "Abrir o forno repetidas vezes nos primeiros minutos de um bolo."
+      ],
+      "deepDive": "O bicarbonato precisa de um componente ácido para produzir gás com eficiência; o fermento químico já combina agentes que reagem com umidade e calor. Em bolos e cookies, a troca direta entre eles altera sabor, cor, crescimento e textura. Misture os agentes secos de forma homogênea e leve a massa ao forno conforme a receita.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Não são a mesma coisa",
+          "items": [
+            {
+              "term": "Bicarbonato",
+              "definition": "Precisa de condições adequadas, geralmente presença de acidez, para produzir gás na massa."
+            },
+            {
+              "term": "Fermento químico",
+              "definition": "Mistura formulada para liberar gás durante a preparação e o aquecimento, conforme o produto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-6",
+      "title": "Manteiga noisette em casa",
+      "category": "Confeitaria",
+      "summary": "Aqueça manteiga em fogo médio: ela espuma, a água evapora e os sólidos do leite douram, criando aroma de avelã.",
+      "why": "Retire do fogo quando os sólidos ficarem dourados; eles podem queimar rapidamente.",
+      "practice": "Transfira imediatamente para um recipiente frio para interromper o cozimento.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que acontece na panela",
+          "body": "Ao aquecer manteiga, a água evapora, a espuma muda de aparência e os sólidos do leite começam a dourar no fundo. Esse processo produz aromas que lembram avelãs tostadas, especialmente úteis em cookies e molhos."
+        },
+        {
+          "heading": "Passo a passo seguro",
+          "body": "Use panela de fundo claro para enxergar a cor. Aqueça em fogo médio, mexendo ou girando a panela. Quando os sólidos passarem do amarelo para o dourado e o aroma ficar tostado, transfira imediatamente para recipiente resistente ao calor."
+        },
+        {
+          "heading": "Como usar depois",
+          "body": "Em massa de cookie, resfrie antes de incorporar ovos e considere a perda de água da manteiga, pois ela altera a hidratação. Em legumes e massas, use pequenas quantidades como finalização."
+        }
+      ],
+      "mistakes": [
+        "Deixar a manteiga na panela quente depois de atingir a cor desejada.",
+        "Usar panela muito escura sem conseguir perceber o ponto.",
+        "Adicionar ovos à manteiga excessivamente quente."
+      ],
+      "deepDive": "A manteiga passa por etapas: derrete, perde água e os sólidos do leite começam a dourar. Use panela clara e fogo médio-baixo para enxergar a cor e sentir o aroma de castanhas. Retire imediatamente do fogo ao atingir tom âmbar, pois o calor residual continua o cozimento. Se os sólidos ficarem pretos, o sabor pode ficar amargo.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Observe as transformações",
+          "items": [
+            "Derreta a manteiga em uma panela de fundo claro.",
+            "Observe a espuma e os sólidos do leite mudarem de cor.",
+            "Retire do fogo ao atingir o aroma e a cor desejados, antes de queimar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-7",
+      "title": "Segurança com frango",
+      "category": "Boas práticas",
+      "summary": "Evite contaminação cruzada entre frango cru e alimentos prontos para consumo. Use utensílios separados ou lave-os bem.",
+      "why": "Temperatura interna mínima segura: 74 °C, medida com termômetro culinário.",
+      "practice": "Não lave o frango cru; higienize bancadas, tábuas e mãos após o manuseio.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Atenção à temperatura",
+          "body": "Frango cru pode conter microrganismos nocivos. Cozinhe até atingir 74 °C no centro da parte mais espessa, medindo com termômetro culinário. A cor branca da carne, isoladamente, não garante segurança."
+        },
+        {
+          "heading": "Evite contaminação cruzada",
+          "body": "Não lave frango cru: os respingos podem espalhar microrganismos. Higienize mãos e utensílios depois do contato. Separe tábuas e facas usadas para carne crua daquelas que manipulam verduras e alimentos prontos."
+        },
+        {
+          "heading": "Armazenamento",
+          "body": "Mantenha frango cru refrigerado e descongele dentro da geladeira, protegido de outros alimentos. Refrigere sobras prontamente, de preferência em recipientes rasos, e reaqueça completamente."
+        }
+      ],
+      "mistakes": [
+        "Lavar o frango sob água corrente.",
+        "Usar a mesma tábua para frango cru e tomate da salada.",
+        "Avaliar o ponto seguro somente pela cor externa."
+      ],
+      "deepDive": "Evite lavar frango cru: respingos podem espalhar microrganismos. Separe tábuas e utensílios de alimentos prontos para consumo e higienize superfícies após o contato. Cozinhe até 74 °C no centro da parte mais espessa, medindo com termômetro culinário. Refrigere sobras prontamente em recipientes rasos.",
+      "contentBlocks": [
+        {
+          "type": "callout",
+          "title": "Segurança em primeiro lugar",
+          "text": "Evite contaminação cruzada, higienize utensílios e siga recomendações oficiais de cocção segura. Cor e aparência, isoladamente, não comprovam segurança."
+        }
+      ]
+    },
+    {
+      "id": "tec-8",
+      "title": "Três maneiras de engrossar molhos",
+      "category": "Técnicas",
+      "summary": "Redução evapora parte da água; roux cozinha gordura e farinha; amido disperso em água fria engrossa ao aquecer.",
+      "why": "Cada método altera sabor e textura de forma diferente.",
+      "practice": "Comece com pouco espessante e ajuste gradualmente.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Redução",
+          "body": "A redução concentra um molho pela evaporação da água, intensificando sabores e também o sal. Funciona bem em molhos de tomate e fundos de carne; mexa quando necessário para evitar que grudem."
+        },
+        {
+          "heading": "Roux",
+          "body": "Roux é a combinação de farinha e gordura aquecidas em proporções próximas. Cozinhe a farinha com manteiga por alguns instantes e incorpore leite ou caldo gradualmente para criar molho branco sem grumos."
+        },
+        {
+          "heading": "Amido em suspensão",
+          "body": "Amido de milho deve ser dissolvido primeiro em uma pequena porção de líquido frio. Depois, incorpore à preparação quente e cozinhe até engrossar. Adicione aos poucos para não deixar textura gelatinosa."
+        }
+      ],
+      "mistakes": [
+        "Adicionar amido seco diretamente ao líquido fervendo.",
+        "Não cozinhar a farinha do roux, deixando gosto de farinha crua.",
+        "Reduzir muito um molho já salgado."
+      ],
+      "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Técnicas de espessamento",
+          "items": [
+            {
+              "term": "Redução",
+              "definition": "Evaporação de parte da água para concentrar o molho."
+            },
+            {
+              "term": "Roux",
+              "definition": "Mistura cozida de gordura e farinha usada como base para alguns molhos."
+            },
+            {
+              "term": "Amido",
+              "definition": "Ingrediente que engrossa ao gelatinizar nas condições adequadas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-servico-refeicao",
+      "title": "Antipasto, entrada, couvert e aperitivo",
+      "category": "Cultura gastronômica",
+      "summary": "Entenda a função de cada serviço no início de uma refeição e como eles se relacionam.",
+      "why": "Ajuda a ler cardápios, planejar menus e organizar a sequência de um jantar.",
+      "practice": "Monte um jantar: bebida aperitiva na recepção, pães à mesa e bruschetta como antipasto/entrada.",
+      "createdAt": "2026-11-08",
+      "lesson": [
+        {
+          "heading": "Antipasto",
+          "body": "Na tradição italiana, antipasto (plural antipasti) é o serviço que antecede o primo piatto. Pode incluir bruschetta, caponata, queijos, embutidos e vegetais marinados. Normalmente funciona como a entrada do menu italiano."
+        },
+        {
+          "heading": "Entrada",
+          "body": "É o primeiro prato de uma refeição estruturada, antes do prato principal. Pode ser carpaccio, salada, sopa, tartare ou outra preparação fria ou quente. É uma categoria mais ampla que antipasto."
+        },
+        {
+          "heading": "Couvert",
+          "body": "No uso brasileiro, é o conjunto de pequenos alimentos oferecidos à mesa no início do atendimento, como pães, manteiga, patês e azeite. Pode ter cobrança específica informada previamente, conforme as regras aplicáveis. Não confundir com couvert artístico."
+        },
+        {
+          "heading": "Aperitivo",
+          "body": "É consumido antes da refeição para estimular o apetite e socializar. Tradicionalmente inclui bebidas como vermute e espumante, frequentemente acompanhadas de azeitonas, castanhas ou canapés."
+        },
+        {
+          "heading": "Exemplo de sequência italiana",
+          "body": "Aperitivo na chegada; pães e azeite à mesa; burrata com tomate como antipasto/entrada; massa como primo piatto; carne como secondo piatto; tiramisù como dolce. Nem todos os serviços são obrigatórios."
+        }
+      ],
+      "mistakes": [
+        "Achar que antipasto e entrada precisam ser dois pratos diferentes.",
+        "Confundir couvert alimentício com couvert artístico.",
+        "Restringir aperitivo apenas a petiscos, ignorando as bebidas."
+      ],
+      "deepDive": "Os termos descrevem aspectos distintos: antipasto é um serviço da tradição italiana; entrada é uma função no menu; couvert é um serviço de recepção à mesa; aperitivo é o consumo pré-refeição, especialmente de bebidas. Eles podem se sobrepor.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Termos que aparecem no serviço",
+          "items": [
+            {
+              "term": "Couvert",
+              "definition": "Itens oferecidos antes da refeição, conforme o serviço da casa."
+            },
+            {
+              "term": "Antipasto",
+              "definition": "Preparação tradicionalmente servida antes do prato principal na cozinha italiana."
+            },
+            {
+              "term": "Aperitivo",
+              "definition": "Bebida ou pequena preparação associada ao momento anterior à refeição."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-contaminacao-direta",
+      "title": "Contaminação direta dos alimentos",
+      "category": "Segurança alimentar",
+      "summary": "Quando um contaminante alcança o alimento diretamente, como gotículas de um espirro ou respingos de produto químico.",
+      "why": "Reconhecer as fontes de contaminação ajuda a proteger alimentos prontos e ingredientes durante o preparo.",
+      "practice": "Antes de cozinhar, higienize as mãos, proteja os alimentos de respingos e mantenha produtos de limpeza longe da bancada.",
+      "createdAt": "2026-11-08",
+      "lesson": [
+        {
+          "heading": "O que significa",
+          "body": "Contaminação direta ocorre quando um agente biológico, químico ou físico chega diretamente ao alimento a partir da fonte, sem transferência por outro utensílio ou alimento. Exemplos: espirrar sobre uma salada, um inseto pousar na comida ou produto de limpeza respingar em uma preparação."
+        },
+        {
+          "heading": "Principais riscos",
+          "body": "Gotículas respiratórias, contato de mãos sem higiene, pragas, cabelos, fragmentos de materiais e produtos químicos podem comprometer a segurança do alimento. O risco depende do contaminante e da exposição."
+        },
+        {
+          "heading": "Como prevenir",
+          "body": "Lave as mãos com água e sabão, cubra ferimentos, não manipule alimentos expostos ao tossir ou espirrar, mantenha recipientes protegidos e guarde saneantes longe dos ingredientes."
+        },
+        {
+          "heading": "O que fazer em caso de suspeita",
+          "body": "Se houver respingo de saneante ou outra contaminação potencialmente perigosa, descarte o alimento afetado. Não tente resolver apenas aquecendo: calor não remove contaminantes químicos."
+        }
+      ],
+      "mistakes": [
+        "Manipular alimentos prontos sem lavar as mãos.",
+        "Deixar pratos descobertos próximos de produtos de limpeza.",
+        "Acreditar que cozinhar sempre torna seguro um alimento contaminado."
+      ],
+      "deepDive": "Contaminação direta descreve o contato imediato da fonte contaminante com o alimento. É diferente de contaminação cruzada, que enfatiza a transferência de contaminantes entre fontes, alimentos ou superfícies. As classificações podem se sobrepor dependendo do contexto.",
+      "contentBlocks": [
+        {
+          "type": "bullets",
+          "title": "Pontos de atenção",
+          "items": [
+            "Separar alimentos crus dos prontos para consumo.",
+            "Higienizar mãos, superfícies e utensílios entre tarefas.",
+            "Respeitar armazenamento e procedimentos de segurança alimentar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-contaminacao-cruzada",
+      "title": "Contaminação cruzada: direta e indireta",
+      "category": "Segurança alimentar",
+      "summary": "Transferência de contaminantes de um alimento, superfície ou utensílio para outro alimento.",
+      "why": "Evita que microrganismos presentes em carnes cruas alcancem alimentos prontos para consumo.",
+      "practice": "Corte frango cru em uma tábua, lave e higienize faca e tábua antes de preparar a salada; mantenha carnes cruas fechadas na parte inferior da geladeira.",
+      "createdAt": "2026-11-08",
+      "lesson": [
+        {
+          "heading": "O que é",
+          "body": "É a transferência de microrganismos ou outros contaminantes de uma fonte para um alimento que pode estar pronto para consumo. É especialmente perigosa quando um alimento cru contamina outro que não será cozido."
+        },
+        {
+          "heading": "Cruzada direta",
+          "body": "Acontece por contato entre alimentos, por exemplo quando carne crua encosta em uma salada pronta ou seus líquidos escorrem sobre ela na geladeira."
+        },
+        {
+          "heading": "Cruzada indireta",
+          "body": "Acontece por intermédio de mãos, facas, tábuas, panos ou bancadas. Exemplo: cortar frango cru e depois tomate com a mesma faca sem higienização adequada."
+        },
+        {
+          "heading": "Prevenção no dia a dia",
+          "body": "Separe alimentos crus dos prontos, use utensílios distintos ou higienize-os entre tarefas, lave as mãos com água e sabão e armazene carnes cruas em recipientes fechados nas prateleiras inferiores."
+        },
+        {
+          "heading": "Cozinhar resolve?",
+          "body": "O cozimento adequado reduz muitos riscos microbiológicos, mas não corrige todos os casos de contaminação, especialmente quando há toxinas resistentes ao calor ou substâncias químicas."
+        }
+      ],
+      "mistakes": [
+        "Reutilizar a faca de carne crua para legumes prontos sem higienização.",
+        "Armazenar frango cru acima de alimentos prontos e deixar líquidos escorrerem.",
+        "Usar o mesmo pano sujo em várias superfícies."
+      ],
+      "deepDive": "A distinção direta/indireta na contaminação cruzada depende do caminho de transferência: contato entre alimentos ou intermediários como utensílios e mãos. Portanto, contaminação direta e cruzada não são categorias necessariamente excludentes.",
+      "contentBlocks": [
+        {
+          "type": "workflow",
+          "title": "Exemplo de risco e prevenção",
+          "items": [
+            "Utensílio entra em contato com alimento cru",
+            "Utensílio não é higienizado adequadamente",
+            "Contato com alimento pronto para consumo",
+            "Interrompa o ciclo: separe e higienize utensílios"
+          ]
+        }
+      ]
+    }
+  ]
+}
