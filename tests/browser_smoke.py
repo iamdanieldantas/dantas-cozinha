@@ -38,7 +38,9 @@ def run():
             assert techniques, "A Escola está vazia"
 
             assert desktop.locator("#home-recipes .recipe-card").count() == min(3, len(recipes))
-            assert desktop.locator("#recipe-list .recipe-card").count() == len(recipes)
+            assert desktop.locator("#recipe-list .recipe-card").count() == len(recipes) + len(discoveries)
+            assert desktop.locator("#recipe-list .curated-card").count() == len(discoveries)
+            assert "Risoto de cogumelos" in desktop.locator("#recipe-list .recipe-card").first.inner_text() or "Bolo de cenoura com especiarias" in desktop.locator("#recipe-list .recipe-card").first.inner_text()
             assert desktop.locator("#curation-list .curation-card").count() == len(discoveries)
             assert desktop.locator("#curation-list .curation-card a[href^='https://']").count() == len(discoveries)
             assert desktop.locator("#curation-list .curation-ingredients li").count() == sum(
