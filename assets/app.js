@@ -178,6 +178,24 @@ function setPageMeta(page,recipe){
  const ogDescription=document.querySelector('meta[property="og:description"]');
  if(ogDescription)ogDescription.setAttribute('content',meta.description);
 }
+const METRICS_KEY='dantas-cozinha-local-metrics-v1';
+const METRICS_CONSENT_KEY='dantas-cozinha-local-metrics-consent';
+function recordLocalMetric(kind){
+ try{
+  if(localStorage.getItem(METRICS_CONSENT_KEY)!=='yes')return;
+  const current=JSON.parse(localStorage.getItem(METRICS_KEY)||'{}');
+  const count=Number.isSafeInteger(current[kind])?current[kind]:0;
+  current[kind]=Math.min(count+1,1000000);
+  localStorage.setItem(METRICS_KEY,JSON.stringify(current));
+ }catch{}
+}
+function setupLocalMetrics(){
+ const input=el('local-metrics-consent'),clear=el('local-metrics-clear'),status=el('local-metrics-status');
+ if(!input||!clear)return;
+ try{input.checked=localStorage.getItem(METRICS_CONSENT_KEY)==='yes'}catch{}
+ input.onchange=()=>{try{if(input.checked)localStorage.setItem(METRICS_CONSENT_KEY,'yes');else{localStorage.removeItem(METRICS_CONSENT_KEY);localStorage.removeItem(METRICS_KEY)}status.textContent=input.checked?'Métricas locais ativadas.':'Métricas desativadas e apagadas.'}catch{status.textContent='Não foi possível salvar a preferência.'}};
+ clear.onclick=()=>{try{localStorage.removeItem(METRICS_KEY);status.textContent='Métricas apagadas.'}catch{status.textContent='Não foi possível apagar.'}};
+}
 function goto(page){
 if(page!=='receita'&&!page.startsWith('receita/'))stopCookingTimer();
 const recipeRoute=page.startsWith('receita/');
@@ -190,6 +208,7 @@ document.querySelectorAll('[data-view]').forEach(v=>v.classList.toggle('active',
 document.querySelectorAll('[data-page]').forEach(v=>{const active=v.dataset.page===page||(page==='receita'&&v.dataset.page==='receitas');v.classList.toggle('active',active);if(active)v.setAttribute('aria-current','page');else v.removeAttribute('aria-current')});
 el('main-nav').classList.remove('open');el('mobile-toggle').setAttribute('aria-expanded','false');
 if(page==='receitas')renderRecipes();
+recordLocalMetric(page==='receita'?'recipe_views':page==='tecnicas'?'school_views':page==='buscar'?'search_views':'other_views');
 if(page==='buscar')renderUnifiedSearch();
 if(page==='receita')renderRecipePage(recipeId);
 if(page==='planejamento')renderPlanner();
@@ -309,7 +328,7 @@ el('clear-plan').onclick=()=>{if(!Object.keys(state.planner).length)return;if(co
 el('copy-list').onclick=async()=>{const list=grocery();if(!list.length){toast('Escolha receitas primeiro.');return}try{await navigator.clipboard.writeText(textGrocery());toast('Lista copiada!')}catch{download('lista-de-compras.txt',textGrocery(),'text/plain');toast('Lista salva como arquivo.')}};
 el('print-list').onclick=()=>{if(!grocery().length){toast('Escolha receitas primeiro.');return}window.print()};el('export-backup').onclick=doBackup;el('import-backup').onchange=e=>{importBackup(e.target.files?.[0]);e.target.value=''};
 }
-function main(){updateFavCount();renderHome();renderRecipes();renderCuratedDiscoveries();renderTechniques();renderWorkshops();renderVideos();renderPlanner();initEvents();const last=DATA.generatedAt?new Date(DATA.generatedAt):null;if(last&&!isNaN(last))el('last-update').textContent=`Conteúdo: ${last.toLocaleDateString('pt-BR')}`;goto(decodeURIComponent(location.hash.slice(1))||'inicio')}
+function main(){updateFavCount();renderHome();renderRecipes();renderCuratedDiscoveries();renderTechniques();renderWorkshops();renderVideos();renderPlanner();initEvents();setupLocalMetrics();const last=DATA.generatedAt?new Date(DATA.generatedAt):null;if(last&&!isNaN(last))el('last-update').textContent=`Conteúdo: ${last.toLocaleDateString('pt-BR')}`;goto(decodeURIComponent(location.hash.slice(1))||'inicio')}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',main);else main();
 if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 })();
