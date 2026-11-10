@@ -157,3 +157,17 @@
 .tech-lesson[id]{scroll-margin-top:100px}
 @media(max-width:660px){.school-toolbar{padding:17px}.school-contents ol{columns:1}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Fase 2 — leitura de receitas e transparência editorial. */
+.detail-photo .recipe-image-credit{font-size:12px;line-height:1.6;color:#575f53;padding:12px 15px;background:#f6f1e8;border:1px solid #e6ddcf;border-top:0;border-radius:0 0 12px 12px}
+.recipe-image-credit strong{color:var(--forest)}
+.recipe-editorial-notice{font-size:12px;line-height:1.65;color:#60675e;max-width:68ch}
+.detail-steps .detail-subtitle{max-width:57ch;line-height:1.65}
+@media print{
+ .announcement,.header,.footer,.detail-back,.serving-control button,.modal-notes,.detail-source a,#recipe-detail-fav{display:none!important}
+ .detail-content{display:block!important}
+ .detail-ingredients,.detail-steps{break-inside:avoid}
+ .detail-photo img{max-height:230px;object-fit:contain}
+ .detail-shell{padding:0!important}
+ .detail-content,.detail-extra{box-shadow:none!important}
+}
