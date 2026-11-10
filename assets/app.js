@@ -3,7 +3,7 @@ const DATA=window.DANTAS_DATA||{recipes:[],techniques:[],workshops:[],videos:[]}
 const RECIPES=[...(DATA.recipes||[])].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
 const STORAGE_KEY='dantas-cozinha-v1';
 const cleanState=()=>({favorites:[],notes:{},planner:{},shoppingChecked:{}});
-let state=readState(),selectedFilter='todas',selectedSearch='',modalRecipe=null,modalServings=1;
+let state=readState(),selectedFilter='todas',selectedSearch='',selectedSchoolCategory='todas',selectedSchoolSearch='',modalRecipe=null,modalServings=1;
 function readState(){try{const x=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');return x&&typeof x==='object'?{...cleanState(),...x,favorites:Array.isArray(x.favorites)?x.favorites:[],notes:x.notes||{},planner:x.planner||{},shoppingChecked:x.shoppingChecked||{}}:cleanState()}catch{return cleanState()}}
 function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch{toast('Não foi possível salvar neste navegador.')}}
 function el(id){return document.getElementById(id)}
@@ -38,28 +38,39 @@ function schoolBlock(block){
  const items=Array.isArray(block.items)?block.items:[];
  const list=(tag,values)=>`<${tag}>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</${tag}>`;
  switch(block.type){
- case 'bullets':return `<div class="school-block school-list">${title}${list('ul',items)}</div>`;
- case 'steps':return `<div class="school-block school-steps">${title}${list('ol',items)}</div>`;
+ case 'bullets':if(!items.length)return '';return `<div class="school-block school-list">${title}${list('ul',items)}</div>`;
+ case 'steps':if(!items.length)return '';return `<div class="school-block school-steps">${title}${list('ol',items)}</div>`;
  case 'callout':return `<aside class="school-block school-callout" aria-label="${esc(block.title||'Dica')}"><span aria-hidden="true">✦</span><div>${title}<p>${esc(block.text||'')}</p></div></aside>`;
  case 'image':{const url=safeUrl(block.src||'');if(url==='#'||!block.alt)return '';return `<figure class="school-block school-image"><img src="${esc(url)}" alt="${esc(block.alt)}" loading="lazy" decoding="async"><figcaption>${esc(block.caption||'')}${block.credit?` · ${esc(block.credit)}`:''}</figcaption></figure>`;}
  case 'workflow':{if(!items.length)return '';return `<section class="school-block school-flow" aria-label="${esc(block.title||'Fluxo de trabalho')}">${title}<ol>${items.map((v,i)=>`<li><span aria-hidden="true">${i+1}</span><strong>${esc(v)}</strong></li>`).join('')}</ol></section>`;}
  case 'orgchart':{if(!items.length)return '';return `<section class="school-block school-org" aria-label="${esc(block.title||'Hierarquia')}">${title}<ol>${items.map((v,i)=>`<li style="--level:${Math.min(i,4)}"><span aria-hidden="true">↳</span>${esc(v)}</li>`).join('')}</ol></section>`;}
- case 'glossary':return `<div class="school-block school-glossary">${title}<dl>${items.filter(v=>v&&typeof v==='object').map(v=>`<dt>${esc(v.term)}</dt><dd>${esc(v.definition)}</dd>`).join('')}</dl></div>`;
+ case 'glossary':if(!items.length)return '';return `<div class="school-block school-glossary">${title}<dl>${items.filter(v=>v&&typeof v==='object').map(v=>`<dt>${esc(v.term)}</dt><dd>${esc(v.definition)}</dd>`).join('')}</dl></div>`;
  default:return '';
  }
 }
 function schoolParagraphs(value){return String(value||'').split(/\n\s*\n/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('')}
+function renderSchoolFilters(){
+ const root=el('school-filters');if(!root)return;
+ const categories=['todas',...new Set((DATA.techniques||[]).map(t=>t.category).filter(Boolean))];
+ root.innerHTML=categories.map(c=>`<button type="button" class="chip ${selectedSchoolCategory===c?'selected':''}" data-school-category="${esc(c)}" aria-pressed="${selectedSchoolCategory===c}">${esc(c==='todas'?'Todas as aulas':c)}</button>`).join('');
+}
 function renderTechniques(){
  const root=el('tech-grid');if(!root)return;
- root.innerHTML=(DATA.techniques||[]).map((t,i)=>`<details class="tech-card">
- <summary><div class="tech-summary"><div class="tech-number">${String(i+1).padStart(2,'0')} <span class="tech-pill"> · ${esc(t.category)}</span></div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p></div><span class="tech-toggle" aria-hidden="true"></span></summary>
+ const term=selectedSchoolSearch.trim().toLocaleLowerCase('pt-BR');
+ const lessons=(DATA.techniques||[]).filter(t=>(selectedSchoolCategory==='todas'||t.category===selectedSchoolCategory)&&(!term||[t.title,t.summary,t.category,...(t.lesson||[]).map(s=>s.heading)].join(' ').toLocaleLowerCase('pt-BR').includes(term)));
+ const count=el('school-count');if(count)count.textContent=`${lessons.length} ${lessons.length===1?'aula encontrada':'aulas encontradas'}`;
+ root.innerHTML=lessons.length?lessons.map((t,i)=>`<details class="tech-card" id="escola-${esc(t.id)}">
+ <summary><div class="tech-summary"><div class="tech-number">${String(i+1).padStart(2,'0')} <span class="tech-pill"> · ${esc(t.category)}</span></div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p><span class="school-card-meta">${(t.lesson||[]).length} seções · Exercício prático</span></div><span class="tech-toggle" aria-hidden="true"></span></summary>
  <div class="tech-detail"><div class="school-intro"><span class="school-kicker">CADERNO DE APRENDIZADO</span><p>${esc(t.summary)}</p></div>
  <div class="tech-lesson"><h4>Por que importa</h4>${schoolParagraphs(t.why)}</div>
+ <nav class="school-contents" aria-label="Sumário da aula"><strong>Nesta aula</strong><ol>${(t.lesson||[]).map((section,j)=>`<li><a href="#aula-${esc(t.id)}-${j}" data-school-anchor="aula-${esc(t.id)}-${j}">${esc(section.heading)}</a></li>`).join('')}</ol></nav>
  ${(t.lesson||[]).map((section,j)=>`<section class="tech-lesson" id="aula-${esc(t.id)}-${j}"><h4><span class="school-section-number">${String(j+1).padStart(2,'0')}</span> ${esc(section.heading)}</h4>${schoolParagraphs(section.body)}${(section.blocks||[]).map(schoolBlock).join('')}</section>`).join('')}
  ${(t.contentBlocks||[]).map(schoolBlock).join('')}
+ ${t.deepDive?`<div class="tech-lesson school-deep-dive"><h4>Para aprofundar</h4>${schoolParagraphs(t.deepDive)}</div>`:''}
  <div class="tech-lesson tech-practice"><h4>✦ Experimente na cozinha</h4>${schoolParagraphs(t.practice)}</div>
  ${t.mistakes?.length?`<div class="tech-lesson school-mistakes"><h4>Erros comuns</h4><ul>${t.mistakes.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`:''}
- </div></details>`).join('');
+ </div></details>`).join(''):'<div class="empty-state">Nenhuma aula encontrada. Tente outro termo ou categoria.</div>';
+ renderSchoolFilters();
 }
 function renderWorkshops(){const now=new Date();const today=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');el('workshop-list').innerHTML=(DATA.workshops||[]).filter(w=>!w.eventDate||w.eventDate>=today).map((w,i)=>`<article class="workshop-card"><div class="workshop-head"><span class="workshop-letter">${['A','I','G'][i%3]}</span><span class="workshop-tag">${esc(w.tag)}</span></div><h3>${esc(w.name)}</h3><div class="workshop-location">📍 ${esc(w.neighborhood)} · ${esc(w.address)}</div><p>${esc(w.description)}</p><div class="workshop-links"><a href="${esc(safeUrl(w.url))}" target="_blank" rel="noopener noreferrer">${w.eventDate?"Detalhes e inscrição ↗":"Site e programação ↗"}</a>${w.instagram?`<a href="${esc(safeUrl(w.instagram))}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>`:''}</div></article>`).join('')}
 function renderVideos(){el('video-list').innerHTML=(DATA.videos||[]).map(v=>`<article class="video-card"><span class="video-play">▶</span><div><span class="tech-pill">${esc(v.platform)} · ${esc(v.topic)}</span><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p><a href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener noreferrer" class="text-button">Abrir conteúdo oficial ↗</a></div></article>`).join('')}
@@ -153,6 +164,9 @@ function download(filename,contents,type){const url=URL.createObjectURL(new Blob
 function doBackup(){download('dantas-cozinha-backup.json',JSON.stringify({app:'dantas-cozinha',version:1,exportedAt:new Date().toISOString(),data:state},null,2),'application/json')}
 async function importBackup(file){if(!file)return;try{if(file.size>1_000_000)throw Error('Arquivo muito grande.');const parsed=JSON.parse(await file.text());if(parsed.app!=='dantas-cozinha'||!parsed.data||typeof parsed.data!=='object')throw Error('Formato incompatível.');const s=parsed.data;state={favorites:Array.isArray(s.favorites)?s.favorites.filter(id=>RECIPES.some(r=>r.id===id)):[],notes:s.notes&&typeof s.notes==='object'?s.notes:{},planner:s.planner&&typeof s.planner==='object'?s.planner:{},shoppingChecked:s.shoppingChecked&&typeof s.shoppingChecked==='object'?s.shoppingChecked:{}};saveState();renderHome();renderRecipes();renderPlanner();toast('Backup importado com sucesso!')}catch(e){toast(`Não foi possível importar: ${e.message}`)}}
 function initEvents(){window.addEventListener('hashchange',()=>goto(decodeURIComponent(location.hash.slice(1))));document.addEventListener('click',e=>{const go=e.target.closest('[data-goto]');if(go){location.hash=go.dataset.goto;goto(go.dataset.goto);return}const cat=e.target.closest('[data-category-go]');if(cat){selectedFilter=cat.dataset.categoryGo;location.hash='receitas';goto('receitas');return}const f=e.target.closest('[data-fav]');if(f){fav(f.dataset.fav);return}const add=e.target.closest('[data-plan-add]');if(add){quickAdd(add.dataset.planAdd);return}const recipe=e.target.closest('[data-recipe]');if(recipe){openRecipe(recipe.dataset.recipe);return}});
+const schoolSearch=el('school-search');if(schoolSearch)schoolSearch.oninput=e=>{selectedSchoolSearch=e.target.value;renderTechniques()};
+const schoolFilters=el('school-filters');if(schoolFilters)schoolFilters.onclick=e=>{const button=e.target.closest('[data-school-category]');if(button){selectedSchoolCategory=button.dataset.schoolCategory;renderTechniques()}};
+const schoolGrid=el('tech-grid');if(schoolGrid)schoolGrid.onclick=e=>{const link=e.target.closest('[data-school-anchor]');if(link){e.preventDefault();el(link.dataset.schoolAnchor)?.scrollIntoView({behavior:'smooth',block:'start'})}};
 el('recipe-search').oninput=e=>{selectedSearch=e.target.value;renderRecipes()};el('recipe-filters').onclick=e=>{const chip=e.target.closest('[data-filter]');if(chip){selectedFilter=chip.dataset.filter;renderRecipes()}};
 el('fav-shortcut').onclick=()=>{selectedFilter='favoritas';selectedSearch='';el('recipe-search').value='';location.hash='receitas';goto('receitas')};el('footer-favorites').onclick=el('fav-shortcut').onclick;
 el('mobile-toggle').onclick=()=>{const n=el('main-nav');n.classList.toggle('open');el('mobile-toggle').setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')};
