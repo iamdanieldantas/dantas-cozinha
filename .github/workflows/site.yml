@@ -65,9 +65,13 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./_site
+          # Reexecuções do mesmo workflow não podem reutilizar o nome do artefato.
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Registrar URL de publicação
         run: |
           echo "### Publicação concluída" >> "$GITHUB_STEP_SUMMARY"
