@@ -2331,6 +2331,57 @@ window.DANTAS_DATA = {
   ],
   "techniques": [
     {
+      "id": "escola-brigada-pracas-funcionamento",
+      "title": "Por dentro da cozinha profissional: cargos, praças e serviço",
+      "category": "Organização",
+      "summary": "Entenda a brigada de cozinha, os cargos do chef ao commis, a praça quente e fria, o passe e o caminho de uma comanda.",
+      "why": "Ajuda a compreender como funções, estações e comunicação permitem entregar pratos coordenados com qualidade e segurança.",
+      "practice": "Desenhe as praças de um restaurante fictício e acompanhe uma comanda de entrada, principal e sobremesa, atribuindo responsáveis e ordem de saída.",
+      "createdAt": "2026-11-10",
+      "lesson": [
+        {
+          "heading": "A brigada e a cadeia de comando",
+          "body": "A brigada de cozinha é uma forma de organizar pessoas, responsabilidades e estações de produção, historicamente associada a Auguste Escoffier. Não é uma hierarquia universal: um restaurante pequeno pode reunir funções, enquanto hotéis e operações grandes podem ter várias cozinhas. Chef executivo supervisiona a operação gastronômica de uma ou mais unidades, quando o cargo existe; chef de cuisine lidera uma cozinha; sous-chef é o segundo na operação, coordena a equipe e substitui o chef. Chef de partie responde por uma praça; demi-chef atua como apoio experiente; commis é profissional em formação. Cozinheiro e auxiliar são nomenclaturas comuns no Brasil, com atribuições definidas por cada estabelecimento. Chef não significa simplesmente qualquer pessoa que cozinha: envolve liderança e responsabilidade."
+        },
+        {
+          "heading": "O que é uma praça?",
+          "body": "Praça é a estação de trabalho com equipamentos, ingredientes, mise en place e responsabilidade definidos. Praça quente concentra cocções e finalizações quentes; praça fria ou garde-manger prepara saladas, entradas frias, conservas e outras produções refrigeradas, conforme o menu. A confeitaria ou pâtisserie responde por sobremesas e massas doces. Na brigada clássica, saucier prepara molhos e certas cocções; poissonnier trabalha com peixes; rôtisseur com assados; grillardin com grelhados; entremetier com vegetais, ovos e guarnições. Essas divisões podem não existir separadamente em cozinhas atuais. Uma praça não é um cargo: chef de partie é o cargo de quem pode liderá-la."
+        },
+        {
+          "heading": "Antes do serviço: recebimento e mise en place",
+          "body": "O fluxo começa no planejamento de compras, recebimento e conferência dos insumos, armazenamento adequado e identificação de produtos. O chef define menu e padrões; responsáveis de praça revisam fichas técnicas, porcionam, preparam bases, etiquetam, organizam utensílios e verificam equipamentos. A equipe alinha itens indisponíveis, alergênicos, reservas e tarefas. Mise en place é preparar antecipadamente o que pode ser feito sem comprometer qualidade ou segurança; não significa cozinhar todos os pratos antes de o cliente pedir."
+        },
+        {
+          "heading": "Durante o serviço: comanda, passe e sincronização",
+          "body": "A equipe de salão registra o pedido no sistema ou comanda. No passe, o expedidor — frequentemente chef ou sous-chef — lê, prioriza e distribui os pedidos às praças. Cada estação confirma, prepara e informa o andamento. O passe confere composição, apresentação, modificações e sincronização para que os pratos de uma mesma mesa saiam juntos quando apropriado. O salão retira e entrega. Comunicação curta e confirmação de pedidos reduzem erros; pedidos com restrições alimentares exigem atenção especial e protocolo próprio."
+        },
+        {
+          "heading": "Simulação: uma mesa, três preparações",
+          "body": "Exemplo didático, não relato de serviço real: uma mesa pede salada de entrada, peixe grelhado com legumes e sobremesa. A praça fria monta a salada; o passe libera a entrada. Enquanto o cliente come, a praça quente coordena peixe e guarnição, ajustando o início de cada cocção para que ambos terminem próximos. A confeitaria organiza a sobremesa e finaliza após a liberação do pedido. O passe confere cada etapa e comunica ao salão. Em uma cozinha pequena, uma única pessoa pode cobrir mais de uma dessas funções."
+        },
+        {
+          "heading": "Depois do serviço: fechamento e melhoria",
+          "body": "Ao encerrar, as praças identificam e armazenam corretamente o que pode ser conservado, descartam o que não é seguro reaproveitar, limpam e sanitizam equipamentos e superfícies segundo o procedimento do estabelecimento, registram perdas e necessidades de reposição. Chef e sous-chef podem revisar atrasos, devoluções e organização do turno. Segurança alimentar, controle de tempo e temperatura e prevenção de contaminação cruzada são responsabilidades compartilhadas."
+        },
+        {
+          "heading": "Glossário para ler uma cozinha profissional",
+          "body": "Brigade de cuisine: estrutura de equipe; chef de cuisine: chefe da cozinha; sous-chef: subchefe; chef de partie: chefe de praça; commis: profissional iniciante; garde-manger: estação de preparações frias; saucier: molhos; entremetier: guarnições e preparações vegetais; pâtissier: confeitaria; mise en place: preparação e organização prévias; passe: ponto de conferência e saída dos pratos; service: período de atendimento. Os nomes franceses são referências históricas, não títulos obrigatórios no Brasil."
+        },
+        {
+          "heading": "O que muda entre restaurantes",
+          "body": "Em um bistrô pequeno, chef e cozinheiros podem alternar entre praça quente, fria e passe. Em um restaurante de alto volume, há especialização por estação e turnos. Em uma cozinha de hotel, chef executivo pode coordenar banquetes, restaurante e room service. O desenho ideal depende de menu, volume, espaço, equipe e segurança. Não confunda organograma de referência com regra legal de cargos."
+        }
+      ],
+      "mistakes": [
+        "Achar que chef executivo, chef de cuisine e cozinheiro são sempre o mesmo cargo.",
+        "Tratar praça quente e praça fria como cargos, em vez de estações.",
+        "Supor que todo restaurante tem todos os postos da brigada francesa.",
+        "Iniciar pratos de uma mesa sem coordenar os tempos no passe.",
+        "Ignorar protocolos de higiene, alergênicos e contaminação cruzada."
+      ],
+      "deepDive": "A organização de uma cozinha profissional articula liderança (chef, sous-chef), execução por estações (praças), planejamento (fichas técnicas e mise en place) e expedição (passe). Durante o serviço, o passe coordena comandas e tempos, enquanto cada praça responde por sua parte do prato. A estrutura clássica francesa é uma referência histórica; restaurantes contemporâneos adaptam cargos e praças à realidade da operação. Exercício: mapeie uma mesa com entrada fria, principal quente e sobremesa, descrevendo quem recebe, prepara, confere e entrega cada etapa."
+    },
+    {
       "id": "tec-1",
       "title": "Mise en place: cozinhar sem correria",
       "category": "Organização",
