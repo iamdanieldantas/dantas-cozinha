@@ -218,3 +218,16 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
  html{scroll-behavior:auto}
  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* Fase 3 — busca unificada */
+.unified-search-page{padding-top:52px;padding-bottom:85px;max-width:1000px}
+.unified-search-label{display:block;font-weight:700;margin:26px 0 9px}
+.unified-search-input{display:block;width:100%;padding:16px 18px;border:1px solid #b8c3b9;border-radius:12px;background:#fff;color:#263b2e;font:inherit}
+.unified-search-input:focus-visible,.unified-result button:focus-visible{outline:3px solid #b46c40;outline-offset:3px}
+.unified-filters{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0}
+.unified-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px;margin-top:22px}
+.unified-result{border:1px solid #e5e4dc;border-radius:16px;background:#fffdf9;padding:24px;min-width:0}
+.unified-result h2{font-size:1.3rem;margin:12px 0}
+.unified-result p{line-height:1.6;overflow-wrap:anywhere}
+.unified-result button{margin-top:14px}
+@media(max-width:660px){.unified-search-page{padding-top:28px;padding-bottom:50px}.unified-results{grid-template-columns:1fr}}
