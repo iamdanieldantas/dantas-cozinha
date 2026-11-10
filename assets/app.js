@@ -179,6 +179,7 @@ function setPageMeta(page,recipe){
  if(ogDescription)ogDescription.setAttribute('content',meta.description);
 }
 function goto(page){
+if(page!=='receita'&&!page.startsWith('receita/'))stopCookingTimer();
 const recipeRoute=page.startsWith('receita/');
 const recipeId=recipeRoute?page.slice('receita/'.length):null;
 if(recipeRoute)ensureRecipePage();
@@ -235,10 +236,47 @@ ${r.sourceUrl?`<a href="${esc(safeUrl(r.sourceUrl))}" target="_blank" rel="noope
 <div class="modal-notes"><label for="recipe-note">Meu caderno de anotações</label><textarea id="recipe-note" maxlength="5000" placeholder="Como ficou? O que você mudaria?" aria-label="Notas pessoais"></textarea><small>Salvo automaticamente neste navegador.</small></div>
 </div></div>`;
 el('recipe-note').value=state.notes[id]||'';
+setupCookingTools();
 el('serving-plus').onclick=()=>scale(1);
 el('serving-minus').onclick=()=>scale(-1);
 el('recipe-detail-fav').onclick=()=>fav(id);
 el('recipe-note').oninput=e=>{state.notes[id]=e.target.value;saveState()};
+}
+let cookingInterval=null,cookingWakeLock=null;
+function stopCookingTimer(){if(cookingInterval)clearInterval(cookingInterval);cookingInterval=null}
+function setupCookingTools(){
+ stopCookingTimer();
+ const root=el('recipe-detail');
+ if(!root)return;
+ const steps=root.querySelector('.detail-steps');
+ if(!steps)return;
+ const controls=document.createElement('div');
+ controls.className='cooking-tools';
+ controls.innerHTML='<label for="cooking-minutes">Timer (minutos)</label><input id="cooking-minutes" type="number" min="1" max="180" value="10"><button type="button" id="cooking-start" class="btn-outline">Iniciar</button><button type="button" id="cooking-stop" class="btn-outline">Parar</button><button type="button" id="cooking-screen" class="btn-outline" aria-pressed="false">Manter tela ativa</button><span id="cooking-status" role="status" aria-live="polite"></span>';
+ steps.prepend(controls);
+ const status=el('cooking-status'),screen=el('cooking-screen');
+ el('cooking-start').onclick=()=>{
+  const minutes=Number(el('cooking-minutes').value);
+  if(!Number.isInteger(minutes)||minutes<1||minutes>180){status.textContent='Informe de 1 a 180 minutos.';return}
+  stopCookingTimer();
+  const deadline=Date.now()+minutes*60000;
+  const tick=()=>{
+   const remaining=Math.max(0,Math.ceil((deadline-Date.now())/1000));
+   status.textContent=remaining?'Restam '+Math.floor(remaining/60)+'m '+String(remaining%60).padStart(2,'0')+'s':'Tempo encerrado!';
+   if(!remaining)stopCookingTimer();
+  };
+  tick();cookingInterval=setInterval(tick,1000);
+ };
+ el('cooking-stop').onclick=()=>{stopCookingTimer();status.textContent='Timer parado.'};
+ screen.onclick=async()=>{
+  if(cookingWakeLock){await cookingWakeLock.release();return}
+  try{
+   if(!('wakeLock' in navigator))throw Error('Unsupported');
+   cookingWakeLock=await navigator.wakeLock.request('screen');
+   screen.setAttribute('aria-pressed','true');screen.textContent='Tela ativa';
+   cookingWakeLock.addEventListener('release',()=>{cookingWakeLock=null;screen.setAttribute('aria-pressed','false');screen.textContent='Manter tela ativa'});
+  }catch{status.textContent='Manter tela ativa não está disponível neste navegador.'}
+ };
 }
 function scale(amount){modalServings=Math.max(1,Math.min(40,modalServings+amount));el('serving-number').textContent=modalServings;el('ingredients-list').innerHTML=ingredientsList(modalRecipe,modalServings/modalRecipe.servings)}
 
