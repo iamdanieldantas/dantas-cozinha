@@ -58,6 +58,7 @@ jobs:
           mkdir -p _site/assets
           cp index.html _site/index.html
           cp assets/*.js assets/*.css assets/*.svg _site/assets/
+          cp manifest.webmanifest sw.js robots.txt _site/
           touch _site/.nojekyll
       - name: Preparar Python para páginas estáticas
         uses: actions/setup-python@v5
