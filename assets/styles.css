@@ -243,3 +243,17 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .privacy-settings label{display:flex;align-items:center;gap:8px}
 .privacy-settings input{accent-color:#2e4838}
 .privacy-settings button:focus-visible{outline:3px solid #b46c40;outline-offset:3px}
+
+/* Revisão integrada — continuidade, escola e consistência editorial */
+.home-learning-prompt,.learning-path-panel{background:#f3f4ec;border:1px solid #dce4d9;border-radius:20px;padding:clamp(20px,4vw,36px);margin:28px 0 40px}
+.home-learning-prompt{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.home-learning-prompt h2,.learning-path-panel h2{font-family:Georgia,serif;color:#2e4838;margin:10px 0}
+.home-learning-prompt p,.learning-path-panel p{max-width:650px}
+.learning-progress-track{width:100%;height:12px;border-radius:99px;background:#d8e0d5;overflow:hidden;margin:16px 0}
+.learning-progress-track span{display:block;height:100%;width:0;background:#466d52;transition:width .25s ease}
+.learning-path-panel button{max-width:100%;white-space:normal;text-align:left}
+.recipe-content-status{background:#fff8e8;border-left:3px solid #bd9250;border-radius:5px;padding:12px 15px;font-size:.9rem}
+.related-recipes{margin:30px 0}
+.related-recipes h2{margin-bottom:20px}
+.related-recipes .recipe-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+@media(max-width:640px){.home-learning-prompt{align-items:stretch}.home-learning-prompt .btn{width:100%}.related-recipes .recipe-grid{grid-template-columns:1fr}}

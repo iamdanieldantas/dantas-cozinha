@@ -69,10 +69,20 @@ def run():
             assert desktop.locator("#recipe-detail h1").inner_text() == example["title"]
             assert desktop.locator("#recipe-note").input_value() == "Teste de persistência e navegação."
 
+            desktop.goto(base + "#inicio", wait_until="domcontentloaded")
+            assert desktop.locator("#home-learning-progress").inner_text()
+            desktop.goto(base + "#buscar", wait_until="domcontentloaded")
+            desktop.locator("#unified-search").fill(example["title"].split()[0])
+            assert desktop.locator("#unified-results .unified-result").count() >= 1
+            desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
+            assert desktop.locator("#school-progress-bar").get_attribute("aria-valuenow") is not None
+            desktop.locator("#school-next-lesson").click()
+            assert desktop.locator("#tech-grid details[open]").count() >= 1
             desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
             assert desktop.locator("#tech-grid details").count() == len(techniques)
             first = desktop.locator("#tech-grid details").first
-            first.locator("summary").click()
+            if first.get_attribute("open") is None:
+                first.locator("summary").click()
             assert first.get_attribute("open") is not None
             assert first.locator(".tech-lesson").count() >= 3
             for topic in ("Antipasto, entrada, couvert e aperitivo",
@@ -83,7 +93,8 @@ def run():
                     has=desktop.locator("summary h3", has_text=topic)
                 )
                 assert lesson.count() == 1, "Aula essencial ausente: " + topic
-                lesson.locator("summary").click()
+                if lesson.get_attribute("open") is None:
+                    lesson.locator("summary").click()
                 assert lesson.get_attribute("open") is not None
 
             mobile = browser.new_page(
