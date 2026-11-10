@@ -48,7 +48,7 @@ function schoolBlock(block){
  default:return '';
  }
 }
-function schoolParagraphs(value){return String(value||'').split(/\\n\\s*\\n/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('')}
+function schoolParagraphs(value){return String(value||'').split(/\n\s*\n/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('')}
 function renderTechniques(){
  const root=el('tech-grid');if(!root)return;
  root.innerHTML=(DATA.techniques||[]).map((t,i)=>`<details class="tech-card">
