@@ -72,7 +72,11 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Verificar site público e integridade dos assets
+        env:
+          PUBLISHED_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/verify_deployment.py --url "$PUBLISHED_URL"
       - name: Registrar URL de publicação
         run: |
-          echo "### Publicação concluída" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Publicação concluída e verificada" >> "$GITHUB_STEP_SUMMARY"
           echo "URL: ${{ steps.deployment.outputs.page_url }}" >> "$GITHUB_STEP_SUMMARY"
