@@ -897,7 +897,7 @@
       "difficulty": "Intermediário",
       "servings": 12,
       "emoji": "🍰",
-      "image": "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&w=940&q=80",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bolo_de_Cenoura_%28diagonal%29%2C_08-12-2020.jpg",
       "ingredients": [
         {
           "quantity": 250,
@@ -964,7 +964,10 @@
       "ingredientsSummary": "Cenoura, ovos, farinha, açúcar, óleo e chocolate",
       "verifiedTestClaim": "Versão não testada independentemente pelo Dantas Cozinha.",
       "minutesLabel": "65 min (aprox.)",
-      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão."
+      "recipeVersion": "Versão culinária independente elaborada para o Dantas Cozinha. A publicação citada é referência de inspiração, não fonte das quantidades ou do preparo desta versão.",
+      "imageCredit": "Pedro Toniazzo Terres / Wikimedia Commons · CC BY-SA 4.0 (imagem ilustrativa; sem alterações)",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Bolo_de_Cenoura_(diagonal),_08-12-2020.jpg",
+      "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     {
       "id": "curadoria-brownie",

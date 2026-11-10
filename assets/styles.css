@@ -257,3 +257,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .related-recipes h2{margin-bottom:20px}
 .related-recipes .recipe-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
 @media(max-width:640px){.home-learning-prompt{align-items:stretch}.home-learning-prompt .btn{width:100%}.related-recipes .recipe-grid{grid-template-columns:1fr}}
+
+/* Curadoria semanal no mesmo catálogo, sem representar fichas externas como preparo local */
+.curated-card{border:1px solid #d8e4d9}
+.curated-photo{min-height:135px;display:flex;align-items:center;justify-content:center;background:linear-gradient(125deg,#e5eee0,#f7f0df);color:#47684c;font-size:3.2rem}
+.curated-card .recipe-content{display:flex;flex-direction:column;gap:10px}
+.curated-source{font-size:.85rem;font-weight:600;margin:0}
+.curated-disclaimer{font-size:.82rem;color:#59695c;margin:0}
+.curated-card .card-bottom{margin-top:auto}
