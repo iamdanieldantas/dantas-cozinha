@@ -3102,12 +3102,21 @@ window.DANTAS_DATA = {
       "workshopsExpiredRemoved": 3,
       "videosAdded": 0,
       "notes": "Três novas seleções com autoria e URL oficial verificadas, sem reproduzir preparo. Quatro aulas futuras com datas e preços publicados nas páginas da escola; vagas não confirmadas. Nenhum vídeo novo por falta de URL adicional verificável."
+    },
+    {
+      "date": "2026-11-09",
+      "type": "curadoria-editorial-proposta",
+      "recipesAdded": 0,
+      "editorialSelectionsProposed": 2,
+      "workshopsAdded": 0,
+      "videosAdded": 0,
+      "notes": "Fichas editoriais com autoria Panelinha e links originais; revisão humana e testes de CI obrigatórios antes de qualquer publicação."
     }
   ],
   "curationPolicy": {
     "version": 2,
     "rule": "Receitas de fontes editoriais reputadas, ingredientes encontrados em supermercados brasileiros; receitas internacionais são aceitas. Sem inventar preparo, teste ou quantidade.",
-    "reviewDate": "2026-11-02",
+    "reviewDate": "2026-11-09",
     "notes": "Fichas editoriais semanais de novas fontes incluem título, descrição própria, ingredientes principais, autoria e URL original; não reproduzem quantidades ou preparo. O catálogo legado mantém seu próprio esquema."
   },
   "curatedDiscoveries": [
@@ -3173,6 +3182,55 @@ window.DANTAS_DATA = {
       "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
+      "title": "Risoto de cogumelos com salsinha",
+      "category": "principal",
+      "description": "Risoto com três variedades de cogumelos e caldo de legumes aromático. A publicação explica como adiantar parte do cozimento e finalizar o prato na hora de servir; medidas e técnica detalhada estão na fonte.",
+      "mainIngredients": [
+        "arroz para risoto",
+        "shiitake",
+        "shimeji",
+        "cogumelo-de-paris",
+        "cenoura",
+        "salsão",
+        "cebola",
+        "vinho branco",
+        "salsinha"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
+      "verifiedAt": "2026-11-09",
+      "createdAt": "2026-11-09",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
+      "title": "Bolo de cenoura com especiarias (carrot cake)",
+      "category": "sobremesa",
+      "description": "Versão aromática do bolo de cenoura com nozes, canela, gengibre e cobertura de iogurte. O preparo da cobertura exige planejamento antecipado; consulte a publicação original para medidas e instruções.",
+      "mainIngredients": [
+        "cenoura",
+        "farinha de trigo",
+        "ovos",
+        "açúcar mascavo",
+        "nozes",
+        "canela",
+        "gengibre",
+        "iogurte natural"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
+      "verifiedAt": "2026-11-09",
+      "createdAt": "2026-11-09",
       "curationStatus": "fonte-editorial-verificada",
       "preparation": "Consultar a receita original no Panelinha.",
       "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
