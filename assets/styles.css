@@ -138,3 +138,22 @@
 .school-glossary dd{margin:0;line-height:1.6}
 .school-mistakes{border-bottom:0}
 @media(max-width:660px){.tech-card[open] .tech-detail{padding:18px 17px}.school-block{padding:15px}.school-flow ol{flex-direction:column}.school-flow li{flex-basis:auto;width:100%}.school-glossary dl{grid-template-columns:1fr}.school-glossary dd{margin-bottom:8px}}
+
+/* Fase 2 — descoberta e leitura da Escola. */
+.school-toolbar{margin:25px 0 27px;padding:23px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
+.school-search-label{display:block;font-size:13px;font-weight:750;color:var(--forest);margin-bottom:9px}
+#school-search{width:100%;max-width:640px;border:1px solid #c9c5bb;background:#fff;border-radius:11px;padding:12px 15px;color:var(--ink)}
+#school-search:focus-visible,.school-toolbar button:focus-visible,.school-contents a:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.school-filters{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 10px}
+.school-filters .chip{white-space:normal;text-align:center}
+.school-count{font-size:12px;color:var(--muted);margin:7px 0 0}
+.school-card-meta{display:inline-block;font-size:12px;color:#53725c;margin-top:8px;font-weight:650}
+.school-contents{background:#f8f2e9;border:1px solid #e9dfd2;padding:17px 20px;border-radius:13px;margin:18px 0 24px}
+.school-contents strong{color:var(--forest);font-size:13px}
+.school-contents ol{margin:8px 0 0;padding-left:22px;columns:2;column-gap:24px}
+.school-contents li{break-inside:avoid;margin:6px 0}
+.school-contents a{text-decoration:underline;text-underline-offset:3px;color:#315c43}
+.school-deep-dive{background:#f8f4e9;padding:17px;border-radius:13px}
+.tech-lesson[id]{scroll-margin-top:100px}
+@media(max-width:660px){.school-toolbar{padding:17px}.school-contents ol{columns:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
