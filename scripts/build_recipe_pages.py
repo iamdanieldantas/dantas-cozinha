@@ -6,7 +6,7 @@ from html import escape
 import json
 from pathlib import Path
 import re
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 from build_dataset import assemble
@@ -46,6 +46,9 @@ def generate(destination: Path) -> int:
         instructions = "".join("<li>" + escape(step) + "</li>" for step in steps)
         ingredient_html = "".join("<li>" + escape(item) + "</li>" for item in ingredients)
         app_url = BASE + "#receita/" + quote(slug)
+        source_url = recipe.get("sourceUrl", "")
+        parsed_source = urlparse(source_url) if isinstance(source_url, str) else None
+        source_link = (f'<p>Referência: <a href="{escape(source_url, quote=True)}" rel="noopener noreferrer">{escape(recipe.get("source") or "Fonte original")}</a></p>' if parsed_source and parsed_source.scheme == "https" and parsed_source.netloc else "")
         # Only include attributes supported by the editorial dataset; no ratings or fabricated imagery.
         schema = {
             "@context": "https://schema.org",
@@ -76,7 +79,7 @@ def generate(destination: Path) -> int:
 <section class="panel"><h2>Ingredientes</h2><ul>{ingredient_html}</ul></section>
 <section class="panel"><h2>Modo de preparo</h2><ol>{instructions}</ol></section>
 <p><a href="{app_url}">Abrir versão interativa: ajustar porções, salvar favoritos e planejar</a></p>
-<p><small>Conteúdo editorial informativo. Consulte a referência original quando indicada no catálogo.</small></p></article></main></body></html>"""
+{source_link}<p><small>Conteúdo editorial informativo. Consulte a referência original quando indicada no catálogo.</small></p></article></main></body></html>"""
         target = destination / "receitas" / slug / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page, encoding="utf-8")
