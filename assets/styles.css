@@ -231,3 +231,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .unified-result p{line-height:1.6;overflow-wrap:anywhere}
 .unified-result button{margin-top:14px}
 @media(max-width:660px){.unified-search-page{padding-top:28px;padding-bottom:50px}.unified-results{grid-template-columns:1fr}}
+
+/* Consolidated study, cooking and installable app controls */
+.school-complete{margin:14px 0 20px}
+.cooking-tools{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0 24px;padding:16px;border:1px solid #e0e5dd;border-radius:12px;background:#f8faf6}
+.cooking-tools input{width:75px;padding:8px;border:1px solid #aebdaf;border-radius:8px;font:inherit}
+.cooking-tools [role=status]{flex-basis:100%;font-weight:650}
+.cooking-tools button:focus-visible,.school-complete:focus-visible{outline:3px solid #b46c40;outline-offset:3px}
