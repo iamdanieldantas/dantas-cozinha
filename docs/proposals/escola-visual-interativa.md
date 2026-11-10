@@ -9,7 +9,7 @@ As aulas atuais são longos blocos de texto, com poucos recursos para orientar l
 Transformar a Escola em uma experiência didática visual e responsiva, preservando o conteúdo existente e a navegação atual.
 
 ## Abrangência obrigatória: TODOS os artigos da Escola
-A entrega não é considerada concluída com apenas um piloto. O novo design system e renderizador devem servir a **100% dos artigos atuais** da coleção `window.DANTAS_DATA.techniques` e a qualquer artigo novo. O piloto é só a primeira etapa de validação; o rollout integral e a auditoria artigo por artigo fazem parte do mesmo objetivo da feature.
+Os recursos são **opcionais e combináveis por artigo**. Nenhuma aula é obrigada a conter imagens, bullets, workflows, organogramas ou exercícios. A infraestrutura deve oferecer esses tipos de bloco e o editor escolhe apenas os adequados ao tema. A entrega não é considerada concluída com apenas um piloto. O novo design system e renderizador devem servir a **100% dos artigos atuais** da coleção `window.DANTAS_DATA.techniques` e a qualquer artigo novo. O piloto é só a primeira etapa de validação; o rollout integral e a auditoria artigo por artigo fazem parte do mesmo objetivo da feature.
 
 ### Inventário atual (gerado a partir do catálogo)
 - `escola-brigada-pracas-funcionamento` — Por dentro da cozinha profissional: cargos, praças e serviço
@@ -27,7 +27,7 @@ A entrega não é considerada concluída com apenas um piloto. O novo design sys
 
 ### Matriz de enriquecimento por artigo
 - Para **cada artigo**, avaliar a pertinência de imagem, bullets, ícones, workflow, diagrama, comparativo, glossário e exercício; não forçar diagramas ou fotos quando não agregam clareza.
-- Cada artigo deve conter estrutura editorial legível (introdução, objetivos, seções, resumo e prática), com ao menos um recurso visual ou esquemático útil, além de listas onde adequadas.
+- Cada artigo deve manter uma estrutura editorial legível e flexível (título, resumo e seções; objetivos, prática e conclusão quando pertinentes). **Não exigir nenhum bloco visual específico**, nem quantidade mínima de imagens, listas, ícones ou diagramas.
 - Criar inventário de migração com `id`, blocos planejados, fonte/crédito de mídia, status e resultado de QA por artigo.
 - Exigir cobertura automatizada que derive a lista de IDs do catálogo e sinalize artigo não migrado; não fixar a quantidade de aulas no teste.
 - Preservar significado e conteúdo técnico, revisar acessibilidade e licenciamento de cada mídia.
@@ -61,14 +61,21 @@ A entrega não é considerada concluída com apenas um piloto. O novo design sys
 - Sem links quebrados, exceções JS, regressão em hash navigation ou seções expansíveis.
 - Dados e testes derivados do catálogo, sem quantidades fixas; sem afrouxar critérios para obter CI verde.
 
+## Contrato de composição flexível
+- `contentBlocks` é uma lista opcional de blocos heterogêneos; cada artigo pode ter zero ou mais instâncias de cada tipo permitido.
+- O renderizador deve preservar a ordem dos blocos, permitir texto simples e renderizar aulas legadas sem `contentBlocks`.
+- Campos opcionais ausentes não podem criar espaços vazios, placeholders ou erros.
+- O catálogo pode conter aulas inteiramente textuais, aulas com uma imagem ou aulas com vários fluxogramas, conforme necessidade didática.
+- Validar apenas a estrutura dos blocos **presentes** e os requisitos comuns; não impor um checklist de mídia por aula.
+
 ## Critério de conclusão global
-**100% das aulas existentes migradas e verificadas** no novo padrão, além de template para futuras aulas. O piloto isolado não satisfaz o aceite. Validar a página de cada artigo em desktop e mobile e revisar mídia, diagramas e estrutura didática. Quando o conteúdo não pedir um fluxo, usar outra representação pertinente.
+**100% das aulas existentes compatíveis e verificadas** com o novo renderizador e padrão editorial, sem obrigatoriedade de adicionar todos os recursos a todas as aulas, além de template para futuras aulas. O piloto isolado não satisfaz o aceite. Validar a página de cada artigo em desktop e mobile e revisar mídia, diagramas e estrutura didática. Quando o conteúdo não pedir um fluxo, usar outra representação pertinente.
 
 ## Plano de implementação (futuro PR separado)
 1. Prototipar layout e componentes com dados do piloto.
 2. Implementar renderizador e fallback legado.
 3. Converter piloto para blocos tipados e revisar fontes/mídias.
-3a. Migrar todas as demais aulas do inventário e revisar cada uma editorial e visualmente.
+3a. Garantir compatibilidade de todas as demais aulas com o renderizador, migrando/enriquecendo somente onde fizer sentido editorial e revisando cada uma.
 4. Testar navegação, acessibilidade, desktop e mobile.
 5. Executar `python -m harness.runner --mode review --browser`, registrar relatório e erros, incluindo cobertura integral das aulas.
 6. Abrir PR de implementação em rascunho; aprovação e merge exclusivamente humanos.
