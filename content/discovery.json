@@ -1,0 +1,159 @@
+{
+  "workshops": [
+    {
+      "id": "junta-risoto-2026-11-03",
+      "name": "Risotos — 03/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "03/11/2026, 19h–23h. Risoto de pomodoro, cogumelos, camarão e tiramisù. R$ 305 + R$ 7,63 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-risoto-03-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Risoto · R$ 305 + taxa",
+      "eventDate": "2026-11-03",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-bao-guioza-2026-11-04",
+      "name": "Bao e guioza — 04/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "04/11/2026, 19h–23h. Massa de bao, porco agridoce, frango frito coreano, guioza e acompanhamentos. Valor publicado: R$ 305 + R$ 7,63 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-bao-e-guioza-04-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária asiática · R$ 305 + taxa",
+      "eventDate": "2026-11-04",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "junta-sushi-2026-11-07",
+      "name": "Sushi — 07/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "07/11/2026, 10h–14h. Manipulação de pescado, shari, sashimi, sushi e hand rolls. R$ 390 + R$ 9,75 de taxa (vagas não confirmadas).",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-sushi-07-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária japonesa · R$ 390 + taxa",
+      "eventDate": "2026-11-07",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "junta-gnocchi-2026-11-09",
+      "name": "Gnocchi — 09/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "09/11/2026, 19h–23h. Massas de batata, banana-da-terra e mandioquinha com molhos. Valor publicado: R$ 305 + R$ 7,63 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-gnocchi-09-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Massas italianas · R$ 305 + taxa",
+      "eventDate": "2026-11-09",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "junta-pizza-2026-11-11",
+      "name": "Pizza do zero — 11/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "11/11/2026, 19h–23h. Massa de pizza, abertura, montagem e sabores marinara, pepperoni e marguerita. Valor publicado: R$ 305 + R$ 7,63 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-pizza-11-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Pizza artesanal · R$ 305 + taxa",
+      "eventDate": "2026-11-11",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "junta-massa-fresca-2026-11-13",
+      "name": "Massa fresca — 13/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363",
+      "description": "13/11/2026, 19h–23h. Raviolo, talharim e cavatelli com diferentes molhos, além de panacota de milho. Valor publicado: R$ 330 + R$ 8,25 de taxa; vagas não verificadas.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-massa-fresca-13-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Massa fresca · R$ 330 + taxa",
+      "eventDate": "2026-11-13",
+      "verifiedAt": "2026-11-02"
+    },
+    {
+      "id": "accademia",
+      "name": "Accademia Gastronomica",
+      "neighborhood": "Moema",
+      "address": "Rua Inhambu, 1126",
+      "description": "Aulas práticas e cursos livres de culinária para iniciantes e entusiastas.",
+      "url": "https://www.agastronomica.com.br/",
+      "instagram": "https://www.instagram.com/agastronomica/",
+      "tag": "Aulas práticas",
+      "eventDate": null,
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "iga-vila-mariana",
+      "name": "IGA Vila Mariana",
+      "neighborhood": "Vila Mariana",
+      "address": "Rua Vergueiro, 1900",
+      "description": "Cursos rápidos e formação em gastronomia, confeitaria e panificação.",
+      "url": "https://igavilamariana.com.br/",
+      "instagram": null,
+      "tag": "Cursos e oficinas",
+      "eventDate": null,
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "ig-santo-amaro",
+      "name": "Instituto Gourmet Santo Amaro",
+      "neighborhood": "Santo Amaro",
+      "address": "Rua Voluntário Delmiro Sampaio, 22",
+      "description": "Cursos de gastronomia, panificação e confeitaria; confira as turmas no site.",
+      "url": "https://igsantoamarosp.com.br/",
+      "instagram": null,
+      "tag": "Cursos presenciais",
+      "eventDate": null,
+      "verifiedAt": "2026-10-15"
+    }
+  ],
+  "videos": [
+    {
+      "id": "panelinha-pao-queijo-2023",
+      "title": "Pão de queijo: passo a passo com Rita Lobo",
+      "topic": "Técnicas brasileiras",
+      "description": "Vídeo oficial do Panelinha com demonstração do pão de queijo e opções de aproveitamento da massa.",
+      "url": "https://www.youtube.com/watch?v=2kC3Ruhe2iw",
+      "platform": "YouTube · Panelinha",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "panelinha-brownie-cafe-2023",
+      "title": "Brownie de chocolate e café com Rita Lobo",
+      "topic": "Sobremesas",
+      "description": "Demonstração publicada no canal oficial do Panelinha sobre textura do brownie.",
+      "url": "https://www.youtube.com/watch?v=kE6qTLe17oc",
+      "platform": "YouTube · Panelinha",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "receitas-pao-queijo-liquidificador-2024",
+      "title": "Pão de queijo de liquidificador com Rita Lobo",
+      "topic": "Receitas em vídeo",
+      "description": "Vídeo publicado no canal oficial Receitas, com a versão de liquidificador.",
+      "url": "https://www.youtube.com/watch?v=p_UZdXhjeVQ",
+      "platform": "YouTube · Receitas",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "instagram-panelinha-oficial",
+      "title": "Panelinha no Instagram",
+      "topic": "Instagram oficial",
+      "description": "Perfil oficial para acompanhar publicações gastronômicas e receitas; não é um post específico.",
+      "url": "https://www.instagram.com/panelinha_ritalobo/",
+      "platform": "Instagram · Panelinha",
+      "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "instagram-junta-cozinha-oficial",
+      "title": "Junta Cozinha no Instagram",
+      "topic": "Instagram oficial",
+      "description": "Perfil oficial divulgado no site da escola; consulte publicações e atualizações de aulas.",
+      "url": "https://www.instagram.com/juntacozinha/",
+      "platform": "Instagram · Junta Cozinha",
+      "verifiedAt": "2026-10-26"
+    }
+  ]
+}
