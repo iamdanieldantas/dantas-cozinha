@@ -311,4 +311,5 @@ el('print-list').onclick=()=>{if(!grocery().length){toast('Escolha receitas prim
 }
 function main(){updateFavCount();renderHome();renderRecipes();renderCuratedDiscoveries();renderTechniques();renderWorkshops();renderVideos();renderPlanner();initEvents();const last=DATA.generatedAt?new Date(DATA.generatedAt):null;if(last&&!isNaN(last))el('last-update').textContent=`Conteúdo: ${last.toLocaleDateString('pt-BR')}`;goto(decodeURIComponent(location.hash.slice(1))||'inicio')}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',main);else main();
+if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
 })();
