@@ -2379,7 +2379,63 @@ window.DANTAS_DATA = {
         "Iniciar pratos de uma mesa sem coordenar os tempos no passe.",
         "Ignorar protocolos de higiene, alergênicos e contaminação cruzada."
       ],
-      "deepDive": "A organização de uma cozinha profissional articula liderança (chef, sous-chef), execução por estações (praças), planejamento (fichas técnicas e mise en place) e expedição (passe). Durante o serviço, o passe coordena comandas e tempos, enquanto cada praça responde por sua parte do prato. A estrutura clássica francesa é uma referência histórica; restaurantes contemporâneos adaptam cargos e praças à realidade da operação. Exercício: mapeie uma mesa com entrada fria, principal quente e sobremesa, descrevendo quem recebe, prepara, confere e entrega cada etapa."
+      "deepDive": "A organização de uma cozinha profissional articula liderança (chef, sous-chef), execução por estações (praças), planejamento (fichas técnicas e mise en place) e expedição (passe). Durante o serviço, o passe coordena comandas e tempos, enquanto cada praça responde por sua parte do prato. A estrutura clássica francesa é uma referência histórica; restaurantes contemporâneos adaptam cargos e praças à realidade da operação. Exercício: mapeie uma mesa com entrada fria, principal quente e sobremesa, descrevendo quem recebe, prepara, confere e entrega cada etapa.",
+      "contentBlocks": [
+        {
+          "type": "orgchart",
+          "title": "Brigada clássica: uma hierarquia de referência",
+          "items": [
+            "Chef de cuisine — liderança da cozinha",
+            "Sous-chef — coordenação do serviço",
+            "Chef de partie — responsável por uma praça",
+            "Commis e auxiliares — apoio e execução"
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Importante",
+          "text": "A hierarquia é uma referência histórica. Restaurantes menores podem combinar cargos e praças; chef executivo pode supervisionar várias unidades."
+        },
+        {
+          "type": "workflow",
+          "title": "O caminho de uma comanda",
+          "items": [
+            "Salão registra o pedido",
+            "Passe organiza a sequência",
+            "Praças executam as preparações",
+            "Passe confere e sincroniza",
+            "Salão leva os pratos à mesa"
+          ]
+        },
+        {
+          "type": "bullets",
+          "title": "Como identificar as praças",
+          "items": [
+            "Praça quente: cocções e preparações servidas quentes",
+            "Praça fria: entradas, saladas e preparações frias",
+            "Confeitaria: sobremesas e massas doces",
+            "Passe: coordenação, conferência e saída dos pratos"
+          ]
+        },
+        {
+          "type": "glossary",
+          "title": "Vocabulário da brigada",
+          "items": [
+            {
+              "term": "Mise en place",
+              "definition": "Preparação e organização antes do serviço."
+            },
+            {
+              "term": "Passe",
+              "definition": "Ponto de coordenação e saída dos pratos."
+            },
+            {
+              "term": "Chef de partie",
+              "definition": "Profissional responsável por uma praça."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tec-1",
