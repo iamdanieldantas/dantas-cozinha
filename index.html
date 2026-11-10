@@ -18,9 +18,9 @@
 <title>Dantas Cozinha • um lugar para cozinhar bem</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="stylesheet" href="assets/styles.css?v=20261110-fase3-performance-v1">
-<script defer src="assets/data.js?v=20261110-fase3-performance-v1"></script>
-<script defer src="assets/app.js?v=20261110-fase3-performance-v1"></script>
+<link rel="stylesheet" href="assets/styles.css?v=20261110-fase3-search-v1">
+<script defer src="assets/data.js?v=20261110-fase3-search-v1"></script>
+<script defer src="assets/app.js?v=20261110-fase3-search-v1"></script>
 </head>
 <body>
 <div class="announcement">✦ Pequenos rituais, grandes sabores. Bem-vindo à sua cozinha.</div>
@@ -29,12 +29,26 @@
   <a class="brand" href="#inicio" aria-label="Dantas Cozinha — início"><span class="brand-logo"><img src="assets/logo-mark.svg" width="43" height="43" alt="" aria-hidden="true"></span><span class="brand-word">dantas <em>cozinha.</em></span></a>
   <button class="mobile-toggle" id="mobile-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">☰</button>
   <nav class="nav" id="main-nav" aria-label="Navegação principal">
-   <a href="#inicio" data-page="inicio">Início</a><a href="#receitas" data-page="receitas">Receitas</a><a href="#tecnicas" data-page="tecnicas">Escola</a><a href="#workshops" data-page="workshops">Workshops</a><a href="#videos" data-page="videos">Vídeos</a><a href="#planejamento" data-page="planejamento">Meu cardápio</a>
+   <a href="#inicio" data-page="inicio">Início</a><a href="#buscar" data-page="buscar">Buscar</a><a href="#receitas" data-page="receitas">Receitas</a><a href="#tecnicas" data-page="tecnicas">Escola</a><a href="#workshops" data-page="workshops">Workshops</a><a href="#videos" data-page="videos">Vídeos</a><a href="#planejamento" data-page="planejamento">Meu cardápio</a>
   </nav>
   <button type="button" id="fav-shortcut" class="header-saved" title="Ver favoritos" aria-label="Ver favoritos">♡ <span id="fav-count">0</span></button>
  </div>
 </header>
 <main id="app-main">
+<section data-view="buscar" class="page" aria-labelledby="search-page-title">
+ <div class="shell unified-search-page">
+  <div class="section-heading"><span class="eyebrow">ENCONTRE NO ACERVO</span><h1 id="search-page-title">Buscar na cozinha</h1><p>Encontre receitas e aulas da Escola em um só lugar.</p></div>
+  <label for="unified-search" class="unified-search-label">O que você quer cozinhar ou aprender?</label>
+  <input id="unified-search" class="unified-search-input" type="search" autocomplete="off" placeholder="Ex.: risoto, massa, técnicas..." aria-controls="unified-results">
+  <div id="unified-filters" class="unified-filters" role="group" aria-label="Filtrar tipo de conteúdo">
+   <button type="button" class="chip selected" data-search-kind="todos" aria-pressed="true">Tudo</button>
+   <button type="button" class="chip" data-search-kind="receitas" aria-pressed="false">Receitas</button>
+   <button type="button" class="chip" data-search-kind="aulas" aria-pressed="false">Aulas</button>
+  </div>
+  <p id="unified-count" role="status" aria-live="polite"></p>
+  <div id="unified-results" class="unified-results"></div>
+ </div>
+</section>
 <section data-view="inicio" class="page active">
  <div class="hero"><div class="shell hero-grid"><div class="hero-copy">
    <span class="eyebrow light">O SEU CADERNO DE SABORES</span>
