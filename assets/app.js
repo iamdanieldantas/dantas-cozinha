@@ -18,6 +18,54 @@ function card(r){return `<article class="recipe-card"><div class="recipe-photo" 
 function updateFavCount(){el('fav-count').textContent=state.favorites.length}
 function renderRecipes(){const term=selectedSearch.trim().toLocaleLowerCase('pt-BR');const arr=RECIPES.filter(r=>(selectedFilter==='todas'||selectedFilter==='favoritas'&&isFav(r.id)||r.category===selectedFilter)&&(!term||[r.title,r.description,...(r.ingredients||[]).map(i=>typeof i==='string'?i:i.name)].join(' ').toLocaleLowerCase('pt-BR').includes(term)));
 el('recipe-list').innerHTML=arr.length?arr.map(card).join(''):'<div class="empty-state"><strong>Nenhuma receita por aqui.</strong> Experimente outro filtro ou termo de busca.</div>';el('recipes-count').textContent=`${arr.length} ${arr.length===1?'receita encontrada':'receitas encontradas'}`;document.querySelectorAll('#recipe-filters .chip').forEach(b=>b.classList.toggle('selected',b.dataset.filter===selectedFilter));updateFavCount()}
+let unifiedKind='todos';
+function normalizedSearch(value){return String(value||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('pt-BR').trim()}
+function searchScore(title,summary,details,words){
+ const a=normalizedSearch(title),b=normalizedSearch(summary),c=normalizedSearch(details);
+ if(!words.length)return 1;
+ let score=0;
+ for(const word of words){
+  if(a===word)score+=12;
+  else if(a.includes(word))score+=7;
+  else if(b.includes(word))score+=3;
+  else if(c.includes(word))score+=1;
+  else return 0;
+ }
+ return score;
+}
+function unifiedMatches(query,kind='todos'){
+ const words=normalizedSearch(query).split(/\\s+/).filter(Boolean);
+ const results=[];
+ if(kind!=='aulas')for(const r of RECIPES){
+  const score=searchScore(r.title,r.description,(r.ingredients||[]).map(i=>typeof i==='string'?i:i.name).join(' '),words);
+  if(score)results.push({kind:'receita',id:r.id,title:r.title,description:r.description||'',score});
+ }
+ if(kind!=='receitas')for(const t of (DATA.techniques||[])){
+  const detail=[t.category,t.why,t.practice,...(t.lesson||[]).flatMap(section=>[section.heading,section.body])].join(' ');
+  const score=searchScore(t.title,t.summary,detail,words);
+  if(score)results.push({kind:'aula',id:t.id,title:t.title,description:t.summary||'',score});
+ }
+ return results.sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title,'pt-BR'));
+}
+function renderUnifiedSearch(){
+ const root=el('unified-results');if(!root)return;
+ const input=el('unified-search'),query=input?input.value:'';
+ const results=unifiedMatches(query,unifiedKind);
+ el('unified-count').textContent=results.length+' '+(results.length===1?'resultado encontrado':'resultados encontrados');
+ document.querySelectorAll('[data-search-kind]').forEach(b=>{const selected=b.dataset.searchKind===unifiedKind;b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected))});
+ root.innerHTML=results.length?results.map(r=>`<article class="unified-result">
+ <span class="tech-pill">${r.kind==='receita'?'Receita':'Aula da Escola'}</span>
+ <h2>${esc(r.title)}</h2><p>${esc(r.description)}</p>
+ <button type="button" class="btn-outline" data-unified-open="${esc(r.id)}" data-unified-type="${r.kind}" aria-label="Abrir ${r.kind}: ${esc(r.title)}">Abrir ${r.kind==='receita'?'receita':'aula'}</button>
+ </article>`).join(''):'<p class="empty-state">Nenhum resultado encontrado. Experimente outra palavra ou filtro.</p>';
+}
+function openUnifiedResult(id,kind){
+ if(kind==='receita'){openRecipe(id);return}
+ selectedSchoolCategory='todas';selectedSchoolSearch='';
+ const schoolInput=el('school-search');if(schoolInput)schoolInput.value='';
+ location.hash='tecnicas';goto('tecnicas');
+ const target=el('escola-'+id);if(target){target.open=true;target.scrollIntoView({behavior:'smooth',block:'start'})}
+}
 function renderCuratedDiscoveries(){
 const root=el('curation-list');if(!root)return;
 const discoveries=[...(DATA.curatedDiscoveries||[])].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
@@ -111,6 +159,7 @@ function ensureRecipePage(){
   return root;
 }
 const PAGE_META={
+ buscar:{title:'Buscar receitas e aulas • Dantas Cozinha',description:'Pesquise receitas e aulas da Escola de Gastronomia em um único lugar.'},
  inicio:{title:'Dantas Cozinha • um lugar para cozinhar bem',description:'Receitas, técnicas culinárias, workshops e planejamento semanal para cozinhar melhor.'},
  receitas:{title:'Receitas • Dantas Cozinha',description:'Explore receitas com ingredientes, quantidades e modo de preparo.'},
  tecnicas:{title:'Escola de Gastronomia • Dantas Cozinha',description:'Aprenda técnicas, fundamentos e organização da cozinha.'},
@@ -134,12 +183,13 @@ const recipeRoute=page.startsWith('receita/');
 const recipeId=recipeRoute?page.slice('receita/'.length):null;
 if(recipeRoute)ensureRecipePage();
 if(recipeRoute)page='receita';
-const available=['inicio','receitas','receita','tecnicas','workshops','videos','planejamento'];
+const available=['inicio','buscar','receitas','receita','tecnicas','workshops','videos','planejamento'];
 if(!available.includes(page))page='inicio';
 document.querySelectorAll('[data-view]').forEach(v=>v.classList.toggle('active',v.dataset.view===page));
 document.querySelectorAll('[data-page]').forEach(v=>{const active=v.dataset.page===page||(page==='receita'&&v.dataset.page==='receitas');v.classList.toggle('active',active);if(active)v.setAttribute('aria-current','page');else v.removeAttribute('aria-current')});
 el('main-nav').classList.remove('open');el('mobile-toggle').setAttribute('aria-expanded','false');
 if(page==='receitas')renderRecipes();
+if(page==='buscar')renderUnifiedSearch();
 if(page==='receita')renderRecipePage(recipeId);
 if(page==='planejamento')renderPlanner();
 setPageMeta(page,page==='receita'?RECIPES.find(r=>r.id===recipeId):null);
@@ -202,7 +252,14 @@ function renderShopping(){const all=grocery();el('shopping-list').innerHTML=all.
 function download(filename,contents,type){const url=URL.createObjectURL(new Blob([contents],{type}));const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000)}
 function doBackup(){download('dantas-cozinha-backup.json',JSON.stringify({app:'dantas-cozinha',version:1,exportedAt:new Date().toISOString(),data:state},null,2),'application/json')}
 async function importBackup(file){if(!file)return;try{if(file.size>1_000_000)throw Error('Arquivo muito grande.');const parsed=JSON.parse(await file.text());if(parsed.app!=='dantas-cozinha'||!parsed.data||typeof parsed.data!=='object')throw Error('Formato incompatível.');const s=parsed.data;state={favorites:Array.isArray(s.favorites)?s.favorites.filter(id=>RECIPES.some(r=>r.id===id)):[],notes:s.notes&&typeof s.notes==='object'?s.notes:{},planner:s.planner&&typeof s.planner==='object'?s.planner:{},shoppingChecked:s.shoppingChecked&&typeof s.shoppingChecked==='object'?s.shoppingChecked:{}};saveState();renderHome();renderRecipes();renderPlanner();toast('Backup importado com sucesso!')}catch(e){toast(`Não foi possível importar: ${e.message}`)}}
-function initEvents(){window.addEventListener('hashchange',()=>goto(decodeURIComponent(location.hash.slice(1))));document.addEventListener('click',e=>{const go=e.target.closest('[data-goto]');if(go){location.hash=go.dataset.goto;goto(go.dataset.goto);return}const cat=e.target.closest('[data-category-go]');if(cat){selectedFilter=cat.dataset.categoryGo;location.hash='receitas';goto('receitas');return}const f=e.target.closest('[data-fav]');if(f){fav(f.dataset.fav);return}const add=e.target.closest('[data-plan-add]');if(add){quickAdd(add.dataset.planAdd);return}const recipe=e.target.closest('[data-recipe]');if(recipe){openRecipe(recipe.dataset.recipe);return}});
+function initEvents(){
+ const unifiedInput=el('unified-search');
+ if(unifiedInput)unifiedInput.oninput=renderUnifiedSearch;
+ const unifiedFilters=el('unified-filters');
+ if(unifiedFilters)unifiedFilters.onclick=e=>{const b=e.target.closest('[data-search-kind]');if(b){unifiedKind=b.dataset.searchKind;renderUnifiedSearch()}};
+ const unifiedResults=el('unified-results');
+ if(unifiedResults)unifiedResults.onclick=e=>{const b=e.target.closest('[data-unified-open]');if(b)openUnifiedResult(b.dataset.unifiedOpen,b.dataset.unifiedType)};
+window.addEventListener('hashchange',()=>goto(decodeURIComponent(location.hash.slice(1))));document.addEventListener('click',e=>{const go=e.target.closest('[data-goto]');if(go){location.hash=go.dataset.goto;goto(go.dataset.goto);return}const cat=e.target.closest('[data-category-go]');if(cat){selectedFilter=cat.dataset.categoryGo;location.hash='receitas';goto('receitas');return}const f=e.target.closest('[data-fav]');if(f){fav(f.dataset.fav);return}const add=e.target.closest('[data-plan-add]');if(add){quickAdd(add.dataset.planAdd);return}const recipe=e.target.closest('[data-recipe]');if(recipe){openRecipe(recipe.dataset.recipe);return}});
 const schoolSearch=el('school-search');if(schoolSearch)schoolSearch.oninput=e=>{selectedSchoolSearch=e.target.value;renderTechniques()};
 const schoolFilters=el('school-filters');if(schoolFilters)schoolFilters.onclick=e=>{const button=e.target.closest('[data-school-category]');if(button){selectedSchoolCategory=button.dataset.schoolCategory;renderTechniques()}};
 const schoolGrid=el('tech-grid');if(schoolGrid)schoolGrid.onclick=e=>{const link=e.target.closest('[data-school-anchor]');if(link){e.preventDefault();el(link.dataset.schoolAnchor)?.scrollIntoView({behavior:'smooth',block:'start'})}};
