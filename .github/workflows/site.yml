@@ -59,6 +59,12 @@ jobs:
           cp index.html _site/index.html
           cp assets/*.js assets/*.css assets/*.svg _site/assets/
           touch _site/.nojekyll
+      - name: Preparar Python para páginas estáticas
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Gerar páginas individuais de receitas e sitemap
+        run: python scripts/build_recipe_pages.py --out _site
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
       - name: Enviar artefato validado
