@@ -8,6 +8,30 @@ As aulas atuais são longos blocos de texto, com poucos recursos para orientar l
 ## Objetivo
 Transformar a Escola em uma experiência didática visual e responsiva, preservando o conteúdo existente e a navegação atual.
 
+## Abrangência obrigatória: TODOS os artigos da Escola
+A entrega não é considerada concluída com apenas um piloto. O novo design system e renderizador devem servir a **100% dos artigos atuais** da coleção `window.DANTAS_DATA.techniques` e a qualquer artigo novo. O piloto é só a primeira etapa de validação; o rollout integral e a auditoria artigo por artigo fazem parte do mesmo objetivo da feature.
+
+### Inventário atual (gerado a partir do catálogo)
+- `escola-brigada-pracas-funcionamento` — Por dentro da cozinha profissional: cargos, praças e serviço
+- `tec-1` — Mise en place: cozinhar sem correria
+- `tec-2` — Maillard: o segredo do dourado
+- `tec-3` — Emulsão: molhos mais cremosos
+- `tec-4` — Como ajustar o sal sem errar
+- `tec-5` — Fermento químico x bicarbonato
+- `tec-6` — Manteiga noisette em casa
+- `tec-7` — Segurança com frango
+- `tec-8` — Três maneiras de engrossar molhos
+- `tec-servico-refeicao` — Antipasto, entrada, couvert e aperitivo
+- `tec-contaminacao-direta` — Contaminação direta dos alimentos
+- `tec-contaminacao-cruzada` — Contaminação cruzada: direta e indireta
+
+### Matriz de enriquecimento por artigo
+- Para **cada artigo**, avaliar a pertinência de imagem, bullets, ícones, workflow, diagrama, comparativo, glossário e exercício; não forçar diagramas ou fotos quando não agregam clareza.
+- Cada artigo deve conter estrutura editorial legível (introdução, objetivos, seções, resumo e prática), com ao menos um recurso visual ou esquemático útil, além de listas onde adequadas.
+- Criar inventário de migração com `id`, blocos planejados, fonte/crédito de mídia, status e resultado de QA por artigo.
+- Exigir cobertura automatizada que derive a lista de IDs do catálogo e sinalize artigo não migrado; não fixar a quantidade de aulas no teste.
+- Preservar significado e conteúdo técnico, revisar acessibilidade e licenciamento de cada mídia.
+
 ## Escopo do MVP
 1. Página de aula com título, resumo, objetivos de aprendizagem, índice navegável e seções em blocos.
 2. Renderizador de blocos tipados: paragraph, bulletList, numberedList, image, callout, iconFact, flowchart, orgChart, comparison, glossary, exercise.
@@ -37,12 +61,16 @@ Transformar a Escola em uma experiência didática visual e responsiva, preserva
 - Sem links quebrados, exceções JS, regressão em hash navigation ou seções expansíveis.
 - Dados e testes derivados do catálogo, sem quantidades fixas; sem afrouxar critérios para obter CI verde.
 
+## Critério de conclusão global
+**100% das aulas existentes migradas e verificadas** no novo padrão, além de template para futuras aulas. O piloto isolado não satisfaz o aceite. Validar a página de cada artigo em desktop e mobile e revisar mídia, diagramas e estrutura didática. Quando o conteúdo não pedir um fluxo, usar outra representação pertinente.
+
 ## Plano de implementação (futuro PR separado)
 1. Prototipar layout e componentes com dados do piloto.
 2. Implementar renderizador e fallback legado.
 3. Converter piloto para blocos tipados e revisar fontes/mídias.
+3a. Migrar todas as demais aulas do inventário e revisar cada uma editorial e visualmente.
 4. Testar navegação, acessibilidade, desktop e mobile.
-5. Executar `python -m harness.runner --mode review --browser`, registrar relatório e erros.
+5. Executar `python -m harness.runner --mode review --browser`, registrar relatório e erros, incluindo cobertura integral das aulas.
 6. Abrir PR de implementação em rascunho; aprovação e merge exclusivamente humanos.
 
 ## Governança
