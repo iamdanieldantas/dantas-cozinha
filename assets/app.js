@@ -75,7 +75,7 @@ function renderTechniques(){
 }
 function renderWorkshops(){
  const root=el('workshop-list');if(!root)return;
- const today=new Date().toLocaleDateString('en-CA',{timeZone:'America/Sao_Paulo'});
+ const today=new Date().toLocaleDateString('sv-SE',{timeZone:'America/Sao_Paulo'});
  const all=DATA.workshops||[];
  const events=all.filter(w=>w.eventDate&&w.eventDate>=today).sort((a,b)=>a.eventDate.localeCompare(b.eventDate));
  const schools=all.filter(w=>!w.eventDate);
