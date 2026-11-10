@@ -171,3 +171,15 @@
  .detail-shell{padding:0!important}
  .detail-content,.detail-extra{box-shadow:none!important}
 }
+
+/* Fase 2 — programação por data e acervo permanente. */
+.workshop-section,.video-section{margin:26px 0 38px}
+.workshop-section>h3,.video-section>h3{font-family:var(--serif);font-size:27px;color:var(--forest);margin:0 0 7px}
+.workshop-section>p{color:var(--muted);font-size:13px;line-height:1.6;margin:0 0 20px}
+.workshop-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:20px}
+.workshop-date{font-size:13px;font-weight:600;color:var(--forest)}
+.workshop-verified,.video-verified{display:block;font-size:11px;line-height:1.6;color:#60665e}
+.workshop-empty{padding:22px;background:#f6f1e9;border:1px solid var(--line);border-radius:13px}
+.video-section .video-card{margin:14px 0}
+.video-verified{margin:9px 0}
+@media(max-width:650px){.workshop-section>h3,.video-section>h3{font-size:23px}}

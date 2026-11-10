@@ -73,8 +73,27 @@ function renderTechniques(){
  </div></details>`).join(''):'<div class="empty-state">Nenhuma aula encontrada. Tente outro termo ou categoria.</div>';
  renderSchoolFilters();
 }
-function renderWorkshops(){const now=new Date();const today=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');el('workshop-list').innerHTML=(DATA.workshops||[]).filter(w=>!w.eventDate||w.eventDate>=today).map((w,i)=>`<article class="workshop-card"><div class="workshop-head"><span class="workshop-letter">${['A','I','G'][i%3]}</span><span class="workshop-tag">${esc(w.tag)}</span></div><h3>${esc(w.name)}</h3><div class="workshop-location">📍 ${esc(w.neighborhood)} · ${esc(w.address)}</div><p>${esc(w.description)}</p><div class="workshop-links"><a href="${esc(safeUrl(w.url))}" target="_blank" rel="noopener noreferrer">${w.eventDate?"Detalhes e inscrição ↗":"Site e programação ↗"}</a>${w.instagram?`<a href="${esc(safeUrl(w.instagram))}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>`:''}</div></article>`).join('')}
-function renderVideos(){el('video-list').innerHTML=(DATA.videos||[]).map(v=>`<article class="video-card"><span class="video-play">▶</span><div><span class="tech-pill">${esc(v.platform)} · ${esc(v.topic)}</span><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p><a href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener noreferrer" class="text-button">Abrir conteúdo oficial ↗</a></div></article>`).join('')}
+function renderWorkshops(){
+ const root=el('workshop-list');if(!root)return;
+ const today=new Date().toLocaleDateString('sv-SE',{timeZone:'America/Sao_Paulo'});
+ const all=DATA.workshops||[];
+ const events=all.filter(w=>w.eventDate&&w.eventDate>=today).sort((a,b)=>a.eventDate.localeCompare(b.eventDate));
+ const schools=all.filter(w=>!w.eventDate);
+ const fmt=date=>date?new Date(date+'T12:00:00Z').toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric',timeZone:'UTC'}):'';
+ const card=(w,kind)=>`<article class="workshop-card"><div class="workshop-head"><span class="workshop-letter" aria-hidden="true">${kind==='event'?'◷':'✦'}</span><span class="workshop-tag">${esc(w.tag||'Gastronomia')}</span></div><h3>${esc(w.name)}</h3><div class="workshop-location">📍 ${esc(w.neighborhood)} · ${esc(w.address)}</div>${w.eventDate?`<p class="workshop-date"><strong>Data:</strong> ${esc(fmt(w.eventDate))}</p>`:''}<p>${esc(w.description)}</p><p class="workshop-verified">Informações consultadas em ${esc(fmt(w.verifiedAt))}. Confirme programação, preço e vagas com o organizador.</p><div class="workshop-links"><a href="${esc(safeUrl(w.url))}" target="_blank" rel="noopener noreferrer">${kind==='event'?'Consultar evento ↗':'Ver cursos e programação ↗'}</a>${w.instagram?`<a href="${esc(safeUrl(w.instagram))}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>`:''}</div></article>`;
+ root.innerHTML=`<div class="workshop-section"><h3>Próximas aulas com data</h3><p>Eventos encontrados no catálogo; disponibilidade não confirmada.</p><div class="workshop-items">${events.length?events.map(w=>card(w,'event')).join(''):'<p class="workshop-empty">Não há aulas futuras cadastradas. Consulte a programação das escolas abaixo.</p>'}</div></div><div class="workshop-section"><h3>Escolas e cursos permanentes</h3><p>Instituições para acompanhar novas turmas e oficinas.</p><div class="workshop-items">${schools.map(w=>card(w,'school')).join('')}</div></div>`;
+}
+
+function renderVideos(){
+ const root=el('video-list');if(!root)return;
+ const all=DATA.videos||[];
+ const videos=all.filter(v=>{try{return new URL(v.url).hostname.replace(/^www\./,'')==='youtube.com'||new URL(v.url).hostname==='youtu.be'}catch{return false}});
+ const profiles=all.filter(v=>!videos.includes(v));
+ const fmt=date=>date?new Date(date+'T12:00:00Z').toLocaleDateString('pt-BR',{timeZone:'UTC'}):'data não informada';
+ const card=(v,isVideo)=>`<article class="video-card"><span class="video-play" aria-hidden="true">${isVideo?'▶':'◎'}</span><div><span class="tech-pill">${esc(v.platform)} · ${esc(v.topic)}</span><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p><small class="video-verified">Link consultado em ${esc(fmt(v.verifiedAt))}. Conteúdo de terceiros.</small><a href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener noreferrer" class="text-button">${isVideo?'Assistir na plataforma ↗':'Abrir perfil oficial ↗'}</a></div></article>`;
+ root.innerHTML=`<section class="video-section"><h3>Vídeos selecionados</h3>${videos.map(v=>card(v,true)).join('')}</section><section class="video-section"><h3>Perfis para acompanhar</h3>${profiles.map(v=>card(v,false)).join('')}</section>`;
+}
+
 function ensureRecipePage(){
   let root=el('recipe-detail');
   if(root)return root;
