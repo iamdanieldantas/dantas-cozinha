@@ -69,6 +69,15 @@ def run():
             assert desktop.locator("#recipe-detail h1").inner_text() == example["title"]
             assert desktop.locator("#recipe-note").input_value() == "Teste de persistência e navegação."
 
+            desktop.goto(base + "#inicio", wait_until="domcontentloaded")
+            assert desktop.locator("#home-learning-progress").inner_text()
+            desktop.goto(base + "#buscar", wait_until="domcontentloaded")
+            desktop.locator("#unified-search").fill(example["title"].split()[0])
+            assert desktop.locator("#unified-results .unified-result").count() >= 1
+            desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
+            assert desktop.locator("#school-progress-bar").get_attribute("aria-valuenow") is not None
+            desktop.locator("#school-next-lesson").click()
+            assert desktop.locator("#tech-grid details[open]").count() >= 1
             desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
             assert desktop.locator("#tech-grid details").count() == len(techniques)
             first = desktop.locator("#tech-grid details").first
