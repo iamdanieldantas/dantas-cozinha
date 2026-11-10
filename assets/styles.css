@@ -109,3 +109,32 @@
 .curation-card>small{font-size:10px;color:var(--muted);line-height:1.5}
 @media(max-width:960px){.curation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.curation-grid{grid-template-columns:1fr}.curation-card{padding:21px}.curation-feature{margin-top:40px}}
+
+/* Escola: biblioteca modular de recursos didáticos. */
+.tech-card .school-intro{padding:18px 22px;margin-bottom:24px;background:#f0e9de;border-radius:14px}
+.tech-card .school-kicker{font-size:10px;letter-spacing:.13em;font-weight:800;color:#8c5d3d}
+.tech-card .school-intro p{margin:9px 0 0;font-size:14px;line-height:1.7}
+.tech-card .tech-lesson{padding-bottom:17px;border-bottom:1px solid #e9e0d4}
+.tech-card .tech-lesson h4{font-size:17px;line-height:1.5}
+.school-section-number{font:700 12px system-ui,sans-serif;color:#a16a49;margin-right:7px}
+.school-block{margin:18px 0;padding:18px 21px;border-radius:14px;background:#fff;border:1px solid #e7dfd4}
+.school-block h5{font-size:15px;margin:0 0 12px;color:#264a37}
+.school-block ul,.school-block ol{margin:0;padding-left:24px}
+.school-block li{line-height:1.75;margin:7px 0}
+.school-callout{display:flex;gap:14px;background:#eaf0e4}
+.school-callout>span{font-size:25px;color:#426849}
+.school-callout p{margin:0;line-height:1.75}
+.school-image{padding:0;overflow:hidden}
+.school-image img{display:block;width:100%;height:auto;max-height:460px;object-fit:cover}
+.school-image figcaption{padding:10px 15px;color:#70665b;font-size:12px}
+.school-flow ol{display:flex;flex-wrap:wrap;gap:12px;padding:0;list-style:none}
+.school-flow li{flex:1 1 135px;min-width:0;display:flex;gap:9px;align-items:center;background:#f4f0e7;padding:12px;border-radius:10px;font-size:12px}
+.school-flow li span{display:grid;place-items:center;flex:0 0 28px;height:28px;background:#315c43;color:white;border-radius:50%}
+.school-org ol{list-style:none;padding:0}
+.school-org li{margin-left:calc(var(--level)*12px);padding:10px 14px;background:#f1eee7;border-left:3px solid #718f72;border-radius:7px}
+.school-org li span{color:#718f72;margin-right:8px}
+.school-glossary dl{display:grid;grid-template-columns:minmax(90px,1fr) 2fr;gap:8px 15px;margin:0}
+.school-glossary dt{font-weight:800;color:#315c43}
+.school-glossary dd{margin:0;line-height:1.6}
+.school-mistakes{border-bottom:0}
+@media(max-width:660px){.tech-card[open] .tech-detail{padding:18px 17px}.school-block{padding:15px}.school-flow ol{flex-direction:column}.school-flow li{flex-basis:auto;width:100%}.school-glossary dl{grid-template-columns:1fr}.school-glossary dd{margin-bottom:8px}}
