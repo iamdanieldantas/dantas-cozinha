@@ -81,7 +81,8 @@ def run():
             desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
             assert desktop.locator("#tech-grid details").count() == len(techniques)
             first = desktop.locator("#tech-grid details").first
-            first.locator("summary").click()
+            if first.get_attribute("open") is None:
+                first.locator("summary").click()
             assert first.get_attribute("open") is not None
             assert first.locator(".tech-lesson").count() >= 3
             for topic in ("Antipasto, entrada, couvert e aperitivo",
@@ -92,7 +93,8 @@ def run():
                     has=desktop.locator("summary h3", has_text=topic)
                 )
                 assert lesson.count() == 1, "Aula essencial ausente: " + topic
-                lesson.locator("summary").click()
+                if lesson.get_attribute("open") is None:
+                    lesson.locator("summary").click()
                 assert lesson.get_attribute("open") is not None
 
             mobile = browser.new_page(
