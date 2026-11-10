@@ -2464,7 +2464,19 @@ window.DANTAS_DATA = {
         "Separar ingredientes crus e prontos na mesma superfície sem higienização.",
         "Medir todos os líquidos em um único copo e esquecer o que deveria entrar depois."
       ],
-      "deepDive": "Organize ingredientes por ordem de uso; pese tudo antes de ligar o fogo. Separe também tigelas para resíduos, panos limpos e utensílios. Para receitas com etapas simultâneas, identifique o que pode ser preparado antecipadamente e o que precisa ser feito na hora. A mise en place reduz esquecimentos e ajuda a manter a temperatura e o tempo sob controle."
+      "deepDive": "Organize ingredientes por ordem de uso; pese tudo antes de ligar o fogo. Separe também tigelas para resíduos, panos limpos e utensílios. Para receitas com etapas simultâneas, identifique o que pode ser preparado antecipadamente e o que precisa ser feito na hora. A mise en place reduz esquecimentos e ajuda a manter a temperatura e o tempo sob controle.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Antes de acender o fogo",
+          "items": [
+            "Leia a receita inteira e confira o rendimento.",
+            "Separe ingredientes e equipamentos por ordem de uso.",
+            "Higienize, pese e faça os cortes necessários.",
+            "Organize uma área limpa para finalização."
+          ]
+        }
+      ]
     },
     {
       "id": "tec-2",
@@ -2493,7 +2505,19 @@ window.DANTAS_DATA = {
         "Virar a carne a cada poucos segundos sem formar crosta.",
         "Confundir alimento muito escuro ou queimado com dourado bem desenvolvido."
       ],
-      "deepDive": "A reação de Maillard é favorecida por superfície relativamente seca, calor e contato com a panela. Se houver excesso de alimento, a água liberada resfria a frigideira e a carne cozinha no vapor em vez de dourar. Seque a proteína, aqueça a panela e doure em lotes; observe a crosta sem confundir dourado com queimado."
+      "deepDive": "A reação de Maillard é favorecida por superfície relativamente seca, calor e contato com a panela. Se houver excesso de alimento, a água liberada resfria a frigideira e a carne cozinha no vapor em vez de dourar. Seque a proteína, aqueça a panela e doure em lotes; observe a crosta sem confundir dourado com queimado.",
+      "contentBlocks": [
+        {
+          "type": "workflow",
+          "title": "Caminho para um bom dourado",
+          "items": [
+            "Seque a superfície do alimento",
+            "Aqueça a frigideira adequadamente",
+            "Evite sobrecarregar a panela",
+            "Observe a cor e ajuste o fogo"
+          ]
+        }
+      ]
     },
     {
       "id": "tec-3",
@@ -2522,7 +2546,18 @@ window.DANTAS_DATA = {
         "Aquecer demais um molho que leva gema.",
         "Descartar toda a água do cozimento antes de ajustar a textura."
       ],
-      "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas."
+      "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Montando uma emulsão",
+          "items": [
+            "Comece pela fase aquosa e pelos ingredientes emulsificantes.",
+            "Adicione a gordura aos poucos, misturando continuamente.",
+            "Observe a textura e ajuste a consistência conforme a receita."
+          ]
+        }
+      ]
     },
     {
       "id": "tec-4",
@@ -2551,7 +2586,18 @@ window.DANTAS_DATA = {
         "Esquecer o sal presente no queijo ou na conserva.",
         "Tentar corrigir excesso de sal apenas com açúcar."
       ],
-      "deepDive": "Tempere em camadas: um pouco no início e correção perto do final. Ingredientes como queijo curado, azeitona, shoyu e caldos concentrados já fornecem sal. Ao provar, considere também acidez e gordura, que alteram a percepção do tempero. Se exagerar, aumente o volume com ingredientes sem sal, quando a receita permitir."
+      "deepDive": "Tempere em camadas: um pouco no início e correção perto do final. Ingredientes como queijo curado, azeitona, shoyu e caldos concentrados já fornecem sal. Ao provar, considere também acidez e gordura, que alteram a percepção do tempero. Se exagerar, aumente o volume com ingredientes sem sal, quando a receita permitir.",
+      "contentBlocks": [
+        {
+          "type": "bullets",
+          "title": "Checklist para temperar",
+          "items": [
+            "Prove em etapas, quando for seguro fazê-lo.",
+            "Considere ingredientes já salgados, como queijos e caldos.",
+            "Ajuste pouco a pouco, em vez de corrigir tudo no final."
+          ]
+        }
+      ]
     },
     {
       "id": "tec-5",
@@ -2580,7 +2626,23 @@ window.DANTAS_DATA = {
         "Usar bicarbonato em excesso, deixando gosto residual.",
         "Abrir o forno repetidas vezes nos primeiros minutos de um bolo."
       ],
-      "deepDive": "O bicarbonato precisa de um componente ácido para produzir gás com eficiência; o fermento químico já combina agentes que reagem com umidade e calor. Em bolos e cookies, a troca direta entre eles altera sabor, cor, crescimento e textura. Misture os agentes secos de forma homogênea e leve a massa ao forno conforme a receita."
+      "deepDive": "O bicarbonato precisa de um componente ácido para produzir gás com eficiência; o fermento químico já combina agentes que reagem com umidade e calor. Em bolos e cookies, a troca direta entre eles altera sabor, cor, crescimento e textura. Misture os agentes secos de forma homogênea e leve a massa ao forno conforme a receita.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Não são a mesma coisa",
+          "items": [
+            {
+              "term": "Bicarbonato",
+              "definition": "Precisa de condições adequadas, geralmente presença de acidez, para produzir gás na massa."
+            },
+            {
+              "term": "Fermento químico",
+              "definition": "Mistura formulada para liberar gás durante a preparação e o aquecimento, conforme o produto."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tec-6",
@@ -2609,7 +2671,18 @@ window.DANTAS_DATA = {
         "Usar panela muito escura sem conseguir perceber o ponto.",
         "Adicionar ovos à manteiga excessivamente quente."
       ],
-      "deepDive": "A manteiga passa por etapas: derrete, perde água e os sólidos do leite começam a dourar. Use panela clara e fogo médio-baixo para enxergar a cor e sentir o aroma de castanhas. Retire imediatamente do fogo ao atingir tom âmbar, pois o calor residual continua o cozimento. Se os sólidos ficarem pretos, o sabor pode ficar amargo."
+      "deepDive": "A manteiga passa por etapas: derrete, perde água e os sólidos do leite começam a dourar. Use panela clara e fogo médio-baixo para enxergar a cor e sentir o aroma de castanhas. Retire imediatamente do fogo ao atingir tom âmbar, pois o calor residual continua o cozimento. Se os sólidos ficarem pretos, o sabor pode ficar amargo.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Observe as transformações",
+          "items": [
+            "Derreta a manteiga em uma panela de fundo claro.",
+            "Observe a espuma e os sólidos do leite mudarem de cor.",
+            "Retire do fogo ao atingir o aroma e a cor desejados, antes de queimar."
+          ]
+        }
+      ]
     },
     {
       "id": "tec-7",
@@ -2638,7 +2711,14 @@ window.DANTAS_DATA = {
         "Usar a mesma tábua para frango cru e tomate da salada.",
         "Avaliar o ponto seguro somente pela cor externa."
       ],
-      "deepDive": "Evite lavar frango cru: respingos podem espalhar microrganismos. Separe tábuas e utensílios de alimentos prontos para consumo e higienize superfícies após o contato. Cozinhe até 74 °C no centro da parte mais espessa, medindo com termômetro culinário. Refrigere sobras prontamente em recipientes rasos."
+      "deepDive": "Evite lavar frango cru: respingos podem espalhar microrganismos. Separe tábuas e utensílios de alimentos prontos para consumo e higienize superfícies após o contato. Cozinhe até 74 °C no centro da parte mais espessa, medindo com termômetro culinário. Refrigere sobras prontamente em recipientes rasos.",
+      "contentBlocks": [
+        {
+          "type": "callout",
+          "title": "Segurança em primeiro lugar",
+          "text": "Evite contaminação cruzada, higienize utensílios e siga recomendações oficiais de cocção segura. Cor e aparência, isoladamente, não comprovam segurança."
+        }
+      ]
     },
     {
       "id": "tec-8",
@@ -2667,7 +2747,27 @@ window.DANTAS_DATA = {
         "Não cozinhar a farinha do roux, deixando gosto de farinha crua.",
         "Reduzir muito um molho já salgado."
       ],
-      "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível."
+      "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Técnicas de espessamento",
+          "items": [
+            {
+              "term": "Redução",
+              "definition": "Evaporação de parte da água para concentrar o molho."
+            },
+            {
+              "term": "Roux",
+              "definition": "Mistura cozida de gordura e farinha usada como base para alguns molhos."
+            },
+            {
+              "term": "Amido",
+              "definition": "Ingrediente que engrossa ao gelatinizar nas condições adequadas."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tec-servico-refeicao",
@@ -2704,7 +2804,27 @@ window.DANTAS_DATA = {
         "Confundir couvert alimentício com couvert artístico.",
         "Restringir aperitivo apenas a petiscos, ignorando as bebidas."
       ],
-      "deepDive": "Os termos descrevem aspectos distintos: antipasto é um serviço da tradição italiana; entrada é uma função no menu; couvert é um serviço de recepção à mesa; aperitivo é o consumo pré-refeição, especialmente de bebidas. Eles podem se sobrepor."
+      "deepDive": "Os termos descrevem aspectos distintos: antipasto é um serviço da tradição italiana; entrada é uma função no menu; couvert é um serviço de recepção à mesa; aperitivo é o consumo pré-refeição, especialmente de bebidas. Eles podem se sobrepor.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Termos que aparecem no serviço",
+          "items": [
+            {
+              "term": "Couvert",
+              "definition": "Itens oferecidos antes da refeição, conforme o serviço da casa."
+            },
+            {
+              "term": "Antipasto",
+              "definition": "Preparação tradicionalmente servida antes do prato principal na cozinha italiana."
+            },
+            {
+              "term": "Aperitivo",
+              "definition": "Bebida ou pequena preparação associada ao momento anterior à refeição."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "tec-contaminacao-direta",
@@ -2737,7 +2857,18 @@ window.DANTAS_DATA = {
         "Deixar pratos descobertos próximos de produtos de limpeza.",
         "Acreditar que cozinhar sempre torna seguro um alimento contaminado."
       ],
-      "deepDive": "Contaminação direta descreve o contato imediato da fonte contaminante com o alimento. É diferente de contaminação cruzada, que enfatiza a transferência de contaminantes entre fontes, alimentos ou superfícies. As classificações podem se sobrepor dependendo do contexto."
+      "deepDive": "Contaminação direta descreve o contato imediato da fonte contaminante com o alimento. É diferente de contaminação cruzada, que enfatiza a transferência de contaminantes entre fontes, alimentos ou superfícies. As classificações podem se sobrepor dependendo do contexto.",
+      "contentBlocks": [
+        {
+          "type": "bullets",
+          "title": "Pontos de atenção",
+          "items": [
+            "Separar alimentos crus dos prontos para consumo.",
+            "Higienizar mãos, superfícies e utensílios entre tarefas.",
+            "Respeitar armazenamento e procedimentos de segurança alimentar."
+          ]
+        }
+      ]
     },
     {
       "id": "tec-contaminacao-cruzada",
@@ -2774,7 +2905,19 @@ window.DANTAS_DATA = {
         "Armazenar frango cru acima de alimentos prontos e deixar líquidos escorrerem.",
         "Usar o mesmo pano sujo em várias superfícies."
       ],
-      "deepDive": "A distinção direta/indireta na contaminação cruzada depende do caminho de transferência: contato entre alimentos ou intermediários como utensílios e mãos. Portanto, contaminação direta e cruzada não são categorias necessariamente excludentes."
+      "deepDive": "A distinção direta/indireta na contaminação cruzada depende do caminho de transferência: contato entre alimentos ou intermediários como utensílios e mãos. Portanto, contaminação direta e cruzada não são categorias necessariamente excludentes.",
+      "contentBlocks": [
+        {
+          "type": "workflow",
+          "title": "Exemplo de risco e prevenção",
+          "items": [
+            "Utensílio entra em contato com alimento cru",
+            "Utensílio não é higienizado adequadamente",
+            "Contato com alimento pronto para consumo",
+            "Interrompa o ciclo: separe e higienize utensílios"
+          ]
+        }
+      ]
     }
   ],
   "workshops": [
