@@ -31,14 +31,35 @@ root.innerHTML=discoveries.length?discoveries.map(item=>`<article class="curatio
 </article>`).join(''):'<p>Nenhuma seleção editorial nova nesta semana.</p>';
 }
 function renderHome(){el('home-recipes').innerHTML=RECIPES.slice(0,3).map(card).join('')}
+// Escola: blocos didáticos opcionais; conteúdo legado continua acessível.
+function schoolBlock(block){
+ if(!block||typeof block!=='object')return '';
+ const title=block.title?`<h5>${esc(block.title)}</h5>`:'';
+ const items=Array.isArray(block.items)?block.items:[];
+ const list=(tag,values)=>`<${tag}>${values.map(v=>`<li>${esc(v)}</li>`).join('')}</${tag}>`;
+ switch(block.type){
+ case 'bullets':return `<div class="school-block school-list">${title}${list('ul',items)}</div>`;
+ case 'steps':return `<div class="school-block school-steps">${title}${list('ol',items)}</div>`;
+ case 'callout':return `<aside class="school-block school-callout" aria-label="${esc(block.title||'Dica')}"><span aria-hidden="true">✦</span><div>${title}<p>${esc(block.text||'')}</p></div></aside>`;
+ case 'image':{const url=safeUrl(block.src||'');if(url==='#'||!block.alt)return '';return `<figure class="school-block school-image"><img src="${esc(url)}" alt="${esc(block.alt)}" loading="lazy" decoding="async"><figcaption>${esc(block.caption||'')}${block.credit?` · ${esc(block.credit)}`:''}</figcaption></figure>`;}
+ case 'workflow':{if(!items.length)return '';return `<section class="school-block school-flow" aria-label="${esc(block.title||'Fluxo de trabalho')}">${title}<ol>${items.map((v,i)=>`<li><span aria-hidden="true">${i+1}</span><strong>${esc(v)}</strong></li>`).join('')}</ol></section>`;}
+ case 'orgchart':{if(!items.length)return '';return `<section class="school-block school-org" aria-label="${esc(block.title||'Hierarquia')}">${title}<ol>${items.map((v,i)=>`<li style="--level:${Math.min(i,4)}"><span aria-hidden="true">↳</span>${esc(v)}</li>`).join('')}</ol></section>`;}
+ case 'glossary':return `<div class="school-block school-glossary">${title}<dl>${items.filter(v=>v&&typeof v==='object').map(v=>`<dt>${esc(v.term)}</dt><dd>${esc(v.definition)}</dd>`).join('')}</dl></div>`;
+ default:return '';
+ }
+}
+function schoolParagraphs(value){return String(value||'').split(/\\n\\s*\\n/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('')}
 function renderTechniques(){
-el('tech-grid').innerHTML=(DATA.techniques||[]).map((t,i)=>`<details class="tech-card">
-<summary><div class="tech-summary"><div class="tech-number">${String(i+1).padStart(2,'0')} <span class="tech-pill"> · ${esc(t.category)}</span></div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p></div><span class="tech-toggle" aria-hidden="true"></span></summary>
-<div class="tech-detail"><div class="tech-lesson"><h4>Por que importa</h4><p>${esc(t.why)}</p></div>
-${(t.lesson||[]).map(section=>`<div class="tech-lesson"><h4>${esc(section.heading)}</h4><p>${esc(section.body)}</p></div>`).join('')}
-<div class="tech-lesson tech-practice"><h4>Experimente na cozinha</h4><p>${esc(t.practice)}</p></div>
-${t.mistakes?.length?`<div class="tech-lesson"><h4>Erros comuns</h4><ul>${t.mistakes.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`:''}
-</div></details>`).join('')
+ const root=el('tech-grid');if(!root)return;
+ root.innerHTML=(DATA.techniques||[]).map((t,i)=>`<details class="tech-card">
+ <summary><div class="tech-summary"><div class="tech-number">${String(i+1).padStart(2,'0')} <span class="tech-pill"> · ${esc(t.category)}</span></div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p></div><span class="tech-toggle" aria-hidden="true"></span></summary>
+ <div class="tech-detail"><div class="school-intro"><span class="school-kicker">CADERNO DE APRENDIZADO</span><p>${esc(t.summary)}</p></div>
+ <div class="tech-lesson"><h4>Por que importa</h4>${schoolParagraphs(t.why)}</div>
+ ${(t.lesson||[]).map((section,j)=>`<section class="tech-lesson" id="aula-${esc(t.id)}-${j}"><h4><span class="school-section-number">${String(j+1).padStart(2,'0')}</span> ${esc(section.heading)}</h4>${schoolParagraphs(section.body)}${(section.blocks||[]).map(schoolBlock).join('')}</section>`).join('')}
+ ${(t.contentBlocks||[]).map(schoolBlock).join('')}
+ <div class="tech-lesson tech-practice"><h4>✦ Experimente na cozinha</h4>${schoolParagraphs(t.practice)}</div>
+ ${t.mistakes?.length?`<div class="tech-lesson school-mistakes"><h4>Erros comuns</h4><ul>${t.mistakes.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`:''}
+ </div></details>`).join('');
 }
 function renderWorkshops(){const now=new Date();const today=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');el('workshop-list').innerHTML=(DATA.workshops||[]).filter(w=>!w.eventDate||w.eventDate>=today).map((w,i)=>`<article class="workshop-card"><div class="workshop-head"><span class="workshop-letter">${['A','I','G'][i%3]}</span><span class="workshop-tag">${esc(w.tag)}</span></div><h3>${esc(w.name)}</h3><div class="workshop-location">📍 ${esc(w.neighborhood)} · ${esc(w.address)}</div><p>${esc(w.description)}</p><div class="workshop-links"><a href="${esc(safeUrl(w.url))}" target="_blank" rel="noopener noreferrer">${w.eventDate?"Detalhes e inscrição ↗":"Site e programação ↗"}</a>${w.instagram?`<a href="${esc(safeUrl(w.instagram))}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>`:''}</div></article>`).join('')}
 function renderVideos(){el('video-list').innerHTML=(DATA.videos||[]).map(v=>`<article class="video-card"><span class="video-play">▶</span><div><span class="tech-pill">${esc(v.platform)} · ${esc(v.topic)}</span><h3>${esc(v.title)}</h3><p>${esc(v.description)}</p><a href="${esc(safeUrl(v.url))}" target="_blank" rel="noopener noreferrer" class="text-button">Abrir conteúdo oficial ↗</a></div></article>`).join('')}
