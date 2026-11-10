@@ -251,7 +251,7 @@ root.innerHTML=`<div class="shell detail-shell">
 <div class="detail-breadcrumb"><button class="detail-back" type="button" data-goto="receitas">← Todas as receitas</button><span> / </span><span>${esc(categoryName[r.category]||'Receita')}</span></div>
 <div class="detail-hero"><figure class="detail-photo">${img(r)}${imageAttribution(r)}</figure>
 <div class="detail-intro"><span class="eyebrow">${esc(categoryName[r.category]||'Receita')} · CADERNO DE RECEITAS</span>
-<h1>${esc(r.title)}</h1><p>${esc(r.description)}</p>
+<h1>${esc(r.title)}</h1><p>${esc(r.description)}</p><p class="recipe-content-status">${r.verifiedTestClaim?esc(r.verifiedTestClaim):"Preparo não declarado como testado pelo Dantas Cozinha."} ${r.curationStatus==="versao-autoral-com-referencia"?"Esta é uma versão independente inspirada na fonte citada.":""}</p>
 <div class="detail-stats"><span>◷ ${esc(r.minutesLabel || (r.minutes ? r.minutes+' min' : 'Tempo variável'))}</span><span>✳ ${esc(r.difficulty||'Preparo caseiro')}</span><span>♙ ${esc(r.servingsLabel||(r.servings+' porções'))}</span></div>
 <button type="button" id="recipe-detail-fav" class="btn-outline">${isFav(id)?'♥ Salvo':'♡ Salvar receita'}</button></div></div>
 <div class="detail-content">
@@ -264,6 +264,7 @@ root.innerHTML=`<div class="shell detail-shell">
 ${r.recipeVersion?`<p class="recipe-version">${esc(r.recipeVersion)}</p>`:''}
 <div class="detail-source"><span class="eyebrow">CRÉDITOS E REFERÊNCIAS</span><p class="recipe-editorial-notice">A referência culinária não significa reprodução literal da receita de terceiros. Consulte a origem indicada para conhecer a publicação original.</p><p>${esc(r.source||r.sourceName||'Receita compartilhada com o Dantas Cozinha')}</p>
 ${r.sourceUrl?`<a href="${esc(safeUrl(r.sourceUrl))}" target="_blank" rel="noopener noreferrer">Consultar referência: ${esc(r.sourceName||r.source)} ↗</a>`:''}</div>
+<section class="related-recipes" aria-label="Outras receitas para experimentar"><h2>Continue explorando</h2><div class="recipe-grid">${RECIPES.filter(x=>x.id!==r.id&&x.category===r.category).slice(0,2).map(card).join('')}</div></section>
 <div class="modal-notes"><label for="recipe-note">Meu caderno de anotações</label><textarea id="recipe-note" maxlength="5000" placeholder="Como ficou? O que você mudaria?" aria-label="Notas pessoais"></textarea><small>Salvo automaticamente neste navegador.</small></div>
 </div></div>`;
 el('recipe-note').value=state.notes[id]||'';
