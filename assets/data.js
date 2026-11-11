@@ -3736,7 +3736,8 @@ window.DANTAS_DATA = {
       "createdAt": "2026-11-02",
       "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
       "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-nhoque-de-batata"
     },
     {
       "id": "selecao-2026-11-02-empanadas-de-carne",
@@ -3760,7 +3761,8 @@ window.DANTAS_DATA = {
       "createdAt": "2026-11-02",
       "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
       "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-empanadas-de-carne"
     },
     {
       "id": "selecao-2026-11-02-focaccia-sem-sova",
@@ -3782,7 +3784,8 @@ window.DANTAS_DATA = {
       "createdAt": "2026-11-02",
       "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
       "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-focaccia-sem-sova"
     },
     {
       "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
@@ -3807,7 +3810,8 @@ window.DANTAS_DATA = {
       "createdAt": "2026-11-09",
       "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
       "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-09-risoto-cogumelos-salsinha"
     },
     {
       "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
@@ -3831,7 +3835,8 @@ window.DANTAS_DATA = {
       "createdAt": "2026-11-09",
       "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
       "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-09-bolo-cenoura-especiarias"
     }
   ]
 };
