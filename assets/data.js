@@ -3031,6 +3031,54 @@ window.DANTAS_DATA = {
       "tag": "Cursos presenciais",
       "eventDate": null,
       "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "junta-ceviche-crudo-tiradito-2026-11-12",
+      "name": "Ceviche, crudo e tiradito — 12/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363 — Vila Clementino, São Paulo - SP",
+      "description": "12/11/2026, 19h–23h. Aula prática de ceviche clássico peruano, crudo de atum com coalhada seca, laranja e pistache e tiradito de peixe branco nikkei. Valor publicado: R$ 350 + R$ 8,75 de taxa; disponibilidade de vagas não confirmada.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-ceviche-crudo-e-tiradito-12-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária peruana e nikkei · R$ 350 + taxa",
+      "eventDate": "2026-11-12",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "junta-lamen-2026-11-16",
+      "name": "Lamen — 16/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363 — Vila Clementino, São Paulo - SP",
+      "description": "16/11/2026, 19h–23h. Aula prática de massa de lamen, caldo de frango e porco, chashu suíno, ajitama e acompanhamentos. Valor publicado: R$ 350 + R$ 8,75 de taxa; disponibilidade de vagas não confirmada.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-lamen-16-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária japonesa · R$ 350 + taxa",
+      "eventDate": "2026-11-16",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "junta-bao-vegetariano-2026-11-17",
+      "name": "Bao vegetariano — 17/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363 — Vila Clementino, São Paulo - SP",
+      "description": "17/11/2026, 19h–23h. Aula prática de bao no vapor, tempurá de legumes, cogumelos glaceados, berinjela crocante, picles e maionese de missô. Valor publicado: R$ 305 + R$ 7,63 de taxa; disponibilidade de vagas não confirmada.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-bao-vegetariano-17-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária asiática vegetariana · R$ 305 + taxa",
+      "eventDate": "2026-11-17",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "sesc-zona-sul-para-mesa-2026-11",
+      "name": "Da Zona Sul para a Mesa — Sesc Interlagos",
+      "neighborhood": "Interlagos",
+      "address": "Sesc Interlagos — Praça Pau-Brasil, São Paulo - SP",
+      "description": "Programação gratuita aos sábados e domingos, de 07 a 29/11/2026, às 10h. Encontro com produtores da Zona Sul para conhecer sabores, saberes e iniciativas locais de alimentação e agroecologia. Acesso livre, sujeito à lotação; programação pode mudar em caso de chuva ou frio.",
+      "url": "https://www.sescsp.org.br/programacao/da-zona-sul-para-a-mesa/",
+      "instagram": null,
+      "tag": "Encontro gastronômico · Grátis",
+      "eventDate": "2026-11-29",
+      "verifiedAt": "2026-11-10"
     }
   ],
   "videos": [
@@ -3078,9 +3126,186 @@ window.DANTAS_DATA = {
       "url": "https://www.instagram.com/juntacozinha/",
       "platform": "Instagram · Junta Cozinha",
       "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "panelinha-ragu-carne-2025",
+      "title": "Ragu de carne: preparo para várias refeições",
+      "topic": "Técnicas e planejamento",
+      "description": "Vídeo publicado no canal oficial verificado do Panelinha com Rita Lobo, demonstrando um ragu que pode ser preparado antecipadamente e reaproveitado em diferentes refeições.",
+      "url": "https://www.youtube.com/watch?v=V5Mql_hrRS0",
+      "platform": "YouTube · Panelinha",
+      "verifiedAt": "2026-11-10"
     }
   ],
-  "curatedQueue": [],
+  "curatedQueue": [
+    {
+      "id": "selecao-2026-11-02-nhoque-de-batata",
+      "title": "Nhoque de batata",
+      "category": "principal",
+      "description": "Massa caseira italiana feita com batata, gemas e farinha. Uma opção para preparar com molho de tomate, manteiga ou o acompanhamento preferido; o passo a passo e as medidas permanecem na publicação original.",
+      "mainIngredients": [
+        "batata asterix",
+        "gemas",
+        "farinha de trigo",
+        "sal"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Seleção antiga retirada do catálogo público porque não possuía ficha completa e imagem/licença verificadas."
+    },
+    {
+      "id": "selecao-2026-11-02-empanadas-de-carne",
+      "title": "Empanadas de carne",
+      "category": "principal",
+      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias. A versão publicada utiliza manteiga e ingredientes comuns em supermercados brasileiros; consulte a fonte para medidas e instruções.",
+      "mainIngredients": [
+        "farinha de trigo",
+        "manteiga",
+        "contrafilé",
+        "cebola",
+        "ovos",
+        "salsinha",
+        "cominho",
+        "páprica"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Seleção antiga retirada do catálogo público porque não possuía ficha completa e imagem/licença verificadas."
+    },
+    {
+      "id": "selecao-2026-11-02-focaccia-sem-sova",
+      "title": "Focaccia sem sova",
+      "category": "entrada",
+      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes. Uma escolha para servir como entrada ou acompanhar refeições, com instruções de fermentação na fonte original.",
+      "mainIngredients": [
+        "farinha de trigo",
+        "fermento biológico seco instantâneo",
+        "sal",
+        "água",
+        "azeite",
+        "sal grosso"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Seleção antiga retirada do catálogo público porque não possuía ficha completa e imagem/licença verificadas."
+    },
+    {
+      "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
+      "title": "Risoto de cogumelos com salsinha",
+      "category": "principal",
+      "description": "Risoto com três variedades de cogumelos e caldo de legumes aromático. A publicação explica como adiantar parte do cozimento e finalizar o prato na hora de servir; medidas e técnica detalhada estão na fonte.",
+      "mainIngredients": [
+        "arroz para risoto",
+        "shiitake",
+        "shimeji",
+        "cogumelo-de-paris",
+        "cenoura",
+        "salsão",
+        "cebola",
+        "vinho branco",
+        "salsinha"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
+      "verifiedAt": "2026-11-09",
+      "createdAt": "2026-11-09",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Seleção antiga retirada do catálogo público porque não possuía ficha completa e imagem/licença verificadas."
+    },
+    {
+      "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
+      "title": "Bolo de cenoura com especiarias (carrot cake)",
+      "category": "sobremesa",
+      "description": "Versão aromática do bolo de cenoura com nozes, canela, gengibre e cobertura de iogurte. O preparo da cobertura exige planejamento antecipado; consulte a publicação original para medidas e instruções.",
+      "mainIngredients": [
+        "cenoura",
+        "farinha de trigo",
+        "ovos",
+        "açúcar mascavo",
+        "nozes",
+        "canela",
+        "gengibre",
+        "iogurte natural"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
+      "verifiedAt": "2026-11-09",
+      "createdAt": "2026-11-09",
+      "curationStatus": "fonte-editorial-verificada",
+      "preparation": "Consultar a receita original no Panelinha.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Seleção antiga retirada do catálogo público porque não possuía ficha completa e imagem/licença verificadas."
+    },
+    {
+      "id": "selecao-2026-11-10-risoto-aveia-cogumelos",
+      "title": "Risoto de aveia rústica com cogumelos",
+      "category": "principal",
+      "author": "MasterChef Brasil 11",
+      "sourceName": "Receitas Nestlé",
+      "sourceUrl": "https://www.receitasnestle.com.br/receitas/risoto-aveia-rustica-cogumelos",
+      "verifiedAt": "2026-11-10",
+      "createdAt": "2026-11-10",
+      "mainIngredients": [
+        "aveia",
+        "funghi secchi",
+        "arroz arbóreo",
+        "cogumelos paris e portobello",
+        "alho-poró",
+        "queijo parmesão"
+      ],
+      "curationStatus": "fonte-editorial-verificada",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Não publicar como receita até existir versão independente completa e imagem do prato com licença verificada."
+    },
+    {
+      "id": "selecao-2026-11-10-risoto-cogumelos-laura-miranda",
+      "title": "Risoto de cogumelos",
+      "category": "principal",
+      "author": "Laura Miranda",
+      "sourceName": "Receitas Globo",
+      "sourceUrl": "https://receitas.globo.com/series-originais/receitas-da-laura/risoto-de-cogumelos.ghtml",
+      "verifiedAt": "2026-11-10",
+      "createdAt": "2026-11-10",
+      "mainIngredients": [
+        "arroz carnaroli ou arbóreo",
+        "cogumelos variados",
+        "funghi seco",
+        "caldo de cogumelos",
+        "vinho branco",
+        "queijo parmesão"
+      ],
+      "curationStatus": "fonte-editorial-verificada",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Não publicar como receita até existir versão independente completa e imagem do prato com licença verificada."
+    }
+  ],
   "releaseHistory": [
     {
       "date": "2026-10-26",
@@ -3114,129 +3339,22 @@ window.DANTAS_DATA = {
       "workshopsAdded": 0,
       "videosAdded": 0,
       "notes": "Duas fichas editoriais de fonte verificada, com links para o preparo original; sem quantidades inventadas."
+    },
+    {
+      "date": "2026-11-10",
+      "type": "curadoria-semanal",
+      "recipesAdded": 0,
+      "editorialSelectionsAdded": 2,
+      "workshopsAdded": 4,
+      "videosAdded": 1,
+      "notes": "Duas fontes de receitas foram verificadas e colocadas na fila editorial, sem publicação no catálogo por falta de imagem/licença confirmada. Cinco fichas antigas incompletas foram removidas da listagem pública e preservadas na fila. Foram adicionadas três aulas oficiais do Junta Cozinha e a programação gastronômica Da Zona Sul para a Mesa do Sesc Interlagos, além de um vídeo oficial do Panelinha."
     }
   ],
   "curationPolicy": {
-    "version": 2,
-    "rule": "Receitas de fontes editoriais reputadas, ingredientes encontrados em supermercados brasileiros; receitas internacionais são aceitas. Sem inventar preparo, teste ou quantidade.",
-    "reviewDate": "2026-11-09",
-    "notes": "Fichas editoriais semanais de novas fontes incluem título, descrição própria, ingredientes principais, autoria e URL original; não reproduzem quantidades ou preparo. O catálogo legado mantém seu próprio esquema."
+    "version": 3,
+    "rule": "Somente receitas completas com versão independente, ingredientes com quantidades, preparo integral, tempo, dificuldade, rendimento, dica, imagem diretamente relacionada com licença e crédito verificados podem integrar recipes. Seleções sem esses requisitos ficam em curatedQueue e nunca aparecem no catálogo público como receitas. Não copiar conteúdo protegido nem alegar testes não realizados.",
+    "reviewDate": "2026-11-10",
+    "notes": "A curadoria editorial é distinta do catálogo de receitas. Link externo é referência, não substituto de ficha interna. CuratedDiscoveries permanece vazio enquanto o frontend apresentar descobertas junto da lista de receitas."
   },
-  "curatedDiscoveries": [
-    {
-      "id": "selecao-2026-11-02-nhoque-de-batata",
-      "title": "Nhoque de batata",
-      "category": "principal",
-      "description": "Massa caseira italiana feita com batata, gemas e farinha. Uma opção para preparar com molho de tomate, manteiga ou o acompanhamento preferido; o passo a passo e as medidas permanecem na publicação original.",
-      "mainIngredients": [
-        "batata asterix",
-        "gemas",
-        "farinha de trigo",
-        "sal"
-      ],
-      "author": "Panelinha",
-      "sourceName": "Panelinha",
-      "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
-      "verifiedAt": "2026-11-02",
-      "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
-    },
-    {
-      "id": "selecao-2026-11-02-empanadas-de-carne",
-      "title": "Empanadas de carne",
-      "category": "principal",
-      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias. A versão publicada utiliza manteiga e ingredientes comuns em supermercados brasileiros; consulte a fonte para medidas e instruções.",
-      "mainIngredients": [
-        "farinha de trigo",
-        "manteiga",
-        "contrafilé",
-        "cebola",
-        "ovos",
-        "salsinha",
-        "cominho",
-        "páprica"
-      ],
-      "author": "Panelinha",
-      "sourceName": "Panelinha",
-      "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
-      "verifiedAt": "2026-11-02",
-      "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
-    },
-    {
-      "id": "selecao-2026-11-02-focaccia-sem-sova",
-      "title": "Focaccia sem sova",
-      "category": "entrada",
-      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes. Uma escolha para servir como entrada ou acompanhar refeições, com instruções de fermentação na fonte original.",
-      "mainIngredients": [
-        "farinha de trigo",
-        "fermento biológico seco instantâneo",
-        "sal",
-        "água",
-        "azeite",
-        "sal grosso"
-      ],
-      "author": "Panelinha",
-      "sourceName": "Panelinha",
-      "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
-      "verifiedAt": "2026-11-02",
-      "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
-    },
-    {
-      "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
-      "title": "Risoto de cogumelos com salsinha",
-      "category": "principal",
-      "description": "Risoto com três variedades de cogumelos e caldo de legumes aromático. A publicação explica como adiantar parte do cozimento e finalizar o prato na hora de servir; medidas e técnica detalhada estão na fonte.",
-      "mainIngredients": [
-        "arroz para risoto",
-        "shiitake",
-        "shimeji",
-        "cogumelo-de-paris",
-        "cenoura",
-        "salsão",
-        "cebola",
-        "vinho branco",
-        "salsinha"
-      ],
-      "author": "Panelinha",
-      "sourceName": "Panelinha",
-      "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
-      "verifiedAt": "2026-11-09",
-      "createdAt": "2026-11-09",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
-    },
-    {
-      "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
-      "title": "Bolo de cenoura com especiarias (carrot cake)",
-      "category": "sobremesa",
-      "description": "Versão aromática do bolo de cenoura com nozes, canela, gengibre e cobertura de iogurte. O preparo da cobertura exige planejamento antecipado; consulte a publicação original para medidas e instruções.",
-      "mainIngredients": [
-        "cenoura",
-        "farinha de trigo",
-        "ovos",
-        "açúcar mascavo",
-        "nozes",
-        "canela",
-        "gengibre",
-        "iogurte natural"
-      ],
-      "author": "Panelinha",
-      "sourceName": "Panelinha",
-      "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
-      "verifiedAt": "2026-11-09",
-      "createdAt": "2026-11-09",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
-    }
-  ]
+  "curatedDiscoveries": []
 };
