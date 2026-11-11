@@ -1,5 +1,48 @@
 {
-  "curatedQueue": [],
+  "curatedQueue": [
+    {
+      "id": "selecao-2026-11-10-risoto-aveia-cogumelos",
+      "title": "Risoto de aveia rústica com cogumelos",
+      "category": "principal",
+      "author": "MasterChef Brasil 11",
+      "sourceName": "Receitas Nestlé",
+      "sourceUrl": "https://www.receitasnestle.com.br/receitas/risoto-aveia-rustica-cogumelos",
+      "verifiedAt": "2026-11-10",
+      "createdAt": "2026-11-10",
+      "mainIngredients": [
+        "aveia",
+        "funghi secchi",
+        "arroz arbóreo",
+        "cogumelos paris e portobello",
+        "alho-poró",
+        "queijo parmesão"
+      ],
+      "curationStatus": "fonte-editorial-verificada",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Não publicar como receita até existir versão independente completa e imagem do prato com licença verificada."
+    },
+    {
+      "id": "selecao-2026-11-10-risoto-cogumelos-laura-miranda",
+      "title": "Risoto de cogumelos",
+      "category": "principal",
+      "author": "Laura Miranda",
+      "sourceName": "Receitas Globo",
+      "sourceUrl": "https://receitas.globo.com/series-originais/receitas-da-laura/risoto-de-cogumelos.ghtml",
+      "verifiedAt": "2026-11-10",
+      "createdAt": "2026-11-10",
+      "mainIngredients": [
+        "arroz carnaroli ou arbóreo",
+        "cogumelos variados",
+        "funghi seco",
+        "caldo de cogumelos",
+        "vinho branco",
+        "queijo parmesão"
+      ],
+      "curationStatus": "fonte-editorial-verificada",
+      "status": "aguardando-ficha-completa-imagem-e-licenca",
+      "notes": "Não publicar como receita até existir versão independente completa e imagem do prato com licença verificada."
+    }
+  ],
   "releaseHistory": [
     {
       "date": "2026-10-26",
@@ -33,13 +76,22 @@
       "workshopsAdded": 0,
       "videosAdded": 0,
       "notes": "Duas fichas editoriais de fonte verificada, com links para o preparo original; sem quantidades inventadas."
+    },
+    {
+      "date": "2026-11-10",
+      "type": "curadoria-semanal",
+      "recipesAdded": 0,
+      "editorialSelectionsAdded": 2,
+      "workshopsAdded": 4,
+      "videosAdded": 1,
+      "notes": "Duas fontes de receitas foram verificadas e colocadas na fila editorial, sem publicação no catálogo por falta de imagem/licença confirmada. Cinco fichas antigas incompletas foram removidas da listagem pública e preservadas na fila. Foram adicionadas três aulas oficiais do Junta Cozinha e a programação gastronômica Da Zona Sul para a Mesa do Sesc Interlagos, além de um vídeo oficial do Panelinha."
     }
   ],
   "curationPolicy": {
-    "version": 2,
-    "rule": "Receitas de fontes editoriais reputadas, ingredientes encontrados em supermercados brasileiros; receitas internacionais são aceitas. Sem inventar preparo, teste ou quantidade.",
-    "reviewDate": "2026-11-09",
-    "notes": "Fichas editoriais semanais de novas fontes incluem título, descrição própria, ingredientes principais, autoria e URL original; não reproduzem quantidades ou preparo. O catálogo legado mantém seu próprio esquema."
+    "version": 3,
+    "rule": "Somente receitas completas com versão independente, ingredientes com quantidades, preparo integral, tempo, dificuldade, rendimento, dica, imagem diretamente relacionada com licença e crédito verificados podem integrar recipes. Seleções sem esses requisitos ficam em curatedQueue e nunca aparecem no catálogo público como receitas. Não copiar conteúdo protegido nem alegar testes não realizados.",
+    "reviewDate": "2026-11-10",
+    "notes": "A curadoria editorial é exibida exclusivamente na seção própria de descobertas; nunca é misturada ao catálogo de receitas completas. Candidatos sem requisitos editoriais permanecem apenas na fila."
   },
   "curatedDiscoveries": [
     {

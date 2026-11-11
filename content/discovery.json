@@ -107,6 +107,54 @@
       "tag": "Cursos presenciais",
       "eventDate": null,
       "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "junta-ceviche-crudo-tiradito-2026-11-12",
+      "name": "Ceviche, crudo e tiradito — 12/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363 — Vila Clementino, São Paulo - SP",
+      "description": "12/11/2026, 19h–23h. Aula prática de ceviche clássico peruano, crudo de atum com coalhada seca, laranja e pistache e tiradito de peixe branco nikkei. Valor publicado: R$ 350 + R$ 8,75 de taxa; disponibilidade de vagas não confirmada.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-ceviche-crudo-e-tiradito-12-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária peruana e nikkei · R$ 350 + taxa",
+      "eventDate": "2026-11-12",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "junta-lamen-2026-11-16",
+      "name": "Lamen — 16/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363 — Vila Clementino, São Paulo - SP",
+      "description": "16/11/2026, 19h–23h. Aula prática de massa de lamen, caldo de frango e porco, chashu suíno, ajitama e acompanhamentos. Valor publicado: R$ 350 + R$ 8,75 de taxa; disponibilidade de vagas não confirmada.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-lamen-16-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária japonesa · R$ 350 + taxa",
+      "eventDate": "2026-11-16",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "junta-bao-vegetariano-2026-11-17",
+      "name": "Bao vegetariano — 17/11",
+      "neighborhood": "Vila Clementino",
+      "address": "Rua Gandavo, 363 — Vila Clementino, São Paulo - SP",
+      "description": "17/11/2026, 19h–23h. Aula prática de bao no vapor, tempurá de legumes, cogumelos glaceados, berinjela crocante, picles e maionese de missô. Valor publicado: R$ 305 + R$ 7,63 de taxa; disponibilidade de vagas não confirmada.",
+      "url": "https://www.juntacozinha.com.br/event-details/aula-de-bao-vegetariano-17-11",
+      "instagram": "https://www.instagram.com/juntacozinha/",
+      "tag": "Culinária asiática vegetariana · R$ 305 + taxa",
+      "eventDate": "2026-11-17",
+      "verifiedAt": "2026-11-10"
+    },
+    {
+      "id": "sesc-zona-sul-para-mesa-2026-11",
+      "name": "Da Zona Sul para a Mesa — Sesc Interlagos",
+      "neighborhood": "Interlagos",
+      "address": "Sesc Interlagos — Praça Pau-Brasil, São Paulo - SP",
+      "description": "Programação gratuita aos sábados e domingos, de 07 a 29/11/2026, às 10h. Encontro com produtores da Zona Sul para conhecer sabores, saberes e iniciativas locais de alimentação e agroecologia. Acesso livre, sujeito à lotação; programação pode mudar em caso de chuva ou frio.",
+      "url": "https://www.sescsp.org.br/programacao/da-zona-sul-para-a-mesa/",
+      "instagram": null,
+      "tag": "Encontro gastronômico · Grátis",
+      "eventDate": "2026-11-29",
+      "verifiedAt": "2026-11-10"
     }
   ],
   "videos": [
@@ -154,6 +202,15 @@
       "url": "https://www.instagram.com/juntacozinha/",
       "platform": "Instagram · Junta Cozinha",
       "verifiedAt": "2026-10-26"
+    },
+    {
+      "id": "panelinha-ragu-carne-2025",
+      "title": "Ragu de carne: preparo para várias refeições",
+      "topic": "Técnicas e planejamento",
+      "description": "Vídeo publicado no canal oficial verificado do Panelinha com Rita Lobo, demonstrando um ragu que pode ser preparado antecipadamente e reaproveitado em diferentes refeições.",
+      "url": "https://www.youtube.com/watch?v=V5Mql_hrRS0",
+      "platform": "YouTube · Panelinha",
+      "verifiedAt": "2026-11-10"
     }
   ]
 }

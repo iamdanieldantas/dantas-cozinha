@@ -1,7 +1,6 @@
 (()=>{'use strict';
 const DATA=window.DANTAS_DATA||{recipes:[],techniques:[],workshops:[],videos:[]};
 const RECIPES=[...(DATA.recipes||[])].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
-const CURATED=[...(DATA.curatedDiscoveries||[])].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
 const STORAGE_KEY='dantas-cozinha-v1';
 const cleanState=()=>({favorites:[],notes:{},planner:{},shoppingChecked:{},completedLessons:[]});
 let state=readState(),selectedFilter='todas',selectedSearch='',selectedSchoolCategory='todas',selectedSchoolSearch='',modalRecipe=null,modalServings=1;
@@ -17,15 +16,12 @@ function imageAttribution(r){return `<figcaption class="recipe-image-credit"><st
 function isFav(id){return state.favorites.includes(id)}
 function card(r){return `<article class="recipe-card"><div class="recipe-photo" data-recipe="${esc(r.id)}"><div class="photo-fallback">${esc(r.emoji||'🍽️')}</div>${img(r)}<span class="badge">${esc(categoryName[r.category]||'Receita')}</span><button class="heart ${isFav(r.id)?'saved':''}" data-fav="${esc(r.id)}" aria-label="${isFav(r.id)?'Remover dos':'Salvar nos'} favoritos" title="Favoritos">${isFav(r.id)?'♥':'♡'}</button></div><div class="recipe-content"><h3 class="recipe-title" data-recipe="${esc(r.id)}">${esc(r.title)}</h3><p class="recipe-desc">${esc(r.description)}</p><div class="recipe-info"><span>◷ ${esc(r.minutesLabel || (r.minutes + ' min'))}</span><span>✳ ${esc(r.difficulty)}</span><span>♙ ${esc(r.servingsLabel || (r.servings + ' porções'))}</span></div><div class="card-bottom"><button class="inline-link" data-recipe="${esc(r.id)}">Ver receita →</button><button class="mini-add" data-plan-add="${esc(r.id)}" title="Adicionar ao próximo espaço vazio do cardápio">+ cardápio</button></div></div></article>`}
 function updateFavCount(){el('fav-count').textContent=state.favorites.length}
-function curatedCard(r){return `<article class="recipe-card curated-card"><div class="curated-photo" aria-hidden="true">✦</div><div class="recipe-content"><span class="tech-pill">Seleção editorial · ${esc(r.createdAt||'')}</span><h3 class="recipe-title">${esc(r.title)}</h3><p class="recipe-desc">${esc(r.description)}</p><p class="curated-source">Fonte: ${esc(r.sourceName||r.author||'Fonte original')}</p><p class="curated-disclaimer">Ficha de descoberta: quantidades e preparo estão na publicação original.</p><div class="card-bottom"><a class="inline-link" href="${esc(safeUrl(r.sourceUrl))}" target="_blank" rel="noopener noreferrer">Ver receita na fonte ↗</a></div></div></article>`}
 function renderRecipes(){
  const term=selectedSearch.trim().toLocaleLowerCase('pt-BR');
  const matches=(r,ingredients)=>!term||[r.title,r.description,...ingredients].join(' ').toLocaleLowerCase('pt-BR').includes(term);
  const recipes=RECIPES.filter(r=>(selectedFilter==='todas'||selectedFilter==='favoritas'&&isFav(r.id)||r.category===selectedFilter)&&matches(r,(r.ingredients||[]).map(i=>typeof i==='string'?i:i.name)));
- const curated=selectedFilter==='favoritas'?[]:CURATED.filter(r=>(selectedFilter==='todas'||r.category===selectedFilter)&&matches(r,r.mainIngredients||[]));
- const combined=[...recipes.map(r=>({r,type:'recipe'})),...curated.map(r=>({r,type:'curated'}))].sort((a,b)=>(b.r.createdAt||'').localeCompare(a.r.createdAt||'')||(a.type==='recipe'?-1:1));
- el('recipe-list').innerHTML=combined.length?combined.map(x=>x.type==='recipe'?card(x.r):curatedCard(x.r)).join(''):'<div class="empty-state"><strong>Nenhuma receita por aqui.</strong> Experimente outro filtro ou termo de busca.</div>';
- el('recipes-count').textContent=`${combined.length} ${combined.length===1?'item encontrado':'itens encontrados'} · ${recipes.length} receitas completas · ${curated.length} seleções editoriais`;
+ el('recipe-list').innerHTML=recipes.length?recipes.map(card).join(''):'<div class="empty-state"><strong>Nenhuma receita por aqui.</strong> Experimente outro filtro ou termo de busca.</div>';
+ el('recipes-count').textContent=`${recipes.length} ${recipes.length===1?'receita encontrada':'receitas encontradas'}`;
  document.querySelectorAll('#recipe-filters .chip').forEach(b=>b.classList.toggle('selected',b.dataset.filter===selectedFilter));updateFavCount()
 }
 let unifiedKind='todos';
@@ -99,7 +95,7 @@ function updateLearningProgress(){
  const fill=el('school-progress-fill');if(fill)fill.style.width=percent+'%';
  const next=el('school-next-lesson');if(next){const pending=lessons.find(t=>!state.completedLessons.includes(t.id));next.disabled=!pending;next.textContent=pending?'Continuar: '+pending.title:'Todas as aulas concluídas!';next.dataset.lessonId=pending?.id||''}
 }
-function renderHome(){el('home-recipes').innerHTML=[...RECIPES.map(r=>({r,type:'recipe'})),...CURATED.map(r=>({r,type:'curated'}))].sort((a,b)=>(b.r.createdAt||'').localeCompare(a.r.createdAt||'')).slice(0,3).map(x=>x.type==='recipe'?card(x.r):curatedCard(x.r)).join('');updateLearningProgress()}
+function renderHome(){el('home-recipes').innerHTML=RECIPES.slice(0,3).map(card).join('');updateLearningProgress()}
 
 // Escola: blocos didáticos opcionais; conteúdo legado continua acessível.
 function schoolBlock(block){

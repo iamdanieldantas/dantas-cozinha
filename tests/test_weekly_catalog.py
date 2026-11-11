@@ -1,4 +1,4 @@
-"""Regression checks: weekly selections are visible and sorted before older recipes."""
+"""Regression checks: editorial selections stay separate from complete recipes."""
 import json
 from pathlib import Path
 import unittest
@@ -12,13 +12,14 @@ class WeeklyCatalogTests(unittest.TestCase):
         self.assertIn("selecao-2026-11-09-risoto-cogumelos-salsinha",ids)
         self.assertIn("selecao-2026-11-09-bolo-cenoura-especiarias",ids)
 
-    def test_catalog_renders_selections_sorted_by_date(self):
+    def test_catalog_keeps_discoveries_out_of_recipe_cards(self):
         app=(ROOT/"assets/app.js").read_text(encoding="utf-8")
-        self.assertIn("const CURATED=",app)
-        self.assertIn("function curatedCard(",app)
-        self.assertIn("...curated.map(",app)
-        self.assertIn("(b.r.createdAt||'').localeCompare(a.r.createdAt||'')",app)
-        self.assertIn("Ver receita na fonte",app)
+        self.assertIn("function renderCuratedDiscoveries()",app)
+        self.assertIn("function renderRecipes()",app)
+        self.assertIn("recipes.map(card)",app)
+        self.assertNotIn("curatedCard(",app)
+        self.assertNotIn("...curated.map(",app)
+        self.assertIn("RECIPES.slice(0,3).map(card)",app)
 
     def test_carrot_cake_photo_and_license(self):
         recipes=json.loads((ROOT/"content/recipes.json").read_text(encoding="utf-8"))["recipes"]
