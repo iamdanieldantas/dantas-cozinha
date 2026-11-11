@@ -3717,5 +3717,121 @@ window.DANTAS_DATA = {
     "reviewDate": "2026-11-10",
     "notes": "A curadoria editorial é exibida exclusivamente na seção própria de descobertas; nunca é misturada ao catálogo de receitas completas. Candidatos sem requisitos editoriais permanecem apenas na fila."
   },
-  "curatedDiscoveries": []
+  "curatedDiscoveries": [
+    {
+      "id": "selecao-2026-11-02-nhoque-de-batata",
+      "title": "Nhoque de batata",
+      "category": "principal",
+      "description": "Massa caseira italiana de batata, gema e farinha; agora há também uma versão independente completa no catálogo.",
+      "mainIngredients": [
+        "batata asterix",
+        "gemas",
+        "farinha de trigo",
+        "sal"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-02-empanadas-de-carne",
+      "title": "Empanadas de carne",
+      "category": "principal",
+      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias; agora há também uma versão independente completa no catálogo.",
+      "mainIngredients": [
+        "farinha de trigo",
+        "manteiga",
+        "contrafilé",
+        "cebola",
+        "ovos",
+        "salsinha",
+        "cominho",
+        "páprica"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-02-focaccia-sem-sova",
+      "title": "Focaccia sem sova",
+      "category": "entrada",
+      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes; agora há também uma versão independente completa no catálogo.",
+      "mainIngredients": [
+        "farinha de trigo",
+        "fermento biológico seco instantâneo",
+        "sal",
+        "água",
+        "azeite",
+        "sal grosso"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
+      "verifiedAt": "2026-11-02",
+      "createdAt": "2026-11-02",
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
+      "title": "Risoto de cogumelos com salsinha",
+      "category": "principal",
+      "description": "Risoto com três variedades de cogumelos e caldo aromático; agora há também uma versão independente completa no catálogo.",
+      "mainIngredients": [
+        "arroz para risoto",
+        "shiitake",
+        "shimeji",
+        "cogumelo-de-paris",
+        "cenoura",
+        "salsão",
+        "cebola",
+        "vinho branco",
+        "salsinha"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
+      "verifiedAt": "2026-11-09",
+      "createdAt": "2026-11-09",
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    },
+    {
+      "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
+      "title": "Bolo de cenoura com especiarias (carrot cake)",
+      "category": "sobremesa",
+      "description": "Bolo de cenoura ralada com nozes, especiarias e cobertura de iogurte; agora há também uma versão independente completa no catálogo.",
+      "mainIngredients": [
+        "cenoura",
+        "farinha de trigo",
+        "ovos",
+        "açúcar mascavo",
+        "nozes",
+        "canela",
+        "gengibre",
+        "iogurte natural"
+      ],
+      "author": "Panelinha",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
+      "verifiedAt": "2026-11-09",
+      "createdAt": "2026-11-09",
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+    }
+  ]
 };
