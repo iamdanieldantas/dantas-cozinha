@@ -28,6 +28,14 @@ class RecipeEditorialTests(unittest.TestCase):
         self.assertIn("function imageAttribution",app)
         self.assertIn("A apresentação pode ser diferente",app)
         self.assertIn("imageAttribution(r)",app)
+        self.assertIn("imageLicenseUrl",app)
+        self.assertIn("licença",app)
+
+    def test_static_recipe_pages_render_image_license_attribution(self):
+        builder=(ROOT/"scripts"/"build_recipe_pages.py").read_text(encoding="utf-8")
+        self.assertIn("imageLicenseUrl",builder)
+        self.assertIn("imageSourceUrl",builder)
+        self.assertIn("recipe-hero",builder)
 
 if __name__=="__main__":
     unittest.main()
