@@ -40,7 +40,8 @@ def run():
             assert desktop.locator("#home-recipes .recipe-card").count() == min(3, len(recipes))
             assert desktop.locator("#recipe-list .recipe-card").count() == len(recipes)
             assert desktop.locator("#recipe-list .curated-card").count() == 0
-            assert recipes[0]["title"] in desktop.locator("#recipe-list .recipe-card").first.inner_text()
+            latest_recipe = sorted(recipes, key=lambda item: item.get("createdAt", ""), reverse=True)[0]
+            assert latest_recipe["title"] in desktop.locator("#recipe-list .recipe-card").first.inner_text()
             assert desktop.locator("#curation-list .curation-card").count() == len(discoveries)
             assert desktop.locator("#curation-list .curation-card a[href^='https://']").count() == len(discoveries)
             assert desktop.locator("#curation-list .curation-ingredients li").count() == sum(
