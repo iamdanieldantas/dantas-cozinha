@@ -44,17 +44,22 @@ class ContentTests(unittest.TestCase):
   def test_verified_editorial_selections_and_upcoming_workshops(self):
     d=load(BASE/'assets'/'data.js')
     published_urls={r.get('sourceUrl') for r in d['recipes'] if r.get('sourceUrl')}
+    published_by_id={r['id']:r for r in d['recipes']}
     selected=d.get('curatedDiscoveries',[])
     self.assertGreaterEqual(len(selected),3)
     self.assertEqual(len({r['id'] for r in selected}),len(selected))
     self.assertEqual(len({r['sourceUrl'] for r in selected}),len(selected))
     for r in selected:
       with self.subTest(selection=r['id']):
-        self.assertNotIn(r['sourceUrl'],published_urls,'Fonte duplicada no catálogo')
+        if r.get('curationStatus')=='fonte-editorial-verificada-com-versao-independente-no-catalogo':
+          self.assertIn(r.get('catalogRecipeId'),published_by_id,'Seleção deve apontar para a receita completa do catálogo')
+          self.assertEqual(published_by_id[r['catalogRecipeId']].get('sourceUrl'),r['sourceUrl'],'A referência deve corresponder à receita vinculada')
+        else:
+          self.assertNotIn(r['sourceUrl'],published_urls,'Fonte duplicada no catálogo')
         self.assertTrue(r['sourceUrl'].startswith('https://'))
         self.assertTrue(r.get('author') and r.get('sourceName'))
         self.assertTrue(r.get('description') and len(r.get('mainIngredients',[]))>=3)
-        self.assertEqual(r.get('curationStatus'),'fonte-editorial-verificada')
+        self.assertIn(r.get('curationStatus'),('fonte-editorial-verificada','fonte-editorial-verificada-com-versao-independente-no-catalogo'))
         self.assertNotIn('steps',r,'Curadoria não deve copiar modo de preparo')
         self.assertNotIn('ingredients',r,'Curadoria não deve inventar quantidades')
         self.assertNotIn('tested',r,'Curadoria não deve alegar teste')
