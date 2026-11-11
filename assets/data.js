@@ -2330,6 +2330,492 @@ window.DANTAS_DATA = {
       "curationStatus": "adaptacao-fornecida-pelo-usuario",
       "verifiedTestClaim": "Adaptação compartilhada pelo usuário; temperatura e tempo estimados, sem teste independente do portal.",
       "imageCredit": "Fotografia ilustrativa de brownie / Unsplash"
+    },
+    {
+      "id": "selecao-2026-11-02-nhoque-de-batata",
+      "title": "Nhoque de batata",
+      "category": "principal",
+      "description": "Nhoque caseiro de batata, leve e macio, com massa feita à mão e finalização simples. A receita rende cerca de quatro porções e combina com molho de tomate, manteiga e sálvia ou o molho de sua preferência.",
+      "minutes": 95,
+      "minutesLabel": "1h35 (aprox.)",
+      "difficulty": "Intermediário",
+      "servings": 4,
+      "servingsLabel": "4 porções",
+      "emoji": "🥔",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gnocchi_cooked.jpg?width=940",
+      "imageCredit": "Sputnikcccp / Wikimedia Commons",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Gnocchi_cooked.jpg",
+      "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "ingredients": [
+        {
+          "quantity": 1000,
+          "unit": "g",
+          "name": "batata asterix"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "gema"
+        },
+        {
+          "quantity": 220,
+          "unit": "g",
+          "name": "farinha de trigo, mais um pouco para polvilhar"
+        },
+        {
+          "quantity": 35,
+          "unit": "g",
+          "name": "queijo parmesão ralado fino (opcional)"
+        },
+        {
+          "quantity": 8,
+          "unit": "g",
+          "name": "sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada ralada"
+        },
+        {
+          "quantity": 1,
+          "unit": "fio",
+          "name": "azeite ou óleo para untar"
+        }
+      ],
+      "steps": [
+        "Escolha batatas de tamanho semelhante. Cozinhe-as inteiras, com casca, em água até ficarem macias ao serem perfuradas com uma faca. Escorra e deixe o vapor sair por alguns minutos.",
+        "Descasque enquanto ainda estiverem mornas e passe pelo espremedor. Espalhe a batata em uma travessa larga para perder umidade e espere amornar.",
+        "Junte a gema, o sal, a noz-moscada e o parmesão, se usar. Acrescente a farinha aos poucos, misturando apenas até formar uma massa macia que possa ser modelada. A quantidade final pode variar conforme a umidade das batatas.",
+        "Polvilhe levemente a bancada. Divida a massa em porções e enrole cada uma em cordões com cerca de 1,5 cm de espessura. Corte pedaços de aproximadamente 2 cm; se desejar, marque cada um com um garfo.",
+        "Ferva uma panela grande com água e sal. Cozinhe os nhoques em pequenas levas; retire com escumadeira quando subirem à superfície e transfira para uma travessa levemente untada.",
+        "Sirva imediatamente com o molho escolhido. Para dourar, salteie os nhoques já cozidos em uma frigideira com manteiga ou azeite."
+      ],
+      "tip": "Batata mais seca costuma exigir menos farinha. Evite trabalhar demais a massa: o excesso de farinha e de manipulação deixa o nhoque pesado.",
+      "tags": [
+        "massa fresca",
+        "cozinha italiana",
+        "receita independente",
+        "não testada pelo portal"
+      ],
+      "createdAt": "2026-11-10",
+      "source": "Referência de estilo e técnica: Panelinha — Nhoque de batata. Formulação independente do Dantas Cozinha.",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
+      "sourceVerifiedAt": "2026-11-10",
+      "curationStatus": "versao-autoral-com-referencia",
+      "ingredientsSummary": "Batata asterix, gema, farinha de trigo e parmesão opcional",
+      "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
+      "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
+    },
+    {
+      "id": "selecao-2026-11-02-empanadas-de-carne",
+      "title": "Empanadas argentinas de carne",
+      "category": "principal",
+      "description": "Empanadas assadas com massa amanteigada e recheio suculento de carne em cubinhos, cebola, ovo e especiarias. O recheio deve esfriar antes da montagem para preservar a textura da massa.",
+      "minutes": 110,
+      "minutesLabel": "1h50 + descanso da massa",
+      "difficulty": "Intermediário",
+      "servings": 12,
+      "servingsLabel": "12 unidades",
+      "emoji": "🥟",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Empanadas_argentinas_de_carne_hechas_al_horno.jpg?width=940",
+      "imageCredit": "Horacio Cambeiro / Wikimedia Commons",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Empanadas_argentinas_de_carne_hechas_al_horno.jpg",
+      "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "ingredients": [
+        {
+          "quantity": 300,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "manteiga sem sal gelada em cubos"
+        },
+        {
+          "quantity": 85,
+          "unit": "ml",
+          "name": "água fria, aproximadamente"
+        },
+        {
+          "quantity": 5,
+          "unit": "g",
+          "name": "sal"
+        },
+        {
+          "quantity": 350,
+          "unit": "g",
+          "name": "contrafilé ou patinho em cubinhos pequenos"
+        },
+        {
+          "quantity": 250,
+          "unit": "g",
+          "name": "cebola picada"
+        },
+        {
+          "quantity": 20,
+          "unit": "ml",
+          "name": "azeite"
+        },
+        {
+          "quantity": 2,
+          "unit": "unidades",
+          "name": "ovos cozidos picados"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "salsinha picada"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "cominho em pó"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "páprica doce"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "gema misturada com 1 colher (sopa) de água para pincelar"
+        },
+        {
+          "quantity": 1,
+          "unit": "a gosto",
+          "name": "sal e pimenta-do-reino"
+        }
+      ],
+      "steps": [
+        "Para a massa, misture a farinha e o sal. Incorpore a manteiga com as pontas dos dedos até obter uma textura de farofa úmida.",
+        "Adicione a água fria gradualmente, apenas até a massa se unir. Achate em um disco, embale e leve à geladeira por pelo menos 40 minutos.",
+        "Enquanto isso, aqueça o azeite em uma frigideira larga. Doure a carne em etapas para não juntar água; retire e reserve.",
+        "Na mesma frigideira, cozinhe a cebola em fogo médio até ficar macia e levemente dourada. Volte a carne, junte cominho, páprica, sal e pimenta e cozinhe até a carne estar pronta e o líquido evaporar.",
+        "Desligue o fogo e misture a salsinha e os ovos cozidos. Espalhe o recheio em uma travessa e refrigere até esfriar completamente.",
+        "Abra a massa sobre bancada enfarinhada até ficar com cerca de 2 a 3 mm. Corte 12 discos de aproximadamente 12 cm; reúna e abra novamente as aparas, se necessário.",
+        "Distribua o recheio no centro dos discos, sem exagerar. Umedeça a borda com água, dobre ao meio e pressione para fechar. Faça pequenas dobras na borda para formar o repulgue.",
+        "Disponha em assadeira forrada, deixando espaço entre elas. Pincele com a mistura de gema e leve ao forno preaquecido a 200 °C por 20 a 25 minutos, até dourar.",
+        "Espere alguns minutos antes de servir, pois o recheio estará muito quente."
+      ],
+      "tip": "O recheio precisa estar frio e relativamente seco antes de montar. Se estiver quente ou úmido, pode amolecer a massa e dificultar o fechamento.",
+      "tags": [
+        "cozinha argentina",
+        "assados",
+        "receita independente",
+        "não testada pelo portal"
+      ],
+      "createdAt": "2026-11-10",
+      "source": "Referência de estilo: Panelinha — Empanadas de carne. Formulação independente do Dantas Cozinha.",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
+      "sourceVerifiedAt": "2026-11-10",
+      "curationStatus": "versao-autoral-com-referencia",
+      "ingredientsSummary": "Carne bovina, cebola, ovo cozido, salsinha e massa amanteigada",
+      "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
+      "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
+    },
+    {
+      "id": "selecao-2026-11-02-focaccia-sem-sova",
+      "title": "Focaccia sem sova",
+      "category": "entrada",
+      "description": "Focaccia de fermentação lenta, com miolo úmido e aerado, casca dourada e azeite. A massa é misturada à mão e descansa na geladeira, sem precisar sovar.",
+      "minutes": 50,
+      "minutesLabel": "50 min de trabalho/forno + 12–24h de fermentação",
+      "difficulty": "Fácil",
+      "servings": 8,
+      "servingsLabel": "1 assadeira de 30 × 20 cm (8 porções)",
+      "emoji": "🍞",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Focaccia_Bread.jpg?width=940",
+      "imageCredit": "Kurtkaiser / Wikimedia Commons (CC0)",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Focaccia_Bread.jpg",
+      "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "ingredients": [
+        {
+          "quantity": 450,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 360,
+          "unit": "ml",
+          "name": "água em temperatura ambiente"
+        },
+        {
+          "quantity": 3,
+          "unit": "g",
+          "name": "fermento biológico seco instantâneo"
+        },
+        {
+          "quantity": 10,
+          "unit": "g",
+          "name": "sal"
+        },
+        {
+          "quantity": 45,
+          "unit": "ml",
+          "name": "azeite de oliva, dividido"
+        },
+        {
+          "quantity": 1,
+          "unit": "colher (chá)",
+          "name": "sal grosso ou flor de sal"
+        },
+        {
+          "quantity": 1,
+          "unit": "a gosto",
+          "name": "alecrim fresco (opcional)"
+        }
+      ],
+      "steps": [
+        "Em uma tigela grande, misture a farinha, o fermento e o sal. Despeje a água e mexa com uma colher firme ou espátula até não restar farinha seca. A massa ficará bem úmida e pegajosa.",
+        "Acrescente 15 ml de azeite e vire a massa algumas vezes para envolver a superfície. Cubra a tigela e leve à geladeira por 12 a 24 horas, até crescer e apresentar bolhas.",
+        "Unte generosamente uma assadeira de aproximadamente 30 × 20 cm com parte do azeite. Transfira a massa para a assadeira e vire-a para cobrir de azeite.",
+        "Com as mãos untadas, puxe delicadamente as extremidades da massa em direção ao centro. Vire com as emendas para baixo, cubra e deixe descansar em temperatura ambiente por 1h30 a 2h, até ficar fofa.",
+        "Preaqueça o forno a 220 °C. Regue a superfície com o azeite restante e pressione as pontas dos dedos na massa para formar cavidades, sem rasgá-la.",
+        "Distribua o sal grosso e, se desejar, folhas de alecrim. Asse por 25 a 30 minutos, até a superfície ficar bem dourada.",
+        "Retire da assadeira e deixe amornar sobre uma grade antes de cortar."
+      ],
+      "tip": "A massa deve continuar macia e pegajosa; evite acrescentar farinha durante a mistura. O tempo de fermentação varia com a temperatura da geladeira e do ambiente.",
+      "tags": [
+        "panificação",
+        "fermentação lenta",
+        "sem sova",
+        "receita independente"
+      ],
+      "createdAt": "2026-11-10",
+      "source": "Referência de técnica: Panelinha — Focaccia sem sova. Formulação independente do Dantas Cozinha.",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
+      "sourceVerifiedAt": "2026-11-10",
+      "curationStatus": "versao-autoral-com-referencia",
+      "ingredientsSummary": "Farinha, água, fermento biológico, sal e azeite",
+      "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
+      "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
+    },
+    {
+      "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
+      "title": "Risoto de cogumelos com salsinha",
+      "category": "principal",
+      "description": "Risoto cremoso com shiitake, shimeji e cogumelo-de-paris, finalizado com manteiga, parmesão e salsinha. O caldo quente é incorporado aos poucos para cozinhar o arroz até ficar al dente.",
+      "minutes": 55,
+      "minutesLabel": "55 min (aprox.)",
+      "difficulty": "Intermediário",
+      "servings": 4,
+      "servingsLabel": "4 porções",
+      "emoji": "🍄",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mushroom_risotto_%283990739885%29.jpg?width=940",
+      "imageCredit": "Karen and Brad Emerson / Wikimedia Commons",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Mushroom_risotto_(3990739885).jpg",
+      "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "ingredients": [
+        {
+          "quantity": 300,
+          "unit": "g",
+          "name": "arroz arbóreo ou carnaroli"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "shiitake fatiado"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "shimeji separado em buquês"
+        },
+        {
+          "quantity": 150,
+          "unit": "g",
+          "name": "cogumelo-de-paris fatiado"
+        },
+        {
+          "quantity": 1.2,
+          "unit": "litros",
+          "name": "caldo de legumes quente, aproximadamente"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "cebola média bem picada"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho picados"
+        },
+        {
+          "quantity": 180,
+          "unit": "ml",
+          "name": "vinho branco seco"
+        },
+        {
+          "quantity": 30,
+          "unit": "ml",
+          "name": "azeite de oliva"
+        },
+        {
+          "quantity": 40,
+          "unit": "g",
+          "name": "manteiga gelada em cubos"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "queijo parmesão ralado fino"
+        },
+        {
+          "quantity": 15,
+          "unit": "g",
+          "name": "salsinha fresca picada"
+        },
+        {
+          "quantity": 1,
+          "unit": "a gosto",
+          "name": "sal e pimenta-do-reino"
+        }
+      ],
+      "steps": [
+        "Mantenha o caldo de legumes aquecido em uma panela ao lado. Limpe os cogumelos com papel-toalha ou pano úmido e corte em tamanhos semelhantes.",
+        "Aqueça uma frigideira larga com um fio de azeite. Doure os cogumelos em pequenas porções, sem amontoar, temperando com sal e pimenta. Reserve.",
+        "Em uma panela de fundo grosso, aqueça o restante do azeite e refogue a cebola em fogo médio até ficar translúcida. Junte o alho e mexa por alguns segundos.",
+        "Acrescente o arroz e mexa por cerca de 1 minuto para envolver os grãos na gordura. Despeje o vinho e mexa até evaporar quase completamente.",
+        "Adicione uma concha de caldo quente e mexa. Quando o líquido estiver quase absorvido, coloque outra concha. Repita o processo, mexendo com frequência, por cerca de 16 a 20 minutos.",
+        "Quando o arroz estiver cremoso por fora e ainda ligeiramente firme no centro, incorpore os cogumelos reservados e ajuste o sal e a pimenta.",
+        "Desligue o fogo. Misture a manteiga gelada e o parmesão até obter uma textura brilhante e cremosa. Finalize com salsinha e sirva imediatamente."
+      ],
+      "tip": "Doure os cogumelos separadamente para que ganhem cor em vez de cozinhar no próprio líquido. A quantidade de caldo é aproximada: use apenas o necessário para chegar ao ponto al dente.",
+      "tags": [
+        "cozinha italiana",
+        "arroz",
+        "cogumelos",
+        "receita independente"
+      ],
+      "createdAt": "2026-11-10",
+      "source": "Referência de técnica e combinação: Panelinha — Risoto de cogumelos com salsinha. Formulação independente do Dantas Cozinha.",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
+      "sourceVerifiedAt": "2026-11-10",
+      "curationStatus": "versao-autoral-com-referencia",
+      "ingredientsSummary": "Arroz arbóreo, shiitake, shimeji, cogumelo-de-paris, vinho branco e salsinha",
+      "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
+      "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
+    },
+    {
+      "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
+      "title": "Bolo de cenoura com especiarias (carrot cake)",
+      "category": "sobremesa",
+      "description": "Bolo úmido de cenoura ralada, nozes, canela e gengibre, com cobertura fresca de iogurte. É uma versão inspirada no carrot cake, diferente do bolo de cenoura brasileiro batido no liquidificador.",
+      "minutes": 75,
+      "minutesLabel": "1h15 + 8–12h para drenar o iogurte",
+      "difficulty": "Intermediário",
+      "servings": 8,
+      "servingsLabel": "1 bolo inglês (8 fatias)",
+      "emoji": "🥕",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrot_Cake_-_The_Den_2025-07-23.jpg?width=940",
+      "imageCredit": "Andy Li / Wikimedia Commons (CC0)",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Carrot_Cake_-_The_Den_2025-07-23.jpg",
+      "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "ingredients": [
+        {
+          "quantity": 240,
+          "unit": "g",
+          "name": "cenoura descascada e ralada fino"
+        },
+        {
+          "quantity": 125,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 170,
+          "unit": "g",
+          "name": "açúcar mascavo"
+        },
+        {
+          "quantity": 90,
+          "unit": "ml",
+          "name": "óleo vegetal neutro"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "nozes picadas"
+        },
+        {
+          "quantity": 6,
+          "unit": "g",
+          "name": "fermento químico em pó"
+        },
+        {
+          "quantity": 3,
+          "unit": "g",
+          "name": "canela em pó"
+        },
+        {
+          "quantity": 2,
+          "unit": "g",
+          "name": "gengibre em pó"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "cravo em pó"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada"
+        },
+        {
+          "quantity": 500,
+          "unit": "g",
+          "name": "iogurte natural integral para a cobertura"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "açúcar de confeiteiro para a cobertura"
+        },
+        {
+          "quantity": 5,
+          "unit": "ml",
+          "name": "extrato de baunilha"
+        }
+      ],
+      "steps": [
+        "Para a cobertura, coloque o iogurte em uma peneira forrada com pano limpo ou filtro de café, apoiada sobre uma tigela. Cubra e deixe drenar na geladeira por 8 a 12 horas.",
+        "Preaqueça o forno a 180 °C. Unte e enfarinhe uma forma de bolo inglês de aproximadamente 22 × 10 cm.",
+        "Em uma tigela, misture a farinha, o fermento, a canela, o gengibre, o cravo e a noz-moscada. Acrescente as nozes e misture.",
+        "Em outra tigela, bata os ovos com o açúcar mascavo até a mistura ficar homogênea. Junte o óleo e mexa.",
+        "Incorpore a cenoura ralada à mistura líquida. Adicione os ingredientes secos em duas etapas, mexendo com espátula apenas até desaparecer a farinha.",
+        "Transfira a massa para a forma e asse por 40 a 50 minutos, até que um palito inserido no centro saia sem massa crua. Espere 15 minutos antes de desenformar e deixe esfriar completamente.",
+        "Para finalizar, misture o iogurte drenado com o açúcar de confeiteiro e a baunilha. Espalhe sobre o bolo frio e, se desejar, finalize com algumas nozes picadas."
+      ],
+      "tip": "A cobertura precisa ser preparada com antecedência e mantida refrigerada. Aplique somente quando o bolo estiver completamente frio para evitar que o iogurte amoleça.",
+      "tags": [
+        "confeitaria",
+        "carrot cake",
+        "especiarias",
+        "receita independente"
+      ],
+      "createdAt": "2026-11-10",
+      "source": "Referência de estilo: Panelinha — Bolo de cenoura com especiarias (carrot cake). Formulação independente do Dantas Cozinha.",
+      "sourceName": "Panelinha",
+      "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
+      "sourceVerifiedAt": "2026-11-10",
+      "curationStatus": "versao-autoral-com-referencia",
+      "ingredientsSummary": "Cenoura, nozes, açúcar mascavo, canela, gengibre e cobertura de iogurte",
+      "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
+      "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
     }
   ],
   "techniques": [
@@ -3236,7 +3722,7 @@ window.DANTAS_DATA = {
       "id": "selecao-2026-11-02-nhoque-de-batata",
       "title": "Nhoque de batata",
       "category": "principal",
-      "description": "Massa caseira italiana feita com batata, gemas e farinha. Uma opção para preparar com molho de tomate, manteiga ou o acompanhamento preferido; o passo a passo e as medidas permanecem na publicação original.",
+      "description": "Massa caseira italiana de batata, gema e farinha; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "batata asterix",
         "gemas",
@@ -3248,15 +3734,16 @@ window.DANTAS_DATA = {
       "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-nhoque-de-batata"
     },
     {
       "id": "selecao-2026-11-02-empanadas-de-carne",
       "title": "Empanadas de carne",
       "category": "principal",
-      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias. A versão publicada utiliza manteiga e ingredientes comuns em supermercados brasileiros; consulte a fonte para medidas e instruções.",
+      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "farinha de trigo",
         "manteiga",
@@ -3272,15 +3759,16 @@ window.DANTAS_DATA = {
       "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-empanadas-de-carne"
     },
     {
       "id": "selecao-2026-11-02-focaccia-sem-sova",
       "title": "Focaccia sem sova",
       "category": "entrada",
-      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes. Uma escolha para servir como entrada ou acompanhar refeições, com instruções de fermentação na fonte original.",
+      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "farinha de trigo",
         "fermento biológico seco instantâneo",
@@ -3294,15 +3782,16 @@ window.DANTAS_DATA = {
       "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-focaccia-sem-sova"
     },
     {
       "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
       "title": "Risoto de cogumelos com salsinha",
       "category": "principal",
-      "description": "Risoto com três variedades de cogumelos e caldo de legumes aromático. A publicação explica como adiantar parte do cozimento e finalizar o prato na hora de servir; medidas e técnica detalhada estão na fonte.",
+      "description": "Risoto com três variedades de cogumelos e caldo aromático; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "arroz para risoto",
         "shiitake",
@@ -3319,15 +3808,16 @@ window.DANTAS_DATA = {
       "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
       "verifiedAt": "2026-11-09",
       "createdAt": "2026-11-09",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-09-risoto-cogumelos-salsinha"
     },
     {
       "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
       "title": "Bolo de cenoura com especiarias (carrot cake)",
       "category": "sobremesa",
-      "description": "Versão aromática do bolo de cenoura com nozes, canela, gengibre e cobertura de iogurte. O preparo da cobertura exige planejamento antecipado; consulte a publicação original para medidas e instruções.",
+      "description": "Bolo de cenoura ralada com nozes, especiarias e cobertura de iogurte; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "cenoura",
         "farinha de trigo",
@@ -3343,9 +3833,10 @@ window.DANTAS_DATA = {
       "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
       "verifiedAt": "2026-11-09",
       "createdAt": "2026-11-09",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-09-bolo-cenoura-especiarias"
     }
   ]
 };

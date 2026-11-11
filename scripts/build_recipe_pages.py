@@ -46,6 +46,17 @@ def generate(destination: Path) -> int:
         instructions = "".join("<li>" + escape(step) + "</li>" for step in steps)
         ingredient_html = "".join("<li>" + escape(item) + "</li>" for item in ingredients)
         app_url = BASE + "#receita/" + quote(slug)
+        image_url = recipe.get("image", "")
+        parsed_image = urlparse(image_url) if isinstance(image_url, str) else None
+        image_html = ""
+        if parsed_image and parsed_image.scheme == "https" and parsed_image.netloc:
+            image_credit = escape(recipe.get("imageCredit") or "Crédito não informado")
+            image_source_url = recipe.get("imageSourceUrl", "")
+            image_license_url = recipe.get("imageLicenseUrl", "")
+            source_link = (f'<a href="{escape(image_source_url, quote=True)}" rel="noopener noreferrer">fonte da imagem</a>' if urlparse(image_source_url).scheme == "https" and urlparse(image_source_url).netloc else "")
+            license_link = (f'<a href="{escape(image_license_url, quote=True)}" rel="noopener noreferrer">licença</a>' if urlparse(image_license_url).scheme == "https" and urlparse(image_license_url).netloc else "")
+            attribution_links = " · ".join(link for link in (source_link, license_link) if link)
+            image_html = f'<figure class="recipe-hero"><img src="{escape(image_url, quote=True)}" alt="{title}" loading="eager"><figcaption>Imagem ilustrativa · {image_credit} {("· " + attribution_links) if attribution_links else ""}</figcaption></figure>'
         source_url = recipe.get("sourceUrl", "")
         parsed_source = urlparse(source_url) if isinstance(source_url, str) else None
         source_link = (f'<p>Referência: <a href="{escape(source_url, quote=True)}" rel="noopener noreferrer">{escape(recipe.get("source") or "Fonte original")}</a></p>' if parsed_source and parsed_source.scheme == "https" and parsed_source.netloc else "")
@@ -72,9 +83,9 @@ def generate(destination: Path) -> int:
 <meta property="og:title" content="{title} • Dantas Cozinha"><meta property="og:description" content="{description}">
 <meta property="og:url" content="{url}"><meta name="twitter:card" content="summary">
 <script type="application/ld+json">{structured}</script>
-<style>body{{margin:0;background:#faf6ef;color:#33342d;font:16px/1.75 system-ui,sans-serif}}main{{max-width:780px;margin:0 auto;padding:32px 22px 70px}}h1,h2{{font-family:Georgia,serif;color:#2e4838;line-height:1.2}}h1{{font-size:clamp(34px,5vw,54px)}}a{{color:#a54d2f}}.brand{{font-weight:750;color:#2e4838}}.intro{{font-size:18px}}.panel{{background:#fffdf8;border:1px solid #e9e3d9;border-radius:18px;padding:24px;margin:25px 0}}li{{margin-bottom:9px}}a:focus-visible{{outline:3px solid #a54d2f;outline-offset:3px}}</style>
+<style>body{{margin:0;background:#faf6ef;color:#33342d;font:16px/1.75 system-ui,sans-serif}}main{{max-width:780px;margin:0 auto;padding:32px 22px 70px}}h1,h2{{font-family:Georgia,serif;color:#2e4838;line-height:1.2}}h1{{font-size:clamp(34px,5vw,54px)}}a{{color:#a54d2f}}.brand{{font-weight:750;color:#2e4838}}.intro{{font-size:18px}}.panel{{background:#fffdf8;border:1px solid #e9e3d9;border-radius:18px;padding:24px;margin:25px 0}}.recipe-hero{{margin:24px 0}}.recipe-hero img{{display:block;width:100%;height:auto;border-radius:16px}}.recipe-hero figcaption{{font-size:13px;color:#68685f;margin-top:8px}}li{{margin-bottom:9px}}a:focus-visible{{outline:3px solid #a54d2f;outline-offset:3px}}</style>
 </head><body><main><nav aria-label="Navegação"><a class="brand" href="{BASE}">Dantas Cozinha</a> / Receitas</nav>
-<article><h1>{title}</h1><p class="intro">{description}</p>
+<article><h1>{title}</h1><p class="intro">{description}</p>{image_html}
 <p>Rendimento: {escape(str(recipe.get("servingsLabel") or str(recipe.get("servings", "Não informado")) + " porções"))}</p>
 <section class="panel"><h2>Ingredientes</h2><ul>{ingredient_html}</ul></section>
 <section class="panel"><h2>Modo de preparo</h2><ol>{instructions}</ol></section>

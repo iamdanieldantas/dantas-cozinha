@@ -98,7 +98,7 @@
       "id": "selecao-2026-11-02-nhoque-de-batata",
       "title": "Nhoque de batata",
       "category": "principal",
-      "description": "Massa caseira italiana feita com batata, gemas e farinha. Uma opção para preparar com molho de tomate, manteiga ou o acompanhamento preferido; o passo a passo e as medidas permanecem na publicação original.",
+      "description": "Massa caseira italiana de batata, gema e farinha; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "batata asterix",
         "gemas",
@@ -110,15 +110,16 @@
       "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-nhoque-de-batata"
     },
     {
       "id": "selecao-2026-11-02-empanadas-de-carne",
       "title": "Empanadas de carne",
       "category": "principal",
-      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias. A versão publicada utiliza manteiga e ingredientes comuns em supermercados brasileiros; consulte a fonte para medidas e instruções.",
+      "description": "Clássico argentino de massa assada com recheio de carne, cebola, ovos e especiarias; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "farinha de trigo",
         "manteiga",
@@ -134,15 +135,16 @@
       "sourceUrl": "https://panelinha.com.br/receita/empanadas-de-carne",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-empanadas-de-carne"
     },
     {
       "id": "selecao-2026-11-02-focaccia-sem-sova",
       "title": "Focaccia sem sova",
       "category": "entrada",
-      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes. Uma escolha para servir como entrada ou acompanhar refeições, com instruções de fermentação na fonte original.",
+      "description": "Pão italiano de fermentação prolongada, preparado sem sovar e com poucos ingredientes; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "farinha de trigo",
         "fermento biológico seco instantâneo",
@@ -156,15 +158,16 @@
       "sourceUrl": "https://panelinha.com.br/receita/focaccia-sem-sova",
       "verifiedAt": "2026-11-02",
       "createdAt": "2026-11-02",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-02-focaccia-sem-sova"
     },
     {
       "id": "selecao-2026-11-09-risoto-cogumelos-salsinha",
       "title": "Risoto de cogumelos com salsinha",
       "category": "principal",
-      "description": "Risoto com três variedades de cogumelos e caldo de legumes aromático. A publicação explica como adiantar parte do cozimento e finalizar o prato na hora de servir; medidas e técnica detalhada estão na fonte.",
+      "description": "Risoto com três variedades de cogumelos e caldo aromático; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "arroz para risoto",
         "shiitake",
@@ -181,15 +184,16 @@
       "sourceUrl": "https://panelinha.com.br/receita/risoto-de-cogumelos-com-salsinha",
       "verifiedAt": "2026-11-09",
       "createdAt": "2026-11-09",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-09-risoto-cogumelos-salsinha"
     },
     {
       "id": "selecao-2026-11-09-bolo-cenoura-especiarias",
       "title": "Bolo de cenoura com especiarias (carrot cake)",
       "category": "sobremesa",
-      "description": "Versão aromática do bolo de cenoura com nozes, canela, gengibre e cobertura de iogurte. O preparo da cobertura exige planejamento antecipado; consulte a publicação original para medidas e instruções.",
+      "description": "Bolo de cenoura ralada com nozes, especiarias e cobertura de iogurte; agora há também uma versão independente completa no catálogo.",
       "mainIngredients": [
         "cenoura",
         "farinha de trigo",
@@ -205,9 +209,10 @@
       "sourceUrl": "https://panelinha.com.br/receita/bolo-de-cenoura-com-especiarias",
       "verifiedAt": "2026-11-09",
       "createdAt": "2026-11-09",
-      "curationStatus": "fonte-editorial-verificada",
-      "preparation": "Consultar a receita original no Panelinha.",
-      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha."
+      "curationStatus": "fonte-editorial-verificada-com-versao-independente-no-catalogo",
+      "preparation": "A ficha completa e independente está disponível no catálogo de receitas. Consulte a publicação original para conhecer a versão de referência.",
+      "testClaim": "Nenhum teste independente alegado pelo Dantas Cozinha.",
+      "catalogRecipeId": "selecao-2026-11-09-bolo-cenoura-especiarias"
     }
   ]
 }
