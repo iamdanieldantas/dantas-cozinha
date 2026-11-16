@@ -45,8 +45,9 @@ class ContentTests(unittest.TestCase):
     d=load(BASE/'assets'/'data.js')
     published_urls={r.get('sourceUrl') for r in d['recipes'] if r.get('sourceUrl')}
     published_by_id={r['id']:r for r in d['recipes']}
-    selected=d.get('curatedDiscoveries',[])
-    self.assertGreaterEqual(len(selected),3)
+    self.assertEqual(d.get('curatedDiscoveries',[]),[], 'Descobertas incompletas não podem aparecer no catálogo público')
+    selected=d.get('curatedQueue',[])
+    self.assertTrue(selected, 'A fila editorial deve preservar seleções verificadas')
     self.assertEqual(len({r['id'] for r in selected}),len(selected))
     self.assertEqual(len({r['sourceUrl'] for r in selected}),len(selected))
     for r in selected:
@@ -58,7 +59,9 @@ class ContentTests(unittest.TestCase):
           self.assertNotIn(r['sourceUrl'],published_urls,'Fonte duplicada no catálogo')
         self.assertTrue(r['sourceUrl'].startswith('https://'))
         self.assertTrue(r.get('author') and r.get('sourceName'))
-        self.assertTrue(r.get('description') and len(r.get('mainIngredients',[]))>=3)
+        self.assertTrue(r.get('title') and len(r.get('mainIngredients',[]))>=3)
+        self.assertTrue(r.get('verifiedAt') and r.get('createdAt'))
+        self.assertNotIn(r['id'],published_by_id,'Seleção incompleta não pode ser publicada como receita')
         self.assertIn(r.get('curationStatus'),('fonte-editorial-verificada','fonte-editorial-verificada-com-versao-independente-no-catalogo'))
         self.assertNotIn('steps',r,'Curadoria não deve copiar modo de preparo')
         self.assertNotIn('ingredients',r,'Curadoria não deve inventar quantidades')
