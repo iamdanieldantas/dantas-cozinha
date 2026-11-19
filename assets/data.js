@@ -2816,6 +2816,81 @@ window.DANTAS_DATA = {
       "ingredientsSummary": "Cenoura, nozes, açúcar mascavo, canela, gengibre e cobertura de iogurte",
       "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
       "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
+    },
+    {
+      "id": "torta-basca-cremosa",
+      "title": "Torta Basca Cremosa",
+      "category": "sobremesa",
+      "description": "Cheesecake sem base de biscoito, com superfície dourada e interior cremoso.",
+      "minutes": 35,
+      "minutesLabel": "30–35 min de forno + preparo, resfriamento e pelo menos 4h de geladeira",
+      "difficulty": "Intermediário",
+      "servings": 8,
+      "servingsLabel": "1 torta de 20 cm (8 fatias estimadas)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Basque-cheesecake.jpg?width=940",
+      "imageCredit": "The-Wuje / Wikimedia Commons (CC BY-SA 4.0; imagem ilustrativa redimensionada)",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Basque-cheesecake.jpg",
+      "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "ingredients": [
+        {
+          "quantity": 600,
+          "unit": "g",
+          "name": "cream cheese"
+        },
+        {
+          "quantity": 180,
+          "unit": "g",
+          "name": "açúcar"
+        },
+        {
+          "quantity": 4,
+          "unit": "unidades",
+          "name": "ovos"
+        },
+        {
+          "quantity": 300,
+          "unit": "ml",
+          "name": "creme de leite fresco"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "farinha de trigo"
+        },
+        {
+          "quantity": 1,
+          "unit": "colher (chá)",
+          "name": "essência de baunilha"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal"
+        }
+      ],
+      "steps": [
+        "Aqueça o forno a 220 °C.",
+        "Misture o cream cheese e o açúcar até obter um creme liso.",
+        "Incorpore os ovos individualmente, misturando a cada inclusão.",
+        "Junte o creme de leite fresco, a baunilha e o sal até uniformizar.",
+        "Passe a farinha por uma peneira e misture suavemente.",
+        "Revista uma forma de 20 cm com papel-manteiga, deixando sobras acima da borda.",
+        "Transfira a mistura para a forma e asse por 30 a 35 minutos.",
+        "Retire quando a superfície estiver bem dourada e o centro ainda oscilar ligeiramente.",
+        "Deixe esfriar por completo.",
+        "Refrigere por no mínimo 4 horas, idealmente durante a noite."
+      ],
+      "tip": "Prefira refrigerar durante a noite antes de servir.",
+      "createdAt": "2026-11-19",
+      "source": "Por Aqui — receita fornecida pelo usuário em captura de tela; link original não informado.",
+      "sourceName": "Por Aqui",
+      "verifiedTestClaim": "Não testada independentemente pelo Dantas Cozinha.",
+      "recipeVersion": "Medidas e técnica fornecidas pelo usuário; preparo reescrito. Rendimento em fatias e dificuldade estimados.",
+      "tags": [
+        "cheesecake",
+        "sobremesa",
+        "torta basca"
+      ]
     }
   ],
   "techniques": [
