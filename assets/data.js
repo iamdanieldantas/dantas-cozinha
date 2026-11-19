@@ -2890,7 +2890,8 @@ window.DANTAS_DATA = {
         "cheesecake",
         "sobremesa",
         "torta basca"
-      ]
+      ],
+      "emoji": "🍰"
     }
   ],
   "techniques": [
