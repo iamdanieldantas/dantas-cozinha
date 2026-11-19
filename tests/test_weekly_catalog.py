@@ -8,9 +8,13 @@ ROOT=Path(__file__).resolve().parents[1]
 class WeeklyCatalogTests(unittest.TestCase):
     def test_recent_curation_in_canonical_dataset(self):
         data=json.loads((ROOT/"content/curation.json").read_text(encoding="utf-8"))
-        ids={r["id"] for r in data["curatedDiscoveries"]}
-        self.assertIn("selecao-2026-11-09-risoto-cogumelos-salsinha",ids)
-        self.assertIn("selecao-2026-11-09-bolo-cenoura-especiarias",ids)
+        self.assertEqual(data["curatedDiscoveries"], [], "Descobertas incompletas não devem ser publicadas")
+        queue=data["curatedQueue"]
+        ids={r["id"] for r in queue}
+        self.assertEqual(len(ids),len(queue),"IDs editoriais devem ser únicos")
+        self.assertIn("selecao-2026-11-10-risoto-aveia-cogumelos",ids)
+        self.assertIn("selecao-2026-11-10-risoto-cogumelos-laura-miranda",ids)
+        self.assertTrue(all(r.get("sourceUrl","").startswith("https://") and r.get("author") and r.get("sourceName") for r in queue))
 
     def test_catalog_keeps_discoveries_out_of_recipe_cards(self):
         app=(ROOT/"assets/app.js").read_text(encoding="utf-8")
