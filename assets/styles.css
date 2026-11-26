@@ -349,3 +349,19 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .school-module-card:focus-visible,.school-lesson-link:focus-visible,.school-reading a:focus-visible,.school-reading summary:focus-visible,.school-family-toggle:focus-visible{outline:2px solid var(--forest);outline-offset:3px}
 @media(max-width:550px){.school-module-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.school-module-copy{padding:12px;gap:6px}.school-module-copy strong{font-size:.98rem}.school-module-copy span{font-size:.75rem}.school-module-copy .school-module-open{padding-top:4px}.school-reading{padding-top:23px}.school-lesson-link{grid-template-columns:26px minmax(0,1fr) 18px;gap:9px}}
 @media(prefers-reduced-motion:reduce){.page.active.page-enter{animation:none}.school-module-card,.school-lesson-link{transition:none}.school-module-card:hover{transform:none}}
+
+/* A consistent lesson navigation at both ends of the reading page. */
+.school-navigation{display:grid;gap:12px;margin:0 0 24px;min-width:0}
+.school-navigation .school-breadcrumb{margin:0;gap:7px;overflow-wrap:anywhere}
+.school-navigation .school-breadcrumb span[aria-current]{color:var(--muted)}
+.school-navigation .school-nav-dropdown{border-block:1px solid var(--line);padding:10px 0}
+.school-nav-dropdown ol{margin:0;padding-left:0;list-style:none}
+.school-nav-dropdown li a{display:block;padding:9px 6px;color:var(--forest);overflow-wrap:anywhere;text-decoration:none}
+.school-nav-dropdown li a[aria-current]{font-weight:750;background:var(--surface-raised);border-left:3px solid var(--forest)}
+.school-navigation .school-nav-actions{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.85rem}
+.school-nav-actions a{color:var(--forest);font-weight:650;text-decoration:underline;text-underline-offset:4px;padding:8px 0}
+.school-nav-siblings{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.school-nav-siblings [aria-disabled]{color:var(--muted);font-size:.85rem;opacity:.65}
+.school-module-return{padding:20px 0}
+.school-reading-footer .school-navigation{margin-bottom:0}
+@media(max-width:550px){.school-navigation .school-nav-actions{align-items:flex-start;flex-direction:column}.school-nav-siblings{justify-content:space-between;width:100%;gap:8px}}
