@@ -92,6 +92,7 @@ def run():
             categories = list(dict.fromkeys(item["category"] for item in techniques))
             assert desktop.locator("#school-filters .school-module-card").count() == len(categories)
             assert desktop.locator("#tech-grid .school-lesson-link").count() == 0
+            assert desktop.locator('#school-filters [data-school-category="todas"]').count() == 1
             covers = desktop.locator("#school-filters .school-module-card img").all()
             assert len(covers) == len(categories)
             for cover in covers:
@@ -102,6 +103,10 @@ def run():
             desktop.locator("#tech-grid .school-lesson-link").first.wait_for()
             assert desktop.locator("#tech-grid .school-lesson-link").count() == sum(
                 item["category"] == categories[0] for item in techniques)
+            assert desktop.locator("#school-filters .school-module-toolbar a").count() == 1
+            assert desktop.locator('#school-filters [data-school-category="modulos"].school-return-primary').count() == 1
+            assert not desktop.locator("#school-next-lesson").is_visible()
+            assert desktop.locator(".school-module-return").count() == 0
             desktop.locator("#tech-grid .school-lesson-link").first.click()
             desktop.locator("#school-lesson-detail h1").wait_for()
             assert desktop.locator('[data-view="aula"]').is_visible()
@@ -131,14 +136,21 @@ def run():
                 for nav in (top, bottom):
                     assert nav.locator("[data-school-prev]").count() == int(index > 0)
                     assert nav.locator("[data-school-next]").count() == int(index < len(module_lessons) - 1)
-                    assert nav.locator(".school-nav-dropdown a").count() == len(module_lessons)
-                    assert nav.locator(".school-nav-dropdown a[aria-current='page']").get_attribute("href") == "#aula/" + lesson["id"]
-                bottom.locator("summary").click()
-                assert bottom.locator(".school-nav-dropdown a").first.is_visible()
+                    assert nav.locator(".school-nav-dropdown, .school-breadcrumb, details").count() == 0
+                    assert nav.locator('a[href="#tecnicas"]').count() == 0
+                    parent = nav.locator("[data-school-parent].school-return-primary")
+                    assert parent.count() == 1
+                    assert parent.get_attribute("href").startswith("#tecnicas/modulo/")
+                    assert parent.evaluate("el => getComputedStyle(el).backgroundColor") != "rgba(0, 0, 0, 0)"
+                    for sibling in nav.locator(".school-nav-siblings a").all():
+                        assert sibling.evaluate("el => getComputedStyle(el).backgroundColor") == "rgba(0, 0, 0, 0)"
+                        assert sibling.evaluate("el => getComputedStyle(el).borderTopStyle") == "solid"
                 bottom.locator("[data-school-parent]").click()
                 desktop.locator("#tech-grid .school-lesson-link").first.wait_for()
                 assert desktop.locator("#tech-grid .school-lesson-link").count() == len(module_lessons)
-                desktop.locator(".school-module-return a").click()
+                assert desktop.locator("#school-filters .school-module-toolbar a").count() == 1
+                assert not desktop.locator("#school-next-lesson").is_visible()
+                desktop.locator('#school-filters [data-school-category="modulos"]').click()
                 desktop.locator("#school-filters .school-module-card").first.wait_for()
             desktop.locator("#school-search").fill(techniques[-1]["title"])
             assert desktop.locator("#tech-grid .school-lesson-link").count() >= 1
@@ -222,12 +234,16 @@ def run():
             top = mobile.locator('[data-school-nav="top"]')
             bottom = mobile.locator('[data-school-nav="bottom"]')
             assert top.inner_text() == bottom.inner_text()
-            top.locator("summary").click()
-            assert top.locator(".school-nav-dropdown a").first.is_visible()
+            for nav in (top, bottom):
+                assert nav.locator(".school-nav-dropdown, .school-breadcrumb, details").count() == 0
+                assert nav.locator('a[href="#tecnicas"]').count() == 0
+                assert nav.locator("[data-school-parent].school-return-primary").count() == 1
             assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth")
             bottom.locator("[data-school-parent]").click()
             mobile.locator("#tech-grid .school-lesson-link").first.wait_for()
-            mobile.locator(".school-module-return a").click()
+            assert mobile.locator("#school-filters .school-module-toolbar a").count() == 1
+            assert not mobile.locator("#school-next-lesson").is_visible()
+            mobile.locator('#school-filters [data-school-category="modulos"]').click()
             mobile.locator("#school-filters .school-module-card").first.wait_for()
             assert mobile.locator("#school-filters .school-module-card").count() == len(categories)
             assert not errors, "Erros JavaScript: " + repr(errors)
