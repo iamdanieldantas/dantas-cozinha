@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   push:
-    branches: [escola-fundamentos-molhos-20261126, receitas-fotos-20261126]
+    branches: [escola-fundamentos-molhos-20261126, receitas-fotos-20261126, escola-leitura-clean-20261126]
 
 permissions:
   contents: read

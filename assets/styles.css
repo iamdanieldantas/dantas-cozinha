@@ -292,3 +292,60 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .school-family-toggle[aria-expanded="true"] .school-family-indicator{transform:rotate(45deg)}
 .school-family .school-family-children{margin:10px 0 0 12px;padding-left:12px;border-left:2px solid #d5c8b4}
 .school-family-children li{background:#fffdf8;padding:9px 11px;border:1px solid var(--line);border-radius:9px}
+
+/* School library and editorial reading view. */
+.page.active.page-enter{animation:school-enter .24s ease-out both}
+@keyframes school-enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.school-module-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px}
+.school-module-card{padding:0;gap:0;overflow:hidden;min-height:0;text-decoration:none;box-shadow:none;background:var(--surface-raised);transition:transform .2s,border-color .2s}
+.school-module-card:hover{transform:translateY(-3px);box-shadow:none}
+.school-module-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.school-module-copy{display:flex;flex-direction:column;gap:8px;flex:1;padding:18px 20px;width:100%}
+.school-module-copy span{font-size:.85rem;color:var(--muted)}
+.school-module-copy .school-module-open{padding-top:10px}
+.school-back,.school-breadcrumb a,.school-reading-footer a{color:var(--forest);text-decoration:underline;text-underline-offset:4px;font-weight:650}
+[data-view="tecnicas"] .tech-lead{display:none}
+[data-view="tecnicas"] .school-toolbar{padding:0;background:transparent;border:0;margin:20px 0}
+[data-view="tecnicas"] .learning-path-panel{padding:18px 0;background:transparent;border:0;box-shadow:none;margin:0 0 30px}
+[data-view="tecnicas"] .learning-path-panel>p:not(#school-progress){display:none}
+#tech-grid{display:flex;flex-direction:column;gap:0;max-width:900px}
+.school-lesson-link{display:grid;grid-template-columns:36px minmax(0,1fr) 24px;align-items:start;gap:14px;padding:22px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);transition:background .18s}
+.school-lesson-link:hover{background:#eee9de}
+.school-lesson-index,.school-lesson-link small{font-size:12px;color:var(--muted)}
+.school-lesson-link h3{font-size:1.08rem;margin:0 0 7px;color:var(--forest);line-height:1.4}
+.school-lesson-link p{font-size:.92rem;line-height:1.6;margin:0 0 8px}
+.school-lesson-arrow{color:var(--forest);font-size:21px}
+.school-reading{max-width:740px;margin:0 auto;padding:36px 0 80px;color:var(--ink)}
+.school-breadcrumb{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.85rem;margin-bottom:32px}
+.school-reading-header{margin-bottom:36px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.school-reading-header h1{font-family:var(--serif);font-size:clamp(32px,5vw,48px);line-height:1.15;color:var(--forest);margin:12px 0 18px}
+.school-reading-header p{font-size:1.13rem;line-height:1.65;color:var(--muted);margin:0}
+.school-reading .school-kicker{font-size:.75rem;color:var(--muted);letter-spacing:.12em;font-weight:700}
+.school-reading .tech-lesson{margin:32px 0;padding:0;border:0;background:transparent}
+.school-reading .tech-lesson h2{font-family:var(--serif);font-size:clamp(22px,3vw,28px);line-height:1.35;color:var(--forest);margin:0 0 13px}
+.school-reading .tech-lesson p,.school-reading .tech-lesson li{font-size:1rem;line-height:1.85;color:var(--ink)}
+.school-reading .tech-lesson p{margin:0 0 16px}
+.school-reading .school-section-number{font-size:12px;color:var(--muted)}
+.school-reading .school-contents,.school-reading .school-deep-dive{border:0;border-block:1px solid var(--line);border-radius:0;background:transparent;padding:16px 0}
+.school-reading summary{cursor:pointer;color:var(--forest);font-weight:700}
+.school-reading details[open]>summary{margin-bottom:14px}
+.school-reading .school-contents ol{columns:1}
+.school-reading .school-block{border:0;border-radius:0;padding:0;background:transparent;margin:32px 0}
+.school-reading .school-block h5{font-size:1.1rem;margin-bottom:15px}
+.school-reading .school-image img{max-width:100%;height:auto;object-fit:contain}
+.school-reading .school-image figcaption{padding:9px 0;color:var(--muted)}
+.school-reading .school-callout,.school-reading .tech-practice{padding:15px 0 15px 17px;border-left:3px solid #718f72}
+.school-reading .school-family-branch{border:0;padding:0;margin:0;border-bottom:1px solid var(--line)}
+.school-reading .school-family-toggle{border:0;border-radius:0;background:transparent;padding:14px 30px 14px 0;cursor:pointer}
+.school-reading .school-family-toggle strong{font-size:1.04rem}
+.school-reading .school-family-children{margin:0 0 14px 8px;padding:0 0 0 16px;border-left:1px solid #718f72}
+.school-reading .school-family-children li{border:0;background:transparent;padding:7px 0}
+.school-reading .school-org ol,.school-reading .school-flow ol{display:block;padding:0;list-style:none}
+.school-reading .school-org li,.school-reading .school-flow li{position:relative;margin:0;padding:10px 0 10px 19px;background:transparent;border:0;border-radius:0;border-left:1px solid #718f72;display:block;width:auto;font-size:1rem}
+.school-reading .school-org li span,.school-reading .school-flow li span{display:inline-grid;background:transparent;color:var(--forest);font-weight:700;width:auto;height:auto;margin-right:9px}
+.school-reading .school-source{color:var(--muted);font-size:.85rem}
+.school-reading-footer{border-top:1px solid var(--line);padding-top:20px;margin-top:40px}
+.school-reading-footer nav{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.school-module-card:focus-visible,.school-lesson-link:focus-visible,.school-reading a:focus-visible,.school-reading summary:focus-visible,.school-family-toggle:focus-visible{outline:2px solid var(--forest);outline-offset:3px}
+@media(max-width:550px){.school-module-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.school-module-copy{padding:12px;gap:6px}.school-module-copy strong{font-size:.98rem}.school-module-copy span{font-size:.75rem}.school-module-copy .school-module-open{padding-top:4px}.school-reading{padding-top:23px}.school-lesson-link{grid-template-columns:26px minmax(0,1fr) 18px;gap:9px}}
+@media(prefers-reduced-motion:reduce){.page.active.page-enter{animation:none}.school-module-card,.school-lesson-link{transition:none}.school-module-card:hover{transform:none}}
