@@ -111,6 +111,23 @@ def run():
                     lesson.locator("summary").click()
                 assert lesson.get_attribute("open") is not None
 
+            visual_lesson = desktop.locator("#escola-escola-facas-cortes")
+            visual_lesson.locator("summary").click()
+            for image in visual_lesson.locator("img[src^='assets/school-']").all():
+                image.scroll_into_view_if_needed()
+                image.evaluate("img => img.loading = 'eager'")
+                image.evaluate("img => img.decode()")
+                assert image.evaluate("img => img.naturalWidth") > 0
+            family_lesson = desktop.locator("#escola-escola-molhos-derivados")
+            family_lesson.locator("summary").click()
+            family = family_lesson.locator("[data-school-family]").filter(has_text="Holandês")
+            assert family.get_attribute("aria-expanded") == "false"
+            family.click()
+            assert family.get_attribute("aria-expanded") == "true"
+            assert family_lesson.get_by_text("Béarnaise", exact=True).first.is_visible()
+            family.click()
+            assert family.get_attribute("aria-expanded") == "false"
+
             mobile = browser.new_page(
                 viewport={"width": 390, "height": 844}, device_scale_factor=1,
                 is_mobile=True, has_touch=True
