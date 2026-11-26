@@ -2342,10 +2342,10 @@ window.DANTAS_DATA = {
       "servings": 4,
       "servingsLabel": "4 porções",
       "emoji": "🥔",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gnocchi_cooked.jpg?width=940",
-      "imageCredit": "Sputnikcccp / Wikimedia Commons",
-      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Gnocchi_cooked.jpg",
-      "imageLicenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "image": "https://images.pexels.com/photos/31911031/pexels-photo-31911031/free-photo-of-delicious-gnocchi-with-tomato-sauce-and-basil.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Deane Bayas / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/delicious-gnocchi-with-tomato-sauce-and-basil-31911031/",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
       "ingredients": [
         {
           "quantity": 1000,
@@ -2419,10 +2419,10 @@ window.DANTAS_DATA = {
       "servings": 12,
       "servingsLabel": "12 unidades",
       "emoji": "🥟",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Empanadas_argentinas_de_carne_hechas_al_horno.jpg?width=940",
-      "imageCredit": "Horacio Cambeiro / Wikimedia Commons",
-      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Empanadas_argentinas_de_carne_hechas_al_horno.jpg",
-      "imageLicenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "image": "https://images.pexels.com/photos/9328424/pexels-photo-9328424.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Valeria Boltneva / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/food-on-white-ceramic-plate-9328424/",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
       "ingredients": [
         {
           "quantity": 300,
@@ -2529,10 +2529,10 @@ window.DANTAS_DATA = {
       "servings": 8,
       "servingsLabel": "1 assadeira de 30 × 20 cm (8 porções)",
       "emoji": "🍞",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Focaccia_Bread.jpg?width=940",
-      "imageCredit": "Kurtkaiser / Wikimedia Commons (CC0)",
-      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Focaccia_Bread.jpg",
-      "imageLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "image": "https://images.pexels.com/photos/30666809/pexels-photo-30666809/free-photo-of-close-up-of-freshly-baked-focaccia-bread-with-herbs.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Natalia Olivera / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/close-up-of-freshly-baked-focaccia-bread-with-herbs-30666809/",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
       "ingredients": [
         {
           "quantity": 450,
@@ -2607,10 +2607,10 @@ window.DANTAS_DATA = {
       "servings": 4,
       "servingsLabel": "4 porções",
       "emoji": "🍄",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mushroom_risotto_%283990739885%29.jpg?width=940",
-      "imageCredit": "Karen and Brad Emerson / Wikimedia Commons",
-      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:Mushroom_risotto_(3990739885).jpg",
-      "imageLicenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "image": "https://images.pexels.com/photos/6406460/pexels-photo-6406460.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Max Griss / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/photo-of-risotto-on-a-black-and-white-plate-6406460/",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
       "ingredients": [
         {
           "quantity": 300,
