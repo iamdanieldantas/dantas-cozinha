@@ -77,6 +77,16 @@ def run():
             desktop.goto(base + "#buscar", wait_until="domcontentloaded")
             desktop.locator("#unified-search").fill(example["title"].split()[0])
             assert desktop.locator("#unified-results .unified-result").count() >= 1
+            # Search must open the standalone lesson, not the former inline accordion.
+            desktop.locator('[data-search-kind="aulas"]').click()
+            desktop.locator("#unified-search").fill(techniques[0]["title"])
+            result = desktop.locator(f'[data-unified-open="{techniques[0]["id"]}"][data-unified-type="aula"]')
+            result.wait_for()
+            result.click()
+            desktop.locator("#school-lesson-detail h1").wait_for()
+            assert desktop.locator('[data-view="aula"]').is_visible()
+            assert desktop.locator("#school-lesson-detail h1").inner_text() == techniques[0]["title"]
+            assert desktop.evaluate("location.hash") == "#aula/" + techniques[0]["id"]
             desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
             assert desktop.locator("#school-progress-bar").get_attribute("aria-valuenow") is not None
             categories = list(dict.fromkeys(item["category"] for item in techniques))

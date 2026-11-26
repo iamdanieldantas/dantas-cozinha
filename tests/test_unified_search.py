@@ -13,7 +13,7 @@ class UnifiedSearchTests(unittest.TestCase):
 
     def test_search_ranking_and_deep_links(self):
         app=(ROOT/"assets/app.js").read_text(encoding="utf-8")
-        for marker in ('function normalizedSearch','function searchScore','function unifiedMatches','function renderUnifiedSearch','function openUnifiedResult','target.open=true','openRecipe(id)'):
+        for marker in ('function normalizedSearch','function searchScore','function unifiedMatches','function renderUnifiedSearch','function openUnifiedResult','function openSchoolLesson','function renderSchoolLesson',"location.hash='aula/'+encodeURIComponent(id)",'openRecipe(id)'):
             self.assertIn(marker,app)
         self.assertIn("'buscar'",app)
         self.assertIn("normalize('NFD')",app)
