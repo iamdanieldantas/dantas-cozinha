@@ -136,7 +136,7 @@ function renderSchoolFilters(){
  const all='<a href="#tecnicas/todas" class="school-back" data-school-category="todas">Ver todas as aulas →</a>';
  if(!library){
   const title=selectedSchoolCategory==='modulos'?'Resultados da busca':selectedSchoolCategory==='todas'?'Todas as aulas':selectedSchoolCategory;
-  root.innerHTML=`<div class="school-module-toolbar">${back}${selectedSchoolCategory==='todas'?'':all}</div><h2 class="school-module-heading" tabindex="-1">${esc(title)}</h2>`;
+  root.innerHTML=`<div class="school-module-toolbar">${back}${selectedSchoolCategory==='modulos'?all:''}</div><h2 class="school-module-heading" tabindex="-1">${esc(title)}</h2>`;
   return;
  }
  const cards=modules.map(({category,lessons})=>{
@@ -149,20 +149,21 @@ function renderTechniques(){
  const root=el('tech-grid');if(!root)return;
  const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
  const term=normalize(selectedSchoolSearch.trim());
+ const inModule=selectedSchoolCategory!=='modulos'&&selectedSchoolCategory!=='todas';
+ const continueLesson=el('school-next-lesson');if(continueLesson)continueLesson.hidden=inModule;
  const library=selectedSchoolCategory==='modulos'&&!term;
  const lessons=learningLessons().filter(t=>(selectedSchoolCategory==='todas'||selectedSchoolCategory==='modulos'||t.category===selectedSchoolCategory)&&(!term||normalize([t.title,t.summary,t.category,...(t.lesson||[]).flatMap(s=>[s.heading,s.body]),t.deepDive].join(' ')).includes(term)));
  if(library){root.innerHTML='';const count=el('school-count');if(count)count.textContent=`${schoolModules().length} módulos · ${lessons.length} aulas`;updateLearningProgress();renderSchoolFilters();return;}
  const count=el('school-count');if(count)count.textContent=`${lessons.length} ${lessons.length===1?'aula encontrada':'aulas encontradas'}`;
  updateLearningProgress();
  root.innerHTML=lessons.length?lessons.map((t,i)=>`<a class="school-lesson-link" href="#aula/${encodeURIComponent(t.id)}" data-school-lesson="${esc(t.id)}"><span class="school-lesson-index">${String(i+1).padStart(2,'0')}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p><small>${state.completedLessons.includes(t.id)?'✓ Concluída':(t.lesson||[]).length+' seções'}</small></div><span aria-hidden="true" class="school-lesson-arrow">→</span></a>`).join(''):'<div class="empty-state">Nenhuma aula encontrada. Tente outro termo ou categoria.</div>';
- root.insertAdjacentHTML('beforeend','<nav class="school-module-return" aria-label="Retorno à biblioteca"><a class="school-back" href="#tecnicas">← Todos os módulos</a></nav>');
+ if(!inModule)root.insertAdjacentHTML('beforeend','<nav class="school-module-return" aria-label="Retorno à biblioteca"><a class="school-back" href="#tecnicas">← Todos os módulos</a></nav>');
  renderSchoolFilters();
 }
 function schoolLessonNavigation(t,module,i,position){
  const prev=module[i-1],next=module[i+1];
  const route=schoolRoute(t.category);
- const items=module.map((lesson,j)=>`<li><a href="#aula/${encodeURIComponent(lesson.id)}"${j===i?' aria-current="page"':''}>${j+1}. ${esc(lesson.title)}${j===i?' (aula atual)':''}</a></li>`).join('');
- return `<div class="school-navigation" data-school-nav="${position}"><nav class="school-breadcrumb" aria-label="Caminho da aula — ${position==='top'?'início':'final'}"><a href="#tecnicas">Todos os módulos</a><span aria-hidden="true">/</span><a href="#${route}">${esc(t.category)}</a><span aria-hidden="true">/</span><span aria-current="page">${esc(t.title)}</span></nav><details class="school-nav-dropdown"><summary>Aulas deste módulo (${i+1} de ${module.length})</summary><ol>${items}</ol></details><nav class="school-nav-actions" aria-label="Navegação entre aulas — ${position==='top'?'início':'final'}"><a href="#${route}" data-school-parent>← Voltar às aulas do módulo</a><div class="school-nav-siblings">${prev?`<a href="#aula/${encodeURIComponent(prev.id)}" data-school-prev>← Aula anterior</a>`:'<span aria-disabled="true">← Aula anterior</span>'}${next?`<a href="#aula/${encodeURIComponent(next.id)}" data-school-next>Próxima aula →</a>`:'<span aria-disabled="true">Próxima aula →</span>'}</div></nav></div>`;
+ return `<div class="school-navigation" data-school-nav="${position}"><nav class="school-nav-actions" aria-label="Navegação entre aulas — ${position==='top'?'início':'final'}"><a href="#${route}" data-school-parent>← Voltar às aulas do módulo</a><div class="school-nav-siblings">${prev?`<a href="#aula/${encodeURIComponent(prev.id)}" data-school-prev>← Aula anterior</a>`:'<span aria-disabled="true">← Aula anterior</span>'}${next?`<a href="#aula/${encodeURIComponent(next.id)}" data-school-next>Próxima aula →</a>`:'<span aria-disabled="true">Próxima aula →</span>'}</div></nav></div>`;
 }
 function renderSchoolLesson(id){
  const root=el("school-lesson-detail"),t=learningLessons().find(x=>x.id===id);if(!root)return;
