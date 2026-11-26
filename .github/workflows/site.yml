@@ -76,13 +76,14 @@ jobs:
           # Reexecuções do mesmo workflow não podem reutilizar o nome do artefato.
           name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Aguardar disponibilidade do artefato na API
+        shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
           ARTIFACT_NAME: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
         run: |
           set -euo pipefail
           for attempt in {1..12}; do
-            if ids=$(gh api --paginate "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?per_page=100" --jq '.artifacts[] | select(.name == env.ARTIFACT_NAME and .expired == false) | .id'); then
+            if ids=$(gh api --paginate "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?per_page=100" | jq -r --arg name "$ARTIFACT_NAME" '.artifacts[] | select(.name == $name and .expired == false) | .id'); then
               if [[ -n "$ids" ]]; then
                 echo "Artefato $ARTIFACT_NAME disponível na API."
                 exit 0
@@ -93,6 +94,7 @@ jobs:
           done
           echo "::error::Artefato de Pages não disponível após as tentativas. Reexecute o job de publicação."
           exit 1
+      - name: Publicar no GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
