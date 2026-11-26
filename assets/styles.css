@@ -352,16 +352,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* A consistent lesson navigation at both ends of the reading page. */
 .school-navigation{display:grid;gap:12px;margin:0 0 24px;min-width:0}
-.school-navigation .school-breadcrumb{margin:0;gap:7px;overflow-wrap:anywhere}
-.school-navigation .school-breadcrumb span[aria-current]{color:var(--muted)}
-.school-navigation .school-nav-dropdown{border-block:1px solid var(--line);padding:10px 0}
-.school-nav-dropdown ol{margin:0;padding-left:0;list-style:none}
-.school-nav-dropdown li a{display:block;padding:9px 6px;color:var(--forest);overflow-wrap:anywhere;text-decoration:none}
-.school-nav-dropdown li a[aria-current]{font-weight:750;background:var(--surface-raised);border-left:3px solid var(--forest)}
 .school-navigation .school-nav-actions{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.85rem}
-.school-nav-actions a{color:var(--forest);font-weight:650;text-decoration:underline;text-underline-offset:4px;padding:8px 0}
-.school-nav-siblings{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
-.school-nav-siblings [aria-disabled]{color:var(--muted);font-size:.85rem;opacity:.65}
-.school-module-return{padding:20px 0}
+.school-module-toolbar .school-return-primary,.school-navigation .school-nav-actions .school-return-primary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid var(--forest);border-radius:10px;background:var(--forest);color:#fff;text-decoration:none;font-weight:750;line-height:1.35;text-align:center}
+.school-module-toolbar .school-return-primary:hover,.school-navigation .school-nav-actions .school-return-primary:hover{background:var(--forest-deep);border-color:var(--forest-deep)}
+.school-nav-siblings{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.school-navigation .school-nav-siblings>a,.school-navigation .school-nav-siblings>[aria-disabled]{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 12px;border:1px solid var(--forest);border-radius:10px;background:transparent;color:var(--forest);text-decoration:none;font-weight:650;line-height:1.35;text-align:center}
+.school-navigation .school-nav-siblings>a:hover{background:var(--surface-raised)}
+.school-navigation .school-nav-siblings>[aria-disabled]{border-color:var(--line);color:var(--muted);opacity:.65;font-weight:500}
+#school-next-lesson[hidden]{display:none!important}
 .school-reading-footer .school-navigation{margin-bottom:0}
-@media(max-width:550px){.school-navigation .school-nav-actions{align-items:flex-start;flex-direction:column}.school-nav-siblings{justify-content:space-between;width:100%;gap:8px}}
+@media(max-width:550px){.school-navigation .school-nav-actions{align-items:stretch;flex-direction:column}.school-nav-siblings{justify-content:space-between;width:100%;gap:8px}.school-navigation .school-nav-siblings>*{flex:1;min-width:0}.school-navigation .school-nav-actions .school-return-primary{width:100%}}
