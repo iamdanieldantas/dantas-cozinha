@@ -81,52 +81,73 @@ def run():
             assert desktop.locator("#school-progress-bar").get_attribute("aria-valuenow") is not None
             categories = list(dict.fromkeys(item["category"] for item in techniques))
             assert desktop.locator("#school-filters .school-module-card").count() == len(categories)
-            assert desktop.locator("#tech-grid details").count() == 0
+            assert desktop.locator("#tech-grid .school-lesson-link").count() == 0
+            covers = desktop.locator("#school-filters .school-module-card img").all()
+            assert len(covers) == len(categories)
+            for cover in covers:
+                cover.evaluate("img => img.loading = 'eager'")
+                cover.evaluate("img => img.decode()")
+                assert cover.evaluate("img => img.naturalWidth") > 0
             desktop.locator("#school-filters .school-module-card").first.click()
-            assert desktop.locator("#tech-grid details").count() == sum(
+            desktop.locator("#tech-grid .school-lesson-link").first.wait_for()
+            assert desktop.locator("#tech-grid .school-lesson-link").count() == sum(
+                item["category"] == categories[0] for item in techniques)
+            desktop.locator("#tech-grid .school-lesson-link").first.click()
+            desktop.locator("#school-lesson-detail h1").wait_for()
+            assert desktop.locator('[data-view="aula"]').is_visible()
+            assert desktop.locator("#school-lesson-detail h1").inner_text() == techniques[0]["title"]
+            assert desktop.locator("#school-lesson-detail .tech-lesson").count() >= 3
+            desktop.locator("[data-lesson-complete]").click()
+            assert desktop.locator("[data-lesson-complete]").get_attribute("aria-pressed") == "true"
+            desktop.reload(wait_until="domcontentloaded")
+            assert desktop.locator("[data-lesson-complete]").get_attribute("aria-pressed") == "true"
+            desktop.locator("[data-lesson-complete]").click()
+            desktop.go_back(wait_until="domcontentloaded")
+            desktop.locator("#tech-grid .school-lesson-link").first.wait_for()
+            assert desktop.locator("#tech-grid .school-lesson-link").count() == sum(
                 item["category"] == categories[0] for item in techniques)
             desktop.locator('[data-school-category="modulos"]').click()
-            assert desktop.locator("#school-filters .school-module-card").count() == len(categories)
+            desktop.locator("#school-filters .school-module-card").first.wait_for()
             desktop.locator("#school-search").fill(techniques[-1]["title"])
-            assert desktop.locator("#tech-grid details").count() >= 1
+            assert desktop.locator("#tech-grid .school-lesson-link").count() >= 1
             desktop.locator("#school-search").fill("")
             desktop.locator("#school-next-lesson").click()
-            assert desktop.locator("#tech-grid details[open]").count() >= 1
-            desktop.locator('[data-school-category="todas"]').click()
-            assert desktop.locator("#tech-grid details").count() == len(techniques)
-            first = desktop.locator("#tech-grid details").first
-            if first.get_attribute("open") is None:
-                first.locator("summary").click()
-            assert first.get_attribute("open") is not None
-            assert first.locator(".tech-lesson").count() >= 3
+            desktop.locator("#school-lesson-detail h1").wait_for()
+            desktop.goto(base + "#tecnicas/todas", wait_until="domcontentloaded")
+            desktop.locator("#tech-grid .school-lesson-link").first.wait_for()
+            assert desktop.locator("#tech-grid .school-lesson-link").count() == len(techniques)
             for topic in ("Antipasto, entrada, couvert e aperitivo",
                           "Contaminação direta dos alimentos",
                           "Contaminação cruzada: direta e indireta"):
-                # São conteúdos mínimos do acervo. Qualquer alteração exige revisão editorial.
-                lesson = desktop.locator("#tech-grid details").filter(
-                    has=desktop.locator("summary h3", has_text=topic)
-                )
+                lesson = desktop.locator("#tech-grid .school-lesson-link").filter(has_text=topic)
                 assert lesson.count() == 1, "Aula essencial ausente: " + topic
-                if lesson.get_attribute("open") is None:
-                    lesson.locator("summary").click()
-                assert lesson.get_attribute("open") is not None
+                lesson.click()
+                desktop.locator("#school-lesson-detail h1").wait_for()
+                assert desktop.locator("#school-lesson-detail h1").inner_text() == topic
+                desktop.goto(base + "#tecnicas/todas", wait_until="domcontentloaded")
+                desktop.locator("#tech-grid .school-lesson-link").first.wait_for()
 
+            desktop.goto(base + "#aula/escola-facas-cortes", wait_until="domcontentloaded")
             visual_lesson = desktop.locator("#escola-escola-facas-cortes")
-            visual_lesson.locator("summary").click()
+            visual_lesson.wait_for()
             for image in visual_lesson.locator("img[src^='assets/school-']").all():
-                image.scroll_into_view_if_needed()
                 image.evaluate("img => img.loading = 'eager'")
                 image.evaluate("img => img.decode()")
                 assert image.evaluate("img => img.naturalWidth") > 0
+            desktop.goto(base + "#aula/escola-molhos-derivados", wait_until="domcontentloaded")
             family_lesson = desktop.locator("#escola-escola-molhos-derivados")
-            family_lesson.locator("summary").click()
+            family_lesson.wait_for()
             family = family_lesson.locator("[data-school-family]").filter(has_text="Holandês")
             assert family.get_attribute("aria-expanded") == "false"
             family.click()
             assert family.get_attribute("aria-expanded") == "true"
             assert family_lesson.get_by_text("Béarnaise", exact=True).first.is_visible()
-            family.click()
+            other = family_lesson.locator("[data-school-family]").first
+            other.click()
+            assert other.get_attribute("aria-expanded") == "true"
             assert family.get_attribute("aria-expanded") == "false"
+            other.click()
+            assert other.get_attribute("aria-expanded") == "false"
 
             mobile = browser.new_page(
                 viewport={"width": 390, "height": 844}, device_scale_factor=1,
@@ -159,9 +180,15 @@ def run():
             mobile.goto(base + "#tecnicas", wait_until="domcontentloaded")
             assert mobile.locator("#school-filters .school-module-card").count() == len(categories)
             mobile.locator("#school-filters .school-module-card").first.click()
-            assert mobile.locator("#tech-grid details").count() == sum(
+            mobile.locator("#tech-grid .school-lesson-link").first.wait_for()
+            assert mobile.locator("#tech-grid .school-lesson-link").count() == sum(
                 item["category"] == categories[0] for item in techniques)
-            mobile.locator('[data-school-category="modulos"]').click()
+            mobile.locator("#tech-grid .school-lesson-link").first.click()
+            mobile.locator("#school-lesson-detail h1").wait_for()
+            assert mobile.locator('[data-view="aula"]').is_visible()
+            assert mobile.evaluate("document.documentElement.scrollWidth <= innerWidth")
+            mobile.locator(".school-breadcrumb a").first.click()
+            mobile.locator("#school-filters .school-module-card").first.wait_for()
             assert mobile.locator("#school-filters .school-module-card").count() == len(categories)
             assert not errors, "Erros JavaScript: " + repr(errors)
             print("SMOKE OK: desktop/mobile, curadoria, receitas completas, notas, Escola e oficinas")

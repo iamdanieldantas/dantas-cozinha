@@ -67,7 +67,6 @@ function renderUnifiedSearch(){
 }
 function openUnifiedResult(id,kind){
  if(kind==='receita'){openRecipe(id);return}
- location.hash='tecnicas';goto('tecnicas');
  openSchoolLesson(id);
 }
 function renderCuratedDiscoveries(){
@@ -84,6 +83,10 @@ root.innerHTML=discoveries.length?discoveries.map(item=>`<article class="curatio
 </article>`).join(''):'<p>Nenhuma seleção editorial nova nesta semana.</p>';
 }
 function learningLessons(){return [...(DATA.techniques||[])]}
+const SCHOOL_COVERS={"Organização e cultura gastronômica":"assets/school-cover-organizacao.svg","Utensílios e equipamentos":"assets/school-cover-utensilios.svg","Facas e técnicas de corte":"assets/school-cover-facas.svg","Técnicas de cocção":"assets/school-cover-coccao.svg","Fundos, molhos e bases culinárias":"assets/school-cover-molhos.svg","Ingredientes e sabores":"assets/school-cover-sabores.svg","Panificação e confeitaria":"assets/school-cover-confeitaria.svg","Boas práticas":"assets/school-cover-praticas.svg","Segurança alimentar":"assets/school-cover-seguranca.svg"};
+function schoolSlug(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}
+function schoolRoute(category){return category==='modulos'?'tecnicas':category==='todas'?'tecnicas/todas':'tecnicas/modulo/'+schoolSlug(category)}
+function schoolCover(category){return SCHOOL_COVERS[category]||'assets/school-cover-organizacao.svg'}
 function schoolModules(){
  const groups=new Map();
  for(const lesson of learningLessons()){
@@ -93,11 +96,8 @@ function schoolModules(){
  return [...groups].map(([category,lessons])=>({category,lessons}));
 }
 function openSchoolLesson(id){
- const lesson=learningLessons().find(t=>t.id===id);if(!lesson)return;
- selectedSchoolCategory=lesson.category;selectedSchoolSearch='';
- const input=el('school-search');if(input)input.value='';
- renderTechniques();
- const target=el('escola-'+id);if(target){target.open=true;target.querySelector('summary')?.focus({preventScroll:true});target.scrollIntoView({behavior:'smooth',block:'start'})}
+ if(!learningLessons().some(t=>t.id===id))return;
+ location.hash='aula/'+encodeURIComponent(id);
 }
 function updateLearningProgress(){
  const lessons=learningLessons(),done=lessons.filter(t=>state.completedLessons.includes(t.id)).length;
@@ -121,7 +121,7 @@ function schoolBlock(block){
  case 'steps':if(!items.length)return '';return `<div class="school-block school-steps">${title}${list('ol',items)}</div>`;
  case 'callout':return `<aside class="school-block school-callout" aria-label="${esc(block.title||'Dica')}"><span aria-hidden="true">✦</span><div>${title}<p>${esc(block.text||'')}</p></div></aside>`;
  case 'image':{const local=/^assets\/school-(?:utensilios|facas|cortes|coccao|fundos|roux|emulsao|manteiga)\.svg$/.test(block.src||'');const url=local?block.src:safeUrl(block.src||'');if(url==='#'||!block.alt)return '';return `<figure class="school-block school-image"><img src="${esc(url)}" alt="${esc(block.alt)}" loading="lazy" decoding="async" onerror="this.hidden=true"><figcaption>${esc(block.caption||'')}${block.credit?` · ${esc(block.credit)}`:''}</figcaption></figure>`;}
- case 'family':if(!items.length)return '';return `<section class="school-block school-family" aria-label="${esc(block.title||'Famílias')}">${title}<p>Toque em uma base para explorar seus derivados.</p><div class="school-family-root">Molhos-mãe</div><ul class="school-family-branches">${items.map(v=>`<li class="school-family-branch"><button type="button" class="school-family-toggle" data-school-family aria-expanded="false"><strong>${esc(v.term)}</strong><span>${esc(v.definition)}</span><span class="school-family-indicator" aria-hidden="true">+</span></button><ul class="school-family-children" hidden>${(v.children||[]).map(child=>`<li><strong>${esc(child.name)}</strong><span>${esc(child.detail)}</span></li>`).join('')}</ul></li>`).join('')}</ul></section>`;
+ case 'family':if(!items.length)return '';return `<section class="school-block school-family" aria-label="${esc(block.title||'Famílias')}">${title}<p>Toque em uma base para explorar seus derivados.</p><ul class="school-family-branches">${items.map(v=>`<li class="school-family-branch"><button type="button" class="school-family-toggle" data-school-family aria-expanded="false"><strong>${esc(v.term)}</strong><span>${esc(v.definition)}</span><span class="school-family-indicator" aria-hidden="true">+</span></button><ul class="school-family-children" hidden>${(v.children||[]).map(child=>`<li><strong>${esc(child.name)}</strong><span>${esc(child.detail)}</span></li>`).join('')}</ul></li>`).join('')}</ul></section>`;
  case 'workflow':{if(!items.length)return '';return `<section class="school-block school-flow" aria-label="${esc(block.title||'Fluxo de trabalho')}">${title}<ol>${items.map((v,i)=>`<li><span aria-hidden="true">${i+1}</span><strong>${esc(v)}</strong></li>`).join('')}</ol></section>`;}
  case 'orgchart':{if(!items.length)return '';return `<section class="school-block school-org" aria-label="${esc(block.title||'Hierarquia')}">${title}<ol>${items.map((v,i)=>`<li style="--level:${Math.min(i,4)}"><span aria-hidden="true">↳</span>${esc(v)}</li>`).join('')}</ol></section>`;}
  case 'glossary':if(!items.length)return '';return `<div class="school-block school-glossary">${title}<dl>${items.filter(v=>v&&typeof v==='object').map(v=>`<dt>${esc(v.term)}</dt><dd>${esc(v.definition)}</dd>`).join('')}</dl></div>`;
@@ -132,8 +132,8 @@ function schoolParagraphs(value){return String(value||'').split(/\n\s*\n/).filte
 function renderSchoolFilters(){
  const root=el('school-filters');if(!root)return;
  const modules=schoolModules(),term=selectedSchoolSearch.trim(),library=selectedSchoolCategory==='modulos'&&!term;
- const back='<button type="button" class="btn-outline" data-school-category="modulos">← Todos os módulos</button>';
- const all='<button type="button" class="btn-outline" data-school-category="todas">Ver todas as aulas</button>';
+ const back='<a href="#tecnicas" class="school-back" data-school-category="modulos">← Todos os módulos</a>';
+ const all='<a href="#tecnicas/todas" class="school-back" data-school-category="todas">Ver todas as aulas →</a>';
  if(!library){
   const title=selectedSchoolCategory==='modulos'?'Resultados da busca':selectedSchoolCategory==='todas'?'Todas as aulas':selectedSchoolCategory;
   root.innerHTML=`<div class="school-module-toolbar">${back}${selectedSchoolCategory==='todas'?'':all}</div><h2 class="school-module-heading" tabindex="-1">${esc(title)}</h2>`;
@@ -141,7 +141,7 @@ function renderSchoolFilters(){
  }
  const cards=modules.map(({category,lessons})=>{
   const done=lessons.filter(t=>state.completedLessons.includes(t.id)).length;
-  return `<button type="button" class="school-module-card" data-school-category="${esc(category)}"><strong>${esc(category)}</strong><span>${lessons.length} ${lessons.length===1?'aula':'aulas'} · ${done} concluída(s)</span><span class="school-module-open">Explorar módulo <span aria-hidden="true">→</span></span></button>`;
+  return `<a href="#${schoolRoute(category)}" class="school-module-card" data-school-category="${esc(category)}"><img src="${schoolCover(category)}" alt="" loading="lazy" decoding="async"><div class="school-module-copy"><strong>${esc(category)}</strong><span>${lessons.length} ${lessons.length===1?'aula':'aulas'} · ${done} concluída(s)</span><span class="school-module-open">Explorar módulo <span aria-hidden="true">→</span></span></div></a>`;
  }).join('');
  root.innerHTML=`<div class="school-module-toolbar"><h2 class="school-module-heading" tabindex="-1">Explore os módulos</h2>${all}</div><div class="school-module-grid">${cards}</div>`;
 }
@@ -154,18 +154,25 @@ function renderTechniques(){
  if(library){root.innerHTML='';const count=el('school-count');if(count)count.textContent=`${schoolModules().length} módulos · ${lessons.length} aulas`;updateLearningProgress();renderSchoolFilters();return;}
  const count=el('school-count');if(count)count.textContent=`${lessons.length} ${lessons.length===1?'aula encontrada':'aulas encontradas'}`;
  updateLearningProgress();
- root.innerHTML=lessons.length?lessons.map((t,i)=>`<details class="tech-card" id="escola-${esc(t.id)}">
- <summary><div class="tech-summary"><div class="tech-number">${String(i+1).padStart(2,'0')} <span class="tech-pill"> · ${esc(t.category)}</span></div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p><span class="school-card-meta">${(t.lesson||[]).length} seções · Exercício prático</span></div><span class="tech-toggle" aria-hidden="true"></span></summary>
- <div class="tech-detail"><button type="button" class="btn-outline school-complete" data-lesson-complete="${esc(t.id)}" aria-pressed="${state.completedLessons.includes(t.id)}">${state.completedLessons.includes(t.id)?'✓ Aula concluída':'Marcar aula como concluída'}</button><div class="school-intro"><span class="school-kicker">CADERNO DE APRENDIZADO</span><p>${esc(t.summary)}</p></div>
- <div class="tech-lesson"><h4>Por que importa</h4>${schoolParagraphs(t.why)}</div>
- <nav class="school-contents" aria-label="Sumário da aula"><strong>Nesta aula</strong><ol>${(t.lesson||[]).map((section,j)=>`<li><a href="#aula-${esc(t.id)}-${j}" data-school-anchor="aula-${esc(t.id)}-${j}">${esc(section.heading)}</a></li>`).join('')}</ol></nav>
- ${(t.lesson||[]).map((section,j)=>`<section class="tech-lesson" id="aula-${esc(t.id)}-${j}"><h4><span class="school-section-number">${String(j+1).padStart(2,'0')}</span> ${esc(section.heading)}</h4>${schoolParagraphs(section.body)}${(section.blocks||[]).map(schoolBlock).join('')}</section>`).join('')}
- ${(t.contentBlocks||[]).map(schoolBlock).join('')}
- ${t.deepDive?`<div class="tech-lesson school-deep-dive"><h4>Para aprofundar</h4>${schoolParagraphs(t.deepDive)}</div>`:''}
- <div class="tech-lesson tech-practice"><h4>✦ Experimente na cozinha</h4>${schoolParagraphs(t.practice)}</div>
- ${t.mistakes?.length?`<div class="tech-lesson school-mistakes"><h4>Erros comuns</h4><ul>${t.mistakes.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`:''}
- </div></details>`).join(''):'<div class="empty-state">Nenhuma aula encontrada. Tente outro termo ou categoria.</div>';
+ root.innerHTML=lessons.length?lessons.map((t,i)=>`<a class="school-lesson-link" href="#aula/${encodeURIComponent(t.id)}" data-school-lesson="${esc(t.id)}"><span class="school-lesson-index">${String(i+1).padStart(2,'0')}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p><small>${state.completedLessons.includes(t.id)?'✓ Concluída':(t.lesson||[]).length+' seções'}</small></div><span aria-hidden="true" class="school-lesson-arrow">→</span></a>`).join(''):'<div class="empty-state">Nenhuma aula encontrada. Tente outro termo ou categoria.</div>';
  renderSchoolFilters();
+}
+function renderSchoolLesson(id){
+ const root=el("school-lesson-detail"),t=learningLessons().find(x=>x.id===id);if(!root)return;
+ if(!t){root.innerHTML='<p>Aula não encontrada. <a href="#tecnicas">Voltar à Escola</a></p>';return;}
+ const module=learningLessons().filter(x=>x.category===t.category),i=module.findIndex(x=>x.id===id),prev=module[i-1],next=module[i+1];
+ root.innerHTML=`<article class="school-reading" id="escola-${esc(t.id)}"><nav class="school-breadcrumb" aria-label="Caminho da aula"><a href="#tecnicas">Escola</a><span aria-hidden="true">/</span><a href="#${schoolRoute(t.category)}">${esc(t.category)}</a></nav>
+ <header class="school-reading-header"><span class="school-kicker">AULA ${i+1} DE ${module.length}</span><h1 tabindex="-1">${esc(t.title)}</h1><p>${esc(t.summary)}</p></header>
+ <div class="tech-lesson school-why"><h2>Por que importa</h2>${schoolParagraphs(t.why)}</div>
+ <details class="school-contents"><summary>Nesta aula</summary><ol>${(t.lesson||[]).map((section,j)=>`<li><a href="#aula-${esc(t.id)}-${j}" data-school-anchor="aula-${esc(t.id)}-${j}">${esc(section.heading)}</a></li>`).join('')}</ol></details>
+ ${(t.lesson||[]).map((section,j)=>`<section class="tech-lesson" id="aula-${esc(t.id)}-${j}"><h2><span class="school-section-number">${String(j+1).padStart(2,'0')}</span> ${esc(section.heading)}</h2>${schoolParagraphs(section.body)}${(section.blocks||[]).map(schoolBlock).join('')}</section>`).join('')}
+ ${(t.contentBlocks||[]).map(schoolBlock).join('')}
+ ${t.deepDive?`<details class="tech-lesson school-deep-dive"><summary>Para aprofundar</summary>${schoolParagraphs(t.deepDive)}</details>`:''}
+ <div class="tech-lesson tech-practice"><h2>✦ Experimente na cozinha</h2>${schoolParagraphs(t.practice)}</div>
+ ${t.mistakes?.length?`<div class="tech-lesson school-mistakes"><h2>Erros comuns</h2><ul>${t.mistakes.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`:''}
+
+ ${t.sourceUrl?`<p class="school-source">Referência: <a href="${esc(safeUrl(t.sourceUrl))}" target="_blank" rel="noopener noreferrer">${esc(t.sourceName||t.sourceUrl)}</a></p>`:''}
+ <footer class="school-reading-footer"><button type="button" class="btn primary school-complete" data-lesson-complete="${esc(t.id)}" aria-pressed="${state.completedLessons.includes(t.id)}">${state.completedLessons.includes(t.id)?'✓ Aula concluída':'Marcar aula como concluída'}</button><nav aria-label="Navegação entre aulas">${prev?`<a href="#aula/${encodeURIComponent(prev.id)}">← Aula anterior</a>`:'<a href="#tecnicas">Todos os módulos</a>'}${next?`<a href="#aula/${encodeURIComponent(next.id)}">Próxima aula →</a>`:`<a href="#${schoolRoute(t.category)}">Voltar ao módulo →</a>`}</nav></footer></article>`;
 }
 function renderWorkshops(){
  const root=el('workshop-list');if(!root)return;
@@ -242,25 +249,32 @@ function setupLocalMetrics(){
  input.onchange=()=>{try{if(input.checked)localStorage.setItem(METRICS_CONSENT_KEY,'yes');else{localStorage.removeItem(METRICS_CONSENT_KEY);localStorage.removeItem(METRICS_KEY)}status.textContent=input.checked?'Métricas locais ativadas.':'Métricas desativadas e apagadas.'}catch{status.textContent='Não foi possível salvar a preferência.'}};
  clear.onclick=()=>{try{localStorage.removeItem(METRICS_KEY);status.textContent='Métricas apagadas.'}catch{status.textContent='Não foi possível apagar.'}};
 }
+let lastRoute=null;
 function goto(page){
+const route=page||'inicio';const changed=route!==lastRoute;lastRoute=route;
+const lessonId=page.startsWith('aula/')?page.slice(5):null;
+if(lessonId!==null)page='aula';
+if(page==='tecnicas'||page.startsWith('tecnicas/')){const sub=page.slice('tecnicas/'.length);selectedSchoolCategory=page==='tecnicas/todas'?'todas':schoolModules().find(m=>sub==='modulo/'+schoolSlug(m.category))?.category||'modulos';if(changed){selectedSchoolSearch='';if(el('school-search'))el('school-search').value=''}page='tecnicas'}
 if(page!=='receita'&&!page.startsWith('receita/'))stopCookingTimer();
 const recipeRoute=page.startsWith('receita/');
 const recipeId=recipeRoute?page.slice('receita/'.length):null;
 if(recipeRoute)ensureRecipePage();
 if(recipeRoute)page='receita';
-const available=['inicio','buscar','receitas','receita','tecnicas','workshops','videos','planejamento'];
+const available=['inicio','buscar','receitas','receita','tecnicas','aula','workshops','videos','planejamento'];
 if(!available.includes(page))page='inicio';
 document.querySelectorAll('[data-view]').forEach(v=>v.classList.toggle('active',v.dataset.view===page));
-document.querySelectorAll('[data-page]').forEach(v=>{const active=v.dataset.page===page||(page==='receita'&&v.dataset.page==='receitas');v.classList.toggle('active',active);if(active)v.setAttribute('aria-current','page');else v.removeAttribute('aria-current')});
+document.querySelectorAll('[data-page]').forEach(v=>{const active=v.dataset.page===page||(page==='receita'&&v.dataset.page==='receitas')||(page==='aula'&&v.dataset.page==='tecnicas');v.classList.toggle('active',active);if(active)v.setAttribute('aria-current','page');else v.removeAttribute('aria-current')});
 el('main-nav').classList.remove('open');el('mobile-toggle').setAttribute('aria-expanded','false');
 if(page==='receitas')renderRecipes();
 recordLocalMetric(page==='receita'?'recipe_views':page==='tecnicas'?'school_views':page==='buscar'?'search_views':'other_views');
 if(page==='buscar')renderUnifiedSearch();
-if(page==='tecnicas')renderSchoolFilters();
+if(page==='tecnicas')renderTechniques();
+if(page==='aula')renderSchoolLesson(lessonId);
 if(page==='receita')renderRecipePage(recipeId);
 if(page==='planejamento')renderPlanner();
 setPageMeta(page,page==='receita'?RECIPES.find(r=>r.id===recipeId):null);
-window.scrollTo(0,0)
+if(page==='aula'){const lesson=learningLessons().find(t=>t.id===lessonId);if(lesson)document.title=lesson.title+' • Escola Dantas'}
+if(changed){const view=document.querySelector('[data-view="'+page+'"]');if(view){view.classList.remove('page-enter');void view.offsetWidth;view.classList.add('page-enter')}window.scrollTo(0,0);if(page==='aula')el('school-lesson-detail')?.querySelector('h1')?.focus({preventScroll:true});}
 }
 function fav(id){if(!RECIPES.some(r=>r.id===id))return;if(isFav(id)){state.favorites=state.favorites.filter(x=>x!==id);toast('Removido dos favoritos.')}else{state.favorites.push(id);toast('Receita salva nos favoritos!')}saveState();renderRecipes();renderHome();if(modalRecipe?.id===id && el('recipe-detail-fav'))el('recipe-detail-fav').textContent=isFav(id)?'♥ Salvo':'♡ Salvar receita'}
 function qty(n){if(n==null)return '';return Number(n.toFixed(2)).toLocaleString('pt-BR',{maximumFractionDigits:2})}
@@ -367,8 +381,8 @@ function initEvents(){
  if(unifiedResults)unifiedResults.onclick=e=>{const b=e.target.closest('[data-unified-open]');if(b)openUnifiedResult(b.dataset.unifiedOpen,b.dataset.unifiedType)};
 window.addEventListener('hashchange',()=>goto(decodeURIComponent(location.hash.slice(1))));document.addEventListener('click',e=>{const go=e.target.closest('[data-goto]');if(go){location.hash=go.dataset.goto;goto(go.dataset.goto);return}const cat=e.target.closest('[data-category-go]');if(cat){selectedFilter=cat.dataset.categoryGo;location.hash='receitas';goto('receitas');return}const f=e.target.closest('[data-fav]');if(f){fav(f.dataset.fav);return}const add=e.target.closest('[data-plan-add]');if(add){quickAdd(add.dataset.planAdd);return}const recipe=e.target.closest('[data-recipe]');if(recipe){openRecipe(recipe.dataset.recipe);return}});
 const schoolSearch=el('school-search');if(schoolSearch)schoolSearch.oninput=e=>{selectedSchoolSearch=e.target.value;renderTechniques()};
-const schoolFilters=el('school-filters');if(schoolFilters)schoolFilters.onclick=e=>{const button=e.target.closest('[data-school-category]');if(button){selectedSchoolCategory=button.dataset.schoolCategory;selectedSchoolSearch='';const input=el('school-search');if(input)input.value='';renderTechniques();schoolFilters.querySelector('.school-module-heading')?.focus()}};
-const schoolGrid=el('tech-grid');if(schoolGrid)schoolGrid.onclick=e=>{const family=e.target.closest('[data-school-family]');if(family){const expanded=family.getAttribute('aria-expanded')==='true';family.setAttribute('aria-expanded',String(!expanded));family.nextElementSibling.hidden=expanded;return}const completed=e.target.closest('[data-lesson-complete]');if(completed){const id=completed.dataset.lessonComplete;state.completedLessons=state.completedLessons.includes(id)?state.completedLessons.filter(x=>x!==id):[...state.completedLessons,id];saveState();completed.setAttribute('aria-pressed',String(state.completedLessons.includes(id)));completed.textContent=state.completedLessons.includes(id)?'✓ Aula concluída':'Marcar aula como concluída';updateLearningProgress();renderSchoolFilters();return}const link=e.target.closest('[data-school-anchor]');if(link){e.preventDefault();el(link.dataset.schoolAnchor)?.scrollIntoView({behavior:'smooth',block:'start'})}};
+const schoolFilters=el('school-filters');if(schoolFilters)schoolFilters.onclick=e=>{const link=e.target.closest('[data-school-category]');if(link&&link.hash===location.hash){selectedSchoolSearch='';if(el('school-search'))el('school-search').value='';renderTechniques()}};
+const schoolGrid=el('school-lesson-detail');if(schoolGrid)schoolGrid.onclick=e=>{const family=e.target.closest('[data-school-family]');if(family){const expanded=family.getAttribute('aria-expanded')==='true';if(!expanded)schoolGrid.querySelectorAll('[data-school-family][aria-expanded="true"]').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.hidden=true});family.setAttribute('aria-expanded',String(!expanded));family.nextElementSibling.hidden=expanded;return}const completed=e.target.closest('[data-lesson-complete]');if(completed){const id=completed.dataset.lessonComplete;state.completedLessons=state.completedLessons.includes(id)?state.completedLessons.filter(x=>x!==id):[...state.completedLessons,id];saveState();completed.setAttribute('aria-pressed',String(state.completedLessons.includes(id)));completed.textContent=state.completedLessons.includes(id)?'✓ Aula concluída':'Marcar aula como concluída';updateLearningProgress();renderTechniques();return}const link=e.target.closest('[data-school-anchor]');if(link){e.preventDefault();el(link.dataset.schoolAnchor)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'})}};
 el('recipe-search').oninput=e=>{selectedSearch=e.target.value;renderRecipes()};el('recipe-filters').onclick=e=>{const chip=e.target.closest('[data-filter]');if(chip){selectedFilter=chip.dataset.filter;renderRecipes()}};
 el('fav-shortcut').onclick=()=>{selectedFilter='favoritas';selectedSearch='';el('recipe-search').value='';location.hash='receitas';goto('receitas')};el('footer-favorites').onclick=el('fav-shortcut').onclick;
 el('mobile-toggle').onclick=()=>{const n=el('main-nav');n.classList.toggle('open');el('mobile-toggle').setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')};
