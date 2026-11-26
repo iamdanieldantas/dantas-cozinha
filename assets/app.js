@@ -25,7 +25,7 @@ function renderRecipes(){
  document.querySelectorAll('#recipe-filters .chip').forEach(b=>b.classList.toggle('selected',b.dataset.filter===selectedFilter));updateFavCount()
 }
 let unifiedKind='todos';
-function normalizedSearch(value){return String(value||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('pt-BR').trim()}
+function normalizedSearch(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR').trim()}
 function searchScore(title,summary,details,words){
  const a=normalizedSearch(title),b=normalizedSearch(summary),c=normalizedSearch(details);
  if(!words.length)return 1;
@@ -40,7 +40,7 @@ function searchScore(title,summary,details,words){
  return score;
 }
 function unifiedMatches(query,kind='todos'){
- const words=normalizedSearch(query).split(/\\s+/).filter(Boolean);
+ const words=normalizedSearch(query).split(/\s+/).filter(Boolean);
  const results=[];
  if(kind!=='aulas')for(const r of RECIPES){
   const score=searchScore(r.title,r.description,(r.ingredients||[]).map(i=>typeof i==='string'?i:i.name).join(' '),words);
