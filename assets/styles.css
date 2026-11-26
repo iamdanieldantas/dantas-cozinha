@@ -278,3 +278,17 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .school-module-card>span{font-size:.86rem;color:var(--muted)}
 .school-module-card .school-module-open{color:var(--forest);font-weight:700;margin-top:auto}
 @media(max-width:660px){.school-module-grid{grid-template-columns:1fr;gap:12px}.school-module-card{min-height:112px;padding:17px}.school-module-toolbar{justify-content:flex-start}}
+
+/* Original school illustrations and interactive sauce families. */
+.school-image:has(img[src^="assets/school-"]) img{max-height:none;object-fit:contain;max-width:480px;margin:auto}
+.school-image img[hidden],.school-family-children[hidden]{display:none!important}
+.school-family-root{padding:10px;text-align:center;border-radius:10px;background:var(--forest);color:white;font-weight:750;margin:14px 0}
+.school-family .school-family-branches,.school-family .school-family-children{list-style:none;padding:0;margin:0}
+.school-family .school-family-branch{position:relative;margin:12px 0;padding-left:12px;border-left:2px solid #d5c8b4}
+.school-family-toggle{position:relative;width:100%;text-align:left;border:1px solid var(--line);border-radius:10px;background:#f8f3e9;padding:12px 34px 12px 12px;color:var(--forest);font:inherit;line-height:1.4}
+.school-family-toggle strong,.school-family-toggle>span:not(.school-family-indicator),.school-family-children strong,.school-family-children span{display:block;overflow-wrap:anywhere}
+.school-family-toggle>span:not(.school-family-indicator),.school-family-children span{font-size:12px;color:#615a50;margin-top:3px}
+.school-family-indicator{position:absolute;right:12px;top:12px;font-size:18px;line-height:1}
+.school-family-toggle[aria-expanded="true"] .school-family-indicator{transform:rotate(45deg)}
+.school-family .school-family-children{margin:10px 0 0 12px;padding-left:12px;border-left:2px solid #d5c8b4}
+.school-family-children li{background:#fffdf8;padding:9px 11px;border:1px solid var(--line);border-radius:9px}
