@@ -2898,7 +2898,7 @@ window.DANTAS_DATA = {
     {
       "id": "escola-brigada-pracas-funcionamento",
       "title": "Por dentro da cozinha profissional: cargos, praças e serviço",
-      "category": "Organização",
+      "category": "Organização e cultura gastronômica",
       "summary": "Entenda a brigada de cozinha, os cargos do chef ao commis, a praça quente e fria, o passe e o caminho de uma comanda.",
       "why": "Ajuda a compreender como funções, estações e comunicação permitem entregar pratos coordenados com qualidade e segurança.",
       "practice": "Desenhe as praças de um restaurante fictício e acompanhe uma comanda de entrada, principal e sobremesa, atribuindo responsáveis e ordem de saída.",
@@ -3005,7 +3005,7 @@ window.DANTAS_DATA = {
     {
       "id": "tec-1",
       "title": "Mise en place: cozinhar sem correria",
-      "category": "Organização",
+      "category": "Organização e cultura gastronômica",
       "summary": "Separe, meça e corte ingredientes antes de ligar o fogo. Leia a receita completa e deixe utensílios à mão.",
       "why": "Reduz esquecimentos e evita que alimentos queimem enquanto você procura o próximo ingrediente.",
       "practice": "Comece com três potinhos: aromáticos, ingredientes secos e finalização.",
@@ -3044,300 +3044,9 @@ window.DANTAS_DATA = {
       ]
     },
     {
-      "id": "tec-2",
-      "title": "Maillard: o segredo do dourado",
-      "category": "Ciência",
-      "summary": "A reação entre aminoácidos e açúcares favorece aromas quando a superfície está relativamente seca e quente.",
-      "why": "Panela muito cheia faz a temperatura cair e os alimentos soltarem água.",
-      "practice": "Seque cogumelos e carnes com papel-toalha e doure em pequenas levas.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "O que é a reação de Maillard",
-          "body": "O escurecimento que cria aromas de carne grelhada, pão tostado e cogumelos dourados envolve reações entre aminoácidos e açúcares. Ela é favorecida pela combinação de calor e superfície com pouca umidade; não é a mesma coisa que a caramelização do açúcar."
-        },
-        {
-          "heading": "Como alcançar uma boa crosta",
-          "body": "Seque a superfície do alimento, use frigideira aquecida e deixe espaço entre as porções. Não mova a carne a cada segundo: dê tempo para formar crosta antes de virar. Ajuste a intensidade do fogo conforme a espessura e evite carbonizar temperos."
-        },
-        {
-          "heading": "Onde aparece",
-          "body": "Hambúrguer, prime rib e cogumelos para risoto são ótimos exercícios. Observe que a água acumulada na frigideira produz vapor e atrasa o dourado."
-        }
-      ],
-      "mistakes": [
-        "Encher uma frigideira pequena com muitos ingredientes.",
-        "Virar a carne a cada poucos segundos sem formar crosta.",
-        "Confundir alimento muito escuro ou queimado com dourado bem desenvolvido."
-      ],
-      "deepDive": "A reação de Maillard é favorecida por superfície relativamente seca, calor e contato com a panela. Se houver excesso de alimento, a água liberada resfria a frigideira e a carne cozinha no vapor em vez de dourar. Seque a proteína, aqueça a panela e doure em lotes; observe a crosta sem confundir dourado com queimado.",
-      "contentBlocks": [
-        {
-          "type": "workflow",
-          "title": "Caminho para um bom dourado",
-          "items": [
-            "Seque a superfície do alimento",
-            "Aqueça a frigideira adequadamente",
-            "Evite sobrecarregar a panela",
-            "Observe a cor e ajuste o fogo"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tec-3",
-      "title": "Emulsão: molhos mais cremosos",
-      "category": "Técnicas",
-      "summary": "Emulsões dispersam gotículas de gordura em uma fase aquosa. Agitação e ingredientes emulsificantes ajudam a manter a mistura.",
-      "why": "Na massa, amido da água do cozimento facilita um molho brilhante.",
-      "practice": "Adicione um pouco de água da massa ao molho e mexa vigorosamente.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "O princípio da emulsão",
-          "body": "Óleo e água não se misturam espontaneamente por muito tempo. Quando a gordura é fragmentada em gotículas pequenas e estabilizada por ingredientes como gema ou mostarda, formamos uma emulsão. A maionese é um exemplo clássico."
-        },
-        {
-          "heading": "Maionese e molhos",
-          "body": "Para maionese, adicione o óleo lentamente sobre a fase aquosa enquanto bate. Se a mistura separar, comece outra emulsão com pequena quantidade de água ou mostarda e incorpore aos poucos o molho quebrado. Para preparos sem cocção, utilize ovos pasteurizados."
-        },
-        {
-          "heading": "Emulsão da massa",
-          "body": "Em uma carbonara ou molho de manteiga, um pouco de água do cozimento da massa ajuda a ligar gordura e líquido. Ajuste o calor: excesso de temperatura pode separar o molho ou coagular o ovo."
-        }
-      ],
-      "mistakes": [
-        "Acrescentar todo o óleo de uma vez em uma maionese iniciada à mão.",
-        "Aquecer demais um molho que leva gema.",
-        "Descartar toda a água do cozimento antes de ajustar a textura."
-      ],
-      "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas.",
-      "contentBlocks": [
-        {
-          "type": "steps",
-          "title": "Montando uma emulsão",
-          "items": [
-            "Comece pela fase aquosa e pelos ingredientes emulsificantes.",
-            "Adicione a gordura aos poucos, misturando continuamente.",
-            "Observe a textura e ajuste a consistência conforme a receita."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tec-4",
-      "title": "Como ajustar o sal sem errar",
-      "category": "Fundamentos",
-      "summary": "Tempere aos poucos, prove no fim e considere ingredientes já salgados, como queijo e caldo pronto.",
-      "why": "Sal realça sabores; adição excessiva é difícil de corrigir.",
-      "practice": "Reserve metade do sal previsto para o ajuste final.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "O sal tem camadas",
-          "body": "O sal intensifica a percepção de sabores e deve ser pensado ao longo do preparo. Alguns ingredientes já contêm bastante sódio — queijos curados, bacon, caldo pronto, azeitonas e carne-seca — e mudam a necessidade de tempero."
-        },
-        {
-          "heading": "Quando ajustar",
-          "body": "Em carnes, tempere segundo a técnica escolhida. Em molhos, experimente depois de reduzir, porque a evaporação concentra o sal. Para arroz e massa, siga uma proporção adequada, lembrando que o líquido de cozimento pode ser descartado."
-        },
-        {
-          "heading": "Como corrigir",
-          "body": "Se o prato ficou salgado, o caminho mais confiável é aumentar a porção de ingredientes sem sal ou adicionar líquido sem sal quando a receita permitir. Açúcar e batata crua não retiram magicamente o excesso."
-        }
-      ],
-      "mistakes": [
-        "Salgar de novo antes de provar um molho reduzido.",
-        "Esquecer o sal presente no queijo ou na conserva.",
-        "Tentar corrigir excesso de sal apenas com açúcar."
-      ],
-      "deepDive": "Tempere em camadas: um pouco no início e correção perto do final. Ingredientes como queijo curado, azeitona, shoyu e caldos concentrados já fornecem sal. Ao provar, considere também acidez e gordura, que alteram a percepção do tempero. Se exagerar, aumente o volume com ingredientes sem sal, quando a receita permitir.",
-      "contentBlocks": [
-        {
-          "type": "bullets",
-          "title": "Checklist para temperar",
-          "items": [
-            "Prove em etapas, quando for seguro fazê-lo.",
-            "Considere ingredientes já salgados, como queijos e caldos.",
-            "Ajuste pouco a pouco, em vez de corrigir tudo no final."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tec-5",
-      "title": "Fermento químico x bicarbonato",
-      "category": "Panificação",
-      "summary": "Fermento químico geralmente contém componentes ácidos e básicos. Bicarbonato funciona melhor quando há ingrediente ácido na receita.",
-      "why": "Trocar um pelo outro sem ajustar a fórmula pode mudar sabor, cor e crescimento.",
-      "practice": "Meça com colher nivelada e asse logo após finalizar massas com fermentação química.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "O que muda entre os dois",
-          "body": "Bicarbonato de sódio é uma base que reage com componentes ácidos, liberando gás carbônico. Já o fermento químico comercial costuma reunir bicarbonato e agentes ácidos, permitindo uma fermentação química mais previsível em bolos."
-        },
-        {
-          "heading": "O efeito na textura",
-          "body": "Além da expansão, o bicarbonato pode alterar a cor e o espalhamento de cookies. O fermento químico tende a contribuir para uma textura mais aerada em massas de bolo. A quantidade deve seguir a proporção da receita."
-        },
-        {
-          "heading": "Como usar",
-          "body": "Peneire com os secos, evite misturar excessivamente depois de hidratar e asse conforme o tempo de espera recomendado. Em biscoitos, repouso na geladeira pode controlar o formato."
-        }
-      ],
-      "mistakes": [
-        "Trocar fermento químico por bicarbonato na proporção de 1:1.",
-        "Usar bicarbonato em excesso, deixando gosto residual.",
-        "Abrir o forno repetidas vezes nos primeiros minutos de um bolo."
-      ],
-      "deepDive": "O bicarbonato precisa de um componente ácido para produzir gás com eficiência; o fermento químico já combina agentes que reagem com umidade e calor. Em bolos e cookies, a troca direta entre eles altera sabor, cor, crescimento e textura. Misture os agentes secos de forma homogênea e leve a massa ao forno conforme a receita.",
-      "contentBlocks": [
-        {
-          "type": "glossary",
-          "title": "Não são a mesma coisa",
-          "items": [
-            {
-              "term": "Bicarbonato",
-              "definition": "Precisa de condições adequadas, geralmente presença de acidez, para produzir gás na massa."
-            },
-            {
-              "term": "Fermento químico",
-              "definition": "Mistura formulada para liberar gás durante a preparação e o aquecimento, conforme o produto."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tec-6",
-      "title": "Manteiga noisette em casa",
-      "category": "Confeitaria",
-      "summary": "Aqueça manteiga em fogo médio: ela espuma, a água evapora e os sólidos do leite douram, criando aroma de avelã.",
-      "why": "Retire do fogo quando os sólidos ficarem dourados; eles podem queimar rapidamente.",
-      "practice": "Transfira imediatamente para um recipiente frio para interromper o cozimento.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "O que acontece na panela",
-          "body": "Ao aquecer manteiga, a água evapora, a espuma muda de aparência e os sólidos do leite começam a dourar no fundo. Esse processo produz aromas que lembram avelãs tostadas, especialmente úteis em cookies e molhos."
-        },
-        {
-          "heading": "Passo a passo seguro",
-          "body": "Use panela de fundo claro para enxergar a cor. Aqueça em fogo médio, mexendo ou girando a panela. Quando os sólidos passarem do amarelo para o dourado e o aroma ficar tostado, transfira imediatamente para recipiente resistente ao calor."
-        },
-        {
-          "heading": "Como usar depois",
-          "body": "Em massa de cookie, resfrie antes de incorporar ovos e considere a perda de água da manteiga, pois ela altera a hidratação. Em legumes e massas, use pequenas quantidades como finalização."
-        }
-      ],
-      "mistakes": [
-        "Deixar a manteiga na panela quente depois de atingir a cor desejada.",
-        "Usar panela muito escura sem conseguir perceber o ponto.",
-        "Adicionar ovos à manteiga excessivamente quente."
-      ],
-      "deepDive": "A manteiga passa por etapas: derrete, perde água e os sólidos do leite começam a dourar. Use panela clara e fogo médio-baixo para enxergar a cor e sentir o aroma de castanhas. Retire imediatamente do fogo ao atingir tom âmbar, pois o calor residual continua o cozimento. Se os sólidos ficarem pretos, o sabor pode ficar amargo.",
-      "contentBlocks": [
-        {
-          "type": "steps",
-          "title": "Observe as transformações",
-          "items": [
-            "Derreta a manteiga em uma panela de fundo claro.",
-            "Observe a espuma e os sólidos do leite mudarem de cor.",
-            "Retire do fogo ao atingir o aroma e a cor desejados, antes de queimar."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "tec-7",
-      "title": "Segurança com frango",
-      "category": "Boas práticas",
-      "summary": "Evite contaminação cruzada entre frango cru e alimentos prontos para consumo. Use utensílios separados ou lave-os bem.",
-      "why": "Temperatura interna mínima segura: 74 °C, medida com termômetro culinário.",
-      "practice": "Não lave o frango cru; higienize bancadas, tábuas e mãos após o manuseio.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "Atenção à temperatura",
-          "body": "Frango cru pode conter microrganismos nocivos. Cozinhe até atingir 74 °C no centro da parte mais espessa, medindo com termômetro culinário. A cor branca da carne, isoladamente, não garante segurança."
-        },
-        {
-          "heading": "Evite contaminação cruzada",
-          "body": "Não lave frango cru: os respingos podem espalhar microrganismos. Higienize mãos e utensílios depois do contato. Separe tábuas e facas usadas para carne crua daquelas que manipulam verduras e alimentos prontos."
-        },
-        {
-          "heading": "Armazenamento",
-          "body": "Mantenha frango cru refrigerado e descongele dentro da geladeira, protegido de outros alimentos. Refrigere sobras prontamente, de preferência em recipientes rasos, e reaqueça completamente."
-        }
-      ],
-      "mistakes": [
-        "Lavar o frango sob água corrente.",
-        "Usar a mesma tábua para frango cru e tomate da salada.",
-        "Avaliar o ponto seguro somente pela cor externa."
-      ],
-      "deepDive": "Evite lavar frango cru: respingos podem espalhar microrganismos. Separe tábuas e utensílios de alimentos prontos para consumo e higienize superfícies após o contato. Cozinhe até 74 °C no centro da parte mais espessa, medindo com termômetro culinário. Refrigere sobras prontamente em recipientes rasos.",
-      "contentBlocks": [
-        {
-          "type": "callout",
-          "title": "Segurança em primeiro lugar",
-          "text": "Evite contaminação cruzada, higienize utensílios e siga recomendações oficiais de cocção segura. Cor e aparência, isoladamente, não comprovam segurança."
-        }
-      ]
-    },
-    {
-      "id": "tec-8",
-      "title": "Três maneiras de engrossar molhos",
-      "category": "Técnicas",
-      "summary": "Redução evapora parte da água; roux cozinha gordura e farinha; amido disperso em água fria engrossa ao aquecer.",
-      "why": "Cada método altera sabor e textura de forma diferente.",
-      "practice": "Comece com pouco espessante e ajuste gradualmente.",
-      "createdAt": "2026-10-15",
-      "lesson": [
-        {
-          "heading": "Redução",
-          "body": "A redução concentra um molho pela evaporação da água, intensificando sabores e também o sal. Funciona bem em molhos de tomate e fundos de carne; mexa quando necessário para evitar que grudem."
-        },
-        {
-          "heading": "Roux",
-          "body": "Roux é a combinação de farinha e gordura aquecidas em proporções próximas. Cozinhe a farinha com manteiga por alguns instantes e incorpore leite ou caldo gradualmente para criar molho branco sem grumos."
-        },
-        {
-          "heading": "Amido em suspensão",
-          "body": "Amido de milho deve ser dissolvido primeiro em uma pequena porção de líquido frio. Depois, incorpore à preparação quente e cozinhe até engrossar. Adicione aos poucos para não deixar textura gelatinosa."
-        }
-      ],
-      "mistakes": [
-        "Adicionar amido seco diretamente ao líquido fervendo.",
-        "Não cozinhar a farinha do roux, deixando gosto de farinha crua.",
-        "Reduzir muito um molho já salgado."
-      ],
-      "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível.",
-      "contentBlocks": [
-        {
-          "type": "glossary",
-          "title": "Técnicas de espessamento",
-          "items": [
-            {
-              "term": "Redução",
-              "definition": "Evaporação de parte da água para concentrar o molho."
-            },
-            {
-              "term": "Roux",
-              "definition": "Mistura cozida de gordura e farinha usada como base para alguns molhos."
-            },
-            {
-              "term": "Amido",
-              "definition": "Ingrediente que engrossa ao gelatinizar nas condições adequadas."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "tec-servico-refeicao",
       "title": "Antipasto, entrada, couvert e aperitivo",
-      "category": "Cultura gastronômica",
+      "category": "Organização e cultura gastronômica",
       "summary": "Entenda a função de cada serviço no início de uma refeição e como eles se relacionam.",
       "why": "Ajuda a ler cardápios, planejar menus e organizar a sequência de um jantar.",
       "practice": "Monte um jantar: bebida aperitiva na recepção, pães à mesa e bruschetta como antipasto/entrada.",
@@ -3388,6 +3097,837 @@ window.DANTAS_DATA = {
               "definition": "Bebida ou pequena preparação associada ao momento anterior à refeição."
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "escola-utensilios-funcoes",
+      "title": "Utensílios: escolha a ferramenta pelo resultado",
+      "category": "Utensílios e equipamentos",
+      "summary": "O formato, o material e a superfície de contato determinam como uma ferramenta se comporta.",
+      "why": "Escolher o utensílio certo facilita controlar calor, textura e movimento.",
+      "practice": "Compare como uma espátula e um fouet movimentam água e uma mistura mais espessa; observe a diferença.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Panelas e frigideiras",
+          "body": "Uma frigideira larga favorece evaporação e douramento; uma panela alta reduz respingos e acomoda líquidos. O wok permite mover pequenas porções rapidamente, desde que o fogão entregue calor suficiente."
+        },
+        {
+          "heading": "Misturar, retirar e coar",
+          "body": "O fouet dispersa ingredientes e pode incorporar ar. A espátula raspa superfícies e dobra misturas; a escumadeira retira sólidos de um líquido e a concha transfere líquidos. Uma peneira separa partículas."
+        },
+        {
+          "heading": "Materiais",
+          "body": "Aço inoxidável tolera bem o douramento; ferro fundido retém calor; revestimentos antiaderentes favorecem alimentos delicados e pedem utensílios compatíveis. Alumínio conduz calor rapidamente. Espessura e construção também importam."
+        }
+      ],
+      "mistakes": [
+        "Lotar uma frigideira quando se deseja dourar.",
+        "Usar utensílios metálicos em revestimentos sensíveis.",
+        "Confundir peneirar com bater."
+      ],
+      "deepDive": "A geometria da panela muda a área de evaporação; por isso uma redução pode avançar mais depressa em recipiente largo. Referência temática: apostila Chef das Gulas, aula 1, p. 9.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-utensilios.svg",
+          "alt": "Frigideira, panela alta, fouet e escumadeira com suas funções",
+          "caption": "Compare a geometria e a função das ferramentas.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Fouet",
+              "definition": "Mistura, dispersa e incorpora ar."
+            },
+            {
+              "term": "Escumadeira",
+              "definition": "Retira sólidos deixando o líquido escorrer."
+            },
+            {
+              "term": "Frigideira",
+              "definition": "Ampla superfície para cocção direta."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escola-facas-cortes",
+      "title": "Facas e cortes: tamanho, forma e função",
+      "category": "Facas e técnicas de corte",
+      "summary": "Cortes uniformes tornam o cozimento mais previsível; cada lâmina favorece um movimento.",
+      "why": "A espessura afeta o tempo de cocção e a textura percebida.",
+      "practice": "Corte uma cenoura em bastões finos e cubos maiores; cozinhe separadamente e compare a textura.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Escolha da lâmina",
+          "body": "A faca do chef atende a maior parte do preparo; a pequena de legumes ajuda em tarefas de precisão, a serrilhada corta pães, a de filetar acompanha contornos e a de desossar trabalha perto dos ossos."
+        },
+        {
+          "heading": "Cortes clássicos",
+          "body": "Julienne é um bastão fino; brunoise é um cubo pequeno obtido cortando bastões transversalmente; chiffonade é feita em folhas enroladas e fatiadas. Macédoine usa cubos maiores. As dimensões variam conforme a escola."
+        },
+        {
+          "heading": "Uniformidade e ergonomia",
+          "body": "Apoie a tábua de modo firme. Forme uma face plana em vegetais arredondados; use a mão de apoio em garra, com as pontas dos dedos recolhidas. Trabalhe sem pressa, com faca adequada e afiada."
+        }
+      ],
+      "mistakes": [
+        "Cortar peças de espessuras muito diferentes para cozinhar juntas.",
+        "Usar uma faca grande para tarefas de precisão que exigem controle.",
+        "Deixar ingredientes arredondados rolarem."
+      ],
+      "deepDive": "A relação entre área e volume explica por que cortes menores aquecem e perdem umidade mais depressa. Referência temática: apostila Chef das Gulas, aula 1, pp. 10 e 13.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-facas.svg",
+          "alt": "Perfis esquemáticos das facas do chef, legumes, pão e filetar",
+          "caption": "O perfil da lâmina favorece diferentes movimentos.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "image",
+          "src": "assets/school-cortes.svg",
+          "alt": "Julienne em bastões, brunoise e macédoine em cubos, chiffonade em tiras",
+          "caption": "Formas esquemáticas, sem escala de tamanho.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Julienne",
+              "definition": "Bastões finos, aproximadamente 2–3 mm de seção."
+            },
+            {
+              "term": "Brunoise",
+              "definition": "Cubinhos finos, aproximadamente 2–3 mm."
+            },
+            {
+              "term": "Chiffonade",
+              "definition": "Tiras finas de folhas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escola-metodos-coccao",
+      "title": "Métodos de cocção: calor seco, úmido e combinado",
+      "category": "Técnicas de cocção",
+      "summary": "A escolha do método define como o calor chega ao alimento e como a água se comporta.",
+      "why": "Dourar, amaciar e preservar umidade exigem decisões diferentes.",
+      "practice": "Compare legumes assados e cozidos em água até textura semelhante; observe cor e sabor.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Calor seco",
+          "body": "Assar, grelhar e saltear favorecem evaporação e, quando a superfície aquece suficientemente, douramento. Saltear usa pouca gordura e contato rápido; fritar usa gordura como meio de transferência de calor."
+        },
+        {
+          "heading": "Calor úmido",
+          "body": "Ferver, cozinhar a vapor e escalfar usam água ou vapor. A fervura vigorosa pode danificar ingredientes delicados; o escalfamento utiliza líquido aquecido sem ebulição intensa."
+        },
+        {
+          "heading": "Métodos combinados",
+          "body": "No braseado, é comum dourar primeiro e depois cozinhar lentamente com líquido e recipiente tampado. O ambiente úmido e o tempo ajudam a transformar tecidos ricos em colágeno."
+        }
+      ],
+      "mistakes": [
+        "Confundir selar com impermeabilizar a carne.",
+        "Lotar a panela e acumular vapor quando se quer dourar.",
+        "Manter fervura intensa em alimentos delicados."
+      ],
+      "deepDive": "Calor superficial e temperatura interna são variáveis distintas. O ponto final depende também de tamanho, composição e calor residual.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-coccao.svg",
+          "alt": "Calor seco em frigideira, úmido em panela e combinado em panela tampada",
+          "caption": "A presença de água e vapor muda o resultado.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Saltear",
+              "definition": "Cocção rápida com pouca gordura."
+            },
+            {
+              "term": "Escalfar",
+              "definition": "Cocção suave em líquido."
+            },
+            {
+              "term": "Brasear",
+              "definition": "Cocção lenta em ambiente parcialmente líquido."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-2",
+      "title": "Maillard: o segredo do dourado",
+      "category": "Técnicas de cocção",
+      "summary": "A reação entre aminoácidos e açúcares favorece aromas quando a superfície está relativamente seca e quente.",
+      "why": "Panela muito cheia faz a temperatura cair e os alimentos soltarem água.",
+      "practice": "Seque cogumelos e carnes com papel-toalha e doure em pequenas levas.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que é a reação de Maillard",
+          "body": "O escurecimento que cria aromas de carne grelhada, pão tostado e cogumelos dourados envolve reações entre aminoácidos e açúcares. Ela é favorecida pela combinação de calor e superfície com pouca umidade; não é a mesma coisa que a caramelização do açúcar."
+        },
+        {
+          "heading": "Como alcançar uma boa crosta",
+          "body": "Seque a superfície do alimento, use frigideira aquecida e deixe espaço entre as porções. Não mova a carne a cada segundo: dê tempo para formar crosta antes de virar. Ajuste a intensidade do fogo conforme a espessura e evite carbonizar temperos."
+        },
+        {
+          "heading": "Onde aparece",
+          "body": "Hambúrguer, prime rib e cogumelos para risoto são ótimos exercícios. Observe que a água acumulada na frigideira produz vapor e atrasa o dourado."
+        }
+      ],
+      "mistakes": [
+        "Encher uma frigideira pequena com muitos ingredientes.",
+        "Virar a carne a cada poucos segundos sem formar crosta.",
+        "Confundir alimento muito escuro ou queimado com dourado bem desenvolvido."
+      ],
+      "deepDive": "A reação de Maillard é favorecida por superfície relativamente seca, calor e contato com a panela. Se houver excesso de alimento, a água liberada resfria a frigideira e a carne cozinha no vapor em vez de dourar. Seque a proteína, aqueça a panela e doure em lotes; observe a crosta sem confundir dourado com queimado.",
+      "contentBlocks": [
+        {
+          "type": "workflow",
+          "title": "Caminho para um bom dourado",
+          "items": [
+            "Seque a superfície do alimento",
+            "Aqueça a frigideira adequadamente",
+            "Evite sobrecarregar a panela",
+            "Observe a cor e ajuste o fogo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escola-fundos-caldos",
+      "title": "Fundos e caldos: construindo sabor antes do molho",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Fundos são líquidos de base obtidos pela extração de sabor de ingredientes em água.",
+      "why": "Um fundo bem construído dá sabor e corpo sem depender de excesso de sal.",
+      "practice": "Compare uma pequena porção de fundo sem sal com água em um preparo que absorva líquido.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Fundo claro e escuro",
+          "body": "No claro, os ingredientes geralmente não são previamente dourados. No escuro, ossos e vegetais são tostados para desenvolver aromas e cor. Fundo vegetal usa vegetais; fumet é um fundo de peixe aromático, usualmente de extração mais curta."
+        },
+        {
+          "heading": "Extração e corpo",
+          "body": "O calor transfere substâncias solúveis para a água; o colágeno dos tecidos conjuntivos pode se transformar em gelatina. Evite fervura turbulenta quando busca um líquido límpido e retire espuma conforme necessário."
+        },
+        {
+          "heading": "Fundo, caldo e redução",
+          "body": "O vocabulário varia, mas fundo costuma designar uma base pouco salgada, enquanto caldo pode estar pronto para servir. Reduzir concentra sabor e corpo; salgar antes de reduzir dificulta o ajuste posterior."
+        }
+      ],
+      "mistakes": [
+        "Escurecer ossos até ficarem queimados.",
+        "Salgá-lo intensamente antes da redução.",
+        "Usar fervura turbulenta quando se busca limpidez."
+      ],
+      "deepDive": "O fundo claro é a base típica do velouté; o fundo escuro participa da espagnole e da demi-glace clássica. A gelatina aumenta o corpo sem exigir farinha.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-fundos.svg",
+          "alt": "Fundos claro, escuro, vegetal e fumet de peixe",
+          "caption": "Cores ilustrativas: o tom real depende dos ingredientes e da extração.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Fundo claro",
+              "definition": "Base sem tostagem prévia."
+            },
+            {
+              "term": "Fundo escuro",
+              "definition": "Base com ingredientes dourados."
+            },
+            {
+              "term": "Fumet",
+              "definition": "Fundo aromático de peixe."
+            }
+          ]
+        }
+      ],
+      "sourceName": "Le Cordon Bleu",
+      "sourceUrl": "https://www.cordonbleu.edu/news/what-are-the-mother-sauces-of-french-cooking/en"
+    },
+    {
+      "id": "tec-8",
+      "title": "Três maneiras de engrossar molhos",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Redução evapora parte da água; roux cozinha gordura e farinha; amido disperso em água fria engrossa ao aquecer.",
+      "why": "Cada método altera sabor e textura de forma diferente.",
+      "practice": "Comece com pouco espessante e ajuste gradualmente.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Redução",
+          "body": "A redução concentra um molho pela evaporação da água, intensificando sabores e também o sal. Funciona bem em molhos de tomate e fundos de carne; mexa quando necessário para evitar que grudem."
+        },
+        {
+          "heading": "Roux",
+          "body": "Roux é a combinação de farinha e gordura aquecidas em proporções próximas. Cozinhe a farinha com manteiga por alguns instantes e incorpore leite ou caldo gradualmente para criar molho branco sem grumos."
+        },
+        {
+          "heading": "Amido em suspensão",
+          "body": "Amido de milho deve ser dissolvido primeiro em uma pequena porção de líquido frio. Depois, incorpore à preparação quente e cozinhe até engrossar. Adicione aos poucos para não deixar textura gelatinosa."
+        }
+      ],
+      "mistakes": [
+        "Adicionar amido seco diretamente ao líquido fervendo.",
+        "Não cozinhar a farinha do roux, deixando gosto de farinha crua.",
+        "Reduzir muito um molho já salgado."
+      ],
+      "deepDive": "Redução evapora água e concentra sabor, mas pode concentrar também sal. Roux combina gordura e farinha cozidas antes de receber líquido; misture bem para evitar grumos. Amido diluído em líquido frio engrossa rapidamente quando aquecido, mas excesso pode produzir textura gelatinosa. Escolha conforme sabor, transparência e tempo disponível.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Técnicas de espessamento",
+          "items": [
+            {
+              "term": "Redução",
+              "definition": "Evaporação de parte da água para concentrar o molho."
+            },
+            {
+              "term": "Roux",
+              "definition": "Mistura cozida de gordura e farinha usada como base para alguns molhos."
+            },
+            {
+              "term": "Amido",
+              "definition": "Ingrediente que engrossa ao gelatinizar nas condições adequadas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escola-roux-consistencia",
+      "title": "Roux: cor, amido e consistência",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "A farinha cozida em gordura é um recurso para espessar líquidos; a cor modifica sabor e capacidade de espessamento.",
+      "why": "Compreender a gelatinização permite escolher a textura em vez de depender apenas de tempo de fogo.",
+      "practice": "Compare pequenas porções de roux claro e mais tostado com igual quantidade de líquido e observe a viscosidade.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "O que muda com o aquecimento",
+          "body": "A gordura dispersa a farinha. Após adicionar líquido e aquecer, os grânulos de amido absorvem água e aumentam a viscosidade. A tostagem prolongada modifica o amido e costuma diminuir seu poder espessante."
+        },
+        {
+          "heading": "Três pontos de cor",
+          "body": "Roux branco conserva cor clara e é adequado ao béchamel; o louro acrescenta notas tostadas e costuma servir ao velouté; o marrom oferece sabor mais intenso e é associado à espagnole."
+        },
+        {
+          "heading": "Ajuste e recuperação",
+          "body": "Adicione líquido progressivamente enquanto mistura. Se surgirem grumos, retire do fogo, bata e, se necessário, passe por peneira. Um molho muito grosso pode ser diluído aos poucos com o líquido compatível."
+        }
+      ],
+      "mistakes": [
+        "Usar fogo alto a ponto de queimar a farinha.",
+        "Adicionar líquido sem misturar.",
+        "Avaliar viscosidade somente depois que o molho esfria."
+      ],
+      "deepDive": "Roux não é o próprio molho: a fase líquida escolhida define boa parte do perfil final. A redução e o amido em suspensão são alternativas, não sinônimos.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-roux.svg",
+          "alt": "Roux branco, louro e marrom, em tons progressivamente mais escuros",
+          "caption": "À medida que a tostagem avança, a capacidade de espessar geralmente diminui.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Roux branco",
+              "definition": "Sabor suave e cor clara."
+            },
+            {
+              "term": "Roux louro",
+              "definition": "Leve tostagem."
+            },
+            {
+              "term": "Roux marrom",
+              "definition": "Mais sabor tostado e menor capacidade de espessar."
+            }
+          ]
+        }
+      ],
+      "sourceName": "Le Cordon Bleu",
+      "sourceUrl": "https://www.cordonbleu.edu/news/what-are-the-mother-sauces-of-french-cooking/en"
+    },
+    {
+      "id": "tec-3",
+      "title": "Emulsão: molhos mais cremosos",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Emulsões dispersam gotículas de gordura em uma fase aquosa. Agitação e ingredientes emulsificantes ajudam a manter a mistura.",
+      "why": "Na massa, amido da água do cozimento facilita um molho brilhante.",
+      "practice": "Adicione um pouco de água da massa ao molho e mexa vigorosamente.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O princípio da emulsão",
+          "body": "Óleo e água não se misturam espontaneamente por muito tempo. Quando a gordura é fragmentada em gotículas pequenas e estabilizada por ingredientes como gema ou mostarda, formamos uma emulsão. A maionese é um exemplo clássico."
+        },
+        {
+          "heading": "Maionese e molhos",
+          "body": "Para maionese, adicione o óleo lentamente sobre a fase aquosa enquanto bate. Se a mistura separar, comece outra emulsão com pequena quantidade de água ou mostarda e incorpore aos poucos o molho quebrado. Para preparos sem cocção, utilize ovos pasteurizados."
+        },
+        {
+          "heading": "Emulsão da massa",
+          "body": "Em uma carbonara ou molho de manteiga, um pouco de água do cozimento da massa ajuda a ligar gordura e líquido. Ajuste o calor: excesso de temperatura pode separar o molho ou coagular o ovo."
+        }
+      ],
+      "mistakes": [
+        "Acrescentar todo o óleo de uma vez em uma maionese iniciada à mão.",
+        "Aquecer demais um molho que leva gema.",
+        "Descartar toda a água do cozimento antes de ajustar a textura."
+      ],
+      "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-emulsao.svg",
+          "alt": "Fases separadas, gotículas dispersas e emulsão estabilizada",
+          "caption": "Representação esquemática, não uma imagem microscópica.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "steps",
+          "title": "Montando uma emulsão",
+          "items": [
+            "Comece pela fase aquosa e pelos ingredientes emulsificantes.",
+            "Adicione a gordura aos poucos, misturando continuamente.",
+            "Observe a textura e ajuste a consistência conforme a receita."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escola-manteigas-molhos",
+      "title": "Manteiga clarificada e finalização de molhos",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Separar componentes ou emulsificar manteiga produz resultados distintos.",
+      "why": "Controlar água, gordura e temperatura ajuda a obter brilho e textura estável.",
+      "practice": "Compare a aparência de manteiga derretida e clarificada; observe a separação de fases.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Clarificar",
+          "body": "A manteiga contém gordura, água e sólidos lácteos. Ao derreter suavemente, é possível separar a gordura da fase aquosa e dos sólidos, sem dourá-los de propósito. A gordura obtida tolera temperaturas mais altas que manteiga comum."
+        },
+        {
+          "heading": "Noisette não é clarificada",
+          "body": "Na noisette, os sólidos lácteos permanecem e douram; isso gera aroma de castanhas. Na clarificação, o objetivo é removê-los. Ghee geralmente envolve aquecimento adicional e sabor próprio."
+        },
+        {
+          "heading": "Finalização e beurre blanc",
+          "body": "Montar um molho com manteiga fria fora do fogo pode criar uma textura brilhante. Beurre blanc é uma emulsão de manteiga em redução ácida de vinho e/ou vinagre, geralmente com chalota; creme é opcional em algumas versões, não obrigatório."
+        }
+      ],
+      "mistakes": [
+        "Confundir clarificação com douramento.",
+        "Deixar a emulsão ferver intensamente.",
+        "Acrescentar manteiga depressa sem observar a textura."
+      ],
+      "deepDive": "Molhos ricos em manteiga dependem do equilíbrio de fases. Pequenas adições e controle de calor ajudam a evitar a separação.",
+      "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-manteiga.svg",
+          "alt": "Manteiga comum, clarificada e noisette",
+          "caption": "Clarificar remove sólidos; na noisette, eles douram.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Clarificada",
+              "definition": "Gordura separada de água e sólidos."
+            },
+            {
+              "term": "Noisette",
+              "definition": "Manteiga com sólidos lácteos dourados."
+            },
+            {
+              "term": "Monter au beurre",
+              "definition": "Incorporar manteiga na finalização."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-6",
+      "title": "Manteiga noisette em casa",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Aqueça manteiga em fogo médio: ela espuma, a água evapora e os sólidos do leite douram, criando aroma de avelã.",
+      "why": "Retire do fogo quando os sólidos ficarem dourados; eles podem queimar rapidamente.",
+      "practice": "Transfira imediatamente para um recipiente frio para interromper o cozimento.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que acontece na panela",
+          "body": "Ao aquecer manteiga, a água evapora, a espuma muda de aparência e os sólidos do leite começam a dourar no fundo. Esse processo produz aromas que lembram avelãs tostadas, especialmente úteis em cookies e molhos."
+        },
+        {
+          "heading": "Passo a passo seguro",
+          "body": "Use panela de fundo claro para enxergar a cor. Aqueça em fogo médio, mexendo ou girando a panela. Quando os sólidos passarem do amarelo para o dourado e o aroma ficar tostado, transfira imediatamente para recipiente resistente ao calor."
+        },
+        {
+          "heading": "Como usar depois",
+          "body": "Em massa de cookie, resfrie antes de incorporar ovos e considere a perda de água da manteiga, pois ela altera a hidratação. Em legumes e massas, use pequenas quantidades como finalização."
+        }
+      ],
+      "mistakes": [
+        "Deixar a manteiga na panela quente depois de atingir a cor desejada.",
+        "Usar panela muito escura sem conseguir perceber o ponto.",
+        "Adicionar ovos à manteiga excessivamente quente."
+      ],
+      "deepDive": "A manteiga passa por etapas: derrete, perde água e os sólidos do leite começam a dourar. Use panela clara e fogo médio-baixo para enxergar a cor e sentir o aroma de castanhas. Retire imediatamente do fogo ao atingir tom âmbar, pois o calor residual continua o cozimento. Se os sólidos ficarem pretos, o sabor pode ficar amargo.",
+      "contentBlocks": [
+        {
+          "type": "steps",
+          "title": "Observe as transformações",
+          "items": [
+            "Derreta a manteiga em uma panela de fundo claro.",
+            "Observe a espuma e os sólidos do leite mudarem de cor.",
+            "Retire do fogo ao atingir o aroma e a cor desejados, antes de queimar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "escola-molhos-mae",
+      "title": "Os cinco molhos-mãe da cozinha francesa",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Uma classificação clássica conecta bases líquidas, técnicas de espessamento e emulsões.",
+      "why": "Conhecer as famílias ajuda a escolher o molho de acordo com o prato e a criar variações.",
+      "practice": "Escolha um prato do catálogo e justifique qual família de molho poderia acompanhá-lo.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Béchamel e velouté",
+          "body": "Béchamel combina leite e roux claro; velouté usa fundo claro no lugar do leite, com roux claro ou louro. O primeiro tem perfil lácteo; o segundo herda o sabor do fundo."
+        },
+        {
+          "heading": "Espagnole e tomate",
+          "body": "Espagnole é um molho escuro feito com fundo escuro, roux marrom e aromáticos, tradicionalmente com tomate. O molho de tomate pode ganhar corpo pela redução; versões clássicas podem empregar roux e fundo."
+        },
+        {
+          "heading": "Holandês",
+          "body": "O holandês pertence às emulsões quentes de gemas e manteiga com acidez. Não precisa de farinha para engrossar. A agitação, a adição gradual da gordura e o calor moderado são decisivos."
+        }
+      ],
+      "mistakes": [
+        "Classificar holandês como molho à base de roux.",
+        "Trocar fundo por leite sem considerar a mudança de perfil.",
+        "Tratar a classificação clássica como lista de todos os molhos existentes."
+      ],
+      "deepDive": "O sistema de cinco famílias é um mapa de estudo, não uma regra universal. Há molhos frios, reduções e outras tradições que não precisam derivar dessas cinco bases.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Béchamel",
+              "definition": "Leite + roux."
+            },
+            {
+              "term": "Velouté",
+              "definition": "Fundo claro + roux."
+            },
+            {
+              "term": "Espagnole",
+              "definition": "Fundo escuro + roux marrom."
+            },
+            {
+              "term": "Tomate",
+              "definition": "Tomate e concentração de sabor."
+            },
+            {
+              "term": "Holandês",
+              "definition": "Emulsão quente de gema e manteiga."
+            }
+          ]
+        }
+      ],
+      "sourceName": "Le Cordon Bleu",
+      "sourceUrl": "https://www.cordonbleu.edu/news/what-are-the-mother-sauces-of-french-cooking/en"
+    },
+    {
+      "id": "escola-molhos-derivados",
+      "title": "Molhos derivados: transforme uma base em várias",
+      "category": "Fundos, molhos e bases culinárias",
+      "summary": "Os derivados preservam princípios da base e modificam sabor, textura ou aplicação.",
+      "why": "Com um mapa de relações fica mais fácil improvisar e diagnosticar problemas.",
+      "practice": "Escolha uma base e descreva duas variações e os pratos em que elas fariam sentido.",
+      "createdAt": "2026-11-26",
+      "lesson": [
+        {
+          "heading": "Da família do béchamel e do velouté",
+          "body": "Mornay é um béchamel enriquecido com queijo, frequentemente gruyère e parmesão. Soubise incorpora cebola. Suprême parte de velouté de aves enriquecido com creme."
+        },
+        {
+          "heading": "Da família do holandês",
+          "body": "Béarnaise usa a mesma lógica de emulsão, mas a fase ácida é uma redução aromática de vinagre, chalota e estragão. Mousseline recebe creme batido. São preparações delicadas: calor excessivo pode quebrar a emulsão."
+        },
+        {
+          "heading": "Fundos escuros e tomate",
+          "body": "Na tradição clássica, demi-glace resulta de espagnole combinada com fundo escuro e reduzida. Versões modernas podem partir diretamente de fundos concentrados. Molhos de tomate também podem variar por aromáticos e ingredientes complementares."
+        }
+      ],
+      "mistakes": [
+        "Confundir Mornay com béarnaise.",
+        "Adicionar queijo em calor excessivo e prejudicar a textura.",
+        "Reduzir molhos já muito salgados."
+      ],
+      "deepDive": "As famílias descrevem relações técnicas e não exigem que todo derivado seja feito literalmente a partir de uma panela de molho-mãe pronto.",
+      "contentBlocks": [
+        {
+          "type": "family",
+          "title": "Árvore dos molhos clássicos",
+          "items": [
+            {
+              "term": "Béchamel",
+              "definition": "Leite + roux claro",
+              "children": [
+                {
+                  "name": "Mornay",
+                  "detail": "Queijo; massas e gratinados."
+                },
+                {
+                  "name": "Soubise",
+                  "detail": "Cebola; legumes e carnes."
+                }
+              ]
+            },
+            {
+              "term": "Velouté",
+              "definition": "Fundo claro + roux",
+              "children": [
+                {
+                  "name": "Suprême",
+                  "detail": "Velouté de aves enriquecido com creme."
+                },
+                {
+                  "name": "Allemande",
+                  "detail": "Velouté de vitela ligado com gemas e creme."
+                }
+              ]
+            },
+            {
+              "term": "Espagnole",
+              "definition": "Fundo escuro + roux marrom + aromáticos",
+              "children": [
+                {
+                  "name": "Demi-glace",
+                  "detail": "Espagnole e fundo escuro reduzidos, na versão clássica."
+                }
+              ]
+            },
+            {
+              "term": "Holandês",
+              "definition": "Emulsão quente de gemas e manteiga",
+              "children": [
+                {
+                  "name": "Béarnaise",
+                  "detail": "Redução ácida aromática com estragão; clássico com carnes."
+                },
+                {
+                  "name": "Mousseline",
+                  "detail": "Creme batido incorporado; peixes e vegetais."
+                }
+              ]
+            },
+            {
+              "term": "Tomate",
+              "definition": "Base de tomate; versões variam",
+              "children": [
+                {
+                  "name": "Provençale",
+                  "detail": "Variação aromática com alho e ervas, conforme a tradição."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "glossary",
+          "title": "Conceitos essenciais",
+          "items": [
+            {
+              "term": "Béchamel → Mornay",
+              "definition": "Enriquecimento com queijo."
+            },
+            {
+              "term": "Velouté de aves → Suprême",
+              "definition": "Enriquecimento com creme."
+            },
+            {
+              "term": "Holandês → Béarnaise",
+              "definition": "Redução aromática e estragão."
+            },
+            {
+              "term": "Holandês → Mousseline",
+              "definition": "Creme batido."
+            },
+            {
+              "term": "Espagnole + fundo escuro → Demi-glace",
+              "definition": "Redução clássica."
+            }
+          ]
+        }
+      ],
+      "sourceName": "Le Cordon Bleu",
+      "sourceUrl": "https://www.cordonbleu.edu/news/what-are-the-mother-sauces-of-french-cooking/en"
+    },
+    {
+      "id": "tec-4",
+      "title": "Como ajustar o sal sem errar",
+      "category": "Ingredientes e sabores",
+      "summary": "Tempere aos poucos, prove no fim e considere ingredientes já salgados, como queijo e caldo pronto.",
+      "why": "Sal realça sabores; adição excessiva é difícil de corrigir.",
+      "practice": "Reserve metade do sal previsto para o ajuste final.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O sal tem camadas",
+          "body": "O sal intensifica a percepção de sabores e deve ser pensado ao longo do preparo. Alguns ingredientes já contêm bastante sódio — queijos curados, bacon, caldo pronto, azeitonas e carne-seca — e mudam a necessidade de tempero."
+        },
+        {
+          "heading": "Quando ajustar",
+          "body": "Em carnes, tempere segundo a técnica escolhida. Em molhos, experimente depois de reduzir, porque a evaporação concentra o sal. Para arroz e massa, siga uma proporção adequada, lembrando que o líquido de cozimento pode ser descartado."
+        },
+        {
+          "heading": "Como corrigir",
+          "body": "Se o prato ficou salgado, o caminho mais confiável é aumentar a porção de ingredientes sem sal ou adicionar líquido sem sal quando a receita permitir. Açúcar e batata crua não retiram magicamente o excesso."
+        }
+      ],
+      "mistakes": [
+        "Salgar de novo antes de provar um molho reduzido.",
+        "Esquecer o sal presente no queijo ou na conserva.",
+        "Tentar corrigir excesso de sal apenas com açúcar."
+      ],
+      "deepDive": "Tempere em camadas: um pouco no início e correção perto do final. Ingredientes como queijo curado, azeitona, shoyu e caldos concentrados já fornecem sal. Ao provar, considere também acidez e gordura, que alteram a percepção do tempero. Se exagerar, aumente o volume com ingredientes sem sal, quando a receita permitir.",
+      "contentBlocks": [
+        {
+          "type": "bullets",
+          "title": "Checklist para temperar",
+          "items": [
+            "Prove em etapas, quando for seguro fazê-lo.",
+            "Considere ingredientes já salgados, como queijos e caldos.",
+            "Ajuste pouco a pouco, em vez de corrigir tudo no final."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-5",
+      "title": "Fermento químico x bicarbonato",
+      "category": "Panificação e confeitaria",
+      "summary": "Fermento químico geralmente contém componentes ácidos e básicos. Bicarbonato funciona melhor quando há ingrediente ácido na receita.",
+      "why": "Trocar um pelo outro sem ajustar a fórmula pode mudar sabor, cor e crescimento.",
+      "practice": "Meça com colher nivelada e asse logo após finalizar massas com fermentação química.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "O que muda entre os dois",
+          "body": "Bicarbonato de sódio é uma base que reage com componentes ácidos, liberando gás carbônico. Já o fermento químico comercial costuma reunir bicarbonato e agentes ácidos, permitindo uma fermentação química mais previsível em bolos."
+        },
+        {
+          "heading": "O efeito na textura",
+          "body": "Além da expansão, o bicarbonato pode alterar a cor e o espalhamento de cookies. O fermento químico tende a contribuir para uma textura mais aerada em massas de bolo. A quantidade deve seguir a proporção da receita."
+        },
+        {
+          "heading": "Como usar",
+          "body": "Peneire com os secos, evite misturar excessivamente depois de hidratar e asse conforme o tempo de espera recomendado. Em biscoitos, repouso na geladeira pode controlar o formato."
+        }
+      ],
+      "mistakes": [
+        "Trocar fermento químico por bicarbonato na proporção de 1:1.",
+        "Usar bicarbonato em excesso, deixando gosto residual.",
+        "Abrir o forno repetidas vezes nos primeiros minutos de um bolo."
+      ],
+      "deepDive": "O bicarbonato precisa de um componente ácido para produzir gás com eficiência; o fermento químico já combina agentes que reagem com umidade e calor. Em bolos e cookies, a troca direta entre eles altera sabor, cor, crescimento e textura. Misture os agentes secos de forma homogênea e leve a massa ao forno conforme a receita.",
+      "contentBlocks": [
+        {
+          "type": "glossary",
+          "title": "Não são a mesma coisa",
+          "items": [
+            {
+              "term": "Bicarbonato",
+              "definition": "Precisa de condições adequadas, geralmente presença de acidez, para produzir gás na massa."
+            },
+            {
+              "term": "Fermento químico",
+              "definition": "Mistura formulada para liberar gás durante a preparação e o aquecimento, conforme o produto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tec-7",
+      "title": "Segurança com frango",
+      "category": "Boas práticas",
+      "summary": "Evite contaminação cruzada entre frango cru e alimentos prontos para consumo. Use utensílios separados ou lave-os bem.",
+      "why": "Temperatura interna mínima segura: 74 °C, medida com termômetro culinário.",
+      "practice": "Não lave o frango cru; higienize bancadas, tábuas e mãos após o manuseio.",
+      "createdAt": "2026-10-15",
+      "lesson": [
+        {
+          "heading": "Atenção à temperatura",
+          "body": "Frango cru pode conter microrganismos nocivos. Cozinhe até atingir 74 °C no centro da parte mais espessa, medindo com termômetro culinário. A cor branca da carne, isoladamente, não garante segurança."
+        },
+        {
+          "heading": "Evite contaminação cruzada",
+          "body": "Não lave frango cru: os respingos podem espalhar microrganismos. Higienize mãos e utensílios depois do contato. Separe tábuas e facas usadas para carne crua daquelas que manipulam verduras e alimentos prontos."
+        },
+        {
+          "heading": "Armazenamento",
+          "body": "Mantenha frango cru refrigerado e descongele dentro da geladeira, protegido de outros alimentos. Refrigere sobras prontamente, de preferência em recipientes rasos, e reaqueça completamente."
+        }
+      ],
+      "mistakes": [
+        "Lavar o frango sob água corrente.",
+        "Usar a mesma tábua para frango cru e tomate da salada.",
+        "Avaliar o ponto seguro somente pela cor externa."
+      ],
+      "deepDive": "Evite lavar frango cru: respingos podem espalhar microrganismos. Separe tábuas e utensílios de alimentos prontos para consumo e higienize superfícies após o contato. Cozinhe até 74 °C no centro da parte mais espessa, medindo com termômetro culinário. Refrigere sobras prontamente em recipientes rasos.",
+      "contentBlocks": [
+        {
+          "type": "callout",
+          "title": "Segurança em primeiro lugar",
+          "text": "Evite contaminação cruzada, higienize utensílios e siga recomendações oficiais de cocção segura. Cor e aparência, isoladamente, não comprovam segurança."
         }
       ]
     },

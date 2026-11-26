@@ -3,7 +3,7 @@ const DATA=window.DANTAS_DATA||{recipes:[],techniques:[],workshops:[],videos:[]}
 const RECIPES=[...(DATA.recipes||[])].sort((a,b)=>(b.createdAt||'').localeCompare(a.createdAt||''));
 const STORAGE_KEY='dantas-cozinha-v1';
 const cleanState=()=>({favorites:[],notes:{},planner:{},shoppingChecked:{},completedLessons:[]});
-let state=readState(),selectedFilter='todas',selectedSearch='',selectedSchoolCategory='todas',selectedSchoolSearch='',modalRecipe=null,modalServings=1;
+let state=readState(),selectedFilter='todas',selectedSearch='',selectedSchoolCategory='modulos',selectedSchoolSearch='',modalRecipe=null,modalServings=1;
 function readState(){try{const x=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');return x&&typeof x==='object'?{...cleanState(),...x,favorites:Array.isArray(x.favorites)?x.favorites:[],notes:x.notes||{},planner:x.planner||{},shoppingChecked:x.shoppingChecked||{},completedLessons:Array.isArray(x.completedLessons)?x.completedLessons:[]}:cleanState()}catch{return cleanState()}}
 function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch{toast('Não foi possível salvar neste navegador.')}}
 function el(id){return document.getElementById(id)}
@@ -25,7 +25,7 @@ function renderRecipes(){
  document.querySelectorAll('#recipe-filters .chip').forEach(b=>b.classList.toggle('selected',b.dataset.filter===selectedFilter));updateFavCount()
 }
 let unifiedKind='todos';
-function normalizedSearch(value){return String(value||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('pt-BR').trim()}
+function normalizedSearch(value){return String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR').trim()}
 function searchScore(title,summary,details,words){
  const a=normalizedSearch(title),b=normalizedSearch(summary),c=normalizedSearch(details);
  if(!words.length)return 1;
@@ -40,7 +40,7 @@ function searchScore(title,summary,details,words){
  return score;
 }
 function unifiedMatches(query,kind='todos'){
- const words=normalizedSearch(query).split(/\\s+/).filter(Boolean);
+ const words=normalizedSearch(query).split(/\s+/).filter(Boolean);
  const results=[];
  if(kind!=='aulas')for(const r of RECIPES){
   const score=searchScore(r.title,r.description,(r.ingredients||[]).map(i=>typeof i==='string'?i:i.name).join(' '),words);
@@ -67,10 +67,8 @@ function renderUnifiedSearch(){
 }
 function openUnifiedResult(id,kind){
  if(kind==='receita'){openRecipe(id);return}
- selectedSchoolCategory='todas';selectedSchoolSearch='';
- const schoolInput=el('school-search');if(schoolInput)schoolInput.value='';
  location.hash='tecnicas';goto('tecnicas');
- const target=el('escola-'+id);if(target){target.open=true;target.scrollIntoView({behavior:'smooth',block:'start'})}
+ openSchoolLesson(id);
 }
 function renderCuratedDiscoveries(){
 const root=el('curation-list');if(!root)return;
@@ -85,7 +83,22 @@ root.innerHTML=discoveries.length?discoveries.map(item=>`<article class="curatio
 <small>Ficha editorial, sem reprodução do preparo ou alegação de teste pelo portal.</small>
 </article>`).join(''):'<p>Nenhuma seleção editorial nova nesta semana.</p>';
 }
-function learningLessons(){return [...(DATA.techniques||[])].sort((a,b)=>{const order=['Fundamentos','Organização','Segurança','Técnicas','Ciência','Prática'];const ai=order.indexOf(a.category),bi=order.indexOf(b.category);return (ai<0?99:ai)-(bi<0?99:bi)||a.title.localeCompare(b.title,'pt-BR')})}
+function learningLessons(){return [...(DATA.techniques||[])]}
+function schoolModules(){
+ const groups=new Map();
+ for(const lesson of learningLessons()){
+  if(!groups.has(lesson.category))groups.set(lesson.category,[]);
+  groups.get(lesson.category).push(lesson);
+ }
+ return [...groups].map(([category,lessons])=>({category,lessons}));
+}
+function openSchoolLesson(id){
+ const lesson=learningLessons().find(t=>t.id===id);if(!lesson)return;
+ selectedSchoolCategory=lesson.category;selectedSchoolSearch='';
+ const input=el('school-search');if(input)input.value='';
+ renderTechniques();
+ const target=el('escola-'+id);if(target){target.open=true;target.querySelector('summary')?.focus({preventScroll:true});target.scrollIntoView({behavior:'smooth',block:'start'})}
+}
 function updateLearningProgress(){
  const lessons=learningLessons(),done=lessons.filter(t=>state.completedLessons.includes(t.id)).length;
  const percent=lessons.length?Math.round(100*done/lessons.length):0;
@@ -107,7 +120,8 @@ function schoolBlock(block){
  case 'bullets':if(!items.length)return '';return `<div class="school-block school-list">${title}${list('ul',items)}</div>`;
  case 'steps':if(!items.length)return '';return `<div class="school-block school-steps">${title}${list('ol',items)}</div>`;
  case 'callout':return `<aside class="school-block school-callout" aria-label="${esc(block.title||'Dica')}"><span aria-hidden="true">✦</span><div>${title}<p>${esc(block.text||'')}</p></div></aside>`;
- case 'image':{const url=safeUrl(block.src||'');if(url==='#'||!block.alt)return '';return `<figure class="school-block school-image"><img src="${esc(url)}" alt="${esc(block.alt)}" loading="lazy" decoding="async"><figcaption>${esc(block.caption||'')}${block.credit?` · ${esc(block.credit)}`:''}</figcaption></figure>`;}
+ case 'image':{const local=/^assets\/school-(?:utensilios|facas|cortes|coccao|fundos|roux|emulsao|manteiga)\.svg$/.test(block.src||'');const url=local?block.src:safeUrl(block.src||'');if(url==='#'||!block.alt)return '';return `<figure class="school-block school-image"><img src="${esc(url)}" alt="${esc(block.alt)}" loading="lazy" decoding="async" onerror="this.hidden=true"><figcaption>${esc(block.caption||'')}${block.credit?` · ${esc(block.credit)}`:''}</figcaption></figure>`;}
+ case 'family':if(!items.length)return '';return `<section class="school-block school-family" aria-label="${esc(block.title||'Famílias')}">${title}<p>Toque em uma base para explorar seus derivados.</p><div class="school-family-root">Molhos-mãe</div><ul class="school-family-branches">${items.map(v=>`<li class="school-family-branch"><button type="button" class="school-family-toggle" data-school-family aria-expanded="false"><strong>${esc(v.term)}</strong><span>${esc(v.definition)}</span><span class="school-family-indicator" aria-hidden="true">+</span></button><ul class="school-family-children" hidden>${(v.children||[]).map(child=>`<li><strong>${esc(child.name)}</strong><span>${esc(child.detail)}</span></li>`).join('')}</ul></li>`).join('')}</ul></section>`;
  case 'workflow':{if(!items.length)return '';return `<section class="school-block school-flow" aria-label="${esc(block.title||'Fluxo de trabalho')}">${title}<ol>${items.map((v,i)=>`<li><span aria-hidden="true">${i+1}</span><strong>${esc(v)}</strong></li>`).join('')}</ol></section>`;}
  case 'orgchart':{if(!items.length)return '';return `<section class="school-block school-org" aria-label="${esc(block.title||'Hierarquia')}">${title}<ol>${items.map((v,i)=>`<li style="--level:${Math.min(i,4)}"><span aria-hidden="true">↳</span>${esc(v)}</li>`).join('')}</ol></section>`;}
  case 'glossary':if(!items.length)return '';return `<div class="school-block school-glossary">${title}<dl>${items.filter(v=>v&&typeof v==='object').map(v=>`<dt>${esc(v.term)}</dt><dd>${esc(v.definition)}</dd>`).join('')}</dl></div>`;
@@ -117,13 +131,27 @@ function schoolBlock(block){
 function schoolParagraphs(value){return String(value||'').split(/\n\s*\n/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join('')}
 function renderSchoolFilters(){
  const root=el('school-filters');if(!root)return;
- const categories=['todas',...new Set((DATA.techniques||[]).map(t=>t.category).filter(Boolean))];
- root.innerHTML=categories.map(c=>`<button type="button" class="chip ${selectedSchoolCategory===c?'selected':''}" data-school-category="${esc(c)}" aria-pressed="${selectedSchoolCategory===c}">${esc(c==='todas'?'Todas as aulas':c)}</button>`).join('');
+ const modules=schoolModules(),term=selectedSchoolSearch.trim(),library=selectedSchoolCategory==='modulos'&&!term;
+ const back='<button type="button" class="btn-outline" data-school-category="modulos">← Todos os módulos</button>';
+ const all='<button type="button" class="btn-outline" data-school-category="todas">Ver todas as aulas</button>';
+ if(!library){
+  const title=selectedSchoolCategory==='modulos'?'Resultados da busca':selectedSchoolCategory==='todas'?'Todas as aulas':selectedSchoolCategory;
+  root.innerHTML=`<div class="school-module-toolbar">${back}${selectedSchoolCategory==='todas'?'':all}</div><h2 class="school-module-heading" tabindex="-1">${esc(title)}</h2>`;
+  return;
+ }
+ const cards=modules.map(({category,lessons})=>{
+  const done=lessons.filter(t=>state.completedLessons.includes(t.id)).length;
+  return `<button type="button" class="school-module-card" data-school-category="${esc(category)}"><strong>${esc(category)}</strong><span>${lessons.length} ${lessons.length===1?'aula':'aulas'} · ${done} concluída(s)</span><span class="school-module-open">Explorar módulo <span aria-hidden="true">→</span></span></button>`;
+ }).join('');
+ root.innerHTML=`<div class="school-module-toolbar"><h2 class="school-module-heading" tabindex="-1">Explore os módulos</h2>${all}</div><div class="school-module-grid">${cards}</div>`;
 }
 function renderTechniques(){
  const root=el('tech-grid');if(!root)return;
- const term=selectedSchoolSearch.trim().toLocaleLowerCase('pt-BR');
- const lessons=learningLessons().filter(t=>(selectedSchoolCategory==='todas'||t.category===selectedSchoolCategory)&&(!term||[t.title,t.summary,t.category,...(t.lesson||[]).map(s=>s.heading)].join(' ').toLocaleLowerCase('pt-BR').includes(term)));
+ const normalize=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('pt-BR');
+ const term=normalize(selectedSchoolSearch.trim());
+ const library=selectedSchoolCategory==='modulos'&&!term;
+ const lessons=learningLessons().filter(t=>(selectedSchoolCategory==='todas'||selectedSchoolCategory==='modulos'||t.category===selectedSchoolCategory)&&(!term||normalize([t.title,t.summary,t.category,...(t.lesson||[]).flatMap(s=>[s.heading,s.body]),t.deepDive].join(' ')).includes(term)));
+ if(library){root.innerHTML='';const count=el('school-count');if(count)count.textContent=`${schoolModules().length} módulos · ${lessons.length} aulas`;updateLearningProgress();renderSchoolFilters();return;}
  const count=el('school-count');if(count)count.textContent=`${lessons.length} ${lessons.length===1?'aula encontrada':'aulas encontradas'}`;
  updateLearningProgress();
  root.innerHTML=lessons.length?lessons.map((t,i)=>`<details class="tech-card" id="escola-${esc(t.id)}">
@@ -228,6 +256,7 @@ el('main-nav').classList.remove('open');el('mobile-toggle').setAttribute('aria-e
 if(page==='receitas')renderRecipes();
 recordLocalMetric(page==='receita'?'recipe_views':page==='tecnicas'?'school_views':page==='buscar'?'search_views':'other_views');
 if(page==='buscar')renderUnifiedSearch();
+if(page==='tecnicas')renderSchoolFilters();
 if(page==='receita')renderRecipePage(recipeId);
 if(page==='planejamento')renderPlanner();
 setPageMeta(page,page==='receita'?RECIPES.find(r=>r.id===recipeId):null);
@@ -329,7 +358,7 @@ function download(filename,contents,type){const url=URL.createObjectURL(new Blob
 function doBackup(){download('dantas-cozinha-backup.json',JSON.stringify({app:'dantas-cozinha',version:1,exportedAt:new Date().toISOString(),data:state},null,2),'application/json')}
 async function importBackup(file){if(!file)return;try{if(file.size>1_000_000)throw Error('Arquivo muito grande.');const parsed=JSON.parse(await file.text());if(parsed.app!=='dantas-cozinha'||!parsed.data||typeof parsed.data!=='object')throw Error('Formato incompatível.');const s=parsed.data;state={favorites:Array.isArray(s.favorites)?s.favorites.filter(id=>RECIPES.some(r=>r.id===id)):[],notes:s.notes&&typeof s.notes==='object'?s.notes:{},planner:s.planner&&typeof s.planner==='object'?s.planner:{},shoppingChecked:s.shoppingChecked&&typeof s.shoppingChecked==='object'?s.shoppingChecked:{},completedLessons:Array.isArray(s.completedLessons)?s.completedLessons.filter(id=>(DATA.techniques||[]).some(t=>t.id===id)):[]};saveState();renderHome();renderRecipes();renderPlanner();toast('Backup importado com sucesso!')}catch(e){toast(`Não foi possível importar: ${e.message}`)}}
 function initEvents(){
- const nextLesson=el('school-next-lesson');if(nextLesson)nextLesson.onclick=()=>{const id=nextLesson.dataset.lessonId;if(!id)return;selectedSchoolCategory='todas';selectedSchoolSearch='';const input=el('school-search');if(input)input.value='';renderTechniques();const target=el('escola-'+id);if(target){target.open=true;target.scrollIntoView({behavior:'smooth',block:'start'});target.querySelector('summary')?.focus()}};
+ const nextLesson=el('school-next-lesson');if(nextLesson)nextLesson.onclick=()=>openSchoolLesson(nextLesson.dataset.lessonId);
  const unifiedInput=el('unified-search');
  if(unifiedInput)unifiedInput.oninput=renderUnifiedSearch;
  const unifiedFilters=el('unified-filters');
@@ -338,8 +367,8 @@ function initEvents(){
  if(unifiedResults)unifiedResults.onclick=e=>{const b=e.target.closest('[data-unified-open]');if(b)openUnifiedResult(b.dataset.unifiedOpen,b.dataset.unifiedType)};
 window.addEventListener('hashchange',()=>goto(decodeURIComponent(location.hash.slice(1))));document.addEventListener('click',e=>{const go=e.target.closest('[data-goto]');if(go){location.hash=go.dataset.goto;goto(go.dataset.goto);return}const cat=e.target.closest('[data-category-go]');if(cat){selectedFilter=cat.dataset.categoryGo;location.hash='receitas';goto('receitas');return}const f=e.target.closest('[data-fav]');if(f){fav(f.dataset.fav);return}const add=e.target.closest('[data-plan-add]');if(add){quickAdd(add.dataset.planAdd);return}const recipe=e.target.closest('[data-recipe]');if(recipe){openRecipe(recipe.dataset.recipe);return}});
 const schoolSearch=el('school-search');if(schoolSearch)schoolSearch.oninput=e=>{selectedSchoolSearch=e.target.value;renderTechniques()};
-const schoolFilters=el('school-filters');if(schoolFilters)schoolFilters.onclick=e=>{const button=e.target.closest('[data-school-category]');if(button){selectedSchoolCategory=button.dataset.schoolCategory;renderTechniques()}};
-const schoolGrid=el('tech-grid');if(schoolGrid)schoolGrid.onclick=e=>{const completed=e.target.closest('[data-lesson-complete]');if(completed){const id=completed.dataset.lessonComplete;state.completedLessons=state.completedLessons.includes(id)?state.completedLessons.filter(x=>x!==id):[...state.completedLessons,id];saveState();completed.setAttribute('aria-pressed',String(state.completedLessons.includes(id)));completed.textContent=state.completedLessons.includes(id)?'✓ Aula concluída':'Marcar aula como concluída';updateLearningProgress();return}const link=e.target.closest('[data-school-anchor]');if(link){e.preventDefault();el(link.dataset.schoolAnchor)?.scrollIntoView({behavior:'smooth',block:'start'})}};
+const schoolFilters=el('school-filters');if(schoolFilters)schoolFilters.onclick=e=>{const button=e.target.closest('[data-school-category]');if(button){selectedSchoolCategory=button.dataset.schoolCategory;selectedSchoolSearch='';const input=el('school-search');if(input)input.value='';renderTechniques();schoolFilters.querySelector('.school-module-heading')?.focus()}};
+const schoolGrid=el('tech-grid');if(schoolGrid)schoolGrid.onclick=e=>{const family=e.target.closest('[data-school-family]');if(family){const expanded=family.getAttribute('aria-expanded')==='true';family.setAttribute('aria-expanded',String(!expanded));family.nextElementSibling.hidden=expanded;return}const completed=e.target.closest('[data-lesson-complete]');if(completed){const id=completed.dataset.lessonComplete;state.completedLessons=state.completedLessons.includes(id)?state.completedLessons.filter(x=>x!==id):[...state.completedLessons,id];saveState();completed.setAttribute('aria-pressed',String(state.completedLessons.includes(id)));completed.textContent=state.completedLessons.includes(id)?'✓ Aula concluída':'Marcar aula como concluída';updateLearningProgress();renderSchoolFilters();return}const link=e.target.closest('[data-school-anchor]');if(link){e.preventDefault();el(link.dataset.schoolAnchor)?.scrollIntoView({behavior:'smooth',block:'start'})}};
 el('recipe-search').oninput=e=>{selectedSearch=e.target.value;renderRecipes()};el('recipe-filters').onclick=e=>{const chip=e.target.closest('[data-filter]');if(chip){selectedFilter=chip.dataset.filter;renderRecipes()}};
 el('fav-shortcut').onclick=()=>{selectedFilter='favoritas';selectedSearch='';el('recipe-search').value='';location.hash='receitas';goto('receitas')};el('footer-favorites').onclick=el('fav-shortcut').onclick;
 el('mobile-toggle').onclick=()=>{const n=el('main-nav');n.classList.toggle('open');el('mobile-toggle').setAttribute('aria-expanded',n.classList.contains('open')?'true':'false')};

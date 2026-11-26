@@ -1,5 +1,5 @@
 /* Offline fallback for the app shell only; never cache third-party images or personal data. */
-const CACHE='dantas-shell-20261110-v1';
+const CACHE='dantas-shell-20261126-school-visuals-v1';
 const SHELL=['./','./index.html','./assets/styles.css','./assets/app.js','./assets/data.js','./assets/recipe-placeholder.svg'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
