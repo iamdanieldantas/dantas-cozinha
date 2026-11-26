@@ -155,13 +155,20 @@ function renderTechniques(){
  const count=el('school-count');if(count)count.textContent=`${lessons.length} ${lessons.length===1?'aula encontrada':'aulas encontradas'}`;
  updateLearningProgress();
  root.innerHTML=lessons.length?lessons.map((t,i)=>`<a class="school-lesson-link" href="#aula/${encodeURIComponent(t.id)}" data-school-lesson="${esc(t.id)}"><span class="school-lesson-index">${String(i+1).padStart(2,'0')}</span><div><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p><small>${state.completedLessons.includes(t.id)?'✓ Concluída':(t.lesson||[]).length+' seções'}</small></div><span aria-hidden="true" class="school-lesson-arrow">→</span></a>`).join(''):'<div class="empty-state">Nenhuma aula encontrada. Tente outro termo ou categoria.</div>';
+ root.insertAdjacentHTML('beforeend','<nav class="school-module-return" aria-label="Retorno à biblioteca"><a class="school-back" href="#tecnicas">← Todos os módulos</a></nav>');
  renderSchoolFilters();
+}
+function schoolLessonNavigation(t,module,i,position){
+ const prev=module[i-1],next=module[i+1];
+ const route=schoolRoute(t.category);
+ const items=module.map((lesson,j)=>`<li><a href="#aula/${encodeURIComponent(lesson.id)}"${j===i?' aria-current="page"':''}>${j+1}. ${esc(lesson.title)}${j===i?' (aula atual)':''}</a></li>`).join('');
+ return `<div class="school-navigation" data-school-nav="${position}"><nav class="school-breadcrumb" aria-label="Caminho da aula — ${position==='top'?'início':'final'}"><a href="#tecnicas">Todos os módulos</a><span aria-hidden="true">/</span><a href="#${route}">${esc(t.category)}</a><span aria-hidden="true">/</span><span aria-current="page">${esc(t.title)}</span></nav><details class="school-nav-dropdown"><summary>Aulas deste módulo (${i+1} de ${module.length})</summary><ol>${items}</ol></details><nav class="school-nav-actions" aria-label="Navegação entre aulas — ${position==='top'?'início':'final'}"><a href="#${route}" data-school-parent>← Voltar ao módulo</a><div class="school-nav-siblings">${prev?`<a href="#aula/${encodeURIComponent(prev.id)}" data-school-prev>← Aula anterior</a>`:'<span aria-disabled="true">← Aula anterior</span>'}${next?`<a href="#aula/${encodeURIComponent(next.id)}" data-school-next>Próxima aula →</a>`:'<span aria-disabled="true">Próxima aula →</span>'}</div></nav></div>`;
 }
 function renderSchoolLesson(id){
  const root=el("school-lesson-detail"),t=learningLessons().find(x=>x.id===id);if(!root)return;
  if(!t){root.innerHTML='<p>Aula não encontrada. <a href="#tecnicas">Voltar à Escola</a></p>';return;}
- const module=learningLessons().filter(x=>x.category===t.category),i=module.findIndex(x=>x.id===id),prev=module[i-1],next=module[i+1];
- root.innerHTML=`<article class="school-reading" id="escola-${esc(t.id)}"><nav class="school-breadcrumb" aria-label="Caminho da aula"><a href="#tecnicas">Escola</a><span aria-hidden="true">/</span><a href="#${schoolRoute(t.category)}">${esc(t.category)}</a></nav>
+ const module=learningLessons().filter(x=>x.category===t.category),i=module.findIndex(x=>x.id===id);
+ root.innerHTML=`<article class="school-reading" id="escola-${esc(t.id)}">${schoolLessonNavigation(t,module,i,'top')}
  <header class="school-reading-header"><span class="school-kicker">AULA ${i+1} DE ${module.length}</span><h1 tabindex="-1">${esc(t.title)}</h1><p>${esc(t.summary)}</p></header>
  <div class="tech-lesson school-why"><h2>Por que importa</h2>${schoolParagraphs(t.why)}</div>
  <details class="school-contents"><summary>Nesta aula</summary><ol>${(t.lesson||[]).map((section,j)=>`<li><a href="#aula-${esc(t.id)}-${j}" data-school-anchor="aula-${esc(t.id)}-${j}">${esc(section.heading)}</a></li>`).join('')}</ol></details>
@@ -172,7 +179,7 @@ function renderSchoolLesson(id){
  ${t.mistakes?.length?`<div class="tech-lesson school-mistakes"><h2>Erros comuns</h2><ul>${t.mistakes.map(m=>`<li>${esc(m)}</li>`).join('')}</ul></div>`:''}
 
  ${t.sourceUrl?`<p class="school-source">Referência: <a href="${esc(safeUrl(t.sourceUrl))}" target="_blank" rel="noopener noreferrer">${esc(t.sourceName||t.sourceUrl)}</a></p>`:''}
- <footer class="school-reading-footer"><button type="button" class="btn primary school-complete" data-lesson-complete="${esc(t.id)}" aria-pressed="${state.completedLessons.includes(t.id)}">${state.completedLessons.includes(t.id)?'✓ Aula concluída':'Marcar aula como concluída'}</button><nav aria-label="Navegação entre aulas">${prev?`<a href="#aula/${encodeURIComponent(prev.id)}">← Aula anterior</a>`:'<a href="#tecnicas">Todos os módulos</a>'}${next?`<a href="#aula/${encodeURIComponent(next.id)}">Próxima aula →</a>`:`<a href="#${schoolRoute(t.category)}">Voltar ao módulo →</a>`}</nav></footer></article>`;
+ <footer class="school-reading-footer"><button type="button" class="btn primary school-complete" data-lesson-complete="${esc(t.id)}" aria-pressed="${state.completedLessons.includes(t.id)}">${state.completedLessons.includes(t.id)?'✓ Aula concluída':'Marcar aula como concluída'}</button>${schoolLessonNavigation(t,module,i,'bottom')}</footer></article>`;
 }
 function renderWorkshops(){
  const root=el('workshop-list');if(!root)return;
