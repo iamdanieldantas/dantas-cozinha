@@ -3130,6 +3130,13 @@ window.DANTAS_DATA = {
       "deepDive": "A geometria da panela muda a área de evaporação; por isso uma redução pode avançar mais depressa em recipiente largo. Referência temática: apostila Chef das Gulas, aula 1, p. 9.",
       "contentBlocks": [
         {
+          "type": "image",
+          "src": "assets/school-utensilios.svg",
+          "alt": "Frigideira, panela alta, fouet e escumadeira com suas funções",
+          "caption": "Compare a geometria e a função das ferramentas.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
           "type": "glossary",
           "title": "Conceitos essenciais",
           "items": [
@@ -3179,6 +3186,20 @@ window.DANTAS_DATA = {
       "deepDive": "A relação entre área e volume explica por que cortes menores aquecem e perdem umidade mais depressa. Referência temática: apostila Chef das Gulas, aula 1, pp. 10 e 13.",
       "contentBlocks": [
         {
+          "type": "image",
+          "src": "assets/school-facas.svg",
+          "alt": "Perfis esquemáticos das facas do chef, legumes, pão e filetar",
+          "caption": "O perfil da lâmina favorece diferentes movimentos.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
+          "type": "image",
+          "src": "assets/school-cortes.svg",
+          "alt": "Julienne em bastões, brunoise e macédoine em cubos, chiffonade em tiras",
+          "caption": "Formas esquemáticas, sem escala de tamanho.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
           "type": "glossary",
           "title": "Conceitos essenciais",
           "items": [
@@ -3227,6 +3248,13 @@ window.DANTAS_DATA = {
       ],
       "deepDive": "Calor superficial e temperatura interna são variáveis distintas. O ponto final depende também de tamanho, composição e calor residual.",
       "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-coccao.svg",
+          "alt": "Calor seco em frigideira, úmido em panela e combinado em panela tampada",
+          "caption": "A presença de água e vapor muda o resultado.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
         {
           "type": "glossary",
           "title": "Conceitos essenciais",
@@ -3317,6 +3345,13 @@ window.DANTAS_DATA = {
       ],
       "deepDive": "O fundo claro é a base típica do velouté; o fundo escuro participa da espagnole e da demi-glace clássica. A gelatina aumenta o corpo sem exigir farinha.",
       "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-fundos.svg",
+          "alt": "Fundos claro, escuro, vegetal e fumet de peixe",
+          "caption": "Cores ilustrativas: o tom real depende dos ingredientes e da extração.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
         {
           "type": "glossary",
           "title": "Conceitos essenciais",
@@ -3418,6 +3453,13 @@ window.DANTAS_DATA = {
       "deepDive": "Roux não é o próprio molho: a fase líquida escolhida define boa parte do perfil final. A redução e o amido em suspensão são alternativas, não sinônimos.",
       "contentBlocks": [
         {
+          "type": "image",
+          "src": "assets/school-roux.svg",
+          "alt": "Roux branco, louro e marrom, em tons progressivamente mais escuros",
+          "caption": "À medida que a tostagem avança, a capacidade de espessar geralmente diminui.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
           "type": "glossary",
           "title": "Conceitos essenciais",
           "items": [
@@ -3469,6 +3511,13 @@ window.DANTAS_DATA = {
       "deepDive": "Uma emulsão dispersa pequenas gotículas de uma fase em outra, como óleo em água. Mostarda e gema ajudam a estabilizar certas emulsões. Para preparar maionese, acrescente o óleo gradualmente enquanto mistura; para recuperar molho talhado, comece uma nova base aquosa e incorpore o molho separado aos poucos. Use ovos pasteurizados em preparações cruas.",
       "contentBlocks": [
         {
+          "type": "image",
+          "src": "assets/school-emulsao.svg",
+          "alt": "Fases separadas, gotículas dispersas e emulsão estabilizada",
+          "caption": "Representação esquemática, não uma imagem microscópica.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
+        {
           "type": "steps",
           "title": "Montando uma emulsão",
           "items": [
@@ -3508,6 +3557,13 @@ window.DANTAS_DATA = {
       ],
       "deepDive": "Molhos ricos em manteiga dependem do equilíbrio de fases. Pequenas adições e controle de calor ajudam a evitar a separação.",
       "contentBlocks": [
+        {
+          "type": "image",
+          "src": "assets/school-manteiga.svg",
+          "alt": "Manteiga comum, clarificada e noisette",
+          "caption": "Clarificar remove sólidos; na noisette, eles douram.",
+          "credit": "Ilustração original Dantas Cozinha"
+        },
         {
           "type": "glossary",
           "title": "Conceitos essenciais",
@@ -3656,6 +3712,74 @@ window.DANTAS_DATA = {
       ],
       "deepDive": "As famílias descrevem relações técnicas e não exigem que todo derivado seja feito literalmente a partir de uma panela de molho-mãe pronto.",
       "contentBlocks": [
+        {
+          "type": "family",
+          "title": "Árvore dos molhos clássicos",
+          "items": [
+            {
+              "term": "Béchamel",
+              "definition": "Leite + roux claro",
+              "children": [
+                {
+                  "name": "Mornay",
+                  "detail": "Queijo; massas e gratinados."
+                },
+                {
+                  "name": "Soubise",
+                  "detail": "Cebola; legumes e carnes."
+                }
+              ]
+            },
+            {
+              "term": "Velouté",
+              "definition": "Fundo claro + roux",
+              "children": [
+                {
+                  "name": "Suprême",
+                  "detail": "Velouté de aves enriquecido com creme."
+                },
+                {
+                  "name": "Allemande",
+                  "detail": "Velouté de vitela ligado com gemas e creme."
+                }
+              ]
+            },
+            {
+              "term": "Espagnole",
+              "definition": "Fundo escuro + roux marrom + aromáticos",
+              "children": [
+                {
+                  "name": "Demi-glace",
+                  "detail": "Espagnole e fundo escuro reduzidos, na versão clássica."
+                }
+              ]
+            },
+            {
+              "term": "Holandês",
+              "definition": "Emulsão quente de gemas e manteiga",
+              "children": [
+                {
+                  "name": "Béarnaise",
+                  "detail": "Redução ácida aromática com estragão; clássico com carnes."
+                },
+                {
+                  "name": "Mousseline",
+                  "detail": "Creme batido incorporado; peixes e vegetais."
+                }
+              ]
+            },
+            {
+              "term": "Tomate",
+              "definition": "Base de tomate; versões variam",
+              "children": [
+                {
+                  "name": "Provençale",
+                  "detail": "Variação aromática com alho e ervas, conforme a tradição."
+                }
+              ]
+            }
+          ]
+        },
         {
           "type": "glossary",
           "title": "Conceitos essenciais",
