@@ -79,9 +79,20 @@ def run():
             assert desktop.locator("#unified-results .unified-result").count() >= 1
             desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
             assert desktop.locator("#school-progress-bar").get_attribute("aria-valuenow") is not None
+            categories = list(dict.fromkeys(item["category"] for item in techniques))
+            assert desktop.locator("#school-filters .school-module-card").count() == len(categories)
+            assert desktop.locator("#tech-grid details").count() == 0
+            desktop.locator("#school-filters .school-module-card").first.click()
+            assert desktop.locator("#tech-grid details").count() == sum(
+                item["category"] == categories[0] for item in techniques)
+            desktop.locator('[data-school-category="modulos"]').click()
+            assert desktop.locator("#school-filters .school-module-card").count() == len(categories)
+            desktop.locator("#school-search").fill(techniques[-1]["title"])
+            assert desktop.locator("#tech-grid details").count() >= 1
+            desktop.locator("#school-search").fill("")
             desktop.locator("#school-next-lesson").click()
             assert desktop.locator("#tech-grid details[open]").count() >= 1
-            desktop.goto(base + "#tecnicas", wait_until="domcontentloaded")
+            desktop.locator('[data-school-category="todas"]').click()
             assert desktop.locator("#tech-grid details").count() == len(techniques)
             first = desktop.locator("#tech-grid details").first
             if first.get_attribute("open") is None:
@@ -128,6 +139,13 @@ def run():
             assert mobile.locator("#ingredients-list .ingredient-entry").count() == len(example["ingredients"])
             assert mobile.locator("#recipe-detail .detail-steps li").count() == len(example["steps"])
             assert mobile.locator("#recipe-detail").is_visible()
+            mobile.goto(base + "#tecnicas", wait_until="domcontentloaded")
+            assert mobile.locator("#school-filters .school-module-card").count() == len(categories)
+            mobile.locator("#school-filters .school-module-card").first.click()
+            assert mobile.locator("#tech-grid details").count() == sum(
+                item["category"] == categories[0] for item in techniques)
+            mobile.locator('[data-school-category="modulos"]').click()
+            assert mobile.locator("#school-filters .school-module-card").count() == len(categories)
             assert not errors, "Erros JavaScript: " + repr(errors)
             print("SMOKE OK: desktop/mobile, curadoria, receitas completas, notas, Escola e oficinas")
             browser.close()
