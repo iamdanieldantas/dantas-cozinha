@@ -1,6 +1,418 @@
 {
   "recipes": [
     {
+      "servings": 4,
+      "servingsLabel": "4 porções",
+      "createdAt": "2026-11-27",
+      "source": "Cantinho Gastronomia — Aula de Gnocchi (apostila fornecida pelo aluno)",
+      "sourceName": "Cantinho Gastronomia",
+      "sourceUrl": "https://www.cantinhogastronomia.com.br",
+      "curationStatus": "material-de-aula-fornecido-pelo-aluno",
+      "verifiedTestClaim": "Versão redigida a partir do material de aula enviado pelo aluno, sem alegação de teste independente pelo portal.",
+      "recipeVersion": "Ingredientes e proporções da apostila, preparo descrito em redação própria. Tempos totais estimados quando não informados. Itens sem medida na apostila são indicados como a gosto ou conforme necessário.",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
+      "id": "aula-cantinho-gnocchi-mandioquinha",
+      "title": "Gnocchi de mandioquinha com cogumelos no vinho branco, creme de parmesão e avelã tostada",
+      "category": "principal",
+      "description": "Nhoque de mandioquinha e amido de milho dourado em azeite, com cogumelos salteados no vinho branco, creme de parmesão e avelãs tostadas.",
+      "minutes": 60,
+      "minutesLabel": "60 min (estimativa)",
+      "difficulty": "Intermediário",
+      "emoji": "🍄",
+      "image": "https://images.pexels.com/photos/8753670/pexels-photo-8753670.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Team Picsfast / Pexels — imagem ilustrativa de gnocchi com cogumelos",
+      "imageSourceUrl": "https://www.pexels.com/photo/meal-with-mushrooms-8753670/",
+      "ingredients": [
+        {
+          "quantity": 500,
+          "unit": "g",
+          "name": "mandioquinha",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 100,
+          "unit": "g",
+          "name": "amido de milho",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 50,
+          "unit": "ml",
+          "name": "água",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 40,
+          "unit": "g",
+          "name": "queijo ralado fino",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 1,
+          "unit": "colher (chá)",
+          "name": "sal",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 1,
+          "unit": "fio",
+          "name": "azeite para dourar (quanto baste)",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 300,
+          "unit": "g",
+          "name": "cogumelos variados",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "manteiga",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 15,
+          "unit": "ml",
+          "name": "azeite extravirgem",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 1,
+          "unit": "dente",
+          "name": "alho picado",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 80,
+          "unit": "ml",
+          "name": "vinho branco seco",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 2,
+          "unit": "ramos",
+          "name": "tomilho",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal a gosto",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino a gosto",
+          "group": "Cogumelos"
+        },
+        {
+          "quantity": 200,
+          "unit": "ml",
+          "name": "creme de leite fresco",
+          "group": "Creme de parmesão"
+        },
+        {
+          "quantity": 80,
+          "unit": "g",
+          "name": "parmesão ralado fino",
+          "group": "Creme de parmesão"
+        },
+        {
+          "quantity": 20,
+          "unit": "g",
+          "name": "manteiga",
+          "group": "Creme de parmesão"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino a gosto",
+          "group": "Creme de parmesão"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada a gosto",
+          "group": "Creme de parmesão"
+        },
+        {
+          "quantity": 50,
+          "unit": "g",
+          "name": "avelãs tostadas",
+          "group": "Finalização"
+        },
+        {
+          "quantity": 1,
+          "unit": "porção",
+          "name": "parmesão ralado a gosto",
+          "group": "Finalização"
+        },
+        {
+          "quantity": 1,
+          "unit": "porção",
+          "name": "folhas de tomilho a gosto",
+          "group": "Finalização"
+        }
+      ],
+      "steps": [
+        "Cozinhe as mandioquinhas em água até ficarem bem macias. Amasse enquanto ainda estão quentes.",
+        "Combine a mandioquinha amassada com o amido de milho, a água, o queijo ralado e o sal. A massa deve ficar pegajosa, mas permitir modelagem. Modele os nhoques.",
+        "Doure os nhoques em azeite nos dois lados até criar crosta; a apostila não indica fervura dos nhoques depois de modelados.",
+        "Aqueça uma frigideira larga com a manteiga e o azeite. Doure os cogumelos em fogo alto, deixando-os em contato com a superfície quente antes de mexer.",
+        "Junte o alho e o tomilho, refogue brevemente e coloque o vinho branco. Deixe reduzir quase por completo. Acerte sal e pimenta e reserve.",
+        "Em fogo baixo, aqueça o creme de leite até o início da fervura. Incorpore a manteiga e depois o parmesão gradualmente, mexendo até ficar liso. Tempere com pimenta e noz-moscada; ajuste o sal somente se necessário.",
+        "Sugestão de montagem do portal: sirva os nhoques dourados com o creme e os cogumelos, finalizando com as avelãs tostadas, parmesão e tomilho."
+      ],
+      "tip": "Se houver sujeira nos cogumelos, limpe-os e seque bem antes de dourar. A anotação de aula recomenda não lavá-los; uma lavagem rápida seguida de secagem também é possível. Evite encher demais a frigideira para favorecer o dourado.",
+      "tags": [
+        "gnocchi",
+        "mandioquinha",
+        "cogumelos",
+        "aula presencial"
+      ]
+    },
+    {
+      "servings": 4,
+      "servingsLabel": "4 porções",
+      "createdAt": "2026-11-27",
+      "source": "Cantinho Gastronomia — Aula de Gnocchi (apostila fornecida pelo aluno)",
+      "sourceName": "Cantinho Gastronomia",
+      "sourceUrl": "https://www.cantinhogastronomia.com.br",
+      "curationStatus": "material-de-aula-fornecido-pelo-aluno",
+      "verifiedTestClaim": "Versão redigida a partir do material de aula enviado pelo aluno, sem alegação de teste independente pelo portal.",
+      "recipeVersion": "Ingredientes e proporções da apostila, preparo descrito em redação própria. Tempos totais estimados quando não informados. Itens sem medida na apostila são indicados como a gosto ou conforme necessário.",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
+      "id": "aula-cantinho-tiramisu-taca",
+      "title": "Tiramisù na taça",
+      "category": "sobremesa",
+      "description": "Sobremesa em camadas de biscoito champagne umedecido em espresso e creme de mascarpone aerado, finalizada com cacau.",
+      "minutes": 270,
+      "minutesLabel": "30 min de preparo (estimativa) + pelo menos 4h de geladeira",
+      "difficulty": "Intermediário",
+      "emoji": "☕",
+      "image": "https://images.pexels.com/photos/15455310/pexels-photo-15455310/free-photo-of-photo-of-three-creamy-desserts-in-a-glasses-covered-in-chocolate-powder.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Angela Khebou / Pexels — imagem ilustrativa",
+      "imageSourceUrl": "https://www.pexels.com/photo/photo-of-three-creamy-desserts-in-a-glasses-covered-in-chocolate-powder-15455310/",
+      "ingredients": [
+        {
+          "quantity": 250,
+          "unit": "g",
+          "name": "mascarpone",
+          "group": "Tiramisù"
+        },
+        {
+          "quantity": 3,
+          "unit": "unidades",
+          "name": "gemas pasteurizadas (a receita não prevê cocção)",
+          "group": "Tiramisù"
+        },
+        {
+          "quantity": 60,
+          "unit": "g",
+          "name": "açúcar",
+          "group": "Tiramisù"
+        },
+        {
+          "quantity": 100,
+          "unit": "ml",
+          "name": "creme de leite fresco bem gelado",
+          "group": "Tiramisù"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "biscoito champagne",
+          "group": "Tiramisù"
+        },
+        {
+          "quantity": 180,
+          "unit": "ml",
+          "name": "café espresso forte",
+          "group": "Tiramisù"
+        },
+        {
+          "quantity": 1,
+          "unit": "porção",
+          "name": "cacau em pó 100% para finalizar (quanto baste)",
+          "group": "Tiramisù"
+        }
+      ],
+      "steps": [
+        "Prepare o espresso e espere esfriar por completo.",
+        "Bata as gemas pasteurizadas com o açúcar até a mistura clarear e ficar volumosa. Acrescente o mascarpone e misture suavemente até ficar uniforme.",
+        "Em outra tigela, bata o creme de leite fresco bem gelado até formar picos macios. Incorpore ao creme de mascarpone com movimentos delicados para manter a aeração.",
+        "Quebre os biscoitos para caberem nas taças. Passe-os rapidamente pelo café frio, sem deixá-los encharcar.",
+        "Alterne camadas de biscoito e creme nas quatro taças. Cubra e refrigere por pelo menos quatro horas.",
+        "Na hora de servir, peneire cacau em pó sobre as taças."
+      ],
+      "tip": "A apostila anota a possibilidade de substituir o mascarpone por cream cheese; isso altera o sabor e a textura. Use gemas pasteurizadas por segurança, pois o creme não é cozido. Polvilhe o cacau somente na hora de servir, conforme anotação da aula.",
+      "tags": [
+        "tiramisù",
+        "sobremesa italiana",
+        "aula presencial"
+      ]
+    },
+    {
+      "id": "selecao-2026-11-02-nhoque-de-batata",
+      "title": "Gnocchi clássico com pomodoro, burrata e manjericão",
+      "category": "principal",
+      "description": "Nhoque de batata Asterix assada, acompanhado de molho de tomate pelado, burrata e manjericão.",
+      "minutes": 95,
+      "minutesLabel": "1h35 (estimativa; depende das batatas)",
+      "difficulty": "Intermediário",
+      "servings": 4,
+      "servingsLabel": "4 porções",
+      "emoji": "🥔",
+      "image": "https://images.pexels.com/photos/31911031/pexels-photo-31911031/free-photo-of-delicious-gnocchi-with-tomato-sauce-and-basil.jpeg?auto=compress&dpr=1&h=750&w=1260",
+      "imageCredit": "Deane Bayas / Pexels",
+      "imageSourceUrl": "https://www.pexels.com/photo/delicious-gnocchi-with-tomato-sauce-and-basil-31911031/",
+      "imageLicenseUrl": "https://www.pexels.com/license/",
+      "ingredients": [
+        {
+          "quantity": 600,
+          "unit": "g",
+          "name": "batata Asterix",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 120,
+          "unit": "g",
+          "name": "farinha de trigo (quantidade inicial)",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "farinha de trigo adicional, se necessário",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 1,
+          "unit": "unidade",
+          "name": "gema",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 30,
+          "unit": "g",
+          "name": "parmesão ralado fino",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 5,
+          "unit": "g",
+          "name": "sal",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "noz-moscada a gosto",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 1,
+          "unit": "porção",
+          "name": "farinha de trigo para polvilhar (quanto baste)",
+          "group": "Gnocchi"
+        },
+        {
+          "quantity": 600,
+          "unit": "g",
+          "name": "tomate pelado",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 30,
+          "unit": "ml",
+          "name": "azeite extravirgem",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 2,
+          "unit": "dentes",
+          "name": "alho",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 0.5,
+          "unit": "unidade",
+          "name": "cebola pequena",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 8,
+          "unit": "folhas",
+          "name": "manjericão",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "sal a gosto",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino a gosto",
+          "group": "Pomodoro"
+        },
+        {
+          "quantity": 200,
+          "unit": "g",
+          "name": "burrata",
+          "group": "Finalização"
+        },
+        {
+          "quantity": 1,
+          "unit": "porção",
+          "name": "folhas de manjericão a gosto",
+          "group": "Finalização"
+        },
+        {
+          "quantity": 1,
+          "unit": "fio",
+          "name": "azeite extravirgem a gosto",
+          "group": "Finalização"
+        },
+        {
+          "quantity": 1,
+          "unit": "pitada",
+          "name": "pimenta-do-reino a gosto",
+          "group": "Finalização"
+        }
+      ],
+      "steps": [
+        "Aqueça o forno a 180 °C. Asse as batatas inteiras até ficarem macias por dentro; se desejar, acomode-as sobre sal grosso, conforme a sugestão da aula.",
+        "Descasque as batatas ainda quentes e esprema. Distribua a polpa numa superfície limpa para liberar vapor e reduzir a umidade.",
+        "Junte a gema, o parmesão, 5 g de sal e a noz-moscada. Comece com 120 g de farinha e use até os 30 g adicionais somente se a consistência exigir. Misture brevemente, até conseguir modelar a massa.",
+        "Separe porções, forme cordões numa bancada polvilhada de farinha e corte os nhoques.",
+        "Para o pomodoro, amoleça a cebola e o alho no azeite em fogo baixo, sem dourar demais. Junte o tomate e sal, cozinhe por cerca de 25 minutos e desmanche os tomates durante a cocção. Tempere com pimenta e as oito folhas de manjericão.",
+        "Cozinhe os nhoques em água salgada fervente. Quando flutuarem, recolha com uma escumadeira e passe imediatamente ao molho, envolvendo com cuidado.",
+        "Sugestão de montagem do portal: distribua a burrata sobre o nhoque e termine com manjericão, azeite e pimenta."
+      ],
+      "tip": "A faixa da apostila é de 120 a 150 g de farinha para 600 g de batata. Asse até a batata ficar completamente macia; evite sovar e incorporar farinha além do necessário. A camada de sal grosso é opcional e não tem medida especificada.",
+      "tags": [
+        "gnocchi",
+        "massa fresca",
+        "cozinha italiana",
+        "aula presencial"
+      ],
+      "createdAt": "2026-11-27",
+      "source": "Cantinho Gastronomia — Aula de Gnocchi (apostila fornecida pelo aluno)",
+      "sourceName": "Cantinho Gastronomia",
+      "sourceUrl": "https://www.cantinhogastronomia.com.br",
+      "curationStatus": "material-de-aula-fornecido-pelo-aluno",
+      "ingredientsSummary": "Batata Asterix, farinha, gema, parmesão, tomate pelado e burrata",
+      "verifiedTestClaim": "Versão redigida a partir do material de aula enviado pelo aluno, sem alegação de teste independente pelo portal.",
+      "recipeVersion": "Ingredientes e proporções da apostila, preparo descrito em redação própria. Tempos totais estimados quando não informados. Itens sem medida na apostila são indicados como a gosto ou conforme necessário.",
+      "originalCreatedAt": "2026-11-10",
+      "updatedAt": "2026-11-27"
+    },
+    {
       "id": "curadoria-bruschetta-de-tomate",
       "title": "Bruschetta de tomate",
       "category": "entrada",
@@ -2328,83 +2740,6 @@
       "curationStatus": "adaptacao-fornecida-pelo-usuario",
       "verifiedTestClaim": "Adaptação compartilhada pelo usuário; temperatura e tempo estimados, sem teste independente do portal.",
       "imageCredit": "Fotografia ilustrativa de brownie / Unsplash"
-    },
-    {
-      "id": "selecao-2026-11-02-nhoque-de-batata",
-      "title": "Nhoque de batata",
-      "category": "principal",
-      "description": "Nhoque caseiro de batata, leve e macio, com massa feita à mão e finalização simples. A receita rende cerca de quatro porções e combina com molho de tomate, manteiga e sálvia ou o molho de sua preferência.",
-      "minutes": 95,
-      "minutesLabel": "1h35 (aprox.)",
-      "difficulty": "Intermediário",
-      "servings": 4,
-      "servingsLabel": "4 porções",
-      "emoji": "🥔",
-      "image": "https://images.pexels.com/photos/31911031/pexels-photo-31911031/free-photo-of-delicious-gnocchi-with-tomato-sauce-and-basil.jpeg?auto=compress&dpr=1&h=750&w=1260",
-      "imageCredit": "Deane Bayas / Pexels",
-      "imageSourceUrl": "https://www.pexels.com/photo/delicious-gnocchi-with-tomato-sauce-and-basil-31911031/",
-      "imageLicenseUrl": "https://www.pexels.com/license/",
-      "ingredients": [
-        {
-          "quantity": 1000,
-          "unit": "g",
-          "name": "batata asterix"
-        },
-        {
-          "quantity": 1,
-          "unit": "unidade",
-          "name": "gema"
-        },
-        {
-          "quantity": 220,
-          "unit": "g",
-          "name": "farinha de trigo, mais um pouco para polvilhar"
-        },
-        {
-          "quantity": 35,
-          "unit": "g",
-          "name": "queijo parmesão ralado fino (opcional)"
-        },
-        {
-          "quantity": 8,
-          "unit": "g",
-          "name": "sal"
-        },
-        {
-          "quantity": 1,
-          "unit": "pitada",
-          "name": "noz-moscada ralada"
-        },
-        {
-          "quantity": 1,
-          "unit": "fio",
-          "name": "azeite ou óleo para untar"
-        }
-      ],
-      "steps": [
-        "Escolha batatas de tamanho semelhante. Cozinhe-as inteiras, com casca, em água até ficarem macias ao serem perfuradas com uma faca. Escorra e deixe o vapor sair por alguns minutos.",
-        "Descasque enquanto ainda estiverem mornas e passe pelo espremedor. Espalhe a batata em uma travessa larga para perder umidade e espere amornar.",
-        "Junte a gema, o sal, a noz-moscada e o parmesão, se usar. Acrescente a farinha aos poucos, misturando apenas até formar uma massa macia que possa ser modelada. A quantidade final pode variar conforme a umidade das batatas.",
-        "Polvilhe levemente a bancada. Divida a massa em porções e enrole cada uma em cordões com cerca de 1,5 cm de espessura. Corte pedaços de aproximadamente 2 cm; se desejar, marque cada um com um garfo.",
-        "Ferva uma panela grande com água e sal. Cozinhe os nhoques em pequenas levas; retire com escumadeira quando subirem à superfície e transfira para uma travessa levemente untada.",
-        "Sirva imediatamente com o molho escolhido. Para dourar, salteie os nhoques já cozidos em uma frigideira com manteiga ou azeite."
-      ],
-      "tip": "Batata mais seca costuma exigir menos farinha. Evite trabalhar demais a massa: o excesso de farinha e de manipulação deixa o nhoque pesado.",
-      "tags": [
-        "massa fresca",
-        "cozinha italiana",
-        "receita independente",
-        "não testada pelo portal"
-      ],
-      "createdAt": "2026-11-10",
-      "source": "Referência de estilo e técnica: Panelinha — Nhoque de batata. Formulação independente do Dantas Cozinha.",
-      "sourceName": "Panelinha",
-      "sourceUrl": "https://panelinha.com.br/receita/nhoque-batata",
-      "sourceVerifiedAt": "2026-11-10",
-      "curationStatus": "versao-autoral-com-referencia",
-      "ingredientsSummary": "Batata asterix, gema, farinha de trigo e parmesão opcional",
-      "verifiedTestClaim": "Receita independente não testada pela equipe do Dantas Cozinha.",
-      "recipeVersion": "Versão independente elaborada para o Dantas Cozinha, com formulação e texto próprios. A receita de Panelinha indicada é referência editorial; esta página não reproduz seu texto nem afirma teste independente."
     },
     {
       "id": "selecao-2026-11-02-empanadas-de-carne",
